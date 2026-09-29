@@ -1,0 +1,700 @@
+{
+ "content": [
+  {
+   "source": "artwork/TheTempleOfAtalHakkar1_1.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleOfAtalHakkar1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleOfAtalHakkar1_2.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleOfAtalHakkar1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleOfAtalHakkar1_3.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleOfAtalHakkar1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleOfAtalHakkar1_4.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleOfAtalHakkar1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleOfAtalHakkar1_5.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleOfAtalHakkar1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleOfAtalHakkar1_6.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleOfAtalHakkar1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleOfAtalHakkar1_7.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleOfAtalHakkar1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleOfAtalHakkar1_8.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleOfAtalHakkar1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleOfAtalHakkar1_9.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleOfAtalHakkar1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleOfAtalHakkar1_10.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleOfAtalHakkar1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleOfAtalHakkar1_11.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleOfAtalHakkar1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleOfAtalHakkar1_12.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleOfAtalHakkar1_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleofAtalHakkar2_1.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleofAtalHakkar2_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleofAtalHakkar2_2.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleofAtalHakkar2_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleofAtalHakkar2_3.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleofAtalHakkar2_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleofAtalHakkar2_4.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleofAtalHakkar2_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleofAtalHakkar2_5.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleofAtalHakkar2_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleofAtalHakkar2_6.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleofAtalHakkar2_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleofAtalHakkar2_7.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleofAtalHakkar2_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleofAtalHakkar2_8.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleofAtalHakkar2_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleofAtalHakkar2_9.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleofAtalHakkar2_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleofAtalHakkar2_10.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleofAtalHakkar2_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleofAtalHakkar2_11.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleofAtalHakkar2_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleofAtalHakkar2_12.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleofAtalHakkar2_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleofAtalhakkar3_1.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleofAtalhakkar3_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleofAtalhakkar3_2.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleofAtalhakkar3_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleofAtalhakkar3_3.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleofAtalhakkar3_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleofAtalhakkar3_4.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleofAtalhakkar3_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleofAtalhakkar3_5.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleofAtalhakkar3_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleofAtalhakkar3_6.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleofAtalhakkar3_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleofAtalhakkar3_7.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleofAtalhakkar3_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleofAtalhakkar3_8.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleofAtalhakkar3_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleofAtalhakkar3_9.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleofAtalhakkar3_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleofAtalhakkar3_10.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleofAtalhakkar3_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleofAtalhakkar3_11.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleofAtalhakkar3_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheTempleofAtalhakkar3_12.blp",
+   "target": "Interface/WorldMap/TheTempleOfAtalHakkar/TheTempleofAtalhakkar3_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Temple of Atal Hakkar instance map: 3 DungeonMap floors, 75 DungeonMapChunk entries, one WorldMapArea, the instance WorldMapTransforms row and 36 client BLP tiles.",
+ "name": "Temple of Atal Hakkar",
+ "package": "mod-native-instance-maps.temple-of-atal-hakkar",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 1477,
+     "chunks": [
+      {
+       "dungeonMapId": 176,
+       "field2": 5195,
+       "field4": -10000.0,
+       "id": 2749
+      },
+      {
+       "dungeonMapId": 176,
+       "field2": 5202,
+       "field4": -10000.0,
+       "id": 2747
+      },
+      {
+       "dungeonMapId": 176,
+       "field2": 5206,
+       "field4": -10000.0,
+       "id": 2752
+      },
+      {
+       "dungeonMapId": 176,
+       "field2": 5207,
+       "field4": -10000.0,
+       "id": 2750
+      },
+      {
+       "dungeonMapId": 176,
+       "field2": 5208,
+       "field4": -10000.0,
+       "id": 2740
+      },
+      {
+       "dungeonMapId": 176,
+       "field2": 5209,
+       "field4": -10000.0,
+       "id": 2745
+      },
+      {
+       "dungeonMapId": 176,
+       "field2": 5210,
+       "field4": -10000.0,
+       "id": 2743
+      },
+      {
+       "dungeonMapId": 176,
+       "field2": 5211,
+       "field4": -10000.0,
+       "id": 2739
+      },
+      {
+       "dungeonMapId": 176,
+       "field2": 5252,
+       "field4": -10000.0,
+       "id": 2746
+      },
+      {
+       "dungeonMapId": 176,
+       "field2": 5253,
+       "field4": -10000.0,
+       "id": 2751
+      },
+      {
+       "dungeonMapId": 176,
+       "field2": 5254,
+       "field4": -10000.0,
+       "id": 2744
+      },
+      {
+       "dungeonMapId": 176,
+       "field2": 5255,
+       "field4": -10000.0,
+       "id": 2753
+      },
+      {
+       "dungeonMapId": 176,
+       "field2": 5256,
+       "field4": -10000.0,
+       "id": 2754
+      },
+      {
+       "dungeonMapId": 176,
+       "field2": 5259,
+       "field4": -10000.0,
+       "id": 2741
+      },
+      {
+       "dungeonMapId": 176,
+       "field2": 5260,
+       "field4": -10000.0,
+       "id": 2742
+      },
+      {
+       "dungeonMapId": 177,
+       "field2": 5192,
+       "field4": -10000.0,
+       "id": 2721
+      },
+      {
+       "dungeonMapId": 177,
+       "field2": 5193,
+       "field4": -10000.0,
+       "id": 2722
+      },
+      {
+       "dungeonMapId": 177,
+       "field2": 5196,
+       "field4": -10000.0,
+       "id": 2723
+      },
+      {
+       "dungeonMapId": 177,
+       "field2": 5197,
+       "field4": -10000.0,
+       "id": 2724
+      },
+      {
+       "dungeonMapId": 177,
+       "field2": 5198,
+       "field4": -10000.0,
+       "id": 2725
+      },
+      {
+       "dungeonMapId": 177,
+       "field2": 5199,
+       "field4": -10000.0,
+       "id": 2726
+      },
+      {
+       "dungeonMapId": 177,
+       "field2": 5203,
+       "field4": -10000.0,
+       "id": 2727
+      },
+      {
+       "dungeonMapId": 177,
+       "field2": 5204,
+       "field4": -10000.0,
+       "id": 2728
+      },
+      {
+       "dungeonMapId": 177,
+       "field2": 5291,
+       "field4": -10000.0,
+       "id": 2729
+      },
+      {
+       "dungeonMapId": 177,
+       "field2": 5292,
+       "field4": -10000.0,
+       "id": 2730
+      },
+      {
+       "dungeonMapId": 177,
+       "field2": 5294,
+       "field4": -10000.0,
+       "id": 2731
+      },
+      {
+       "dungeonMapId": 177,
+       "field2": 5295,
+       "field4": -10000.0,
+       "id": 2732
+      },
+      {
+       "dungeonMapId": 177,
+       "field2": 5298,
+       "field4": -10000.0,
+       "id": 2733
+      },
+      {
+       "dungeonMapId": 177,
+       "field2": 5303,
+       "field4": -10000.0,
+       "id": 2734
+      },
+      {
+       "dungeonMapId": 177,
+       "field2": 5304,
+       "field4": -10000.0,
+       "id": 2735
+      },
+      {
+       "dungeonMapId": 177,
+       "field2": 5305,
+       "field4": -10000.0,
+       "id": 2736
+      },
+      {
+       "dungeonMapId": 177,
+       "field2": 5307,
+       "field4": -10000.0,
+       "id": 2737
+      },
+      {
+       "dungeonMapId": 177,
+       "field2": 5315,
+       "field4": -10000.0,
+       "id": 2738
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5190,
+       "field4": -10000.0,
+       "id": 2679
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5191,
+       "field4": -10000.0,
+       "id": 2680
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5194,
+       "field4": -10000.0,
+       "id": 2681
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5200,
+       "field4": -10000.0,
+       "id": 2682
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5205,
+       "field4": -10000.0,
+       "id": 2683
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5261,
+       "field4": -10000.0,
+       "id": 2684
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5263,
+       "field4": -10000.0,
+       "id": 2685
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5264,
+       "field4": -10000.0,
+       "id": 2686
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5267,
+       "field4": -10000.0,
+       "id": 2687
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5268,
+       "field4": -10000.0,
+       "id": 2688
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5269,
+       "field4": -10000.0,
+       "id": 2689
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5270,
+       "field4": -10000.0,
+       "id": 2690
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5271,
+       "field4": -10000.0,
+       "id": 2691
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5272,
+       "field4": -10000.0,
+       "id": 2692
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5273,
+       "field4": -10000.0,
+       "id": 2693
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5274,
+       "field4": -10000.0,
+       "id": 2694
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5275,
+       "field4": -10000.0,
+       "id": 2695
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5276,
+       "field4": -10000.0,
+       "id": 2696
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5277,
+       "field4": -10000.0,
+       "id": 2697
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5278,
+       "field4": -10000.0,
+       "id": 2698
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5279,
+       "field4": -10000.0,
+       "id": 2699
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5280,
+       "field4": -10000.0,
+       "id": 2700
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5281,
+       "field4": -10000.0,
+       "id": 2701
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5282,
+       "field4": -10000.0,
+       "id": 2702
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5283,
+       "field4": -10000.0,
+       "id": 2703
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5284,
+       "field4": -10000.0,
+       "id": 2704
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5285,
+       "field4": -10000.0,
+       "id": 2705
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5286,
+       "field4": -10000.0,
+       "id": 2706
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5287,
+       "field4": -10000.0,
+       "id": 2707
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5288,
+       "field4": -10000.0,
+       "id": 2708
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5290,
+       "field4": -10000.0,
+       "id": 2709
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5296,
+       "field4": -10000.0,
+       "id": 2710
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5297,
+       "field4": -10000.0,
+       "id": 2711
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5299,
+       "field4": -10000.0,
+       "id": 2712
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5301,
+       "field4": -10000.0,
+       "id": 2713
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5306,
+       "field4": -10000.0,
+       "id": 2714
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5308,
+       "field4": -10000.0,
+       "id": 2715
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5309,
+       "field4": -10000.0,
+       "id": 2716
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5310,
+       "field4": -10000.0,
+       "id": 2717
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5311,
+       "field4": -10000.0,
+       "id": 2718
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5312,
+       "field4": -10000.0,
+       "id": 2719
+      },
+      {
+       "dungeonMapId": 178,
+       "field2": 5313,
+       "field4": -10000.0,
+       "id": 2720
+      }
+     ],
+     "dungeonMapId": 0,
+     "floors": [
+      {
+       "field3": -252.27099609375,
+       "field4": 442.75799560546875,
+       "field5": -718.5189819335938,
+       "field6": -255.16600036621094,
+       "field7": 38,
+       "floor": 1,
+       "id": 176
+      },
+      {
+       "field3": -24.30747413635254,
+       "field4": 223.86929321289062,
+       "field5": -423.0113830566406,
+       "field6": -256.9759216308594,
+       "field7": 38,
+       "floor": 2,
+       "id": 177
+      },
+      {
+       "field3": -182.6746368408203,
+       "field4": 373.4945983886719,
+       "field5": -620.783935546875,
+       "field6": -250.3959197998047,
+       "field7": 38,
+       "floor": 3,
+       "id": 178
+      }
+     ],
+     "id": 687,
+     "internalName": "TheTempleOfAtalHakkar",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 109,
+   "transform": {
+    "id": 14,
+    "newDungeonMapId": 176,
+    "newMapId": 109,
+    "regionBottom": -20000.0,
+    "regionLeft": 20000.0,
+    "regionOffsetX": 0.0,
+    "regionOffsetY": 0.0,
+    "regionRight": -20000.0,
+    "regionTop": 20000.0
+   }
+  }
+ ]
+}

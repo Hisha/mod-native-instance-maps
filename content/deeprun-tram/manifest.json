@@ -1,0 +1,223 @@
+{
+ "content": [
+  {
+   "source": "artwork/DeeprunTram1_1.blp",
+   "target": "Interface/WorldMap/DeeprunTram/DeeprunTram1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DeeprunTram1_2.blp",
+   "target": "Interface/WorldMap/DeeprunTram/DeeprunTram1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DeeprunTram1_3.blp",
+   "target": "Interface/WorldMap/DeeprunTram/DeeprunTram1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DeeprunTram1_4.blp",
+   "target": "Interface/WorldMap/DeeprunTram/DeeprunTram1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DeeprunTram1_5.blp",
+   "target": "Interface/WorldMap/DeeprunTram/DeeprunTram1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DeeprunTram1_6.blp",
+   "target": "Interface/WorldMap/DeeprunTram/DeeprunTram1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DeeprunTram1_7.blp",
+   "target": "Interface/WorldMap/DeeprunTram/DeeprunTram1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DeeprunTram1_8.blp",
+   "target": "Interface/WorldMap/DeeprunTram/DeeprunTram1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DeeprunTram1_9.blp",
+   "target": "Interface/WorldMap/DeeprunTram/DeeprunTram1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DeeprunTram1_10.blp",
+   "target": "Interface/WorldMap/DeeprunTram/DeeprunTram1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DeeprunTram1_11.blp",
+   "target": "Interface/WorldMap/DeeprunTram/DeeprunTram1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DeeprunTram1_12.blp",
+   "target": "Interface/WorldMap/DeeprunTram/DeeprunTram1_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DeeprunTram2_1.blp",
+   "target": "Interface/WorldMap/DeeprunTram/DeeprunTram2_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DeeprunTram2_2.blp",
+   "target": "Interface/WorldMap/DeeprunTram/DeeprunTram2_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DeeprunTram2_3.blp",
+   "target": "Interface/WorldMap/DeeprunTram/DeeprunTram2_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DeeprunTram2_4.blp",
+   "target": "Interface/WorldMap/DeeprunTram/DeeprunTram2_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DeeprunTram2_5.blp",
+   "target": "Interface/WorldMap/DeeprunTram/DeeprunTram2_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DeeprunTram2_6.blp",
+   "target": "Interface/WorldMap/DeeprunTram/DeeprunTram2_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DeeprunTram2_7.blp",
+   "target": "Interface/WorldMap/DeeprunTram/DeeprunTram2_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DeeprunTram2_8.blp",
+   "target": "Interface/WorldMap/DeeprunTram/DeeprunTram2_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DeeprunTram2_9.blp",
+   "target": "Interface/WorldMap/DeeprunTram/DeeprunTram2_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DeeprunTram2_10.blp",
+   "target": "Interface/WorldMap/DeeprunTram/DeeprunTram2_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DeeprunTram2_11.blp",
+   "target": "Interface/WorldMap/DeeprunTram/DeeprunTram2_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DeeprunTram2_12.blp",
+   "target": "Interface/WorldMap/DeeprunTram/DeeprunTram2_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Deeprun Tram instance map: 2 DungeonMap floors, 7 DungeonMapChunk entries, one WorldMapArea, the instance WorldMapTransforms row and 24 client BLP tiles.",
+ "name": "Deeprun Tram",
+ "package": "mod-native-instance-maps.deeprun-tram",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 2257,
+     "chunks": [
+      {
+       "dungeonMapId": 741,
+       "field2": 17945,
+       "field4": -10000.0,
+       "id": 6257
+      },
+      {
+       "dungeonMapId": 741,
+       "field2": 17949,
+       "field4": -10000.0,
+       "id": 6255
+      },
+      {
+       "dungeonMapId": 741,
+       "field2": 17954,
+       "field4": -10000.0,
+       "id": 6256
+      },
+      {
+       "dungeonMapId": 741,
+       "field2": 35698,
+       "field4": -38.0,
+       "id": 6254
+      },
+      {
+       "dungeonMapId": 742,
+       "field2": 17943,
+       "field4": -10000.0,
+       "id": 6258
+      },
+      {
+       "dungeonMapId": 742,
+       "field2": 17944,
+       "field4": -10000.0,
+       "id": 6259
+      },
+      {
+       "dungeonMapId": 742,
+       "field2": 17935,
+       "field4": -10000.0,
+       "id": 6260
+      }
+     ],
+     "dungeonMapId": 741,
+     "floors": [
+      {
+       "field3": 2311.5,
+       "field4": 2623.5,
+       "field5": -112.5,
+       "field6": 95.5,
+       "field7": 301,
+       "floor": 1,
+       "id": 741
+      },
+      {
+       "field3": -121.5,
+       "field4": 187.5,
+       "field5": -112.5,
+       "field6": 95.5,
+       "field7": 301,
+       "floor": 2,
+       "id": 742
+      }
+     ],
+     "id": 922,
+     "internalName": "DeeprunTram",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 369,
+   "transform": {
+    "id": 12,
+    "newDungeonMapId": 741,
+    "newMapId": 369,
+    "regionBottom": -20000.0,
+    "regionLeft": 20000.0,
+    "regionOffsetX": 0.0,
+    "regionOffsetY": 0.0,
+    "regionRight": -20000.0,
+    "regionTop": 20000.0
+   }
+  }
+ ]
+}

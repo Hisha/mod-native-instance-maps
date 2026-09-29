@@ -1,0 +1,8362 @@
+{
+  "candidates": [
+    {
+      "artworkDirectory": "Interface/WorldMap/AhnQiraj",
+      "artworkNameAlias": null,
+      "blpCount": 36,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 2926
+        },
+        {
+          "additive": true,
+          "id": 2921
+        },
+        {
+          "additive": true,
+          "id": 2934
+        },
+        {
+          "additive": true,
+          "id": 2935
+        },
+        {
+          "additive": true,
+          "id": 2936
+        },
+        {
+          "additive": true,
+          "id": 2895
+        },
+        {
+          "additive": true,
+          "id": 2896
+        },
+        {
+          "additive": true,
+          "id": 2897
+        },
+        {
+          "additive": true,
+          "id": 2915
+        },
+        {
+          "additive": true,
+          "id": 2916
+        },
+        {
+          "additive": true,
+          "id": 2899
+        },
+        {
+          "additive": true,
+          "id": 2903
+        },
+        {
+          "additive": true,
+          "id": 2930
+        },
+        {
+          "additive": true,
+          "id": 2917
+        },
+        {
+          "additive": true,
+          "id": 2927
+        },
+        {
+          "additive": true,
+          "id": 2883
+        },
+        {
+          "additive": true,
+          "id": 2922
+        },
+        {
+          "additive": true,
+          "id": 2931
+        },
+        {
+          "additive": true,
+          "id": 2933
+        },
+        {
+          "additive": true,
+          "id": 2932
+        },
+        {
+          "additive": true,
+          "id": 2905
+        },
+        {
+          "additive": true,
+          "id": 2901
+        },
+        {
+          "additive": true,
+          "id": 2886
+        },
+        {
+          "additive": true,
+          "id": 2885
+        },
+        {
+          "additive": true,
+          "id": 2904
+        },
+        {
+          "additive": true,
+          "id": 2906
+        },
+        {
+          "additive": true,
+          "id": 2887
+        },
+        {
+          "additive": true,
+          "id": 2902
+        },
+        {
+          "additive": true,
+          "id": 2920
+        },
+        {
+          "additive": true,
+          "id": 2907
+        },
+        {
+          "additive": true,
+          "id": 2888
+        },
+        {
+          "additive": true,
+          "id": 2908
+        },
+        {
+          "additive": true,
+          "id": 2909
+        },
+        {
+          "additive": true,
+          "id": 2910
+        },
+        {
+          "additive": true,
+          "id": 2911
+        },
+        {
+          "additive": true,
+          "id": 2928
+        },
+        {
+          "additive": true,
+          "id": 2912
+        },
+        {
+          "additive": true,
+          "id": 2913
+        },
+        {
+          "additive": true,
+          "id": 2882
+        },
+        {
+          "additive": true,
+          "id": 2889
+        },
+        {
+          "additive": true,
+          "id": 2878
+        },
+        {
+          "additive": true,
+          "id": 2890
+        },
+        {
+          "additive": true,
+          "id": 2879
+        },
+        {
+          "additive": true,
+          "id": 2881
+        },
+        {
+          "additive": true,
+          "id": 2880
+        },
+        {
+          "additive": true,
+          "id": 2891
+        },
+        {
+          "additive": true,
+          "id": 2898
+        },
+        {
+          "additive": true,
+          "id": 2937
+        },
+        {
+          "additive": true,
+          "id": 2919
+        },
+        {
+          "additive": true,
+          "id": 2918
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WorldMapArea 766 references dungeonMap_id 2, but DungeonMap 2 belongs to map 574 and is a stock row, so the fixed-ID allocator will never lease it again; mod-content-manager requires the reference to resolve to a floor of map 531"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 191
+        },
+        {
+          "additive": true,
+          "id": 192
+        },
+        {
+          "additive": true,
+          "id": 195
+        }
+      ],
+      "internalName": "AhnQiraj",
+      "mapId": 531,
+      "package": "mod-native-instance-maps.ahnqiraj",
+      "reasonCodes": [
+        "area-floor-reference-unresolvable"
+      ],
+      "slug": "ahnqiraj",
+      "title": "AhnQiraj",
+      "transforms": [
+        {
+          "additive": true,
+          "id": 13
+        }
+      ],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 766
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/ArathiBasin",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [],
+      "classification": "REVIEW",
+      "findings": [
+        "WorldMapArea 461 is a stock row that WDM leaves untouched; the client already has it and there is nothing additive to ship",
+        "WDM Stable declares no DungeonMap floor for map 529; the instance has no floor geometry to compose",
+        "WDM Stable declares no DungeonMapChunk for the floors of map 529",
+        "WDM Stable supplies no WorldMapTransforms row for map 529; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [],
+      "internalName": "ArathiBasin",
+      "mapId": 529,
+      "package": "mod-native-instance-maps.arathibasin",
+      "reasonCodes": [
+        "no-chunks",
+        "no-floors",
+        "no-transform",
+        "stock-world-map-area"
+      ],
+      "slug": "arathibasin",
+      "title": "ArathiBasin",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": false,
+          "id": 461
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/AuchenaiCrypts",
+      "artworkNameAlias": null,
+      "blpCount": 24,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 3219
+        },
+        {
+          "additive": true,
+          "id": 3216
+        },
+        {
+          "additive": true,
+          "id": 3217
+        },
+        {
+          "additive": true,
+          "id": 3224
+        },
+        {
+          "additive": true,
+          "id": 3225
+        },
+        {
+          "additive": true,
+          "id": 3221
+        },
+        {
+          "additive": true,
+          "id": 3227
+        },
+        {
+          "additive": true,
+          "id": 3226
+        },
+        {
+          "additive": true,
+          "id": 3220
+        },
+        {
+          "additive": true,
+          "id": 3215
+        },
+        {
+          "additive": true,
+          "id": 3218
+        },
+        {
+          "additive": true,
+          "id": 3228
+        },
+        {
+          "additive": true,
+          "id": 3223
+        },
+        {
+          "additive": true,
+          "id": 3222
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 558; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 214
+        },
+        {
+          "additive": true,
+          "id": 215
+        }
+      ],
+      "internalName": "AuchenaiCrypts",
+      "mapId": 558,
+      "package": "mod-native-instance-maps.auchenaicrypts",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "auchenaicrypts",
+      "title": "AuchenaiCrypts",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 722
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/BlackFathomDeeps",
+      "artworkNameAlias": null,
+      "blpCount": 36,
+      "chunks": [],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable has no WorldMapArea row whose internal_name is 'BlackFathomDeeps'; there is nothing for the client to attach the artwork directory to, and authoring one would be invention"
+      ],
+      "floors": [],
+      "internalName": "BlackFathomDeeps",
+      "mapId": null,
+      "package": "mod-native-instance-maps.blackfathomdeeps",
+      "reasonCodes": [
+        "no-world-map-area"
+      ],
+      "slug": "blackfathomdeeps",
+      "title": "BlackFathomDeeps",
+      "transforms": [],
+      "worldMapArea": []
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/BlackTemple",
+      "artworkNameAlias": null,
+      "blpCount": 96,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 4578
+        },
+        {
+          "additive": true,
+          "id": 4606
+        },
+        {
+          "additive": true,
+          "id": 4585
+        },
+        {
+          "additive": true,
+          "id": 4587
+        },
+        {
+          "additive": true,
+          "id": 4591
+        },
+        {
+          "additive": true,
+          "id": 4580
+        },
+        {
+          "additive": true,
+          "id": 4584
+        },
+        {
+          "additive": true,
+          "id": 4589
+        },
+        {
+          "additive": true,
+          "id": 4588
+        },
+        {
+          "additive": true,
+          "id": 4590
+        },
+        {
+          "additive": true,
+          "id": 4579
+        },
+        {
+          "additive": true,
+          "id": 4598
+        },
+        {
+          "additive": true,
+          "id": 4602
+        },
+        {
+          "additive": true,
+          "id": 4609
+        },
+        {
+          "additive": true,
+          "id": 4604
+        },
+        {
+          "additive": true,
+          "id": 4607
+        },
+        {
+          "additive": true,
+          "id": 4601
+        },
+        {
+          "additive": true,
+          "id": 4608
+        },
+        {
+          "additive": true,
+          "id": 4603
+        },
+        {
+          "additive": true,
+          "id": 4611
+        },
+        {
+          "additive": true,
+          "id": 4610
+        },
+        {
+          "additive": true,
+          "id": 4599
+        },
+        {
+          "additive": true,
+          "id": 4575
+        },
+        {
+          "additive": true,
+          "id": 4586
+        },
+        {
+          "additive": true,
+          "id": 4569
+        },
+        {
+          "additive": true,
+          "id": 4573
+        },
+        {
+          "additive": true,
+          "id": 4574
+        },
+        {
+          "additive": true,
+          "id": 4570
+        },
+        {
+          "additive": true,
+          "id": 4568
+        },
+        {
+          "additive": true,
+          "id": 4567
+        },
+        {
+          "additive": true,
+          "id": 4571
+        },
+        {
+          "additive": true,
+          "id": 4605
+        },
+        {
+          "additive": true,
+          "id": 4581
+        },
+        {
+          "additive": true,
+          "id": 4582
+        },
+        {
+          "additive": true,
+          "id": 4592
+        },
+        {
+          "additive": true,
+          "id": 4583
+        },
+        {
+          "additive": true,
+          "id": 4600
+        },
+        {
+          "additive": true,
+          "id": 4576
+        },
+        {
+          "additive": true,
+          "id": 4577
+        },
+        {
+          "additive": true,
+          "id": 4572
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 564; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space",
+        "WorldMapArea 796 sets dungeonMap_id -1, WDM's \"not an instance\" sentinel. mod-content-manager treats any non-zero dungeonMapId as a reference (it casts to uint32 at ContentPackage.cpp:360, so -1 becomes 4294967295) and rejects the package unless it names a floor of map 564; carrying the sentinel through and dropping the field are not the same row"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 433
+        },
+        {
+          "additive": true,
+          "id": 434
+        },
+        {
+          "additive": true,
+          "id": 435
+        },
+        {
+          "additive": true,
+          "id": 436
+        },
+        {
+          "additive": true,
+          "id": 437
+        },
+        {
+          "additive": true,
+          "id": 438
+        },
+        {
+          "additive": true,
+          "id": 439
+        }
+      ],
+      "internalName": "BlackTemple",
+      "mapId": 564,
+      "package": "mod-native-instance-maps.blacktemple",
+      "reasonCodes": [
+        "area-floor-reference-unresolvable",
+        "no-transform"
+      ],
+      "slug": "blacktemple",
+      "title": "BlackTemple",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 796
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/BlackfathomDeeps",
+      "artworkNameAlias": "BlackFathomDeeps",
+      "blpCount": 0,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 2482
+        },
+        {
+          "additive": true,
+          "id": 2454
+        },
+        {
+          "additive": true,
+          "id": 2456
+        },
+        {
+          "additive": true,
+          "id": 2455
+        },
+        {
+          "additive": true,
+          "id": 2460
+        },
+        {
+          "additive": true,
+          "id": 2459
+        },
+        {
+          "additive": true,
+          "id": 2458
+        },
+        {
+          "additive": true,
+          "id": 2457
+        },
+        {
+          "additive": true,
+          "id": 2462
+        },
+        {
+          "additive": true,
+          "id": 2463
+        },
+        {
+          "additive": true,
+          "id": 2464
+        },
+        {
+          "additive": true,
+          "id": 2465
+        },
+        {
+          "additive": true,
+          "id": 2466
+        },
+        {
+          "additive": true,
+          "id": 2467
+        },
+        {
+          "additive": true,
+          "id": 2470
+        },
+        {
+          "additive": true,
+          "id": 2471
+        },
+        {
+          "additive": true,
+          "id": 2472
+        },
+        {
+          "additive": true,
+          "id": 2473
+        },
+        {
+          "additive": true,
+          "id": 2477
+        },
+        {
+          "additive": true,
+          "id": 2478
+        },
+        {
+          "additive": true,
+          "id": 2475
+        },
+        {
+          "additive": true,
+          "id": 2476
+        },
+        {
+          "additive": true,
+          "id": 2479
+        },
+        {
+          "additive": true,
+          "id": 2474
+        },
+        {
+          "additive": true,
+          "id": 2483
+        },
+        {
+          "additive": true,
+          "id": 2461
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable draws this map from Interface/WorldMap/BlackFathomDeeps/, but the WorldMapArea internal_name is 'BlackfathomDeeps'; the client derives the directory from internal_name, and inventing or re-casing either name would change a client-baked identity",
+        "WDM Stable supplies no WorldMapTransforms row for map 48; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 162
+        },
+        {
+          "additive": true,
+          "id": 163
+        },
+        {
+          "additive": true,
+          "id": 164
+        }
+      ],
+      "internalName": "BlackfathomDeeps",
+      "mapId": 48,
+      "package": "mod-native-instance-maps.blackfathomdeeps",
+      "reasonCodes": [
+        "artwork-name-mismatch",
+        "no-transform"
+      ],
+      "slug": "blackfathomdeeps",
+      "title": "BlackfathomDeeps",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 688
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/BlackrockDepths",
+      "artworkNameAlias": null,
+      "blpCount": 24,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 2964
+        },
+        {
+          "additive": true,
+          "id": 2958
+        },
+        {
+          "additive": true,
+          "id": 2959
+        },
+        {
+          "additive": true,
+          "id": 2960
+        },
+        {
+          "additive": true,
+          "id": 2961
+        },
+        {
+          "additive": true,
+          "id": 2962
+        },
+        {
+          "additive": true,
+          "id": 2956
+        },
+        {
+          "additive": true,
+          "id": 2963
+        },
+        {
+          "additive": true,
+          "id": 2968
+        },
+        {
+          "additive": true,
+          "id": 2989
+        },
+        {
+          "additive": true,
+          "id": 3879
+        },
+        {
+          "additive": true,
+          "id": 2971
+        },
+        {
+          "additive": true,
+          "id": 2984
+        },
+        {
+          "additive": true,
+          "id": 2970
+        },
+        {
+          "additive": true,
+          "id": 2972
+        },
+        {
+          "additive": true,
+          "id": 2983
+        },
+        {
+          "additive": true,
+          "id": 2987
+        },
+        {
+          "additive": true,
+          "id": 2957
+        },
+        {
+          "additive": true,
+          "id": 2965
+        },
+        {
+          "additive": true,
+          "id": 2982
+        },
+        {
+          "additive": true,
+          "id": 2985
+        },
+        {
+          "additive": true,
+          "id": 2990
+        },
+        {
+          "additive": true,
+          "id": 2966
+        },
+        {
+          "additive": true,
+          "id": 2976
+        },
+        {
+          "additive": true,
+          "id": 2992
+        },
+        {
+          "additive": true,
+          "id": 2991
+        },
+        {
+          "additive": true,
+          "id": 2993
+        },
+        {
+          "additive": true,
+          "id": 4093
+        },
+        {
+          "additive": true,
+          "id": 2980
+        },
+        {
+          "additive": true,
+          "id": 2979
+        },
+        {
+          "additive": true,
+          "id": 2981
+        },
+        {
+          "additive": true,
+          "id": 2977
+        },
+        {
+          "additive": true,
+          "id": 2967
+        },
+        {
+          "additive": true,
+          "id": 2974
+        },
+        {
+          "additive": true,
+          "id": 2975
+        },
+        {
+          "additive": true,
+          "id": 2996
+        },
+        {
+          "additive": true,
+          "id": 2997
+        },
+        {
+          "additive": true,
+          "id": 4704
+        },
+        {
+          "additive": true,
+          "id": 2998
+        },
+        {
+          "additive": true,
+          "id": 3880
+        },
+        {
+          "additive": true,
+          "id": 3000
+        },
+        {
+          "additive": true,
+          "id": 3001
+        },
+        {
+          "additive": true,
+          "id": 3003
+        },
+        {
+          "additive": true,
+          "id": 3004
+        },
+        {
+          "additive": true,
+          "id": 2995
+        },
+        {
+          "additive": true,
+          "id": 4094
+        },
+        {
+          "additive": true,
+          "id": 2994
+        },
+        {
+          "additive": true,
+          "id": 2999
+        },
+        {
+          "additive": true,
+          "id": 3002
+        },
+        {
+          "additive": true,
+          "id": 2973
+        },
+        {
+          "additive": true,
+          "id": 2988
+        },
+        {
+          "additive": true,
+          "id": 2978
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 230; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 200
+        },
+        {
+          "additive": true,
+          "id": 201
+        }
+      ],
+      "internalName": "BlackrockDepths",
+      "mapId": 230,
+      "package": "mod-native-instance-maps.blackrockdepths",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "blackrockdepths",
+      "title": "BlackrockDepths",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 704
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/BlackrockSpire",
+      "artworkNameAlias": null,
+      "blpCount": 84,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 3105
+        },
+        {
+          "additive": true,
+          "id": 3104
+        },
+        {
+          "additive": true,
+          "id": 3089
+        },
+        {
+          "additive": true,
+          "id": 3100
+        },
+        {
+          "additive": true,
+          "id": 3210
+        },
+        {
+          "additive": true,
+          "id": 3102
+        },
+        {
+          "additive": true,
+          "id": 3096
+        },
+        {
+          "additive": true,
+          "id": 4742
+        },
+        {
+          "additive": true,
+          "id": 4705
+        },
+        {
+          "additive": true,
+          "id": 3116
+        },
+        {
+          "additive": true,
+          "id": 3097
+        },
+        {
+          "additive": true,
+          "id": 3099
+        },
+        {
+          "additive": true,
+          "id": 3118
+        },
+        {
+          "additive": true,
+          "id": 3119
+        },
+        {
+          "additive": true,
+          "id": 3122
+        },
+        {
+          "additive": true,
+          "id": 3127
+        },
+        {
+          "additive": true,
+          "id": 3126
+        },
+        {
+          "additive": true,
+          "id": 4092
+        },
+        {
+          "additive": true,
+          "id": 3123
+        },
+        {
+          "additive": true,
+          "id": 3125
+        },
+        {
+          "additive": true,
+          "id": 3124
+        },
+        {
+          "additive": true,
+          "id": 3120
+        },
+        {
+          "additive": true,
+          "id": 3121
+        },
+        {
+          "additive": true,
+          "id": 3128
+        },
+        {
+          "additive": true,
+          "id": 3135
+        },
+        {
+          "additive": true,
+          "id": 3134
+        },
+        {
+          "additive": true,
+          "id": 3132
+        },
+        {
+          "additive": true,
+          "id": 3133
+        },
+        {
+          "additive": true,
+          "id": 3131
+        },
+        {
+          "additive": true,
+          "id": 3129
+        },
+        {
+          "additive": true,
+          "id": 4145
+        },
+        {
+          "additive": true,
+          "id": 3136
+        },
+        {
+          "additive": true,
+          "id": 4146
+        },
+        {
+          "additive": true,
+          "id": 3098
+        },
+        {
+          "additive": true,
+          "id": 3117
+        },
+        {
+          "additive": true,
+          "id": 3010
+        },
+        {
+          "additive": true,
+          "id": 3214
+        },
+        {
+          "additive": true,
+          "id": 3091
+        },
+        {
+          "additive": true,
+          "id": 3101
+        },
+        {
+          "additive": true,
+          "id": 3113
+        },
+        {
+          "additive": true,
+          "id": 3130
+        },
+        {
+          "additive": true,
+          "id": 3137
+        },
+        {
+          "additive": true,
+          "id": 3009
+        },
+        {
+          "additive": true,
+          "id": 3081
+        },
+        {
+          "additive": true,
+          "id": 3092
+        },
+        {
+          "additive": true,
+          "id": 3011
+        },
+        {
+          "additive": true,
+          "id": 3212
+        },
+        {
+          "additive": true,
+          "id": 3211
+        },
+        {
+          "additive": true,
+          "id": 3006
+        },
+        {
+          "additive": true,
+          "id": 3007
+        },
+        {
+          "additive": true,
+          "id": 3213
+        },
+        {
+          "additive": true,
+          "id": 3005
+        },
+        {
+          "additive": true,
+          "id": 3082
+        },
+        {
+          "additive": true,
+          "id": 3008
+        },
+        {
+          "additive": true,
+          "id": 3093
+        },
+        {
+          "additive": true,
+          "id": 3080
+        },
+        {
+          "additive": true,
+          "id": 3083
+        },
+        {
+          "additive": true,
+          "id": 3084
+        },
+        {
+          "additive": true,
+          "id": 3103
+        },
+        {
+          "additive": true,
+          "id": 3109
+        },
+        {
+          "additive": true,
+          "id": 3110
+        },
+        {
+          "additive": true,
+          "id": 3114
+        },
+        {
+          "additive": true,
+          "id": 3108
+        },
+        {
+          "additive": true,
+          "id": 3106
+        },
+        {
+          "additive": true,
+          "id": 3095
+        },
+        {
+          "additive": true,
+          "id": 3094
+        },
+        {
+          "additive": true,
+          "id": 3141
+        },
+        {
+          "additive": true,
+          "id": 3142
+        },
+        {
+          "additive": true,
+          "id": 3140
+        },
+        {
+          "additive": true,
+          "id": 3115
+        },
+        {
+          "additive": true,
+          "id": 3138
+        },
+        {
+          "additive": true,
+          "id": 3111
+        },
+        {
+          "additive": true,
+          "id": 3112
+        },
+        {
+          "additive": true,
+          "id": 3139
+        },
+        {
+          "additive": true,
+          "id": 3107
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 229; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 202
+        },
+        {
+          "additive": true,
+          "id": 207
+        },
+        {
+          "additive": true,
+          "id": 208
+        },
+        {
+          "additive": true,
+          "id": 209
+        },
+        {
+          "additive": true,
+          "id": 210
+        },
+        {
+          "additive": true,
+          "id": 211
+        },
+        {
+          "additive": true,
+          "id": 212
+        }
+      ],
+      "internalName": "BlackrockSpire",
+      "mapId": 229,
+      "package": "mod-native-instance-maps.blackrockspire",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "blackrockspire",
+      "title": "BlackrockSpire",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 721
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/BlackwingLair",
+      "artworkNameAlias": null,
+      "blpCount": 48,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 2856
+        },
+        {
+          "additive": true,
+          "id": 2836
+        },
+        {
+          "additive": true,
+          "id": 2860
+        },
+        {
+          "additive": true,
+          "id": 2837
+        },
+        {
+          "additive": true,
+          "id": 2838
+        },
+        {
+          "additive": true,
+          "id": 2839
+        },
+        {
+          "additive": true,
+          "id": 2840
+        },
+        {
+          "additive": true,
+          "id": 2841
+        },
+        {
+          "additive": true,
+          "id": 2843
+        },
+        {
+          "additive": true,
+          "id": 2842
+        },
+        {
+          "additive": true,
+          "id": 2844
+        },
+        {
+          "additive": true,
+          "id": 2845
+        },
+        {
+          "additive": true,
+          "id": 2859
+        },
+        {
+          "additive": true,
+          "id": 2846
+        },
+        {
+          "additive": true,
+          "id": 2847
+        },
+        {
+          "additive": true,
+          "id": 2849
+        },
+        {
+          "additive": true,
+          "id": 2861
+        },
+        {
+          "additive": true,
+          "id": 2848
+        },
+        {
+          "additive": true,
+          "id": 2862
+        },
+        {
+          "additive": true,
+          "id": 2863
+        },
+        {
+          "additive": true,
+          "id": 2858
+        },
+        {
+          "additive": true,
+          "id": 2857
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 469; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 182
+        },
+        {
+          "additive": true,
+          "id": 183
+        },
+        {
+          "additive": true,
+          "id": 184
+        },
+        {
+          "additive": true,
+          "id": 185
+        }
+      ],
+      "internalName": "BlackwingLair",
+      "mapId": 469,
+      "package": "mod-native-instance-maps.blackwinglair",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "blackwinglair",
+      "title": "BlackwingLair",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 755
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/CoTHillsbradFoothills",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable declares no DungeonMap floor for map 560; the instance has no floor geometry to compose",
+        "WDM Stable declares no DungeonMapChunk for the floors of map 560",
+        "WDM Stable supplies no WorldMapTransforms row for map 560; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [],
+      "internalName": "CoTHillsbradFoothills",
+      "mapId": 560,
+      "package": "mod-native-instance-maps.cothillsbradfoothills",
+      "reasonCodes": [
+        "no-chunks",
+        "no-floors",
+        "no-transform"
+      ],
+      "slug": "cothillsbradfoothills",
+      "title": "CoTHillsbradFoothills",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 734
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/CoTMountHyjal",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable declares no DungeonMap floor for map 534; the instance has no floor geometry to compose",
+        "WDM Stable declares no DungeonMapChunk for the floors of map 534",
+        "WDM Stable supplies no WorldMapTransforms row for map 534; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [],
+      "internalName": "CoTMountHyjal",
+      "mapId": 534,
+      "package": "mod-native-instance-maps.cotmounthyjal",
+      "reasonCodes": [
+        "no-chunks",
+        "no-floors",
+        "no-transform"
+      ],
+      "slug": "cotmounthyjal",
+      "title": "CoTMountHyjal",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 775
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/CoTTheBlackMorass",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable declares no DungeonMap floor for map 269; the instance has no floor geometry to compose",
+        "WDM Stable declares no DungeonMapChunk for the floors of map 269",
+        "WDM Stable supplies no WorldMapTransforms row for map 269; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [],
+      "internalName": "CoTTheBlackMorass",
+      "mapId": 269,
+      "package": "mod-native-instance-maps.cottheblackmorass",
+      "reasonCodes": [
+        "no-chunks",
+        "no-floors",
+        "no-transform"
+      ],
+      "slug": "cottheblackmorass",
+      "title": "CoTTheBlackMorass",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 733
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/CoilfangReservoir",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 4370
+        },
+        {
+          "additive": true,
+          "id": 4373
+        },
+        {
+          "additive": true,
+          "id": 4372
+        },
+        {
+          "additive": true,
+          "id": 4377
+        },
+        {
+          "additive": true,
+          "id": 4366
+        },
+        {
+          "additive": true,
+          "id": 4367
+        },
+        {
+          "additive": true,
+          "id": 4371
+        },
+        {
+          "additive": true,
+          "id": 4374
+        },
+        {
+          "additive": true,
+          "id": 4369
+        },
+        {
+          "additive": true,
+          "id": 4375
+        },
+        {
+          "additive": true,
+          "id": 4376
+        },
+        {
+          "additive": true,
+          "id": 4368
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 548; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 355
+        }
+      ],
+      "internalName": "CoilfangReservoir",
+      "mapId": 548,
+      "package": "mod-native-instance-maps.coilfangreservoir",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "coilfangreservoir",
+      "title": "CoilfangReservoir",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 780
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/DeeprunTram",
+      "artworkNameAlias": null,
+      "blpCount": 24,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 6257
+        },
+        {
+          "additive": true,
+          "id": 6255
+        },
+        {
+          "additive": true,
+          "id": 6256
+        },
+        {
+          "additive": true,
+          "id": 6254
+        },
+        {
+          "additive": true,
+          "id": 6258
+        },
+        {
+          "additive": true,
+          "id": 6259
+        },
+        {
+          "additive": true,
+          "id": 6260
+        }
+      ],
+      "classification": "SAFE",
+      "findings": [],
+      "floors": [
+        {
+          "additive": true,
+          "id": 741
+        },
+        {
+          "additive": true,
+          "id": 742
+        }
+      ],
+      "internalName": "DeeprunTram",
+      "mapId": 369,
+      "package": "mod-native-instance-maps.deeprun-tram",
+      "reasonCodes": [],
+      "slug": "deeprun-tram",
+      "title": "Deeprun Tram",
+      "transforms": [
+        {
+          "additive": true,
+          "id": 12
+        }
+      ],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 922
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/DireMaul",
+      "artworkNameAlias": null,
+      "blpCount": 84,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 3645
+        },
+        {
+          "additive": true,
+          "id": 3694
+        },
+        {
+          "additive": true,
+          "id": 3692
+        },
+        {
+          "additive": true,
+          "id": 3693
+        },
+        {
+          "additive": true,
+          "id": 3691
+        },
+        {
+          "additive": true,
+          "id": 3651
+        },
+        {
+          "additive": true,
+          "id": 3649
+        },
+        {
+          "additive": true,
+          "id": 3650
+        },
+        {
+          "additive": true,
+          "id": 3652
+        },
+        {
+          "additive": true,
+          "id": 3653
+        },
+        {
+          "additive": true,
+          "id": 3664
+        },
+        {
+          "additive": true,
+          "id": 3665
+        },
+        {
+          "additive": true,
+          "id": 3485
+        },
+        {
+          "additive": true,
+          "id": 3498
+        },
+        {
+          "additive": true,
+          "id": 3500
+        },
+        {
+          "additive": true,
+          "id": 3499
+        },
+        {
+          "additive": true,
+          "id": 3675
+        },
+        {
+          "additive": true,
+          "id": 3680
+        },
+        {
+          "additive": true,
+          "id": 3679
+        },
+        {
+          "additive": true,
+          "id": 3678
+        },
+        {
+          "additive": true,
+          "id": 3677
+        },
+        {
+          "additive": true,
+          "id": 3676
+        },
+        {
+          "additive": true,
+          "id": 3672
+        },
+        {
+          "additive": true,
+          "id": 3673
+        },
+        {
+          "additive": true,
+          "id": 3674
+        },
+        {
+          "additive": true,
+          "id": 3671
+        },
+        {
+          "additive": true,
+          "id": 3695
+        },
+        {
+          "additive": true,
+          "id": 3646
+        },
+        {
+          "additive": true,
+          "id": 3647
+        },
+        {
+          "additive": true,
+          "id": 3656
+        },
+        {
+          "additive": true,
+          "id": 3657
+        },
+        {
+          "additive": true,
+          "id": 3658
+        },
+        {
+          "additive": true,
+          "id": 3659
+        },
+        {
+          "additive": true,
+          "id": 3660
+        },
+        {
+          "additive": true,
+          "id": 3648
+        },
+        {
+          "additive": true,
+          "id": 3687
+        },
+        {
+          "additive": true,
+          "id": 3682
+        },
+        {
+          "additive": true,
+          "id": 3486
+        },
+        {
+          "additive": true,
+          "id": 3701
+        },
+        {
+          "additive": true,
+          "id": 3700
+        },
+        {
+          "additive": true,
+          "id": 3699
+        },
+        {
+          "additive": true,
+          "id": 3698
+        },
+        {
+          "additive": true,
+          "id": 3697
+        },
+        {
+          "additive": true,
+          "id": 3696
+        },
+        {
+          "additive": true,
+          "id": 3663
+        },
+        {
+          "additive": true,
+          "id": 3661
+        },
+        {
+          "additive": true,
+          "id": 3654
+        },
+        {
+          "additive": true,
+          "id": 3655
+        },
+        {
+          "additive": true,
+          "id": 3662
+        },
+        {
+          "additive": true,
+          "id": 3666
+        },
+        {
+          "additive": true,
+          "id": 3668
+        },
+        {
+          "additive": true,
+          "id": 3667
+        },
+        {
+          "additive": true,
+          "id": 3685
+        },
+        {
+          "additive": true,
+          "id": 3684
+        },
+        {
+          "additive": true,
+          "id": 3489
+        },
+        {
+          "additive": true,
+          "id": 3488
+        },
+        {
+          "additive": true,
+          "id": 3487
+        },
+        {
+          "additive": true,
+          "id": 3490
+        },
+        {
+          "additive": true,
+          "id": 3688
+        },
+        {
+          "additive": true,
+          "id": 3689
+        },
+        {
+          "additive": true,
+          "id": 3690
+        },
+        {
+          "additive": true,
+          "id": 3497
+        },
+        {
+          "additive": true,
+          "id": 3492
+        },
+        {
+          "additive": true,
+          "id": 3496
+        },
+        {
+          "additive": true,
+          "id": 3491
+        },
+        {
+          "additive": true,
+          "id": 3686
+        },
+        {
+          "additive": true,
+          "id": 3669
+        },
+        {
+          "additive": true,
+          "id": 3670
+        },
+        {
+          "additive": true,
+          "id": 3681
+        },
+        {
+          "additive": true,
+          "id": 3493
+        },
+        {
+          "additive": true,
+          "id": 3494
+        },
+        {
+          "additive": true,
+          "id": 3495
+        },
+        {
+          "additive": true,
+          "id": 3683
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 429; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 262
+        },
+        {
+          "additive": true,
+          "id": 263
+        },
+        {
+          "additive": true,
+          "id": 264
+        },
+        {
+          "additive": true,
+          "id": 265
+        },
+        {
+          "additive": true,
+          "id": 266
+        },
+        {
+          "additive": true,
+          "id": 267
+        }
+      ],
+      "internalName": "DireMaul",
+      "mapId": 429,
+      "package": "mod-native-instance-maps.diremaul",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "diremaul",
+      "title": "DireMaul",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 699
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/Expansion01",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [],
+      "classification": "REVIEW",
+      "findings": [
+        "WorldMapArea 466 is a stock row that WDM leaves untouched; the client already has it and there is nothing additive to ship",
+        "WDM Stable declares no DungeonMap floor for map 530; the instance has no floor geometry to compose",
+        "WDM Stable declares no DungeonMapChunk for the floors of map 530",
+        "ambiguous: WorldMapTransforms 2, 3 all name map 530; a package declares one transform per map"
+      ],
+      "floors": [],
+      "internalName": "Expansion01",
+      "mapId": 530,
+      "package": "mod-native-instance-maps.expansion01",
+      "reasonCodes": [
+        "ambiguous-transform",
+        "no-chunks",
+        "no-floors",
+        "stock-world-map-area"
+      ],
+      "slug": "expansion01",
+      "title": "Expansion01",
+      "transforms": [
+        {
+          "additive": false,
+          "id": 2
+        },
+        {
+          "additive": false,
+          "id": 3
+        }
+      ],
+      "worldMapArea": [
+        {
+          "additive": false,
+          "id": 466
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/Gnomeregan",
+      "artworkNameAlias": null,
+      "blpCount": 48,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 2655
+        },
+        {
+          "additive": true,
+          "id": 2561
+        },
+        {
+          "additive": true,
+          "id": 2661
+        },
+        {
+          "additive": true,
+          "id": 2562
+        },
+        {
+          "additive": true,
+          "id": 2563
+        },
+        {
+          "additive": true,
+          "id": 2564
+        },
+        {
+          "additive": true,
+          "id": 2565
+        },
+        {
+          "additive": true,
+          "id": 2566
+        },
+        {
+          "additive": true,
+          "id": 2567
+        },
+        {
+          "additive": true,
+          "id": 2550
+        },
+        {
+          "additive": true,
+          "id": 2549
+        },
+        {
+          "additive": true,
+          "id": 2548
+        },
+        {
+          "additive": true,
+          "id": 2547
+        },
+        {
+          "additive": true,
+          "id": 2558
+        },
+        {
+          "additive": true,
+          "id": 2665
+        },
+        {
+          "additive": true,
+          "id": 4095
+        },
+        {
+          "additive": true,
+          "id": 2556
+        },
+        {
+          "additive": true,
+          "id": 4097
+        },
+        {
+          "additive": true,
+          "id": 2554
+        },
+        {
+          "additive": true,
+          "id": 2557
+        },
+        {
+          "additive": true,
+          "id": 2559
+        },
+        {
+          "additive": true,
+          "id": 2552
+        },
+        {
+          "additive": true,
+          "id": 4099
+        },
+        {
+          "additive": true,
+          "id": 4096
+        },
+        {
+          "additive": true,
+          "id": 4101
+        },
+        {
+          "additive": true,
+          "id": 2553
+        },
+        {
+          "additive": true,
+          "id": 2551
+        },
+        {
+          "additive": true,
+          "id": 2560
+        },
+        {
+          "additive": true,
+          "id": 2555
+        },
+        {
+          "additive": true,
+          "id": 4103
+        },
+        {
+          "additive": true,
+          "id": 4098
+        },
+        {
+          "additive": true,
+          "id": 4100
+        },
+        {
+          "additive": true,
+          "id": 4102
+        },
+        {
+          "additive": true,
+          "id": 2641
+        },
+        {
+          "additive": true,
+          "id": 2643
+        },
+        {
+          "additive": true,
+          "id": 2570
+        },
+        {
+          "additive": true,
+          "id": 2572
+        },
+        {
+          "additive": true,
+          "id": 2569
+        },
+        {
+          "additive": true,
+          "id": 2571
+        },
+        {
+          "additive": true,
+          "id": 2660
+        },
+        {
+          "additive": true,
+          "id": 2656
+        },
+        {
+          "additive": true,
+          "id": 2654
+        },
+        {
+          "additive": true,
+          "id": 2652
+        },
+        {
+          "additive": true,
+          "id": 2650
+        },
+        {
+          "additive": true,
+          "id": 2648
+        },
+        {
+          "additive": true,
+          "id": 2646
+        },
+        {
+          "additive": true,
+          "id": 2642
+        },
+        {
+          "additive": true,
+          "id": 2644
+        },
+        {
+          "additive": true,
+          "id": 2647
+        },
+        {
+          "additive": true,
+          "id": 2653
+        },
+        {
+          "additive": true,
+          "id": 2657
+        },
+        {
+          "additive": true,
+          "id": 2659
+        },
+        {
+          "additive": true,
+          "id": 2575
+        },
+        {
+          "additive": true,
+          "id": 2580
+        },
+        {
+          "additive": true,
+          "id": 2581
+        },
+        {
+          "additive": true,
+          "id": 2573
+        },
+        {
+          "additive": true,
+          "id": 2574
+        },
+        {
+          "additive": true,
+          "id": 2578
+        },
+        {
+          "additive": true,
+          "id": 2576
+        },
+        {
+          "additive": true,
+          "id": 2633
+        },
+        {
+          "additive": true,
+          "id": 2568
+        },
+        {
+          "additive": true,
+          "id": 2651
+        },
+        {
+          "additive": true,
+          "id": 2649
+        },
+        {
+          "additive": true,
+          "id": 2645
+        },
+        {
+          "additive": true,
+          "id": 2658
+        },
+        {
+          "additive": true,
+          "id": 2545
+        },
+        {
+          "additive": true,
+          "id": 2546
+        },
+        {
+          "additive": true,
+          "id": 2640
+        },
+        {
+          "additive": true,
+          "id": 2634
+        },
+        {
+          "additive": true,
+          "id": 2579
+        },
+        {
+          "additive": true,
+          "id": 2635
+        },
+        {
+          "additive": true,
+          "id": 2639
+        },
+        {
+          "additive": true,
+          "id": 2636
+        },
+        {
+          "additive": true,
+          "id": 2637
+        },
+        {
+          "additive": true,
+          "id": 2638
+        },
+        {
+          "additive": true,
+          "id": 2662
+        },
+        {
+          "additive": true,
+          "id": 2664
+        },
+        {
+          "additive": true,
+          "id": 2663
+        },
+        {
+          "additive": true,
+          "id": 2577
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 90; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 168
+        },
+        {
+          "additive": true,
+          "id": 169
+        },
+        {
+          "additive": true,
+          "id": 170
+        },
+        {
+          "additive": true,
+          "id": 172
+        }
+      ],
+      "internalName": "Gnomeregan",
+      "mapId": 90,
+      "package": "mod-native-instance-maps.gnomeregan",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "gnomeregan",
+      "title": "Gnomeregan",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 691
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/GruulsLair",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 4164
+        },
+        {
+          "additive": true,
+          "id": 4167
+        },
+        {
+          "additive": true,
+          "id": 4166
+        },
+        {
+          "additive": true,
+          "id": 4165
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 565; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 322
+        }
+      ],
+      "internalName": "GruulsLair",
+      "mapId": 565,
+      "package": "mod-native-instance-maps.gruulslair",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "gruulslair",
+      "title": "GruulsLair",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 776
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/HellfireRamparts",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 3269
+        },
+        {
+          "additive": true,
+          "id": 3271
+        },
+        {
+          "additive": true,
+          "id": 3270
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 543; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 219
+        }
+      ],
+      "internalName": "HellfireRamparts",
+      "mapId": 543,
+      "package": "mod-native-instance-maps.hellfireramparts",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "hellfireramparts",
+      "title": "HellfireRamparts",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 797
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/Karazhan",
+      "artworkNameAlias": null,
+      "blpCount": 204,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 4435
+        },
+        {
+          "additive": true,
+          "id": 4477
+        },
+        {
+          "additive": true,
+          "id": 4478
+        },
+        {
+          "additive": true,
+          "id": 4506
+        },
+        {
+          "additive": true,
+          "id": 4515
+        },
+        {
+          "additive": true,
+          "id": 4519
+        },
+        {
+          "additive": true,
+          "id": 4442
+        },
+        {
+          "additive": true,
+          "id": 4438
+        },
+        {
+          "additive": true,
+          "id": 4447
+        },
+        {
+          "additive": true,
+          "id": 4452
+        },
+        {
+          "additive": true,
+          "id": 4453
+        },
+        {
+          "additive": true,
+          "id": 4454
+        },
+        {
+          "additive": true,
+          "id": 4451
+        },
+        {
+          "additive": true,
+          "id": 4461
+        },
+        {
+          "additive": true,
+          "id": 4462
+        },
+        {
+          "additive": true,
+          "id": 4466
+        },
+        {
+          "additive": true,
+          "id": 4469
+        },
+        {
+          "additive": true,
+          "id": 4448
+        },
+        {
+          "additive": true,
+          "id": 4464
+        },
+        {
+          "additive": true,
+          "id": 4459
+        },
+        {
+          "additive": true,
+          "id": 4468
+        },
+        {
+          "additive": true,
+          "id": 4467
+        },
+        {
+          "additive": true,
+          "id": 4474
+        },
+        {
+          "additive": true,
+          "id": 4472
+        },
+        {
+          "additive": true,
+          "id": 4476
+        },
+        {
+          "additive": true,
+          "id": 4480
+        },
+        {
+          "additive": true,
+          "id": 4482
+        },
+        {
+          "additive": true,
+          "id": 4484
+        },
+        {
+          "additive": true,
+          "id": 4481
+        },
+        {
+          "additive": true,
+          "id": 4483
+        },
+        {
+          "additive": true,
+          "id": 4470
+        },
+        {
+          "additive": true,
+          "id": 4471
+        },
+        {
+          "additive": true,
+          "id": 4479
+        },
+        {
+          "additive": true,
+          "id": 4434
+        },
+        {
+          "additive": true,
+          "id": 4446
+        },
+        {
+          "additive": true,
+          "id": 4445
+        },
+        {
+          "additive": true,
+          "id": 4450
+        },
+        {
+          "additive": true,
+          "id": 4436
+        },
+        {
+          "additive": true,
+          "id": 4444
+        },
+        {
+          "additive": true,
+          "id": 4455
+        },
+        {
+          "additive": true,
+          "id": 4485
+        },
+        {
+          "additive": true,
+          "id": 4486
+        },
+        {
+          "additive": true,
+          "id": 4505
+        },
+        {
+          "additive": true,
+          "id": 4512
+        },
+        {
+          "additive": true,
+          "id": 4520
+        },
+        {
+          "additive": true,
+          "id": 4508
+        },
+        {
+          "additive": true,
+          "id": 4510
+        },
+        {
+          "additive": true,
+          "id": 4513
+        },
+        {
+          "additive": true,
+          "id": 4507
+        },
+        {
+          "additive": true,
+          "id": 4514
+        },
+        {
+          "additive": true,
+          "id": 4517
+        },
+        {
+          "additive": true,
+          "id": 4528
+        },
+        {
+          "additive": true,
+          "id": 4511
+        },
+        {
+          "additive": true,
+          "id": 4527
+        },
+        {
+          "additive": true,
+          "id": 4521
+        },
+        {
+          "additive": true,
+          "id": 4522
+        },
+        {
+          "additive": true,
+          "id": 4523
+        },
+        {
+          "additive": true,
+          "id": 4524
+        },
+        {
+          "additive": true,
+          "id": 4525
+        },
+        {
+          "additive": true,
+          "id": 4526
+        },
+        {
+          "additive": true,
+          "id": 4516
+        },
+        {
+          "additive": true,
+          "id": 4494
+        },
+        {
+          "additive": true,
+          "id": 4501
+        },
+        {
+          "additive": true,
+          "id": 4495
+        },
+        {
+          "additive": true,
+          "id": 4496
+        },
+        {
+          "additive": true,
+          "id": 4498
+        },
+        {
+          "additive": true,
+          "id": 4499
+        },
+        {
+          "additive": true,
+          "id": 4497
+        },
+        {
+          "additive": true,
+          "id": 4503
+        },
+        {
+          "additive": true,
+          "id": 4504
+        },
+        {
+          "additive": true,
+          "id": 4518
+        },
+        {
+          "additive": true,
+          "id": 4489
+        },
+        {
+          "additive": true,
+          "id": 4493
+        },
+        {
+          "additive": true,
+          "id": 4500
+        },
+        {
+          "additive": true,
+          "id": 4502
+        },
+        {
+          "additive": true,
+          "id": 4439
+        },
+        {
+          "additive": true,
+          "id": 4443
+        },
+        {
+          "additive": true,
+          "id": 4441
+        },
+        {
+          "additive": true,
+          "id": 4449
+        },
+        {
+          "additive": true,
+          "id": 4460
+        },
+        {
+          "additive": true,
+          "id": 4509
+        },
+        {
+          "additive": true,
+          "id": 4475
+        },
+        {
+          "additive": true,
+          "id": 4488
+        },
+        {
+          "additive": true,
+          "id": 4487
+        },
+        {
+          "additive": true,
+          "id": 4465
+        },
+        {
+          "additive": true,
+          "id": 4437
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 532; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 383
+        },
+        {
+          "additive": true,
+          "id": 385
+        },
+        {
+          "additive": true,
+          "id": 386
+        },
+        {
+          "additive": true,
+          "id": 387
+        },
+        {
+          "additive": true,
+          "id": 388
+        },
+        {
+          "additive": true,
+          "id": 389
+        },
+        {
+          "additive": true,
+          "id": 390
+        },
+        {
+          "additive": true,
+          "id": 391
+        },
+        {
+          "additive": true,
+          "id": 393
+        },
+        {
+          "additive": true,
+          "id": 398
+        },
+        {
+          "additive": true,
+          "id": 399
+        },
+        {
+          "additive": true,
+          "id": 401
+        },
+        {
+          "additive": true,
+          "id": 402
+        },
+        {
+          "additive": true,
+          "id": 403
+        },
+        {
+          "additive": true,
+          "id": 404
+        },
+        {
+          "additive": true,
+          "id": 405
+        },
+        {
+          "additive": true,
+          "id": 406
+        }
+      ],
+      "internalName": "Karazhan",
+      "mapId": 532,
+      "package": "mod-native-instance-maps.karazhan",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "karazhan",
+      "title": "Karazhan",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 799
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/MagistersTerrace",
+      "artworkNameAlias": null,
+      "blpCount": 24,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 3357
+        },
+        {
+          "additive": true,
+          "id": 3356
+        },
+        {
+          "additive": true,
+          "id": 3355
+        },
+        {
+          "additive": true,
+          "id": 3369
+        },
+        {
+          "additive": true,
+          "id": 3366
+        },
+        {
+          "additive": true,
+          "id": 3365
+        },
+        {
+          "additive": true,
+          "id": 3352
+        },
+        {
+          "additive": true,
+          "id": 3358
+        },
+        {
+          "additive": true,
+          "id": 3362
+        },
+        {
+          "additive": true,
+          "id": 3361
+        },
+        {
+          "additive": true,
+          "id": 3363
+        },
+        {
+          "additive": true,
+          "id": 3364
+        },
+        {
+          "additive": true,
+          "id": 3359
+        },
+        {
+          "additive": true,
+          "id": 3360
+        },
+        {
+          "additive": true,
+          "id": 3353
+        },
+        {
+          "additive": true,
+          "id": 3354
+        },
+        {
+          "additive": true,
+          "id": 3367
+        },
+        {
+          "additive": true,
+          "id": 3368
+        },
+        {
+          "additive": true,
+          "id": 3370
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 585; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 236
+        },
+        {
+          "additive": true,
+          "id": 237
+        }
+      ],
+      "internalName": "MagistersTerrace",
+      "mapId": 585,
+      "package": "mod-native-instance-maps.magistersterrace",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "magistersterrace",
+      "title": "MagistersTerrace",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 798
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/MagtheridonsLair",
+      "artworkNameAlias": "Magtheridonslair",
+      "blpCount": 0,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 4288
+        },
+        {
+          "additive": true,
+          "id": 4285
+        },
+        {
+          "additive": true,
+          "id": 4282
+        },
+        {
+          "additive": true,
+          "id": 4283
+        },
+        {
+          "additive": true,
+          "id": 4287
+        },
+        {
+          "additive": true,
+          "id": 4284
+        },
+        {
+          "additive": true,
+          "id": 4286
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable draws this map from Interface/WorldMap/Magtheridonslair/, but the WorldMapArea internal_name is 'MagtheridonsLair'; the client derives the directory from internal_name, and inventing or re-casing either name would change a client-baked identity",
+        "WDM Stable supplies no WorldMapTransforms row for map 544; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 341
+        }
+      ],
+      "internalName": "MagtheridonsLair",
+      "mapId": 544,
+      "package": "mod-native-instance-maps.magtheridonslair",
+      "reasonCodes": [
+        "artwork-name-mismatch",
+        "no-transform"
+      ],
+      "slug": "magtheridonslair",
+      "title": "MagtheridonsLair",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 779
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/Magtheridonslair",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable has no WorldMapArea row whose internal_name is 'Magtheridonslair'; there is nothing for the client to attach the artwork directory to, and authoring one would be invention"
+      ],
+      "floors": [],
+      "internalName": "Magtheridonslair",
+      "mapId": null,
+      "package": "mod-native-instance-maps.magtheridonslair",
+      "reasonCodes": [
+        "no-world-map-area"
+      ],
+      "slug": "magtheridonslair",
+      "title": "Magtheridonslair",
+      "transforms": [],
+      "worldMapArea": []
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/ManaTombs",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 3374
+        },
+        {
+          "additive": true,
+          "id": 3375
+        },
+        {
+          "additive": true,
+          "id": 3383
+        },
+        {
+          "additive": true,
+          "id": 3384
+        },
+        {
+          "additive": true,
+          "id": 3372
+        },
+        {
+          "additive": true,
+          "id": 3378
+        },
+        {
+          "additive": true,
+          "id": 3371
+        },
+        {
+          "additive": true,
+          "id": 3379
+        },
+        {
+          "additive": true,
+          "id": 3377
+        },
+        {
+          "additive": true,
+          "id": 3380
+        },
+        {
+          "additive": true,
+          "id": 3381
+        },
+        {
+          "additive": true,
+          "id": 3376
+        },
+        {
+          "additive": true,
+          "id": 3382
+        },
+        {
+          "additive": true,
+          "id": 3373
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 557; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 238
+        }
+      ],
+      "internalName": "ManaTombs",
+      "mapId": 557,
+      "package": "mod-native-instance-maps.manatombs",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "manatombs",
+      "title": "ManaTombs",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 732
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/Maraudon",
+      "artworkNameAlias": null,
+      "blpCount": 24,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 3525
+        },
+        {
+          "additive": true,
+          "id": 3526
+        },
+        {
+          "additive": true,
+          "id": 3527
+        },
+        {
+          "additive": true,
+          "id": 3528
+        },
+        {
+          "additive": true,
+          "id": 3588
+        },
+        {
+          "additive": true,
+          "id": 3529
+        },
+        {
+          "additive": true,
+          "id": 3530
+        },
+        {
+          "additive": true,
+          "id": 3533
+        },
+        {
+          "additive": true,
+          "id": 3534
+        },
+        {
+          "additive": true,
+          "id": 3535
+        },
+        {
+          "additive": true,
+          "id": 3536
+        },
+        {
+          "additive": true,
+          "id": 3537
+        },
+        {
+          "additive": true,
+          "id": 3538
+        },
+        {
+          "additive": true,
+          "id": 3539
+        },
+        {
+          "additive": true,
+          "id": 3590
+        },
+        {
+          "additive": true,
+          "id": 3591
+        },
+        {
+          "additive": true,
+          "id": 3589
+        },
+        {
+          "additive": true,
+          "id": 3531
+        },
+        {
+          "additive": true,
+          "id": 3532
+        },
+        {
+          "additive": true,
+          "id": 3523
+        },
+        {
+          "additive": true,
+          "id": 3524
+        },
+        {
+          "additive": true,
+          "id": 3502
+        },
+        {
+          "additive": true,
+          "id": 3503
+        },
+        {
+          "additive": true,
+          "id": 3504
+        },
+        {
+          "additive": true,
+          "id": 3505
+        },
+        {
+          "additive": true,
+          "id": 3521
+        },
+        {
+          "additive": true,
+          "id": 3520
+        },
+        {
+          "additive": true,
+          "id": 3518
+        },
+        {
+          "additive": true,
+          "id": 3516
+        },
+        {
+          "additive": true,
+          "id": 3507
+        },
+        {
+          "additive": true,
+          "id": 3509
+        },
+        {
+          "additive": true,
+          "id": 3510
+        },
+        {
+          "additive": true,
+          "id": 3511
+        },
+        {
+          "additive": true,
+          "id": 3515
+        },
+        {
+          "additive": true,
+          "id": 3514
+        },
+        {
+          "additive": true,
+          "id": 3513
+        },
+        {
+          "additive": true,
+          "id": 3512
+        },
+        {
+          "additive": true,
+          "id": 3519
+        },
+        {
+          "additive": true,
+          "id": 3522
+        },
+        {
+          "additive": true,
+          "id": 3517
+        },
+        {
+          "additive": true,
+          "id": 3508
+        },
+        {
+          "additive": true,
+          "id": 3506
+        },
+        {
+          "additive": true,
+          "id": 3501
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 349; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 256
+        },
+        {
+          "additive": true,
+          "id": 257
+        }
+      ],
+      "internalName": "Maraudon",
+      "mapId": 349,
+      "package": "mod-native-instance-maps.maraudon",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "maraudon",
+      "title": "Maraudon",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 750
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/MoltenCore",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 2832
+        },
+        {
+          "additive": true,
+          "id": 2826
+        },
+        {
+          "additive": true,
+          "id": 2825
+        },
+        {
+          "additive": true,
+          "id": 2833
+        },
+        {
+          "additive": true,
+          "id": 2827
+        },
+        {
+          "additive": true,
+          "id": 2834
+        },
+        {
+          "additive": true,
+          "id": 2824
+        },
+        {
+          "additive": true,
+          "id": 2828
+        },
+        {
+          "additive": true,
+          "id": 2835
+        },
+        {
+          "additive": true,
+          "id": 2829
+        },
+        {
+          "additive": true,
+          "id": 2830
+        },
+        {
+          "additive": true,
+          "id": 2831
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 409; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 181
+        }
+      ],
+      "internalName": "MoltenCore",
+      "mapId": 409,
+      "package": "mod-native-instance-maps.moltencore",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "moltencore",
+      "title": "MoltenCore",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 696
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/NetherstormArena",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [],
+      "classification": "REVIEW",
+      "findings": [
+        "WorldMapArea 482 is a stock row that WDM leaves untouched; the client already has it and there is nothing additive to ship",
+        "WDM Stable declares no DungeonMap floor for map 566; the instance has no floor geometry to compose",
+        "WDM Stable declares no DungeonMapChunk for the floors of map 566",
+        "WDM Stable supplies no WorldMapTransforms row for map 566; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [],
+      "internalName": "NetherstormArena",
+      "mapId": 566,
+      "package": "mod-native-instance-maps.netherstormarena",
+      "reasonCodes": [
+        "no-chunks",
+        "no-floors",
+        "no-transform",
+        "stock-world-map-area"
+      ],
+      "slug": "netherstormarena",
+      "title": "NetherstormArena",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": false,
+          "id": 482
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/Northrend",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [
+        {
+          "additive": false,
+          "id": 1182
+        },
+        {
+          "additive": false,
+          "id": 1183
+        },
+        {
+          "additive": false,
+          "id": 1184
+        },
+        {
+          "additive": false,
+          "id": 1185
+        },
+        {
+          "additive": false,
+          "id": 1186
+        },
+        {
+          "additive": false,
+          "id": 1179
+        },
+        {
+          "additive": false,
+          "id": 1180
+        },
+        {
+          "additive": false,
+          "id": 1153
+        },
+        {
+          "additive": false,
+          "id": 1181
+        },
+        {
+          "additive": false,
+          "id": 1204
+        },
+        {
+          "additive": false,
+          "id": 1205
+        },
+        {
+          "additive": false,
+          "id": 1206
+        },
+        {
+          "additive": false,
+          "id": 1207
+        },
+        {
+          "additive": false,
+          "id": 1208
+        },
+        {
+          "additive": false,
+          "id": 1137
+        },
+        {
+          "additive": false,
+          "id": 1138
+        },
+        {
+          "additive": false,
+          "id": 1170
+        },
+        {
+          "additive": false,
+          "id": 1171
+        },
+        {
+          "additive": false,
+          "id": 1172
+        },
+        {
+          "additive": false,
+          "id": 1173
+        },
+        {
+          "additive": false,
+          "id": 1174
+        },
+        {
+          "additive": false,
+          "id": 1175
+        },
+        {
+          "additive": false,
+          "id": 1203
+        },
+        {
+          "additive": false,
+          "id": 1193
+        },
+        {
+          "additive": false,
+          "id": 1194
+        },
+        {
+          "additive": false,
+          "id": 1165
+        },
+        {
+          "additive": false,
+          "id": 1178
+        },
+        {
+          "additive": false,
+          "id": 1189
+        },
+        {
+          "additive": false,
+          "id": 1187
+        },
+        {
+          "additive": false,
+          "id": 1188
+        },
+        {
+          "additive": false,
+          "id": 1190
+        },
+        {
+          "additive": false,
+          "id": 1191
+        },
+        {
+          "additive": false,
+          "id": 1192
+        },
+        {
+          "additive": false,
+          "id": 1168
+        },
+        {
+          "additive": false,
+          "id": 1166
+        },
+        {
+          "additive": false,
+          "id": 1167
+        },
+        {
+          "additive": false,
+          "id": 1169
+        },
+        {
+          "additive": false,
+          "id": 1225
+        },
+        {
+          "additive": false,
+          "id": 1154
+        },
+        {
+          "additive": false,
+          "id": 1155
+        },
+        {
+          "additive": false,
+          "id": 1196
+        },
+        {
+          "additive": false,
+          "id": 1197
+        },
+        {
+          "additive": false,
+          "id": 1198
+        },
+        {
+          "additive": false,
+          "id": 1199
+        },
+        {
+          "additive": false,
+          "id": 1200
+        },
+        {
+          "additive": false,
+          "id": 1201
+        },
+        {
+          "additive": false,
+          "id": 1202
+        },
+        {
+          "additive": false,
+          "id": 1156
+        },
+        {
+          "additive": false,
+          "id": 1157
+        },
+        {
+          "additive": false,
+          "id": 1176
+        },
+        {
+          "additive": false,
+          "id": 1177
+        },
+        {
+          "additive": false,
+          "id": 1195
+        },
+        {
+          "additive": false,
+          "id": 1140
+        },
+        {
+          "additive": false,
+          "id": 1141
+        },
+        {
+          "additive": false,
+          "id": 1142
+        },
+        {
+          "additive": false,
+          "id": 1143
+        },
+        {
+          "additive": false,
+          "id": 1144
+        },
+        {
+          "additive": false,
+          "id": 1145
+        },
+        {
+          "additive": false,
+          "id": 1146
+        },
+        {
+          "additive": false,
+          "id": 1147
+        },
+        {
+          "additive": false,
+          "id": 1148
+        },
+        {
+          "additive": false,
+          "id": 1149
+        },
+        {
+          "additive": false,
+          "id": 1150
+        },
+        {
+          "additive": false,
+          "id": 1151
+        },
+        {
+          "additive": false,
+          "id": 1152
+        },
+        {
+          "additive": false,
+          "id": 1158
+        },
+        {
+          "additive": false,
+          "id": 1159
+        },
+        {
+          "additive": false,
+          "id": 1160
+        },
+        {
+          "additive": false,
+          "id": 1161
+        },
+        {
+          "additive": false,
+          "id": 1162
+        },
+        {
+          "additive": false,
+          "id": 1163
+        },
+        {
+          "additive": false,
+          "id": 1164
+        },
+        {
+          "additive": false,
+          "id": 1267
+        },
+        {
+          "additive": false,
+          "id": 1268
+        },
+        {
+          "additive": false,
+          "id": 1269
+        },
+        {
+          "additive": false,
+          "id": 1283
+        },
+        {
+          "additive": false,
+          "id": 1249
+        },
+        {
+          "additive": false,
+          "id": 1250
+        },
+        {
+          "additive": false,
+          "id": 1251
+        },
+        {
+          "additive": false,
+          "id": 1252
+        },
+        {
+          "additive": false,
+          "id": 1253
+        },
+        {
+          "additive": false,
+          "id": 1254
+        },
+        {
+          "additive": false,
+          "id": 1259
+        },
+        {
+          "additive": false,
+          "id": 1260
+        },
+        {
+          "additive": false,
+          "id": 1261
+        },
+        {
+          "additive": false,
+          "id": 1262
+        },
+        {
+          "additive": false,
+          "id": 1263
+        },
+        {
+          "additive": false,
+          "id": 1264
+        },
+        {
+          "additive": false,
+          "id": 1265
+        },
+        {
+          "additive": false,
+          "id": 1266
+        },
+        {
+          "additive": false,
+          "id": 1255
+        },
+        {
+          "additive": false,
+          "id": 1256
+        },
+        {
+          "additive": false,
+          "id": 1275
+        },
+        {
+          "additive": false,
+          "id": 1270
+        },
+        {
+          "additive": false,
+          "id": 1276
+        },
+        {
+          "additive": false,
+          "id": 1272
+        },
+        {
+          "additive": false,
+          "id": 1271
+        },
+        {
+          "additive": false,
+          "id": 1277
+        },
+        {
+          "additive": false,
+          "id": 1274
+        },
+        {
+          "additive": false,
+          "id": 1308
+        },
+        {
+          "additive": false,
+          "id": 1273
+        },
+        {
+          "additive": false,
+          "id": 1307
+        },
+        {
+          "additive": false,
+          "id": 1258
+        },
+        {
+          "additive": false,
+          "id": 1257
+        },
+        {
+          "additive": false,
+          "id": 1300
+        },
+        {
+          "additive": false,
+          "id": 1301
+        },
+        {
+          "additive": false,
+          "id": 1296
+        },
+        {
+          "additive": false,
+          "id": 1297
+        },
+        {
+          "additive": false,
+          "id": 1298
+        },
+        {
+          "additive": false,
+          "id": 1299
+        },
+        {
+          "additive": false,
+          "id": 1295
+        },
+        {
+          "additive": false,
+          "id": 1285
+        },
+        {
+          "additive": false,
+          "id": 1289
+        },
+        {
+          "additive": false,
+          "id": 1278
+        },
+        {
+          "additive": false,
+          "id": 1281
+        },
+        {
+          "additive": false,
+          "id": 1280
+        },
+        {
+          "additive": false,
+          "id": 1282
+        },
+        {
+          "additive": false,
+          "id": 1279
+        },
+        {
+          "additive": false,
+          "id": 1287
+        },
+        {
+          "additive": false,
+          "id": 1291
+        },
+        {
+          "additive": false,
+          "id": 1288
+        },
+        {
+          "additive": false,
+          "id": 1293
+        },
+        {
+          "additive": false,
+          "id": 1294
+        },
+        {
+          "additive": false,
+          "id": 1284
+        },
+        {
+          "additive": false,
+          "id": 1302
+        },
+        {
+          "additive": false,
+          "id": 1311
+        },
+        {
+          "additive": false,
+          "id": 1312
+        },
+        {
+          "additive": false,
+          "id": 1304
+        },
+        {
+          "additive": false,
+          "id": 1305
+        },
+        {
+          "additive": false,
+          "id": 1309
+        },
+        {
+          "additive": false,
+          "id": 1306
+        },
+        {
+          "additive": false,
+          "id": 1310
+        },
+        {
+          "additive": false,
+          "id": 1292
+        },
+        {
+          "additive": false,
+          "id": 1286
+        },
+        {
+          "additive": false,
+          "id": 1303
+        },
+        {
+          "additive": false,
+          "id": 1290
+        },
+        {
+          "additive": false,
+          "id": 1317
+        },
+        {
+          "additive": false,
+          "id": 1316
+        },
+        {
+          "additive": false,
+          "id": 1318
+        },
+        {
+          "additive": false,
+          "id": 1314
+        },
+        {
+          "additive": false,
+          "id": 1319
+        },
+        {
+          "additive": false,
+          "id": 1313
+        },
+        {
+          "additive": false,
+          "id": 1320
+        },
+        {
+          "additive": false,
+          "id": 1315
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WorldMapArea 485 is a stock row that WDM leaves untouched; the client already has it and there is nothing additive to ship",
+        "DungeonMap floor 27 is already a stock row; the client already has this floor and there is nothing additive to ship",
+        "DungeonMap floor 26 is already a stock row; the client already has this floor and there is nothing additive to ship",
+        "DungeonMapChunk row(s) 1182, 1183, 1184, 1185, 1186, 1179, 1180, 1153 already exist in the stock client; the client already has this tile set and there is nothing additive to ship",
+        "WDM Stable supplies no WorldMapTransforms row for map 571; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": false,
+          "id": 27
+        },
+        {
+          "additive": false,
+          "id": 26
+        }
+      ],
+      "internalName": "Northrend",
+      "mapId": 571,
+      "package": "mod-native-instance-maps.northrend",
+      "reasonCodes": [
+        "no-transform",
+        "stock-chunk",
+        "stock-floor",
+        "stock-world-map-area"
+      ],
+      "slug": "northrend",
+      "title": "Northrend",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": false,
+          "id": 485
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/OnyxiasLair",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 2938
+        },
+        {
+          "additive": true,
+          "id": 2943
+        },
+        {
+          "additive": true,
+          "id": 2939
+        },
+        {
+          "additive": true,
+          "id": 2942
+        },
+        {
+          "additive": true,
+          "id": 2944
+        },
+        {
+          "additive": true,
+          "id": 2940
+        },
+        {
+          "additive": true,
+          "id": 2945
+        },
+        {
+          "additive": true,
+          "id": 2941
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 249; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 196
+        }
+      ],
+      "internalName": "OnyxiasLair",
+      "mapId": 249,
+      "package": "mod-native-instance-maps.onyxiaslair",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "onyxiaslair",
+      "title": "OnyxiasLair",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 718
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/Ragefire",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 1991
+        },
+        {
+          "additive": true,
+          "id": 1988
+        },
+        {
+          "additive": true,
+          "id": 1989
+        },
+        {
+          "additive": true,
+          "id": 1992
+        },
+        {
+          "additive": true,
+          "id": 1990
+        },
+        {
+          "additive": true,
+          "id": 1993
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 389; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 136
+        }
+      ],
+      "internalName": "Ragefire",
+      "mapId": 389,
+      "package": "mod-native-instance-maps.ragefire",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "ragefire",
+      "title": "Ragefire",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 680
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/RazorfenDowns",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 2161
+        },
+        {
+          "additive": true,
+          "id": 2167
+        },
+        {
+          "additive": true,
+          "id": 2162
+        },
+        {
+          "additive": true,
+          "id": 2168
+        },
+        {
+          "additive": true,
+          "id": 2163
+        },
+        {
+          "additive": true,
+          "id": 2169
+        },
+        {
+          "additive": true,
+          "id": 2164
+        },
+        {
+          "additive": true,
+          "id": 2166
+        },
+        {
+          "additive": true,
+          "id": 2170
+        },
+        {
+          "additive": true,
+          "id": 2171
+        },
+        {
+          "additive": true,
+          "id": 2165
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 129; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 150
+        }
+      ],
+      "internalName": "RazorfenDowns",
+      "mapId": 129,
+      "package": "mod-native-instance-maps.razorfendowns",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "razorfendowns",
+      "title": "RazorfenDowns",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 760
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/RazorfenKraul",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 2140
+        },
+        {
+          "additive": true,
+          "id": 2137
+        },
+        {
+          "additive": true,
+          "id": 2139
+        },
+        {
+          "additive": true,
+          "id": 2154
+        },
+        {
+          "additive": true,
+          "id": 2146
+        },
+        {
+          "additive": true,
+          "id": 2141
+        },
+        {
+          "additive": true,
+          "id": 2142
+        },
+        {
+          "additive": true,
+          "id": 2147
+        },
+        {
+          "additive": true,
+          "id": 2155
+        },
+        {
+          "additive": true,
+          "id": 2148
+        },
+        {
+          "additive": true,
+          "id": 2156
+        },
+        {
+          "additive": true,
+          "id": 2149
+        },
+        {
+          "additive": true,
+          "id": 2138
+        },
+        {
+          "additive": true,
+          "id": 2157
+        },
+        {
+          "additive": true,
+          "id": 2150
+        },
+        {
+          "additive": true,
+          "id": 2158
+        },
+        {
+          "additive": true,
+          "id": 2151
+        },
+        {
+          "additive": true,
+          "id": 2136
+        },
+        {
+          "additive": true,
+          "id": 2152
+        },
+        {
+          "additive": true,
+          "id": 2143
+        },
+        {
+          "additive": true,
+          "id": 2153
+        },
+        {
+          "additive": true,
+          "id": 2145
+        },
+        {
+          "additive": true,
+          "id": 2144
+        },
+        {
+          "additive": true,
+          "id": 2160
+        },
+        {
+          "additive": true,
+          "id": 2159
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 47; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 149
+        }
+      ],
+      "internalName": "RazorfenKraul",
+      "mapId": 47,
+      "package": "mod-native-instance-maps.razorfenkraul",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "razorfenkraul",
+      "title": "RazorfenKraul",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 761
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/RuinsofAhnQiraj",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable declares no DungeonMap floor for map 509; the instance has no floor geometry to compose",
+        "WDM Stable declares no DungeonMapChunk for the floors of map 509",
+        "WDM Stable supplies no WorldMapTransforms row for map 509; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [],
+      "internalName": "RuinsofAhnQiraj",
+      "mapId": 509,
+      "package": "mod-native-instance-maps.ruinsofahnqiraj",
+      "reasonCodes": [
+        "no-chunks",
+        "no-floors",
+        "no-transform"
+      ],
+      "slug": "ruinsofahnqiraj",
+      "title": "RuinsofAhnQiraj",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 717
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/ScarletMonastery",
+      "artworkNameAlias": null,
+      "blpCount": 48,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 1996
+        },
+        {
+          "additive": true,
+          "id": 2007
+        },
+        {
+          "additive": true,
+          "id": 1997
+        },
+        {
+          "additive": true,
+          "id": 2008
+        },
+        {
+          "additive": true,
+          "id": 1998
+        },
+        {
+          "additive": true,
+          "id": 2009
+        },
+        {
+          "additive": true,
+          "id": 2811
+        },
+        {
+          "additive": true,
+          "id": 2018
+        },
+        {
+          "additive": true,
+          "id": 2000
+        },
+        {
+          "additive": true,
+          "id": 2011
+        },
+        {
+          "additive": true,
+          "id": 2012
+        },
+        {
+          "additive": true,
+          "id": 2001
+        },
+        {
+          "additive": true,
+          "id": 1994
+        },
+        {
+          "additive": true,
+          "id": 2815
+        },
+        {
+          "additive": true,
+          "id": 2812
+        },
+        {
+          "additive": true,
+          "id": 2816
+        },
+        {
+          "additive": true,
+          "id": 2813
+        },
+        {
+          "additive": true,
+          "id": 2817
+        },
+        {
+          "additive": true,
+          "id": 2814
+        },
+        {
+          "additive": true,
+          "id": 2818
+        },
+        {
+          "additive": true,
+          "id": 4110
+        },
+        {
+          "additive": true,
+          "id": 2005
+        },
+        {
+          "additive": true,
+          "id": 2017
+        },
+        {
+          "additive": true,
+          "id": 2006
+        },
+        {
+          "additive": true,
+          "id": 2802
+        },
+        {
+          "additive": true,
+          "id": 2803
+        },
+        {
+          "additive": true,
+          "id": 2794
+        },
+        {
+          "additive": true,
+          "id": 2804
+        },
+        {
+          "additive": true,
+          "id": 2805
+        },
+        {
+          "additive": true,
+          "id": 2790
+        },
+        {
+          "additive": true,
+          "id": 2795
+        },
+        {
+          "additive": true,
+          "id": 2796
+        },
+        {
+          "additive": true,
+          "id": 2806
+        },
+        {
+          "additive": true,
+          "id": 2797
+        },
+        {
+          "additive": true,
+          "id": 2807
+        },
+        {
+          "additive": true,
+          "id": 4109
+        },
+        {
+          "additive": true,
+          "id": 2808
+        },
+        {
+          "additive": true,
+          "id": 2798
+        },
+        {
+          "additive": true,
+          "id": 2791
+        },
+        {
+          "additive": true,
+          "id": 2809
+        },
+        {
+          "additive": true,
+          "id": 2799
+        },
+        {
+          "additive": true,
+          "id": 2810
+        },
+        {
+          "additive": true,
+          "id": 2800
+        },
+        {
+          "additive": true,
+          "id": 4063
+        },
+        {
+          "additive": true,
+          "id": 2044
+        },
+        {
+          "additive": true,
+          "id": 2038
+        },
+        {
+          "additive": true,
+          "id": 2027
+        },
+        {
+          "additive": true,
+          "id": 2030
+        },
+        {
+          "additive": true,
+          "id": 2028
+        },
+        {
+          "additive": true,
+          "id": 2031
+        },
+        {
+          "additive": true,
+          "id": 4062
+        },
+        {
+          "additive": true,
+          "id": 2032
+        },
+        {
+          "additive": true,
+          "id": 2029
+        },
+        {
+          "additive": true,
+          "id": 2039
+        },
+        {
+          "additive": true,
+          "id": 2033
+        },
+        {
+          "additive": true,
+          "id": 2040
+        },
+        {
+          "additive": true,
+          "id": 4064
+        },
+        {
+          "additive": true,
+          "id": 2034
+        },
+        {
+          "additive": true,
+          "id": 2041
+        },
+        {
+          "additive": true,
+          "id": 2035
+        },
+        {
+          "additive": true,
+          "id": 2042
+        },
+        {
+          "additive": true,
+          "id": 2043
+        },
+        {
+          "additive": true,
+          "id": 2036
+        },
+        {
+          "additive": true,
+          "id": 2037
+        },
+        {
+          "additive": true,
+          "id": 2771
+        },
+        {
+          "additive": true,
+          "id": 2772
+        },
+        {
+          "additive": true,
+          "id": 2782
+        },
+        {
+          "additive": true,
+          "id": 2773
+        },
+        {
+          "additive": true,
+          "id": 2783
+        },
+        {
+          "additive": true,
+          "id": 2774
+        },
+        {
+          "additive": true,
+          "id": 2784
+        },
+        {
+          "additive": true,
+          "id": 2775
+        },
+        {
+          "additive": true,
+          "id": 2785
+        },
+        {
+          "additive": true,
+          "id": 2776
+        },
+        {
+          "additive": true,
+          "id": 2786
+        },
+        {
+          "additive": true,
+          "id": 2777
+        },
+        {
+          "additive": true,
+          "id": 2787
+        },
+        {
+          "additive": true,
+          "id": 2778
+        },
+        {
+          "additive": true,
+          "id": 2801
+        },
+        {
+          "additive": true,
+          "id": 4108
+        },
+        {
+          "additive": true,
+          "id": 2792
+        },
+        {
+          "additive": true,
+          "id": 2789
+        },
+        {
+          "additive": true,
+          "id": 2793
+        },
+        {
+          "additive": true,
+          "id": 2788
+        },
+        {
+          "additive": true,
+          "id": 2769
+        },
+        {
+          "additive": true,
+          "id": 2779
+        },
+        {
+          "additive": true,
+          "id": 2770
+        },
+        {
+          "additive": true,
+          "id": 2780
+        },
+        {
+          "additive": true,
+          "id": 2781
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 189; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 137
+        },
+        {
+          "additive": true,
+          "id": 140
+        },
+        {
+          "additive": true,
+          "id": 141
+        },
+        {
+          "additive": true,
+          "id": 179
+        }
+      ],
+      "internalName": "ScarletMonastery",
+      "mapId": 189,
+      "package": "mod-native-instance-maps.scarletmonastery",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "scarletmonastery",
+      "title": "ScarletMonastery",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 762
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/Scholomance",
+      "artworkNameAlias": null,
+      "blpCount": 48,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 2172
+        },
+        {
+          "additive": true,
+          "id": 2190
+        },
+        {
+          "additive": true,
+          "id": 2188
+        },
+        {
+          "additive": true,
+          "id": 2189
+        },
+        {
+          "additive": true,
+          "id": 2195
+        },
+        {
+          "additive": true,
+          "id": 2194
+        },
+        {
+          "additive": true,
+          "id": 2179
+        },
+        {
+          "additive": true,
+          "id": 2173
+        },
+        {
+          "additive": true,
+          "id": 2174
+        },
+        {
+          "additive": true,
+          "id": 2175
+        },
+        {
+          "additive": true,
+          "id": 2177
+        },
+        {
+          "additive": true,
+          "id": 2180
+        },
+        {
+          "additive": true,
+          "id": 2184
+        },
+        {
+          "additive": true,
+          "id": 2178
+        },
+        {
+          "additive": true,
+          "id": 2197
+        },
+        {
+          "additive": true,
+          "id": 2182
+        },
+        {
+          "additive": true,
+          "id": 2198
+        },
+        {
+          "additive": true,
+          "id": 2186
+        },
+        {
+          "additive": true,
+          "id": 2181
+        },
+        {
+          "additive": true,
+          "id": 2193
+        },
+        {
+          "additive": true,
+          "id": 2187
+        },
+        {
+          "additive": true,
+          "id": 2183
+        },
+        {
+          "additive": true,
+          "id": 4091
+        },
+        {
+          "additive": true,
+          "id": 2196
+        },
+        {
+          "additive": true,
+          "id": 2199
+        },
+        {
+          "additive": true,
+          "id": 2185
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 289; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 151
+        },
+        {
+          "additive": true,
+          "id": 152
+        },
+        {
+          "additive": true,
+          "id": 153
+        },
+        {
+          "additive": true,
+          "id": 154
+        }
+      ],
+      "internalName": "Scholomance",
+      "mapId": 289,
+      "package": "mod-native-instance-maps.scholomance",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "scholomance",
+      "title": "Scholomance",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 763
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/SethekkHalls",
+      "artworkNameAlias": null,
+      "blpCount": 24,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 3238
+        },
+        {
+          "additive": true,
+          "id": 3239
+        },
+        {
+          "additive": true,
+          "id": 3245
+        },
+        {
+          "additive": true,
+          "id": 3231
+        },
+        {
+          "additive": true,
+          "id": 3243
+        },
+        {
+          "additive": true,
+          "id": 3246
+        },
+        {
+          "additive": true,
+          "id": 3230
+        },
+        {
+          "additive": true,
+          "id": 3235
+        },
+        {
+          "additive": true,
+          "id": 3236
+        },
+        {
+          "additive": true,
+          "id": 3233
+        },
+        {
+          "additive": true,
+          "id": 3234
+        },
+        {
+          "additive": true,
+          "id": 3229
+        },
+        {
+          "additive": true,
+          "id": 3241
+        },
+        {
+          "additive": true,
+          "id": 3232
+        },
+        {
+          "additive": true,
+          "id": 3247
+        },
+        {
+          "additive": true,
+          "id": 3244
+        },
+        {
+          "additive": true,
+          "id": 3242
+        },
+        {
+          "additive": true,
+          "id": 3240
+        },
+        {
+          "additive": true,
+          "id": 3237
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 556; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 216
+        },
+        {
+          "additive": true,
+          "id": 217
+        }
+      ],
+      "internalName": "SethekkHalls",
+      "mapId": 556,
+      "package": "mod-native-instance-maps.sethekkhalls",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "sethekkhalls",
+      "title": "SethekkHalls",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 723
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/ShadowLabyrinth",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 3252
+        },
+        {
+          "additive": true,
+          "id": 3258
+        },
+        {
+          "additive": true,
+          "id": 3268
+        },
+        {
+          "additive": true,
+          "id": 3259
+        },
+        {
+          "additive": true,
+          "id": 3253
+        },
+        {
+          "additive": true,
+          "id": 3260
+        },
+        {
+          "additive": true,
+          "id": 3254
+        },
+        {
+          "additive": true,
+          "id": 3261
+        },
+        {
+          "additive": true,
+          "id": 3250
+        },
+        {
+          "additive": true,
+          "id": 3255
+        },
+        {
+          "additive": true,
+          "id": 3262
+        },
+        {
+          "additive": true,
+          "id": 3256
+        },
+        {
+          "additive": true,
+          "id": 3263
+        },
+        {
+          "additive": true,
+          "id": 3257
+        },
+        {
+          "additive": true,
+          "id": 3267
+        },
+        {
+          "additive": true,
+          "id": 3264
+        },
+        {
+          "additive": true,
+          "id": 3266
+        },
+        {
+          "additive": true,
+          "id": 3248
+        },
+        {
+          "additive": true,
+          "id": 3249
+        },
+        {
+          "additive": true,
+          "id": 3251
+        },
+        {
+          "additive": true,
+          "id": 3265
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 555; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 218
+        }
+      ],
+      "internalName": "ShadowLabyrinth",
+      "mapId": 555,
+      "package": "mod-native-instance-maps.shadowlabyrinth",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "shadowlabyrinth",
+      "title": "ShadowLabyrinth",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 724
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/ShadowfangKeep",
+      "artworkNameAlias": null,
+      "blpCount": 84,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 2130
+        },
+        {
+          "additive": true,
+          "id": 2049
+        },
+        {
+          "additive": true,
+          "id": 3881
+        },
+        {
+          "additive": true,
+          "id": 2059
+        },
+        {
+          "additive": true,
+          "id": 2057
+        },
+        {
+          "additive": true,
+          "id": 2058
+        },
+        {
+          "additive": true,
+          "id": 2056
+        },
+        {
+          "additive": true,
+          "id": 2055
+        },
+        {
+          "additive": true,
+          "id": 2129
+        },
+        {
+          "additive": true,
+          "id": 2131
+        },
+        {
+          "additive": true,
+          "id": 2132
+        },
+        {
+          "additive": true,
+          "id": 2051
+        },
+        {
+          "additive": true,
+          "id": 2048
+        },
+        {
+          "additive": true,
+          "id": 2050
+        },
+        {
+          "additive": true,
+          "id": 2052
+        },
+        {
+          "additive": true,
+          "id": 2046
+        },
+        {
+          "additive": true,
+          "id": 2047
+        },
+        {
+          "additive": true,
+          "id": 2128
+        },
+        {
+          "additive": true,
+          "id": 2096
+        },
+        {
+          "additive": true,
+          "id": 2061
+        },
+        {
+          "additive": true,
+          "id": 2065
+        },
+        {
+          "additive": true,
+          "id": 2066
+        },
+        {
+          "additive": true,
+          "id": 2070
+        },
+        {
+          "additive": true,
+          "id": 2068
+        },
+        {
+          "additive": true,
+          "id": 2069
+        },
+        {
+          "additive": true,
+          "id": 2067
+        },
+        {
+          "additive": true,
+          "id": 2062
+        },
+        {
+          "additive": true,
+          "id": 2063
+        },
+        {
+          "additive": true,
+          "id": 2064
+        },
+        {
+          "additive": true,
+          "id": 2071
+        },
+        {
+          "additive": true,
+          "id": 2072
+        },
+        {
+          "additive": true,
+          "id": 4162
+        },
+        {
+          "additive": true,
+          "id": 2076
+        },
+        {
+          "additive": true,
+          "id": 2077
+        },
+        {
+          "additive": true,
+          "id": 4163
+        },
+        {
+          "additive": true,
+          "id": 2135
+        },
+        {
+          "additive": true,
+          "id": 2045
+        },
+        {
+          "additive": true,
+          "id": 2113
+        },
+        {
+          "additive": true,
+          "id": 2098
+        },
+        {
+          "additive": true,
+          "id": 2105
+        },
+        {
+          "additive": true,
+          "id": 2099
+        },
+        {
+          "additive": true,
+          "id": 2100
+        },
+        {
+          "additive": true,
+          "id": 2102
+        },
+        {
+          "additive": true,
+          "id": 2103
+        },
+        {
+          "additive": true,
+          "id": 2101
+        },
+        {
+          "additive": true,
+          "id": 2106
+        },
+        {
+          "additive": true,
+          "id": 2107
+        },
+        {
+          "additive": true,
+          "id": 2108
+        },
+        {
+          "additive": true,
+          "id": 2109
+        },
+        {
+          "additive": true,
+          "id": 2110
+        },
+        {
+          "additive": true,
+          "id": 2112
+        },
+        {
+          "additive": true,
+          "id": 2114
+        },
+        {
+          "additive": true,
+          "id": 2115
+        },
+        {
+          "additive": true,
+          "id": 2116
+        },
+        {
+          "additive": true,
+          "id": 2117
+        },
+        {
+          "additive": true,
+          "id": 2134
+        },
+        {
+          "additive": true,
+          "id": 2104
+        },
+        {
+          "additive": true,
+          "id": 2111
+        },
+        {
+          "additive": true,
+          "id": 2120
+        },
+        {
+          "additive": true,
+          "id": 2119
+        },
+        {
+          "additive": true,
+          "id": 2094
+        },
+        {
+          "additive": true,
+          "id": 2093
+        },
+        {
+          "additive": true,
+          "id": 2054
+        },
+        {
+          "additive": true,
+          "id": 2095
+        },
+        {
+          "additive": true,
+          "id": 2060
+        },
+        {
+          "additive": true,
+          "id": 2073
+        },
+        {
+          "additive": true,
+          "id": 2074
+        },
+        {
+          "additive": true,
+          "id": 2075
+        },
+        {
+          "additive": true,
+          "id": 2124
+        },
+        {
+          "additive": true,
+          "id": 2125
+        },
+        {
+          "additive": true,
+          "id": 2126
+        },
+        {
+          "additive": true,
+          "id": 2127
+        },
+        {
+          "additive": true,
+          "id": 2133
+        },
+        {
+          "additive": true,
+          "id": 2097
+        },
+        {
+          "additive": true,
+          "id": 2053
+        },
+        {
+          "additive": true,
+          "id": 2121
+        },
+        {
+          "additive": true,
+          "id": 2122
+        },
+        {
+          "additive": true,
+          "id": 2080
+        },
+        {
+          "additive": true,
+          "id": 2123
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 33; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 142
+        },
+        {
+          "additive": true,
+          "id": 143
+        },
+        {
+          "additive": true,
+          "id": 144
+        },
+        {
+          "additive": true,
+          "id": 145
+        },
+        {
+          "additive": true,
+          "id": 146
+        },
+        {
+          "additive": true,
+          "id": 147
+        },
+        {
+          "additive": true,
+          "id": 148
+        }
+      ],
+      "internalName": "ShadowfangKeep",
+      "mapId": 33,
+      "package": "mod-native-instance-maps.shadowfangkeep",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "shadowfangkeep",
+      "title": "ShadowfangKeep",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 764
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/Stratholme",
+      "artworkNameAlias": null,
+      "blpCount": 24,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 2232
+        },
+        {
+          "additive": true,
+          "id": 2201
+        },
+        {
+          "additive": true,
+          "id": 4106
+        },
+        {
+          "additive": true,
+          "id": 4887
+        },
+        {
+          "additive": true,
+          "id": 2233
+        },
+        {
+          "additive": true,
+          "id": 2202
+        },
+        {
+          "additive": true,
+          "id": 2234
+        },
+        {
+          "additive": true,
+          "id": 2253
+        },
+        {
+          "additive": true,
+          "id": 2235
+        },
+        {
+          "additive": true,
+          "id": 4107
+        },
+        {
+          "additive": true,
+          "id": 2236
+        },
+        {
+          "additive": true,
+          "id": 2266
+        },
+        {
+          "additive": true,
+          "id": 4888
+        },
+        {
+          "additive": true,
+          "id": 2257
+        },
+        {
+          "additive": true,
+          "id": 2256
+        },
+        {
+          "additive": true,
+          "id": 2260
+        },
+        {
+          "additive": true,
+          "id": 2252
+        },
+        {
+          "additive": true,
+          "id": 2242
+        },
+        {
+          "additive": true,
+          "id": 2254
+        },
+        {
+          "additive": true,
+          "id": 2243
+        },
+        {
+          "additive": true,
+          "id": 2255
+        },
+        {
+          "additive": true,
+          "id": 2244
+        },
+        {
+          "additive": true,
+          "id": 2270
+        },
+        {
+          "additive": true,
+          "id": 2273
+        },
+        {
+          "additive": true,
+          "id": 2264
+        },
+        {
+          "additive": true,
+          "id": 2263
+        },
+        {
+          "additive": true,
+          "id": 2265
+        },
+        {
+          "additive": true,
+          "id": 2267
+        },
+        {
+          "additive": true,
+          "id": 2268
+        },
+        {
+          "additive": true,
+          "id": 2262
+        },
+        {
+          "additive": true,
+          "id": 2245
+        },
+        {
+          "additive": true,
+          "id": 2246
+        },
+        {
+          "additive": true,
+          "id": 2247
+        },
+        {
+          "additive": true,
+          "id": 2248
+        },
+        {
+          "additive": true,
+          "id": 2237
+        },
+        {
+          "additive": true,
+          "id": 2238
+        },
+        {
+          "additive": true,
+          "id": 2239
+        },
+        {
+          "additive": true,
+          "id": 2217
+        },
+        {
+          "additive": true,
+          "id": 2218
+        },
+        {
+          "additive": true,
+          "id": 2203
+        },
+        {
+          "additive": true,
+          "id": 2219
+        },
+        {
+          "additive": true,
+          "id": 2204
+        },
+        {
+          "additive": true,
+          "id": 2220
+        },
+        {
+          "additive": true,
+          "id": 4151
+        },
+        {
+          "additive": true,
+          "id": 2240
+        },
+        {
+          "additive": true,
+          "id": 2250
+        },
+        {
+          "additive": true,
+          "id": 2241
+        },
+        {
+          "additive": true,
+          "id": 2251
+        },
+        {
+          "additive": true,
+          "id": 2206
+        },
+        {
+          "additive": true,
+          "id": 2221
+        },
+        {
+          "additive": true,
+          "id": 2207
+        },
+        {
+          "additive": true,
+          "id": 2222
+        },
+        {
+          "additive": true,
+          "id": 2208
+        },
+        {
+          "additive": true,
+          "id": 2223
+        },
+        {
+          "additive": true,
+          "id": 2224
+        },
+        {
+          "additive": true,
+          "id": 2209
+        },
+        {
+          "additive": true,
+          "id": 2214
+        },
+        {
+          "additive": true,
+          "id": 2225
+        },
+        {
+          "additive": true,
+          "id": 2261
+        },
+        {
+          "additive": true,
+          "id": 2258
+        },
+        {
+          "additive": true,
+          "id": 2226
+        },
+        {
+          "additive": true,
+          "id": 4886
+        },
+        {
+          "additive": true,
+          "id": 2249
+        },
+        {
+          "additive": true,
+          "id": 2271
+        },
+        {
+          "additive": true,
+          "id": 4104
+        },
+        {
+          "additive": true,
+          "id": 2269
+        },
+        {
+          "additive": true,
+          "id": 2272
+        },
+        {
+          "additive": true,
+          "id": 4105
+        },
+        {
+          "additive": true,
+          "id": 2216
+        },
+        {
+          "additive": true,
+          "id": 2227
+        },
+        {
+          "additive": true,
+          "id": 2210
+        },
+        {
+          "additive": true,
+          "id": 2228
+        },
+        {
+          "additive": true,
+          "id": 2229
+        },
+        {
+          "additive": true,
+          "id": 2211
+        },
+        {
+          "additive": true,
+          "id": 2230
+        },
+        {
+          "additive": true,
+          "id": 2212
+        },
+        {
+          "additive": true,
+          "id": 2231
+        },
+        {
+          "additive": true,
+          "id": 2215
+        },
+        {
+          "additive": true,
+          "id": 2213
+        },
+        {
+          "additive": true,
+          "id": 2200
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 329; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 155
+        },
+        {
+          "additive": true,
+          "id": 156
+        }
+      ],
+      "internalName": "Stratholme",
+      "mapId": 329,
+      "package": "mod-native-instance-maps.stratholme",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "stratholme",
+      "title": "Stratholme",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 765
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/SunwellPlateau",
+      "artworkNameAlias": null,
+      "blpCount": 24,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 4613
+        },
+        {
+          "additive": true,
+          "id": 4612
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 580; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space",
+        "WorldMapArea 789 sets dungeonMap_id -1, WDM's \"not an instance\" sentinel. mod-content-manager treats any non-zero dungeonMapId as a reference (it casts to uint32 at ContentPackage.cpp:360, so -1 becomes 4294967295) and rejects the package unless it names a floor of map 580; carrying the sentinel through and dropping the field are not the same row"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 440
+        }
+      ],
+      "internalName": "SunwellPlateau",
+      "mapId": 580,
+      "package": "mod-native-instance-maps.sunwellplateau",
+      "reasonCodes": [
+        "area-floor-reference-unresolvable",
+        "no-transform"
+      ],
+      "slug": "sunwellplateau",
+      "title": "SunwellPlateau",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 789
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/TempestKeep",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 4315
+        },
+        {
+          "additive": true,
+          "id": 4329
+        },
+        {
+          "additive": true,
+          "id": 4316
+        },
+        {
+          "additive": true,
+          "id": 4323
+        },
+        {
+          "additive": true,
+          "id": 4326
+        },
+        {
+          "additive": true,
+          "id": 4324
+        },
+        {
+          "additive": true,
+          "id": 4314
+        },
+        {
+          "additive": true,
+          "id": 4327
+        },
+        {
+          "additive": true,
+          "id": 4325
+        },
+        {
+          "additive": true,
+          "id": 4321
+        },
+        {
+          "additive": true,
+          "id": 4322
+        },
+        {
+          "additive": true,
+          "id": 4319
+        },
+        {
+          "additive": true,
+          "id": 4318
+        },
+        {
+          "additive": true,
+          "id": 4317
+        },
+        {
+          "additive": true,
+          "id": 4328
+        },
+        {
+          "additive": true,
+          "id": 4320
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 550; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 349
+        }
+      ],
+      "internalName": "TempestKeep",
+      "mapId": 550,
+      "package": "mod-native-instance-maps.tempestkeep",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "tempestkeep",
+      "title": "TempestKeep",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 782
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/TheArcatraz",
+      "artworkNameAlias": null,
+      "blpCount": 36,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 3332
+        },
+        {
+          "additive": true,
+          "id": 3331
+        },
+        {
+          "additive": true,
+          "id": 3333
+        },
+        {
+          "additive": true,
+          "id": 3349
+        },
+        {
+          "additive": true,
+          "id": 3341
+        },
+        {
+          "additive": true,
+          "id": 3335
+        },
+        {
+          "additive": true,
+          "id": 3336
+        },
+        {
+          "additive": true,
+          "id": 3337
+        },
+        {
+          "additive": true,
+          "id": 3350
+        },
+        {
+          "additive": true,
+          "id": 3334
+        },
+        {
+          "additive": true,
+          "id": 3351
+        },
+        {
+          "additive": true,
+          "id": 4153
+        },
+        {
+          "additive": true,
+          "id": 3345
+        },
+        {
+          "additive": true,
+          "id": 3346
+        },
+        {
+          "additive": true,
+          "id": 3347
+        },
+        {
+          "additive": true,
+          "id": 3339
+        },
+        {
+          "additive": true,
+          "id": 3348
+        },
+        {
+          "additive": true,
+          "id": 3338
+        },
+        {
+          "additive": true,
+          "id": 3340
+        },
+        {
+          "additive": true,
+          "id": 3342
+        },
+        {
+          "additive": true,
+          "id": 3344
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 552; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 233
+        },
+        {
+          "additive": true,
+          "id": 234
+        },
+        {
+          "additive": true,
+          "id": 235
+        }
+      ],
+      "internalName": "TheArcatraz",
+      "mapId": 552,
+      "package": "mod-native-instance-maps.thearcatraz",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "thearcatraz",
+      "title": "TheArcatraz",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 731
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/TheBloodFurnace",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 3278
+        },
+        {
+          "additive": true,
+          "id": 3274
+        },
+        {
+          "additive": true,
+          "id": 3281
+        },
+        {
+          "additive": true,
+          "id": 3286
+        },
+        {
+          "additive": true,
+          "id": 3280
+        },
+        {
+          "additive": true,
+          "id": 3276
+        },
+        {
+          "additive": true,
+          "id": 3277
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 542; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 221
+        }
+      ],
+      "internalName": "TheBloodFurnace",
+      "mapId": 542,
+      "package": "mod-native-instance-maps.thebloodfurnace",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "thebloodfurnace",
+      "title": "TheBloodFurnace",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 725
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/TheBotanica",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 3318
+        },
+        {
+          "additive": true,
+          "id": 3317
+        },
+        {
+          "additive": true,
+          "id": 3316
+        },
+        {
+          "additive": true,
+          "id": 3315
+        },
+        {
+          "additive": true,
+          "id": 3313
+        },
+        {
+          "additive": true,
+          "id": 3314
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 553; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 230
+        }
+      ],
+      "internalName": "TheBotanica",
+      "mapId": 553,
+      "package": "mod-native-instance-maps.thebotanica",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "thebotanica",
+      "title": "TheBotanica",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 729
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/TheDeadmines",
+      "artworkNameAlias": null,
+      "blpCount": 24,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 2521
+        },
+        {
+          "additive": true,
+          "id": 2524
+        },
+        {
+          "additive": true,
+          "id": 2528
+        },
+        {
+          "additive": true,
+          "id": 2527
+        },
+        {
+          "additive": true,
+          "id": 2518
+        },
+        {
+          "additive": true,
+          "id": 2520
+        },
+        {
+          "additive": true,
+          "id": 2522
+        },
+        {
+          "additive": true,
+          "id": 2525
+        },
+        {
+          "additive": true,
+          "id": 2517
+        },
+        {
+          "additive": true,
+          "id": 2519
+        },
+        {
+          "additive": true,
+          "id": 2523
+        },
+        {
+          "additive": true,
+          "id": 2526
+        },
+        {
+          "additive": true,
+          "id": 2535
+        },
+        {
+          "additive": true,
+          "id": 2536
+        },
+        {
+          "additive": true,
+          "id": 2537
+        },
+        {
+          "additive": true,
+          "id": 2543
+        },
+        {
+          "additive": true,
+          "id": 2531
+        },
+        {
+          "additive": true,
+          "id": 2532
+        },
+        {
+          "additive": true,
+          "id": 2530
+        },
+        {
+          "additive": true,
+          "id": 2534
+        },
+        {
+          "additive": true,
+          "id": 2533
+        },
+        {
+          "additive": true,
+          "id": 2541
+        },
+        {
+          "additive": true,
+          "id": 2540
+        },
+        {
+          "additive": true,
+          "id": 2538
+        },
+        {
+          "additive": true,
+          "id": 2516
+        },
+        {
+          "additive": true,
+          "id": 2544
+        },
+        {
+          "additive": true,
+          "id": 2529
+        },
+        {
+          "additive": true,
+          "id": 2539
+        },
+        {
+          "additive": true,
+          "id": 2542
+        }
+      ],
+      "classification": "SAFE",
+      "findings": [],
+      "floors": [
+        {
+          "additive": true,
+          "id": 166
+        },
+        {
+          "additive": true,
+          "id": 167
+        }
+      ],
+      "internalName": "TheDeadmines",
+      "mapId": 36,
+      "package": "mod-native-instance-maps.the-deadmines",
+      "reasonCodes": [],
+      "slug": "the-deadmines",
+      "title": "The Deadmines",
+      "transforms": [
+        {
+          "additive": true,
+          "id": 11
+        }
+      ],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 756
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/TheMechanar",
+      "artworkNameAlias": null,
+      "blpCount": 24,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 3323
+        },
+        {
+          "additive": true,
+          "id": 3327
+        },
+        {
+          "additive": true,
+          "id": 3324
+        },
+        {
+          "additive": true,
+          "id": 3325
+        },
+        {
+          "additive": true,
+          "id": 3329
+        },
+        {
+          "additive": true,
+          "id": 3321
+        },
+        {
+          "additive": true,
+          "id": 3320
+        },
+        {
+          "additive": true,
+          "id": 3328
+        },
+        {
+          "additive": true,
+          "id": 4155
+        },
+        {
+          "additive": true,
+          "id": 3326
+        },
+        {
+          "additive": true,
+          "id": 3322
+        },
+        {
+          "additive": true,
+          "id": 4157
+        },
+        {
+          "additive": true,
+          "id": 4156
+        },
+        {
+          "additive": true,
+          "id": 3330
+        },
+        {
+          "additive": true,
+          "id": 3319
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 554; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 231
+        },
+        {
+          "additive": true,
+          "id": 232
+        }
+      ],
+      "internalName": "TheMechanar",
+      "mapId": 554,
+      "package": "mod-native-instance-maps.themechanar",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "themechanar",
+      "title": "TheMechanar",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 730
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/TheShatteredHalls",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 3287
+        },
+        {
+          "additive": true,
+          "id": 3289
+        },
+        {
+          "additive": true,
+          "id": 3288
+        },
+        {
+          "additive": true,
+          "id": 3290
+        },
+        {
+          "additive": true,
+          "id": 3291
+        },
+        {
+          "additive": true,
+          "id": 3294
+        },
+        {
+          "additive": true,
+          "id": 3297
+        },
+        {
+          "additive": true,
+          "id": 3293
+        },
+        {
+          "additive": true,
+          "id": 3298
+        },
+        {
+          "additive": true,
+          "id": 3292
+        },
+        {
+          "additive": true,
+          "id": 3296
+        },
+        {
+          "additive": true,
+          "id": 3295
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 540; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 222
+        }
+      ],
+      "internalName": "TheShatteredHalls",
+      "mapId": 540,
+      "package": "mod-native-instance-maps.theshatteredhalls",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "theshatteredhalls",
+      "title": "TheShatteredHalls",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 710
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/TheSlavePens",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 3309
+        },
+        {
+          "additive": true,
+          "id": 3307
+        },
+        {
+          "additive": true,
+          "id": 3310
+        },
+        {
+          "additive": true,
+          "id": 3308
+        },
+        {
+          "additive": true,
+          "id": 3311
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 547; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 228
+        }
+      ],
+      "internalName": "TheSlavePens",
+      "mapId": 547,
+      "package": "mod-native-instance-maps.theslavepens",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "theslavepens",
+      "title": "TheSlavePens",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 728
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/TheSteamvault",
+      "artworkNameAlias": null,
+      "blpCount": 24,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 3303
+        },
+        {
+          "additive": true,
+          "id": 3302
+        },
+        {
+          "additive": true,
+          "id": 3306
+        },
+        {
+          "additive": true,
+          "id": 4160
+        },
+        {
+          "additive": true,
+          "id": 3305
+        },
+        {
+          "additive": true,
+          "id": 4159
+        },
+        {
+          "additive": true,
+          "id": 3304
+        },
+        {
+          "additive": true,
+          "id": 4158
+        },
+        {
+          "additive": true,
+          "id": 4152
+        },
+        {
+          "additive": true,
+          "id": 4161
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 545; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 226
+        },
+        {
+          "additive": true,
+          "id": 227
+        }
+      ],
+      "internalName": "TheSteamvault",
+      "mapId": 545,
+      "package": "mod-native-instance-maps.thesteamvault",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "thesteamvault",
+      "title": "TheSteamvault",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 727
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/TheStockade",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 4065
+        },
+        {
+          "additive": true,
+          "id": 4076
+        },
+        {
+          "additive": true,
+          "id": 4074
+        },
+        {
+          "additive": true,
+          "id": 4075
+        },
+        {
+          "additive": true,
+          "id": 4077
+        },
+        {
+          "additive": true,
+          "id": 4072
+        },
+        {
+          "additive": true,
+          "id": 4071
+        },
+        {
+          "additive": true,
+          "id": 4070
+        },
+        {
+          "additive": true,
+          "id": 4067
+        },
+        {
+          "additive": true,
+          "id": 4068
+        },
+        {
+          "additive": true,
+          "id": 4078
+        },
+        {
+          "additive": true,
+          "id": 4080
+        },
+        {
+          "additive": true,
+          "id": 4079
+        },
+        {
+          "additive": true,
+          "id": 4081
+        },
+        {
+          "additive": true,
+          "id": 4066
+        },
+        {
+          "additive": true,
+          "id": 4069
+        },
+        {
+          "additive": true,
+          "id": 4073
+        },
+        {
+          "additive": true,
+          "id": 2503
+        },
+        {
+          "additive": true,
+          "id": 2484
+        },
+        {
+          "additive": true,
+          "id": 2488
+        },
+        {
+          "additive": true,
+          "id": 2489
+        },
+        {
+          "additive": true,
+          "id": 2504
+        },
+        {
+          "additive": true,
+          "id": 2490
+        },
+        {
+          "additive": true,
+          "id": 2505
+        },
+        {
+          "additive": true,
+          "id": 2491
+        },
+        {
+          "additive": true,
+          "id": 2506
+        },
+        {
+          "additive": true,
+          "id": 2492
+        },
+        {
+          "additive": true,
+          "id": 2487
+        },
+        {
+          "additive": true,
+          "id": 2507
+        },
+        {
+          "additive": true,
+          "id": 2493
+        },
+        {
+          "additive": true,
+          "id": 2508
+        },
+        {
+          "additive": true,
+          "id": 2494
+        },
+        {
+          "additive": true,
+          "id": 2509
+        },
+        {
+          "additive": true,
+          "id": 2495
+        },
+        {
+          "additive": true,
+          "id": 2510
+        },
+        {
+          "additive": true,
+          "id": 2485
+        },
+        {
+          "additive": true,
+          "id": 2496
+        },
+        {
+          "additive": true,
+          "id": 2511
+        },
+        {
+          "additive": true,
+          "id": 2497
+        },
+        {
+          "additive": true,
+          "id": 2512
+        },
+        {
+          "additive": true,
+          "id": 2498
+        },
+        {
+          "additive": true,
+          "id": 2513
+        },
+        {
+          "additive": true,
+          "id": 2499
+        },
+        {
+          "additive": true,
+          "id": 2514
+        },
+        {
+          "additive": true,
+          "id": 2486
+        },
+        {
+          "additive": true,
+          "id": 2500
+        },
+        {
+          "additive": true,
+          "id": 2502
+        },
+        {
+          "additive": true,
+          "id": 2501
+        },
+        {
+          "additive": true,
+          "id": 4082
+        },
+        {
+          "additive": true,
+          "id": 4083
+        },
+        {
+          "additive": true,
+          "id": 4084
+        },
+        {
+          "additive": true,
+          "id": 4085
+        },
+        {
+          "additive": true,
+          "id": 4086
+        },
+        {
+          "additive": true,
+          "id": 4087
+        },
+        {
+          "additive": true,
+          "id": 4088
+        },
+        {
+          "additive": true,
+          "id": 4089
+        },
+        {
+          "additive": true,
+          "id": 4090
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 34; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 165
+        }
+      ],
+      "internalName": "TheStockade",
+      "mapId": 34,
+      "package": "mod-native-instance-maps.thestockade",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "thestockade",
+      "title": "TheStockade",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 690
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/TheTempleOfAtalHakkar",
+      "artworkNameAlias": null,
+      "blpCount": 36,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 2749
+        },
+        {
+          "additive": true,
+          "id": 2747
+        },
+        {
+          "additive": true,
+          "id": 2752
+        },
+        {
+          "additive": true,
+          "id": 2750
+        },
+        {
+          "additive": true,
+          "id": 2740
+        },
+        {
+          "additive": true,
+          "id": 2745
+        },
+        {
+          "additive": true,
+          "id": 2743
+        },
+        {
+          "additive": true,
+          "id": 2739
+        },
+        {
+          "additive": true,
+          "id": 2746
+        },
+        {
+          "additive": true,
+          "id": 2751
+        },
+        {
+          "additive": true,
+          "id": 2744
+        },
+        {
+          "additive": true,
+          "id": 2753
+        },
+        {
+          "additive": true,
+          "id": 2754
+        },
+        {
+          "additive": true,
+          "id": 2741
+        },
+        {
+          "additive": true,
+          "id": 2742
+        },
+        {
+          "additive": true,
+          "id": 2721
+        },
+        {
+          "additive": true,
+          "id": 2722
+        },
+        {
+          "additive": true,
+          "id": 2723
+        },
+        {
+          "additive": true,
+          "id": 2724
+        },
+        {
+          "additive": true,
+          "id": 2725
+        },
+        {
+          "additive": true,
+          "id": 2726
+        },
+        {
+          "additive": true,
+          "id": 2727
+        },
+        {
+          "additive": true,
+          "id": 2728
+        },
+        {
+          "additive": true,
+          "id": 2729
+        },
+        {
+          "additive": true,
+          "id": 2730
+        },
+        {
+          "additive": true,
+          "id": 2731
+        },
+        {
+          "additive": true,
+          "id": 2732
+        },
+        {
+          "additive": true,
+          "id": 2733
+        },
+        {
+          "additive": true,
+          "id": 2734
+        },
+        {
+          "additive": true,
+          "id": 2735
+        },
+        {
+          "additive": true,
+          "id": 2736
+        },
+        {
+          "additive": true,
+          "id": 2737
+        },
+        {
+          "additive": true,
+          "id": 2738
+        },
+        {
+          "additive": true,
+          "id": 2679
+        },
+        {
+          "additive": true,
+          "id": 2680
+        },
+        {
+          "additive": true,
+          "id": 2681
+        },
+        {
+          "additive": true,
+          "id": 2682
+        },
+        {
+          "additive": true,
+          "id": 2683
+        },
+        {
+          "additive": true,
+          "id": 2684
+        },
+        {
+          "additive": true,
+          "id": 2685
+        },
+        {
+          "additive": true,
+          "id": 2686
+        },
+        {
+          "additive": true,
+          "id": 2687
+        },
+        {
+          "additive": true,
+          "id": 2688
+        },
+        {
+          "additive": true,
+          "id": 2689
+        },
+        {
+          "additive": true,
+          "id": 2690
+        },
+        {
+          "additive": true,
+          "id": 2691
+        },
+        {
+          "additive": true,
+          "id": 2692
+        },
+        {
+          "additive": true,
+          "id": 2693
+        },
+        {
+          "additive": true,
+          "id": 2694
+        },
+        {
+          "additive": true,
+          "id": 2695
+        },
+        {
+          "additive": true,
+          "id": 2696
+        },
+        {
+          "additive": true,
+          "id": 2697
+        },
+        {
+          "additive": true,
+          "id": 2698
+        },
+        {
+          "additive": true,
+          "id": 2699
+        },
+        {
+          "additive": true,
+          "id": 2700
+        },
+        {
+          "additive": true,
+          "id": 2701
+        },
+        {
+          "additive": true,
+          "id": 2702
+        },
+        {
+          "additive": true,
+          "id": 2703
+        },
+        {
+          "additive": true,
+          "id": 2704
+        },
+        {
+          "additive": true,
+          "id": 2705
+        },
+        {
+          "additive": true,
+          "id": 2706
+        },
+        {
+          "additive": true,
+          "id": 2707
+        },
+        {
+          "additive": true,
+          "id": 2708
+        },
+        {
+          "additive": true,
+          "id": 2709
+        },
+        {
+          "additive": true,
+          "id": 2710
+        },
+        {
+          "additive": true,
+          "id": 2711
+        },
+        {
+          "additive": true,
+          "id": 2712
+        },
+        {
+          "additive": true,
+          "id": 2713
+        },
+        {
+          "additive": true,
+          "id": 2714
+        },
+        {
+          "additive": true,
+          "id": 2715
+        },
+        {
+          "additive": true,
+          "id": 2716
+        },
+        {
+          "additive": true,
+          "id": 2717
+        },
+        {
+          "additive": true,
+          "id": 2718
+        },
+        {
+          "additive": true,
+          "id": 2719
+        },
+        {
+          "additive": true,
+          "id": 2720
+        }
+      ],
+      "classification": "SAFE",
+      "findings": [],
+      "floors": [
+        {
+          "additive": true,
+          "id": 176
+        },
+        {
+          "additive": true,
+          "id": 177
+        },
+        {
+          "additive": true,
+          "id": 178
+        }
+      ],
+      "internalName": "TheTempleOfAtalHakkar",
+      "mapId": 109,
+      "package": "mod-native-instance-maps.temple-of-atal-hakkar",
+      "reasonCodes": [],
+      "slug": "temple-of-atal-hakkar",
+      "title": "Temple of Atal Hakkar",
+      "transforms": [
+        {
+          "additive": true,
+          "id": 14
+        }
+      ],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 687
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/TheUnderbog",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 3299
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 546; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 223
+        }
+      ],
+      "internalName": "TheUnderbog",
+      "mapId": 546,
+      "package": "mod-native-instance-maps.theunderbog",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "theunderbog",
+      "title": "TheUnderbog",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 726
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/Uldaman",
+      "artworkNameAlias": null,
+      "blpCount": 24,
+      "chunks": [
+        {
+          "additive": true,
+          "id": 2631
+        },
+        {
+          "additive": true,
+          "id": 2607
+        },
+        {
+          "additive": true,
+          "id": 2632
+        },
+        {
+          "additive": true,
+          "id": 2608
+        },
+        {
+          "additive": true,
+          "id": 2588
+        },
+        {
+          "additive": true,
+          "id": 2609
+        },
+        {
+          "additive": true,
+          "id": 2610
+        },
+        {
+          "additive": true,
+          "id": 2589
+        },
+        {
+          "additive": true,
+          "id": 2822
+        },
+        {
+          "additive": true,
+          "id": 2582
+        },
+        {
+          "additive": true,
+          "id": 2819
+        },
+        {
+          "additive": true,
+          "id": 2612
+        },
+        {
+          "additive": true,
+          "id": 2613
+        },
+        {
+          "additive": true,
+          "id": 2591
+        },
+        {
+          "additive": true,
+          "id": 2614
+        },
+        {
+          "additive": true,
+          "id": 2592
+        },
+        {
+          "additive": true,
+          "id": 2615
+        },
+        {
+          "additive": true,
+          "id": 2616
+        },
+        {
+          "additive": true,
+          "id": 2593
+        },
+        {
+          "additive": true,
+          "id": 2617
+        },
+        {
+          "additive": true,
+          "id": 2603
+        },
+        {
+          "additive": true,
+          "id": 2594
+        },
+        {
+          "additive": true,
+          "id": 2618
+        },
+        {
+          "additive": true,
+          "id": 2595
+        },
+        {
+          "additive": true,
+          "id": 2619
+        },
+        {
+          "additive": true,
+          "id": 2620
+        },
+        {
+          "additive": true,
+          "id": 2823
+        },
+        {
+          "additive": true,
+          "id": 2596
+        },
+        {
+          "additive": true,
+          "id": 2621
+        },
+        {
+          "additive": true,
+          "id": 2597
+        },
+        {
+          "additive": true,
+          "id": 2820
+        },
+        {
+          "additive": true,
+          "id": 2583
+        },
+        {
+          "additive": true,
+          "id": 2821
+        },
+        {
+          "additive": true,
+          "id": 2623
+        },
+        {
+          "additive": true,
+          "id": 2624
+        },
+        {
+          "additive": true,
+          "id": 2599
+        },
+        {
+          "additive": true,
+          "id": 2625
+        },
+        {
+          "additive": true,
+          "id": 2626
+        },
+        {
+          "additive": true,
+          "id": 2600
+        },
+        {
+          "additive": true,
+          "id": 2627
+        },
+        {
+          "additive": true,
+          "id": 2601
+        },
+        {
+          "additive": true,
+          "id": 2584
+        },
+        {
+          "additive": true,
+          "id": 2628
+        },
+        {
+          "additive": true,
+          "id": 2602
+        },
+        {
+          "additive": true,
+          "id": 2629
+        },
+        {
+          "additive": true,
+          "id": 2630
+        },
+        {
+          "additive": true,
+          "id": 2587
+        },
+        {
+          "additive": true,
+          "id": 2604
+        },
+        {
+          "additive": true,
+          "id": 2585
+        },
+        {
+          "additive": true,
+          "id": 2605
+        },
+        {
+          "additive": true,
+          "id": 2586
+        },
+        {
+          "additive": true,
+          "id": 2606
+        }
+      ],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable supplies no WorldMapTransforms row for map 70; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": true,
+          "id": 171
+        },
+        {
+          "additive": true,
+          "id": 180
+        }
+      ],
+      "internalName": "Uldaman",
+      "mapId": 70,
+      "package": "mod-native-instance-maps.uldaman",
+      "reasonCodes": [
+        "no-transform"
+      ],
+      "slug": "uldaman",
+      "title": "Uldaman",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 692
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/WailingCaverns",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [
+        {
+          "additive": false,
+          "id": 1209
+        },
+        {
+          "additive": false,
+          "id": 1218
+        },
+        {
+          "additive": false,
+          "id": 1210
+        },
+        {
+          "additive": false,
+          "id": 1219
+        },
+        {
+          "additive": false,
+          "id": 1211
+        },
+        {
+          "additive": false,
+          "id": 1220
+        },
+        {
+          "additive": false,
+          "id": 1212
+        },
+        {
+          "additive": false,
+          "id": 1213
+        },
+        {
+          "additive": false,
+          "id": 1221
+        },
+        {
+          "additive": false,
+          "id": 1217
+        },
+        {
+          "additive": false,
+          "id": 1222
+        },
+        {
+          "additive": false,
+          "id": 1214
+        },
+        {
+          "additive": false,
+          "id": 1223
+        },
+        {
+          "additive": false,
+          "id": 1215
+        },
+        {
+          "additive": false,
+          "id": 1216
+        },
+        {
+          "additive": false,
+          "id": 1224
+        },
+        {
+          "additive": false,
+          "id": 1244
+        },
+        {
+          "additive": false,
+          "id": 1234
+        },
+        {
+          "additive": false,
+          "id": 1235
+        },
+        {
+          "additive": false,
+          "id": 1236
+        },
+        {
+          "additive": false,
+          "id": 1245
+        },
+        {
+          "additive": false,
+          "id": 1246
+        },
+        {
+          "additive": false,
+          "id": 1247
+        },
+        {
+          "additive": false,
+          "id": 1248
+        },
+        {
+          "additive": false,
+          "id": 1229
+        },
+        {
+          "additive": false,
+          "id": 1243
+        },
+        {
+          "additive": false,
+          "id": 1226
+        },
+        {
+          "additive": false,
+          "id": 1239
+        },
+        {
+          "additive": false,
+          "id": 1227
+        },
+        {
+          "additive": false,
+          "id": 1230
+        },
+        {
+          "additive": false,
+          "id": 1240
+        },
+        {
+          "additive": false,
+          "id": 1231
+        },
+        {
+          "additive": false,
+          "id": 1241
+        },
+        {
+          "additive": false,
+          "id": 1232
+        },
+        {
+          "additive": false,
+          "id": 1242
+        },
+        {
+          "additive": false,
+          "id": 1233
+        },
+        {
+          "additive": false,
+          "id": 1228
+        }
+      ],
+      "classification": "UNSAFE",
+      "findings": [
+        "DungeonMap floor 28 is a stock row that WDM mutates; the instance only works with WDM's replacement geometry, and the append-only composer cannot express that",
+        "DungeonMapChunk row(s) 1209, 1218, 1210, 1219, 1211, 1220, 1212, 1213 already exist in the stock client; the client already has this tile set and there is nothing additive to ship",
+        "WDM Stable supplies no WorldMapTransforms row for map 43; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [
+        {
+          "additive": false,
+          "id": 28
+        }
+      ],
+      "internalName": "WailingCaverns",
+      "mapId": 43,
+      "package": "mod-native-instance-maps.wailingcaverns",
+      "reasonCodes": [
+        "no-transform",
+        "stock-chunk",
+        "stock-mutation-required"
+      ],
+      "slug": "wailingcaverns",
+      "title": "WailingCaverns",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 749
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/WarsongGulch",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [],
+      "classification": "REVIEW",
+      "findings": [
+        "WorldMapArea 443 is a stock row that WDM leaves untouched; the client already has it and there is nothing additive to ship",
+        "WDM Stable declares no DungeonMap floor for map 489; the instance has no floor geometry to compose",
+        "WDM Stable declares no DungeonMapChunk for the floors of map 489",
+        "WDM Stable supplies no WorldMapTransforms row for map 489; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [],
+      "internalName": "WarsongGulch",
+      "mapId": 489,
+      "package": "mod-native-instance-maps.warsonggulch",
+      "reasonCodes": [
+        "no-chunks",
+        "no-floors",
+        "no-transform",
+        "stock-world-map-area"
+      ],
+      "slug": "warsonggulch",
+      "title": "WarsongGulch",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": false,
+          "id": 443
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/ZulAman",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable declares no DungeonMap floor for map 568; the instance has no floor geometry to compose",
+        "WDM Stable declares no DungeonMapChunk for the floors of map 568",
+        "WDM Stable supplies no WorldMapTransforms row for map 568; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [],
+      "internalName": "ZulAman",
+      "mapId": 568,
+      "package": "mod-native-instance-maps.zulaman",
+      "reasonCodes": [
+        "no-chunks",
+        "no-floors",
+        "no-transform"
+      ],
+      "slug": "zulaman",
+      "title": "ZulAman",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 781
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/ZulFarrak",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable declares no DungeonMap floor for map 209; the instance has no floor geometry to compose",
+        "WDM Stable declares no DungeonMapChunk for the floors of map 209",
+        "WDM Stable supplies no WorldMapTransforms row for map 209; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [],
+      "internalName": "ZulFarrak",
+      "mapId": 209,
+      "package": "mod-native-instance-maps.zulfarrak",
+      "reasonCodes": [
+        "no-chunks",
+        "no-floors",
+        "no-transform"
+      ],
+      "slug": "zulfarrak",
+      "title": "ZulFarrak",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 686
+        }
+      ]
+    },
+    {
+      "artworkDirectory": "Interface/WorldMap/ZulGurub",
+      "artworkNameAlias": null,
+      "blpCount": 12,
+      "chunks": [],
+      "classification": "REVIEW",
+      "findings": [
+        "WDM Stable declares no DungeonMap floor for map 309; the instance has no floor geometry to compose",
+        "WDM Stable declares no DungeonMapChunk for the floors of map 309",
+        "WDM Stable supplies no WorldMapTransforms row for map 309; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+      ],
+      "floors": [],
+      "internalName": "ZulGurub",
+      "mapId": 309,
+      "package": "mod-native-instance-maps.zulgurub",
+      "reasonCodes": [
+        "no-chunks",
+        "no-floors",
+        "no-transform"
+      ],
+      "slug": "zulgurub",
+      "title": "ZulGurub",
+      "transforms": [],
+      "worldMapArea": [
+        {
+          "additive": true,
+          "id": 697
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "REVIEW": 54,
+    "SAFE": 3,
+    "UNSAFE": 1,
+    "candidates": 58
+  },
+  "floorsWithoutArea": [
+    {
+      "floors": [
+        31,
+        44
+      ],
+      "mapId": 0
+    },
+    {
+      "floors": [
+        56,
+        57,
+        58,
+        59,
+        60,
+        73
+      ],
+      "mapId": 533
+    },
+    {
+      "floors": [
+        1,
+        2,
+        41
+      ],
+      "mapId": 574
+    },
+    {
+      "floors": [
+        39,
+        40
+      ],
+      "mapId": 575
+    },
+    {
+      "floors": [
+        25
+      ],
+      "mapId": 576
+    },
+    {
+      "floors": [
+        42,
+        43,
+        45,
+        46
+      ],
+      "mapId": 578
+    },
+    {
+      "floors": [
+        34
+      ],
+      "mapId": 595
+    },
+    {
+      "floors": [
+        53
+      ],
+      "mapId": 599
+    },
+    {
+      "floors": [
+        37,
+        38
+      ],
+      "mapId": 600
+    },
+    {
+      "floors": [
+        47,
+        48,
+        49
+      ],
+      "mapId": 601
+    },
+    {
+      "floors": [
+        54,
+        55
+      ],
+      "mapId": 602
+    },
+    {
+      "floors": [
+        69,
+        70,
+        71,
+        72,
+        98
+      ],
+      "mapId": 603
+    },
+    {
+      "floors": [
+        36
+      ],
+      "mapId": 604
+    },
+    {
+      "floors": [
+        52
+      ],
+      "mapId": 608
+    },
+    {
+      "floors": [
+        61
+      ],
+      "mapId": 616
+    },
+    {
+      "floors": [
+        50
+      ],
+      "mapId": 619
+    },
+    {
+      "floors": [
+        63
+      ],
+      "mapId": 624
+    },
+    {
+      "floors": [
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      "mapId": 631
+    },
+    {
+      "floors": [
+        101
+      ],
+      "mapId": 632
+    },
+    {
+      "floors": [
+        94,
+        100,
+        95
+      ],
+      "mapId": 649
+    },
+    {
+      "floors": [
+        96,
+        99
+      ],
+      "mapId": 650
+    },
+    {
+      "floors": [
+        102
+      ],
+      "mapId": 668
+    }
+  ],
+  "stockMutations": [
+    {
+      "change": "modified",
+      "fieldDeltas": [
+        {
+          "field": "field3",
+          "stock": -410.9460144042969,
+          "wdm": -375.9460144042969
+        },
+        {
+          "field": "field4",
+          "stock": 595.5289916992188,
+          "wdm": 560.5289916992188
+        },
+        {
+          "field": "field5",
+          "stock": -483.47900390625,
+          "wdm": -410.14599609375
+        },
+        {
+          "field": "field6",
+          "stock": 187.50399780273438,
+          "wdm": 214.1699981689453
+        },
+        {
+          "field": "field7",
+          "stock": 0,
+          "wdm": 11
+        }
+      ],
+      "id": 28,
+      "table": "DungeonMap"
+    },
+    {
+      "change": "removed",
+      "id": 1237,
+      "stockRecord": {
+        "DungeonMapID": 28,
+        "ID": 1237,
+        "MapID": 43,
+        "field2": 3338,
+        "field4": -10000.0
+      },
+      "table": "DungeonMapChunk"
+    },
+    {
+      "change": "removed",
+      "id": 1238,
+      "stockRecord": {
+        "DungeonMapID": 28,
+        "ID": 1238,
+        "MapID": 43,
+        "field2": 3339,
+        "field4": -10000.0
+      },
+      "table": "DungeonMapChunk"
+    },
+    {
+      "change": "modified",
+      "fieldDeltas": [
+        {
+          "field": "parentMapID",
+          "stock": 0,
+          "wdm": 488
+        }
+      ],
+      "id": 609,
+      "table": "WorldMapArea"
+    }
+  ],
+  "unmappedWdmOnlyAreas": [
+    {
+      "areaId": 719,
+      "id": 688,
+      "internalName": "BlackfathomDeeps",
+      "mapId": 48
+    },
+    {
+      "areaId": 3836,
+      "id": 779,
+      "internalName": "MagtheridonsLair",
+      "mapId": 544
+    }
+  ]
+}
