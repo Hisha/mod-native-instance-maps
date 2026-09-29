@@ -23,7 +23,9 @@ Three packages, all validated against `mod-content-manager`'s own
 The other 55 discovered maps are deliberately **not** shipped. See
 [reports/instance-candidates.md](reports/instance-candidates.md) for the
 per-map verdict and reasoning; [reports/wdm-stable-audit.md](reports/wdm-stable-audit.md)
-records the stock-versus-WDM forensics.
+records the stock-versus-WDM forensics, and
+[reports/transform-analysis.md](reports/transform-analysis.md) records what can and
+cannot be derived about a missing `WorldMapTransforms` row.
 
 ## Quick start
 
@@ -63,6 +65,7 @@ upstream/WDM-patch/Stable/enUS/DBFilesClient/*.dbc
         │  tools/instances.py   group by WorldMapArea.internalName
         ▼
    Candidate  ── classify ──▶ SAFE / REVIEW / UNSAFE
+        │  tools/transform.py   decode + test transform rules (analysis only)
         │  tools/semantic.py    project rows onto manifest keys
         ▼
    worldMaps[] declaration
@@ -97,6 +100,88 @@ The three levels answer "can this ship?", not "is this data good?".
 Only one map is UNSAFE (`WailingCaverns`, which needs WDM's rewritten
 `DungeonMap 28` and its two deleted chunk rows). The 54 REVIEW maps are blocked
 on schema expressiveness, not on data quality.
+
+## WDM-supplied versus derived transforms
+
+A `WorldMapTransforms` row tells the client that a world map's region resolves
+to an instance floor. `mod-content-manager` requires one per `worldMaps[]`
+entry, and WDM supplies only four: transforms 11, 12, 13 and 14, covering
+exactly the maps WDM itself had to fix. That is why 50 candidates are REVIEW.
+
+**A derived transform is not the same thing as a WDM transform.** A WDM
+transform is upstream data with an upstream ID and is treated as authoritative
+throughout this repository. A derived transform would be data *this project
+authors*, carrying an ID this project chooses. The two are never mixed, and no
+derived transform is published today.
+
+### What the evidence supports
+
+`tools/transform.py` decodes all 13 rows in stock and WDM and tests each
+candidate rule against them rather than assuming one. Full results, including
+every discriminator that was tried and refuted, are in
+[reports/transform-analysis.md](reports/transform-analysis.md).
+
+The table splits cleanly into two unrelated families: 8 *instance-entrance*
+rows (full `+/-20000` region, `NewMapID == MapID`, zero offsets, a real floor
+in `NewDungeonMapID`) and 5 *world-UI region remap* rows, which are a different
+client feature and are all stock. WDM added no UI-remap rows.
+
+Within the instance family, **four rules are universal across all 8 rows**:
+
+```
+regionBottom/Right/Top/Left = -20000 / -20000 / 20000 / 20000
+newMapId        = MapID
+regionOffsetX   = 0.0
+regionOffsetY   = 0.0
+```
+
+Those fields would be *copied from observed WDM rows*, not invented. The
+remaining field, `NewDungeonMapID`, **cannot be derived** for any map with more
+than one floor. It is not the first floor (3 of 6), not the last (0 of 6), not
+the lowest or highest ID, and not recoverable from `DungeonMap.dbc` record
+order, `WorldMapArea.dungeonMap_id`, chunk offsets, or the `DungeonMap` field
+columns, which are constant across a map's floors. WDM ships no other client
+DBC that could settle it.
+
+The sharpest evidence is a direct contradiction. Deadmines (map 36) and Deeprun
+Tram (map 369) are both two-floor maps that the tables render as equivalent,
+and WDM chose the **second** floor for one (167) and the **first** for the
+other (741). No function of these tables reproduces both. `NewDungeonMapID`
+records the floor an author wired the entrance to, and that fact is not in the
+data — which is also why this repository does not claim to reproduce Deadmines'
+transform 11. It uses it because WDM supplies it.
+
+The narrowest rule the evidence supports is therefore single-floor maps only,
+where `NewDungeonMapID` is forced by elimination. Of the 35 candidates whose
+only REVIEW reason is a missing transform, **17 are single-floor** and
+value-derivable; 18 are multi-floor and are not. Karazhan, the brief's preferred
+stress test, has 17 floors and falls in the non-derivable group.
+
+### Why nothing was published anyway
+
+`NewDungeonMapID` is only half the problem. The row also needs an identity, and
+`mod-content-manager` will not supply one. `worldmap.world-map-transforms.id`
+is routed through `ContentResourceAllocator::PlanFixed()`, which throws when a
+request declares no value and never searches for a free candidate
+(`src/ContentResourceAllocator.h:14`, `:46`; `src/ContentResourceAllocator.cpp:145`;
+used at `src/ContentBuildService.cpp:402`). `docs/WORLD_MAP_DBC.md:131` puts it
+plainly: *"There is no allocator for these rows."*
+
+An authored transform is therefore representable and would be safely owned —
+`PlanFixed` rejects an ID already in the stock baseline or leased by another
+package, so a collision fails loudly — but the ID must be hand-picked and is
+leased durably, making it effectively permanent. Freezing permanent public
+identities by hand is a project-owner decision, not something the tooling
+should decide silently, so the derived-transform path is stopped rather than
+worked around. Resolving it means one of:
+
+1. reserve a fixed ID range for authored transforms and accept permanence,
+2. upstream a real allocator for world-map rows into `mod-content-manager`, or
+3. keep the published set limited to maps WDM already supplies a transform for.
+
+**No derived-transform map is in-game proven, because none have been published.**
+Nothing in this repository should be read as evidence that a derived transform
+would work on PTR.
 
 ## Hard constraints this repository honours
 

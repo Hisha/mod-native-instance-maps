@@ -32,6 +32,16 @@ from instances import (  # noqa: E402
     discover,
 )
 from package import FIXED_TIME, build_epf, manifest_for, serialise  # noqa: E402
+from transform import (  # noqa: E402
+    FULL_REGION_BOTTOM,
+    FULL_REGION_LEFT,
+    FULL_REGION_RIGHT,
+    FULL_REGION_TOP,
+    INSTANCE,
+    UI_REMAP,
+    analyze,
+    render_markdown,
+)
 from wdbc import TABLES, WdbcError, build_bytes, parse_bytes, parse_file  # noqa: E402
 
 STOCK_MISSING = "stock baseline not present"
@@ -631,6 +641,235 @@ class TestEpf(_DiscoveryMixin, unittest.TestCase):
                 with zipfile.ZipFile(output) as archive:
                     for name in archive.namelist():
                         self.assertFalse(name.lower().endswith(".dbc"))
+
+
+class TestTransformForensics(_DiscoveryMixin, unittest.TestCase):
+    """Phase A: can a missing ``WorldMapTransforms`` row be derived?
+
+    These tests pin the forensic *result*, including the negative one.  A future
+    upstream change that made multi-floor selection derivable should fail
+    ``test_floor_selection_is_not_derivable`` on purpose, prompting the rule and
+    the reports to be revisited.
+    """
+
+    analysis = None
+
+    @classmethod
+    def setUpClass(cls) -> None:
+        super().setUpClass()
+        cls.analysis = analyze(paths.stock_dbc_dir(), paths.wdm_dbc_dir())
+
+    def by_id(self, identifier: int):
+        for item in self.analysis.transforms:
+            if item.id == identifier:
+                return item
+        raise AssertionError(f"no transform with ID {identifier}")
+
+    # -- decoding ---------------------------------------------------------
+
+    def test_every_wdm_transform_decodes(self):
+        self.assertEqual(len(self.analysis.transforms), 13)
+        for item in self.analysis.transforms:
+            with self.subTest(id=item.id):
+                self.assertGreater(item.id, 0)
+                self.assertGreater(item.map_id, 0)
+                self.assertIn(item.family, (INSTANCE, UI_REMAP))
+
+    def test_deadmines_transform_decodes_to_the_known_row(self):
+        item = self.by_id(11)
+        self.assertEqual(item.map_id, 36)
+        self.assertEqual(item.region_bottom, -20000.0)
+        self.assertEqual(item.region_right, -20000.0)
+        self.assertEqual(item.region_top, 20000.0)
+        self.assertEqual(item.region_left, 20000.0)
+        self.assertEqual(item.new_map_id, 36)
+        self.assertEqual(item.region_offset_x, 0.0)
+        self.assertEqual(item.region_offset_y, 0.0)
+        self.assertEqual(item.new_dungeon_map_id, 167)
+
+    def test_wdm_supplied_transforms_are_marked_as_wdm_supplied(self):
+        added = [t.id for t in self.analysis.transforms if not t.in_stock]
+        self.assertEqual(sorted(added), [11, 12, 13, 14])
+
+    def test_stock_transforms_are_marked_as_stock(self):
+        stock = [t.id for t in self.analysis.transforms if t.in_stock]
+        self.assertEqual(sorted(stock), [2, 3, 4, 5, 6, 7, 8, 9, 10])
+
+    # -- family separation ------------------------------------------------
+
+    def test_families_partition_every_row(self):
+        total = len(self.analysis.instance) + len(self.analysis.ui_remap)
+        self.assertEqual(total, len(self.analysis.transforms))
+        self.assertEqual(len(self.analysis.instance), 8)
+        self.assertEqual(len(self.analysis.ui_remap), 5)
+
+    def test_every_wdm_added_transform_is_an_instance_entrance(self):
+        for item in self.analysis.transforms:
+            if not item.in_stock:
+                with self.subTest(id=item.id):
+                    self.assertEqual(item.family, INSTANCE)
+
+    def test_structural_fields_are_universal_within_the_instance_family(self):
+        for name in (
+            "region covers the whole map (+/-20000)",
+            "NewMapID equals MapID",
+            "region offsets are zero",
+            "NewDungeonMapID names a floor of the same map",
+        ):
+            with self.subTest(rule=name):
+                self.assertTrue(self.analysis.holds(name), f"{name} is not universal")
+
+    def test_new_map_id_is_not_universal_across_the_whole_table(self):
+        """The rule holds for the instance family only; quoting it generally
+        would be wrong, because the map-530 rows remap to 0 and 1."""
+        remapped = [t for t in self.analysis.transforms if t.new_map_id != t.map_id]
+        self.assertEqual(sorted(t.id for t in remapped), [2, 3])
+        for item in remapped:
+            with self.subTest(id=item.id):
+                self.assertEqual(item.family, UI_REMAP)
+
+    # -- the contested field ---------------------------------------------
+
+    def test_floor_selection_is_not_derivable(self):
+        """The headline negative result, pinned deliberately."""
+        for name in (
+            "NewDungeonMapID is the FIRST floor",
+            "NewDungeonMapID is the LAST floor",
+            "NewDungeonMapID is the LOWEST floor ID",
+            "NewDungeonMapID is the HIGHEST floor ID",
+        ):
+            with self.subTest(rule=name):
+                self.assertFalse(
+                    self.analysis.holds(name), f"{name} unexpectedly became universal"
+                )
+
+    def test_multi_floor_selection_splits_evenly(self):
+        def split(suffix: str) -> tuple:
+            _, holds_for, total = self.analysis.verdict(suffix)
+            return holds_for, total
+
+        self.assertEqual(split("NewDungeonMapID is the FIRST floor (multi-floor maps only)"), (3, 6))
+        self.assertEqual(split("NewDungeonMapID is the SECOND floor (multi-floor maps only)"), (3, 6))
+        self.assertEqual(
+            split("NewDungeonMapID is a floor other than 1st/2nd (multi-floor maps only)"), (0, 6)
+        )
+
+    def test_deadmines_and_deeprun_tram_contradict_each_other(self):
+        """Two structurally equivalent two-floor maps, opposite answers."""
+        deadmines = next(c for c in self.analysis.choices if c.map_id == 36)
+        deeprun = next(c for c in self.analysis.choices if c.map_id == 369)
+        self.assertEqual(deadmines.total, 2)
+        self.assertEqual(deeprun.total, 2)
+        self.assertEqual(deadmines.chosen, 167)
+        self.assertEqual(deeprun.chosen, 741)
+        self.assertEqual(deadmines.index, 2)
+        self.assertEqual(deeprun.index, 1)
+
+    def test_every_choice_names_a_real_floor_of_its_map(self):
+        for choice in self.analysis.choices:
+            with self.subTest(map=choice.map_id):
+                self.assertIsNotNone(choice.index)
+                self.assertIn(choice.chosen, choice.floors)
+
+    # -- the narrow rule --------------------------------------------------
+
+    def test_narrow_rule_reaches_only_single_floor_maps(self):
+        only = [c for c in self.discovery.candidates if list(c.reason_codes) == ["no-transform"]]
+        single = [c for c in only if len(c.floor_ids) == 1]
+        multi = [c for c in only if len(c.floor_ids) > 1]
+        self.assertEqual(len(only), 35)
+        self.assertEqual(len(single), 17)
+        self.assertEqual(len(multi), 18)
+        for item in single:
+            with self.subTest(name=item.internal_name):
+                self.assertEqual(len(item.floor_ids), 1)
+
+    def test_karazhan_is_multi_floor_and_therefore_not_derivable(self):
+        karazhan = self.candidate("Karazhan")
+        self.assertEqual(list(karazhan.reason_codes), ["no-transform"])
+        self.assertEqual(len(karazhan.floor_ids), 17)
+        self.assertEqual(karazhan.classification, REVIEW)
+
+    def test_no_candidate_was_reclassified_by_this_analysis(self):
+        """The forensics report is analysis; published counts must not move."""
+        counts = {}
+        for item in self.discovery.candidates:
+            counts[item.classification] = counts.get(item.classification, 0) + 1
+        self.assertEqual(counts.get(SAFE), 3)
+        self.assertEqual(counts.get(REVIEW), 54)
+        self.assertEqual(counts.get(UNSAFE), 1)
+
+    # -- region constants -------------------------------------------------
+
+    def test_region_constants_match_the_observed_rows(self):
+        for item in self.analysis.instance:
+            with self.subTest(id=item.id):
+                self.assertEqual(item.region_bottom, FULL_REGION_BOTTOM)
+                self.assertEqual(item.region_right, FULL_REGION_RIGHT)
+                self.assertEqual(item.region_top, FULL_REGION_TOP)
+                self.assertEqual(item.region_left, FULL_REGION_LEFT)
+
+    def test_region_constants_never_appear_in_the_ui_remap_family(self):
+        for item in self.analysis.ui_remap:
+            with self.subTest(id=item.id):
+                self.assertFalse(item.full_region)
+
+    # -- report determinism ----------------------------------------------
+
+    def test_report_is_deterministic(self):
+        self.assertEqual(
+            render_markdown(self.analysis, self.discovery.candidates),
+            render_markdown(self.analysis, self.discovery.candidates),
+        )
+
+    def test_report_on_disk_is_current(self):
+        target = paths.REPORTS_DIR / "transform-analysis.md"
+        if not target.is_file():
+            self.skipTest("transform analysis report not generated")
+        self.assertEqual(
+            target.read_text(encoding="utf-8"),
+            render_markdown(self.analysis, self.discovery.candidates),
+        )
+
+    def test_report_states_the_blocker(self):
+        target = paths.REPORTS_DIR / "transform-analysis.md"
+        if not target.is_file():
+            self.skipTest("transform analysis report not generated")
+        text = target.read_text(encoding="utf-8")
+        self.assertIn("There is no allocator for these rows", text)
+        self.assertIn("PlanFixed", text)
+
+    # -- per-floor evidence behind the report's numbers ------------------
+
+    def test_deadmines_floor_chunk_counts(self):
+        """Pins the numbers the report quotes, so they cannot silently drift."""
+        self.assertEqual(self.analysis.chunk_counts[166], 18)
+        self.assertEqual(self.analysis.chunk_counts[167], 11)
+        self.assertEqual(self.analysis.chunk_counts[166] + self.analysis.chunk_counts[167], 29)
+
+    def test_most_chunks_heuristic_is_refuted_on_both_maps(self):
+        for map_id, chosen in ((36, 167), (631, 104)):
+            with self.subTest(map=map_id):
+                floors = next(c for c in self.analysis.choices if c.map_id == map_id).floors
+                busiest = max(floors, key=lambda f: self.analysis.chunk_counts.get(f, 0))
+                self.assertNotEqual(busiest, chosen)
+
+    def test_deadmines_and_deeprun_first_floors_share_the_same_shape(self):
+        """The structural similarity that makes their opposite answers a
+        contradiction rather than a coincidence."""
+        for first_floor in (166, 741):
+            with self.subTest(floor=first_floor):
+                offsets = set(self.analysis.chunk_field4[first_floor])
+                self.assertIn(-10000.0, offsets)
+                real = [v for v in offsets if v != -10000.0]
+                self.assertEqual(len(real), 1)
+
+    def test_deadmines_floor_field_columns_are_available(self):
+        for floor_id in (166, 167):
+            with self.subTest(floor=floor_id):
+                row = self.analysis.floor(floor_id)
+                self.assertEqual(row["mapId"], 36)
+                self.assertEqual(row["field7"], 39)
 
 
 if __name__ == "__main__":

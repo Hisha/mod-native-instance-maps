@@ -19,6 +19,7 @@ help:
 
 reports:
 	$(PYTHON) tools/report.py
+	$(PYTHON) tools/transform.py
 
 packages:
 	$(PYTHON) tools/package.py
@@ -40,6 +41,7 @@ check: all validate
 # would change. Nothing is written.
 verify:
 	$(PYTHON) tools/report.py --check
+	$(PYTHON) tools/transform.py --check
 	$(PYTHON) tools/package.py --check
 	$(PYTHON) tests/run_tests.py
 
