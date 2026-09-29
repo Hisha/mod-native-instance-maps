@@ -1,0 +1,9 @@
+{
+  "project": "WDM-patch",
+  "author": "Trimitor",
+  "repository": "https://github.com/Trimitor/WDM-patch.git",
+  "revision": "5e7e9d1957211f40c9636a9f417901d153b40d4d",
+  "dataset": "Stable",
+  "purpose": "Third-party upstream source/reference material",
+  "modified": false
+}

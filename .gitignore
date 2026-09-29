@@ -1,0 +1,17 @@
+# Generated distributable packages
+dist/*.epf
+
+# Temporary/build output
+tmp/
+build/
+*.tmp
+
+# Python
+__pycache__/
+*.pyc
+
+# Editor/OS noise
+.vscode/
+.idea/
+.DS_Store
+*~
