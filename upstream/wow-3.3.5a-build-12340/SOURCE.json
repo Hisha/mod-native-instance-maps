@@ -3,10 +3,10 @@
   "author": "Blizzard Entertainment",
   "repository": null,
   "revision": "build 12340 (enUS)",
-  "container": "Data/enUS/locale-enUS.MPQ",
+  "container": "Data/enUS/patch-enUS-3.MPQ",
   "member": "Interface\\FrameXML\\FrameXML.toc",
-  "sha256": "36ccfed8ad8e424fb312c942a75bd17c6091dd264df8653f117dcfe8417d91a3",
-  "bytes": 2456,
+  "sha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "bytes": 2820,
   "purpose": "Verified stock FrameXML table of contents. Declared world-map floor labels are inserted into this exact file as one additional module line; no other stock FrameXML file is read, replaced or required.",
   "modified": false,
   "license": "Stock client data. Redistributed unmodified for interoperability with an owned local client; not authored by this project."

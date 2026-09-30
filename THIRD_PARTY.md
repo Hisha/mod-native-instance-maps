@@ -66,13 +66,17 @@ The stock client table of contents under:
 
 is extracted unmodified from:
 
-    Data/enUS/locale-enUS.MPQ   member  Interface\FrameXML\FrameXML.toc
+    Data/enUS/patch-enUS-3.MPQ  member  Interface\FrameXML\FrameXML.toc
     build 12340
+
+`FrameXML.toc` is also carried by the base `locale-enUS.MPQ` and the earlier
+`patch-enUS*.MPQ` archives, but the patch archives take precedence at runtime,
+so this is the copy the client actually loads.
 
 It is vendored so the digest a package declares can be reviewed without the
 client installed, and so the EPF is self-contained. `mod-content-manager` does
 not regenerate FrameXML: it verifies this exact file's SHA-256
-(`36ccfed8ad8e424fb312c942a75bd17c6091dd264df8653f117dcfe8417d91a3`) and inserts
+(`3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754`) and inserts
 a single module line after the stock `## add new modules above here` marker. No
 other stock FrameXML file is read, replaced or required.
 

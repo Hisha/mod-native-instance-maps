@@ -192,7 +192,7 @@ void RunFrameXmlPipeline(fs::path const &package, fs::path const &workspace,
            "ComposeToc: " + error);
 
     // Exactly one added line, and it is the module.  Byte counts prove nothing
-    // else moved: stock 2456 bytes plus one CRLF-terminated module name.
+    // else moved: the stock TOC plus one CRLF-terminated module name.
     // A table of contents line is a bare leaf name, not a path.
     std::string const module =
         fs::path(ContentFrameXml::GeneratedLuaTarget()).filename().string();
