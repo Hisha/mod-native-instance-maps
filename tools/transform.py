@@ -340,13 +340,19 @@ def render_markdown(analysis: TransformAnalysis, candidates: Optional[Sequence] 
     w("")
     w("## Scope")
     w("")
-    w("54 REVIEW candidates exist because mod-content-manager's `worldMaps[]` contract")
-    w("requires exactly one `WorldMapTransforms` row per map, and 50 of those candidates")
-    w("have no WDM-supplied transform. This report asks whether such a row can be")
-    w("*derived* from the other three WDM tables, and reports what the data supports.")
+    w("Most candidate maps have no WDM-supplied `WorldMapTransforms` row. This report")
+    w("asks whether such a row could be *derived* from the other three WDM tables, and")
+    w("reports what the data supports, because the answer determines whether this project")
+    w("could ever author one.")
     w("")
     w("**Short answer: partially. Eight of the ten fields are provable. The tenth,")
     w("`NewDungeonMapID`, is not provable for any map with more than one floor.**")
+    w("")
+    w("That negative result is why no transform is ever synthesised here. It is no longer")
+    w("a blocker on shipping the map: `mod-content-manager` treats")
+    w("`worldMaps[].transform` as optional, so a map WDM ships without one is composed")
+    w("from its area, floors, chunks and artwork alone. See")
+    w("\"How this applies to the candidate set\" below.")
     w("")
 
     w("## Method and its limits")
@@ -562,58 +568,81 @@ def render_markdown(analysis: TransformAnalysis, candidates: Optional[Sequence] 
 
 
 def _render_eligibility(out: List[str], candidates: Sequence) -> None:
-    """Report how far the narrow rule would actually reach in the candidate set."""
-    w = out.append
-    only = [c for c in candidates if list(c.reason_codes) == ["no-transform"]]
-    single = sorted((c for c in only if len(c.floor_ids) == 1), key=lambda c: c.map_id)
-    multi = sorted((c for c in only if len(c.floor_ids) > 1), key=lambda c: -len(c.floor_ids))
+    """What the derivation result means now that a transform is optional.
 
-    w("## How far the narrow rule reaches in the candidate set")
+    The forensic result above is unchanged: ``NewDungeonMapID`` cannot be derived
+    for a multi-floor map.  What changed is that nothing needs it any more.
+    ``mod-content-manager`` treats ``worldMaps[].transform`` as optional, so a map
+    WDM ships without a transform row is described completely by its
+    ``WorldMapArea``, its ``DungeonMap`` floors, its ``DungeonMapChunk`` rows and
+    its artwork -- and no transform is composed, requested or leased.
+    """
+    w = out.append
+    wdm_supplied = sorted((c for c in candidates if c.transform_ids), key=lambda c: c.map_id or 0)
+    no_row = sorted(
+        (c for c in candidates if not c.transform_ids and c.map_id is not None),
+        key=lambda c: c.map_id or 0,
+    )
+    floors_of = {c.map_id: len(c.floor_ids) for c in candidates if c.map_id is not None}
+
+    w("## How this applies to the candidate set")
     w("")
-    w(f"Of the {len(only)} candidates whose *only* REVIEW reason is a missing transform,")
-    w(f"**{len(single)} are single-floor** and therefore value-derivable, and "
-      f"**{len(multi)} are multi-floor** and therefore not.")
+    w("The derivation result is no longer load-bearing. `mod-content-manager` treats")
+    w("`worldMaps[].transform` as optional, so a map WDM ships without a transform row")
+    w("is a complete, valid contribution: no request, no fixed ID, no lease, no composed")
+    w("row, and `WorldMapTransforms.dbc` left byte for byte as the verified stock file.")
     w("")
-    w("This is a property of the candidate set, not a new classification: no candidate has")
-    w("been reclassified, and the published counts in `reports/instance-candidates.md` are")
-    w("unchanged. Single-floor, transform-only, in map order:")
+    w(f"Of the {len(no_row)} candidates whose map has no WDM `WorldMapTransforms` row,")
+    w("**none needs a derived one**, and none gets one. Absence is expressed as an absent")
+    w("key in the semantic declaration, never as `null` and never as a borrowed row.")
     w("")
-    w("| internalName | mapId | floor | floors | chunks | artwork | derivable `NewDungeonMapID` |")
-    w("|---|---:|---:|---:|---:|---:|---|")
-    for c in single:
+    w(f"The remaining {len(wdm_supplied)} candidates whose map WDM *does* give a transform")
+    w("row carry it forward byte for byte, and are the only packages in which")
+    w("`WorldMapTransforms` is composed at all. In map order:")
+    w("")
+    w("| internalName | mapId | transform | floors | chunks |")
+    w("|---|---:|---:|---:|---:|")
+    for c in wdm_supplied:
         w(
-            f"| {c.internal_name} | {c.map_id} | {c.floor_ids[0]} | {len(c.floor_ids)} | "
-            f"{len(c.chunk_ids)} | {len(c.blps)} | {c.floor_ids[0]} (forced) |"
+            f"| {c.internal_name} | {c.map_id} | {', '.join(map(str, c.transform_ids))} | "
+            f"{len(c.floor_ids)} | {len(c.chunk_ids)} |"
         )
     w("")
-    w("Multi-floor, transform-only, largest first. These stay non-derivable regardless of")
-    w("how much other evidence is gathered:")
+    w("Maps with no WDM transform row, in map order. The floor count is the quantity the")
+    w("old rule could not resolve, and it is now simply carried as data:")
     w("")
-    w("| internalName | mapId | floors | chunks |")
-    w("|---|---:|---:|---:|")
-    for c in multi:
-        w(f"| {c.internal_name} | {c.map_id} | {len(c.floor_ids)} | {len(c.chunk_ids)} |")
+    w("| internalName | mapId | floors | chunks | artwork |")
+    w("|---|---:|---:|---:|---:|")
+    for c in no_row:
+        w(
+            f"| {c.internal_name} | {c.map_id} | {floors_of.get(c.map_id, 0)} | "
+            f"{len(c.chunk_ids)} | {len(c.blps)} |"
+        )
     w("")
-    w("Note the consequence for the pilot the brief asked for: **Karazhan has 17 floors**,")
-    w("so it sits in the non-derivable table, and so do Blackrock Spire, Shadowfang Keep,")
-    w("Dire Maul, Gnomeregan and Scarlet Monastery. The multi-floor stress test the brief")
-    w("wanted cannot be satisfied by derivation from WDM data, and no amount of tuning the")
-    w("rule will change that, because the discriminator is absent from the source.")
+    w("**Karazhan (map 532) is the concrete case this report is now anchored to:** 17")
+    w("`DungeonMap` floors, 86 `DungeonMapChunk` rows, one `WorldMapArea` (ID 799) with")
+    w("`dungeonMapId 0`, 204 client tiles, and zero `WorldMapTransforms` rows. It is a")
+    w("large multi-floor native instance that WDM itself ships with no transform, which")
+    w("is the direct evidence that the row is not part of a map's identity.")
     w("")
-
     _render_blocker(out)
 
 
 def _render_blocker(out: List[str]) -> None:
-    """Record the independent blocker: mod-content-manager cannot allocate the ID."""
+    """Why no transform is ever authored, and what would still have to be true."""
     w = out.append
-    w("## Independent blocker: mod-content-manager cannot allocate a transform ID")
+    w("## No transform is ever authored")
     w("")
-    w("Even for the 17 single-floor maps, where every value is derivable, the row still")
-    w("needs an identity, and mod-content-manager will not supply one. This is a separate")
-    w("issue from the floor-selection finding above and would block the phase on its own.")
+    w("Two independent facts each make authoring one the wrong answer, and they are")
+    w("recorded here so the omission is a decision rather than an oversight.")
     w("")
-    w("World-map rows are deliberately excluded from the searching allocator:")
+    w("**1. The value is not derivable.** The `NewDungeonMapID` analysis above refutes")
+    w("every discriminator the four WDM tables offer. A synthesised row would carry a")
+    w("guessed floor ID, and `NewDungeonMapID` is a client-baked identity that the")
+    w("`+/-20000` structural rules do not determine.")
+    w("")
+    w("**2. There is no allocator for the row.** World-map rows are deliberately")
+    w("excluded from the searching allocator:")
     w("")
     w("```cpp")
     w("// src/ContentResourceAllocator.h:14")
@@ -628,35 +657,21 @@ def _render_blocker(out: List[str]) -> None:
     w("{ return {std::move(resourceKind), 1, 0xffffffffu}; }")
     w("```")
     w("")
-    w("`worldmap.world-map-transforms.id` is routed through that policy at")
-    w("`src/ContentBuildService.cpp:402`, and `PlanFixed` throws when a request declares no")
-    w("value (`src/ContentResourceAllocator.cpp:145`). `docs/WORLD_MAP_DBC.md:131` states it")
-    w("plainly: *\"There is no allocator for these rows.\"*")
+    w("`worldmap.world-map-transforms.id` is routed through that policy, and `PlanFixed`")
+    w("throws when a request declares no value")
+    w("(`src/ContentResourceAllocator.cpp:145`). `docs/WORLD_MAP_DBC.md` states it")
+    w("plainly: *\"There is no allocator for these rows.\"* A package could hand-pick an")
+    w("ID, but it would be leased durably and is effectively permanent, so the identity")
+    w("would be frozen into the project by a guess about a field the data does not")
+    w("contain. Omitting the key avoids that entirely.")
     w("")
-    w("The consequences are exact:")
-    w("")
-    w("- A package **must** author-declare the transform ID; there is no")
-    w("  allocate-next-free path for this resource kind.")
-    w("- The declared ID is leased **durably** on first build and is \"effectively")
-    w("  permanent\"; a retired lease is never handed to another owner.")
-    w("- CM does validate the choice: `PlanFixed` rejects an ID already present in the")
-    w("  verified stock baseline or held by another package, so a collision fails the")
-    w("  build loudly rather than corrupting a row.")
-    w("")
-    w("So an authored transform is *representable* and would be safely owned, but the ID")
-    w("would have to be hand-picked and would be frozen into the project permanently.")
-    w("That is precisely the outcome the phase brief said to refuse rather than work")
-    w("around, so the implementation path is stopped here. Resolving it needs a decision")
-    w("from the project owner, not a code change in this repository:")
-    w("")
-    w("1. Author a fixed ID under an explicitly reserved range and accept permanence, or")
-    w("2. Upstream a change to mod-content-manager giving world-map rows a real allocator,")
-    w("   or")
-    w("3. Restrict published maps to those where WDM supplies the transform, i.e. the")
-    w("   three already published.")
-    w("")
-    w("Option 1 is the only one available without touching mod-content-manager, and it is")
-    w("a policy decision about permanent public identity, not a technical question.")
+    w("This report therefore states a narrower conclusion than it used to. It does **not**")
+    w("claim to know what the client does with `NewDungeonMapID` or with")
+    w("`WorldMapTransforms` at runtime; that needs client reverse engineering or in-game")
+    w("observation. The established facts are narrower: WDM supplies four such rows, they")
+    w("are preserved exactly, maps it does not supply one for need none, and the Deadmines")
+    w("\"default floor\" idea remains an unproven hypothesis until a separate in-game A/B")
+    w("test.")
 
 
 

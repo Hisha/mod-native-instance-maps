@@ -1,17 +1,23 @@
 #!/usr/bin/env python3
-"""Compile and run the mod-content-manager validation harness over ``dist/``.
+"""Run every EPF in ``dist/`` through mod-content-manager's real pipeline.
 
 This is the only step in this repository that builds C++.  It exists so the
-generated packages are checked by the same ``ContentPackage::Validate`` and
-``StageInto`` that will install them, rather than by a reimplementation of the
+generated packages are checked by the same ``ContentPackage::Validate``,
+``StageInto``, ``WorldMapDbcComposer`` and ``ContentServerBundle::VerifyParity``
+that will install and activate them, rather than by a reimplementation of the
 rules here.
+
+Each package is checked against the verified stock 3.3.5a build-12340 DBC
+baseline, so composition is exercised for real: rows are leased at their declared
+IDs, composed, staged, read back, and the result is compared against the stock
+file to prove every stock row survived byte for byte.
 
 mod-content-manager is used strictly read-only: its sources are compiled into a
 throwaway binary under a temporary directory and nothing in that checkout is
 written to.
 
     python3 tests/validate_epfs.py
-    python3 tests/validate_epfs.py --epf dist/mod-native-instance-maps.the-deadmines.epf
+    python3 tests/validate_epfs.py --epf dist/mod-native-instance-maps.karazhan.epf
 """
 
 from __future__ import annotations
@@ -48,10 +54,19 @@ UNITS = (
     "SpellDbcComposer",
 )
 
+# The four client tables a native instance map composes into.
+WORLD_MAP_TABLES = ("DungeonMap", "DungeonMapChunk", "WorldMapArea", "WorldMapTransforms")
+
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--epf", type=Path, action="append", dest="epfs")
+    parser.add_argument(
+        "--stock-dbc",
+        type=Path,
+        help="stock 3.3.5a build-12340 DBC baseline "
+        "(default: the one mod-content-manager verifies)",
+    )
     parser.add_argument(
         "--skip-build",
         action="store_true",
@@ -63,6 +78,14 @@ def main(argv: list[str] | None = None) -> int:
     if not (root / "src" / "ContentPackage.h").is_file():
         print(
             f"mod-content-manager not found at {root}; set MOD_CONTENT_MANAGER_DIR",
+            file=sys.stderr,
+        )
+        return 2
+
+    stock = args.stock_dbc or paths.stock_dbc_dir()
+    if not all((stock / f"{table}.dbc").is_file() for table in WORLD_MAP_TABLES):
+        print(
+            f"stock DBC baseline not found at {stock}; set --stock-dbc",
             file=sys.stderr,
         )
         return 2
@@ -88,9 +111,10 @@ def main(argv: list[str] | None = None) -> int:
             command += ["-o", str(binary)]
             subprocess.run(command, check=True)
 
-        command = [str(binary), str(Path(scratch) / "workspace")]
+        command = [str(binary), str(Path(scratch) / "workspace"), str(stock)]
         command += [str(epf.resolve()) for epf in epfs]
         print(f"validating {len(epfs)} package(s) against {root}")
+        print(f"stock DBC baseline: {stock}")
         return subprocess.run(command).returncode
 
 

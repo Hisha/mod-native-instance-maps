@@ -90,6 +90,10 @@ class Candidate:
     chunk_additive: List[bool] = field(default_factory=list)
     transform_ids: List[int] = field(default_factory=list)
     transform_additive: List[bool] = field(default_factory=list)
+    #: ``WorldMapArea.dungeonMap_id`` exactly as WDM wrote it, decoded as a
+    #: signed 32-bit integer.  This is a *reference* the client reads, not a row
+    #: this package owns, so it is recorded for fidelity and never rewritten.
+    area_dungeon_map_id: Optional[int] = None
     classification: str = REVIEW
     findings: List[str] = field(default_factory=list)
 
@@ -132,6 +136,7 @@ class Candidate:
                 )
             ],
             "artworkNameAlias": self.artwork_alias,
+            "areaDungeonMapId": self.area_dungeon_map_id,
             "classification": self.classification,
             "reasonCodes": list(self.reason_codes),
             "findings": list(self.findings),
@@ -327,7 +332,7 @@ def discover(
     transforms_by_map: Dict[int, List[DbcRecord]] = {}
     for record in transforms_table.records:
         transforms_by_map.setdefault(record.map_id(), []).append(record)
-    areas_by_name: Dict[str, List[DbcRecord]] = {}
+        areas_by_name: Dict[str, List[DbcRecord]] = {}
     for record in areas.records:
         areas_by_name.setdefault(str(record.value("internal_name")), []).append(record)
 
@@ -369,6 +374,10 @@ def discover(
         candidate.world_map_area_additive = [
             record.id not in stock_ids["WorldMapArea"] for record in area_rows
         ]
+        # Recorded verbatim, signed.  WDM writes 0, -1 and references to floors of
+        # other maps here, and all three are legitimate source values.
+        if len(area_rows) == 1:
+            candidate.area_dungeon_map_id = int(area_rows[0].value("dungeonMap_id"))
         if map_id is not None:
             floors = floors_by_map.get(map_id, [])
             candidate.floor_ids = [record.id for record in floors]
@@ -459,6 +468,26 @@ UNSAFE_REASONS = frozenset(
 # Everything else is additive-but-incomplete: WDM's rows are consistent and
 # safe to append, they just do not add up to a shippable package.  A human has
 # to decide whether the gap may be closed, and how.
+#
+# Two codes that earlier revisions of this file carried are deliberately absent:
+#
+# ``no-transform``
+#     A missing ``WorldMapTransforms`` row is not an incompleteness.  The four
+#     tables describe a native instance map completely without it: stock 3.3.5a
+#     and WDM Stable both ship large multi-floor instances with no transform row
+#     at all (Karazhan, map 532, is seventeen floors with none), and
+#     mod-content-manager treats ``worldMaps[].transform`` as optional.  A
+#     transform is source data: WDM's rows are preserved byte for byte when it
+#     has one, and when it has none the key is simply absent.  Nothing is derived,
+#     defaulted or allocated here.
+#
+# ``area-floor-reference-unresolvable``
+#     ``WorldMapArea.dungeonMap_id`` is a signed *reference* the client reads,
+#     not a row this package owns.  WDM writes 0, writes -1 as an explicit
+#     sentinel, and points at least one area (Ahn'Qiraj, map 531) at a
+#     ``DungeonMap`` row belonging to a different map.  All three are legitimate
+#     source values, so requiring the reference to name a floor of the same map
+#     rejected real content.  The value is carried through verbatim instead.
 REVIEW_REASONS = frozenset(
     {
         "no-world-map-area",
@@ -470,7 +499,6 @@ REVIEW_REASONS = frozenset(
         "floor-zero",
         "chunk-field2-zero",
         "chunk-floor-reference-unresolvable",
-        "no-transform",
         "ambiguous-transform",
         "stock-transform",
         "stock-world-map-area",
@@ -478,7 +506,6 @@ REVIEW_REASONS = frozenset(
         "stock-chunk",
         "transform-new-map-zero",
         "transform-target-not-a-floor",
-        "area-floor-reference-unresolvable",
         "virtual-map-pinned",
     }
 )
@@ -675,14 +702,12 @@ def _classify(candidate: Candidate, tables: Dict[str, DbcFile], stock: "StockVie
             )
 
     # ---- transform ---------------------------------------------------------
+    # WDM supplying no transform is the ordinary case for a native instance map
+    # and is not a defect: the semantic projection omits the key and
+    # mod-content-manager then requests, leases and composes no transform row.
+    # What is checked here is only the integrity of a transform that *is* there.
     if not candidate.transform_ids:
-        check.fail(
-            "no-transform",
-            "WDM Stable supplies no WorldMapTransforms row for map "
-            f"{candidate.map_id}; a mod-content-manager worldMaps[] entry requires "
-            "exactly one, and authoring one would invent a client-baked row outside "
-            "WDM's fixed ID space",
-        )
+        pass
     elif len(candidate.transform_ids) > 1:
         check.fail(
             "ambiguous-transform",
@@ -716,39 +741,6 @@ def _classify(candidate: Candidate, tables: Dict[str, DbcFile], stock: "StockVie
                 f"WorldMapTransforms {identifier} points NewDungeonMapID "
                 f"{transform.uint('NewDungeonMapID')} at a row that is not a floor of "
                 f"map {candidate.map_id}",
-            )
-
-    # ---- area -> floor reference -------------------------------------------
-    if len(candidate.world_map_area_ids) == 1 and candidate.floor_ids:
-        area = areas.get(candidate.world_map_area_ids[0])
-        reference = int(area.value("dungeonMap_id"))
-        if reference < 0:
-            check.fail(
-                "area-floor-reference-unresolvable",
-                f"WorldMapArea {area.id} sets dungeonMap_id {reference}, WDM's "
-                f"\"not an instance\" sentinel. mod-content-manager treats any non-zero "
-                f"dungeonMapId as a reference (it casts to uint32 at ContentPackage.cpp:360, "
-                f"so {reference} becomes {reference & 0xFFFFFFFF}) and rejects the package "
-                f"unless it names a floor of map {candidate.map_id}; carrying the sentinel "
-                "through and dropping the field are not the same row",
-            )
-        elif reference and reference not in set(candidate.floor_ids):
-            owner = floors.by_id[reference].map_id() if reference in floors.by_id else None
-            where = (
-                f"DungeonMap {reference} belongs to map {owner}"
-                if owner is not None
-                else f"DungeonMap {reference} does not exist in WDM Stable"
-            )
-            lease = (
-                " and is a stock row, so the fixed-ID allocator will never lease it again"
-                if reference in stock.ids["DungeonMap"]
-                else ""
-            )
-            check.fail(
-                "area-floor-reference-unresolvable",
-                f"WorldMapArea {area.id} references dungeonMap_id {reference}, but {where}"
-                f"{lease}; mod-content-manager requires the reference to resolve to a "
-                f"floor of map {candidate.map_id}",
             )
 
     candidate.reason_codes = sorted(check.codes)

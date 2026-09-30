@@ -10,37 +10,147 @@ can be contributed to AzerothCore through `mod-content-manager`, and ship the
 ones that can be shipped safely — without touching the client DBCs, the stock
 data, or the upstream trees.
 
+The correction in this revision: a `WorldMapTransforms` row is **optional**
+source data, and a `WorldMapArea.dungeonMapId` is a **reference**, not a row
+this package owns. Both were previously treated as blockers.
+
 ## Verdict
 
-**3 of 58 discovered maps are publishable.** The remaining 55 are withheld:
-54 REVIEW (schema expressiveness) and 1 UNSAFE (depends on a stock row WDM
-mutates).
+**41 of 58 discovered maps are shippable; 17 are not** — 16 REVIEW (incomplete
+or inconsistent WDM data) and 1 UNSAFE (depends on a stock row WDM mutates).
 
 | Level | Count | Meaning |
 |---|---:|---|
-| SAFE | 3 | every required row is additive, references resolve, artwork present |
-| REVIEW | 54 | additive and consistent, but not expressible as a package |
+| SAFE | 41 | every required row is additive, references are preserved as written, artwork present |
+| REVIEW | 16 | additive and consistent, but WDM's data for them does not add up to a package |
 | UNSAFE | 1 | requires replacing a stock row WDM changes |
 
-Per-map verdicts and reasons: [instance-candidates.md](instance-candidates.md).
-Machine-readable form: [instance-candidates.json](instance-candidates.json).
+**Classification is not publication.** Only four packages are generated, named
+explicitly in `content/publish.json`. The other 37 SAFE maps are deliberately not
+built: correcting a classifier into publishing a 40-map backlog is not the same
+decision as shipping Karazhan.
 
-## Shipped
-
-| Package | Map | Floors | Chunks | Tiles |
-|---|---:|---:|---:|---:|
-| `mod-native-instance-maps.deeprun-tram` | 369 | 2 | 7 | 24 |
-| `mod-native-instance-maps.temple-of-atal-hakkar` | 109 | 3 | 75 | 36 |
-| `mod-native-instance-maps.the-deadmines` | 36 | 2 | 29 | 24 |
+| Published | Map | Floors | Chunks | Transform | Tiles |
+|---|---:|---:|---:|---|---:|
+| `mod-native-instance-maps.deeprun-tram` | 369 | 2 | 7 | WDM 12 | 24 |
+| `mod-native-instance-maps.karazhan` | 532 | 17 | 86 | **none — WDM has none** | 204 |
+| `mod-native-instance-maps.temple-of-atal-hakkar` | 109 | 3 | 75 | WDM 14 | 36 |
+| `mod-native-instance-maps.the-deadmines` | 36 | 2 | 29 | WDM 11 | 24 |
 
 Each is a `mod-content-manager` manifest in `content/<slug>/manifest.json` plus a
 deterministic EPF in `dist/`. No DBC is shipped; composition is
 `mod-content-manager`'s.
 
+Per-map verdicts and reasons: [instance-candidates.md](instance-candidates.md).
+Machine-readable form: [instance-candidates.json](instance-candidates.json).
+
+## What changed, and why
+
+Two rules in `tools/instances.py` blocked maps that are in fact complete.
+
+### 1. `no-transform` is no longer a reason code
+
+A missing `WorldMapTransforms` row used to fail every map WDM does not transform.
+`mod-content-manager` supports the opposite contract: a `worldMaps[]` entry may
+omit `transform` entirely, in which case `AppendRequests` emits no
+`WorldMapTransforms` request, `PlanFixed` issues no lease, and `Compose` leaves
+the verified stock file byte for byte unchanged.
+
+The manifest now omits the key rather than writing `null`, and
+`NewDungeonMapID` is never guessed from a floor. Removing the blocker moved **38
+maps REVIEW → SAFE**: 35 whose only reason was `no-transform`, `AhnQiraj` whose
+only reason was the reference rule below, and `BlackTemple` and `SunwellPlateau`
+which had both.
+
+### 2. `dungeonMapId` is a reference
+
+`WorldMapArea.dungeonMapId` used to be resolved against the package's own floors,
+and anything unresolvable was reported as a defect. That is the wrong model: the
+field names another `DungeonMap` row and does not imply ownership of it. The
+signed value is now carried through verbatim — `0`, `-1`, and a cross-map
+reference alike — and never becomes a request, a lease or a row.
+
+This is what unblocks `BlackTemple` and `SunwellPlateau` (`-1`) and `AhnQiraj`
+(`DungeonMap 2`, a stock row belonging to map 574, which stays stock).
+
+### What was *not* changed
+
+No transform is derived, allocated or synthesized. The refutation in
+[transform-analysis.md](transform-analysis.md) still stands: for a multi-floor map
+the default floor is not recoverable from these tables, because Deadmines and
+Deeprun Tram are indistinguishable here yet WDM chose different floors for each.
+That analysis is now a statement about what this project will not do, rather than
+about what it may ship.
+
+## Karazhan
+
+Map 532, the multi-floor stress case the old rule excluded.
+
+| Property | Value | Source |
+|---|---|---|
+| `WorldMapArea` rows | 1 (id 799, `areaId` 3457, `virtualMapId` -1, `dungeonMapId` 0) | WDM |
+| `DungeonMap` floors | 17 (383, 385–391, 393, 398, 399, 401–406) | WDM |
+| `DungeonMapChunk` rows | 86 | WDM |
+| `WorldMapTransforms` rows | **0** | WDM |
+| Artwork | 204 BLP files | WDM |
+
+The declaration is compared field-for-field against the raw WDM rows, not against
+the importer's own intermediate state, so a renumbered row, a reordered chunk
+list, a normalized signed field or an invented transform fails the suite. All
+204 artwork payloads are compared by SHA-256 against the WDM directory.
+
+### Through mod-content-manager
+
+`tests/validate_epfs.py` drives the real pipeline against the verified stock
+3.3.5a build-12340 baseline:
+
+```
+Validate -> StageInto -> AppendRequests -> PlanFixed -> Compose -> Stage -> VerifyParity
+```
+
+| Table | Stock rows | Composed rows | Added |
+|---|---:|---:|---:|
+| `DungeonMap` | 55 | 72 | 17 |
+| `DungeonMapChunk` | 622 | 708 | 86 |
+| `WorldMapArea` | 108 | 109 | 1 |
+| `WorldMapTransforms` | 9 | 9 | **0** |
+
+Verified for Karazhan:
+
+- no `WorldMapTransforms` request, no lease, no composed row;
+- composed `WorldMapTransforms.dbc` is **byte-identical** to the verified stock
+  file;
+- every stock row and every stock string byte survives composition in place, so
+  no verified row was edited;
+- every appended row is leased at its declared WDM ID, and none collides with a
+  stock ID;
+- every authored row reads back out of the staged `DBFilesClient` file identical
+  to the composed bytes;
+- the parity artifact verifies, with no `WorldMapTransforms` hash recorded —
+  because upstream refuses a hash for a table with no lease;
+- a counterfactual confirms that supplying a transform *would* have produced one
+  request, one lease and one row, so the zeroes are measured, not unchecked.
+
+## Artifacts
+
+Deterministic EPFs, stored uncompressed with `manifest.json` first and a fixed
+1980 timestamp. Reproduced byte-for-byte on a second build:
+
+| Package | SHA-256 | Bytes |
+|---|---|---:|
+| `mod-native-instance-maps.karazhan.epf` | `612feb7ecf66d52e297a667c785fc751f44fa18348c6c23b77fa60be82836e5a` | 9,220,306 |
+| `mod-native-instance-maps.deeprun-tram.epf` | `20dc20ae161184d360bbd55f4c91046d8622fffa2832562da82a245832237154` | 1,085,559 |
+| `mod-native-instance-maps.the-deadmines.epf` | `9f15c23875838f4d819b292c67e1b42a3036ab80cc6343ab05b3409d9001fb59` | 1,088,281 |
+| `mod-native-instance-maps.temple-of-atal-hakkar.epf` | `512db08dcb246ca23b50e25540738470facb604c73bd13b4edf09ebd2c45ea27` | 1,637,085 |
+
+Nothing was deployed. `dist/` is gitignored; the committed artifacts are the
+manifests.
+
 ## Provenance and integrity
 
 - WDM-patch revision `5e7e9d1957211f40c9636a9f417901d153b40d4d`, vendored
-  read-only under `upstream/WDM-patch/`.
+  read-only under `upstream/WDM-patch/` and recorded in
+  `upstream/WDM-patch/SOURCE.json` as `modified: false`.
 - `sha256sum -c ../SHA256SUMS`, run from `upstream/WDM-patch/Stable`:
   **17,072 OK, 0 FAILED.**
 - `git status --porcelain upstream/` reports **0 changes**.
@@ -76,36 +186,34 @@ reportable but not shippable.
 Consequence: *Wailing Caverns* is the single UNSAFE map, because its instance
 only works with WDM's rewritten floor and its deleted chunk rows.
 
-## Why 54 maps are withheld
+## Why 17 maps are withheld
 
 Ranked by cause (a map can have more than one):
 
 | Cause | Maps | Why it blocks |
 |---|---:|---|
-| No `WorldMapTransforms` row | 53 | a `worldMaps[]` entry requires exactly one; authoring one invents a client-baked row outside WDM's fixed ID space |
-| `dungeonMapId` reference cannot resolve | 3 | see below |
-| Artwork directory name ≠ `internalName` | 2 | see below |
-| No `WorldMapArea` row at all | 2 | the artwork directory has nothing to attach to |
-| Stock `WorldMapArea` WDM leaves untouched | 5 | nothing additive to ship; the client already has the map |
-| No floors or chunks | 13 | a PvP map, not an instance |
+| No chunks in the source | 11 | a map with floors but no chunk geometry is not an instance |
+| No floors in the source | 11 | a map with chunks but no floor rows is not an instance |
+| `WorldMapArea` is a stock row WDM leaves untouched | 5 | nothing additive to ship; the client already has the map |
+| Artwork directory name ≠ `internalName` | 2 | the client derives the directory from `internalName`; correcting either side changes a client-baked identity |
+| Artwork with no `WorldMapArea` row | 2 | nothing to attach the artwork to |
+| Chunk row is stock, not WDM's | 2 | `Northrend`, `WailingCaverns` — ID already occupied in the verified baseline |
 | Ambiguous transform (two rows for one map) | 1 | `Expansion01` has transforms 2 and 3 for map 530 |
+| Floor row is stock | 1 | `Northrend` |
+| Requires a WDM stock mutation | 1 | `WailingCaverns` |
 
 Specific cases worth naming:
 
-- **`AhnQiraj`** (map 531) — `WorldMapArea 766` references `DungeonMap 2`,
-  which is a stock row belonging to map 574. The reference cannot resolve
-  within the package, and ID 2 is not re-leasable.
-- **`BlackTemple`**, **`SunwellPlateau`** — `dungeonMapId` is `-1`, WDM's "not
-  an instance" sentinel. `mod-content-manager` tests
-  `if (area.dungeonMapId && ...)` and casts to `uint32_t`
-  (`ContentPackage.cpp:360`), so `-1` becomes `4294967295` and the package is
-  rejected. Carrying the sentinel through and dropping the field are not the
-  same row, so this is reported rather than papered over.
+- **`AhnQiraj`** (map 531) — `WorldMapArea 766` references `DungeonMap 2`, a stock
+  row belonging to map 574. SAFE now: the reference is preserved and ID 2 stays
+  stock. Nothing is contributed for it.
+- **`BlackTemple`**, **`SunwellPlateau`** — `dungeonMapId` is `-1`, WDM's "not an
+  instance" sentinel. Preserved as the signed value `-1`; it requests nothing.
 - **`BlackfathomDeeps`** / `BlackFathomDeeps` and **`MagtheridonsLair`** /
-  `Magtheridonslair` — WDM's `internalName` and its artwork directory disagree
-  in letter case. The client derives the directory from `internalName`, so the
-  declared name and the shipped directory are different strings. Not corrected
-  here: re-casing either side would change a client-baked identity.
+  `Magtheridonslair` — WDM's `internalName` and its artwork directory disagree in
+  letter case, so the declared name and the shipped directory are different
+  strings. Not corrected here: re-casing either side would change a client-baked
+  identity. This is why those four stay REVIEW.
 - **`BlackFathomDeeps`**, **`Magtheridonslair`** (artwork only) — artwork
   directories with no `WorldMapArea` row in either tree.
 
@@ -120,18 +228,21 @@ candidates; the full table with the stock/WDM-only split is in the audit report.
 |---|---|
 | `upstream/WDM-patch/SHA256SUMS` | 17,072 OK, 0 FAILED |
 | `git status --porcelain upstream/` | 0 changes |
-| `python3 tests/run_tests.py` | 54 tests, OK, 0 skipped |
+| `python3 tests/run_tests.py` | **111 tests, OK, 0 skipped** |
 | Deadmines vs `mod-content-manager` golden fixture | exact match on `worldMaps` and `content` |
 | Deadmines chunk order vs WDM's shipped DBC | exact match |
-| `mod-content-manager` full Phase 4 suite (incl. byte-exact Deadmines golden) | PASS |
-| `tests/validate_epfs.py` — all 3 EPFs through `ContentPackage::Validate()` | valid |
-| `tests/validate_epfs.py` — all 3 EPFs through `StageInto()` | 84 files staged and verified |
+| Karazhan declaration vs raw WDM rows | field-for-field match, 17/86/1/0/204 |
+| Karazhan artwork vs WDM payloads | 204/204 SHA-256 match |
+| Karazhan EPF regenerated | byte-identical, matches `dist/` |
+| The three pre-existing manifests regenerated | byte-identical, no diff |
+| `tests/validate_epfs.py` — all 4 EPFs through the full CM pipeline | valid, staged, composed, parity verified |
+| `WorldMapTransforms` composition for Karazhan | byte-identical to verified stock |
 | `make verify` (artifacts up to date, writes nothing) | exit 0 |
 
-The golden-fixture comparison is the load-bearing one: the Deadmines manifest
-here is derived *only* from WDM and then compared field-for-field, in order,
-against a manifest that was authored independently. It matches exactly, on
-both the semantic block and the artwork content block.
+The golden-fixture comparison remains the load-bearing one for Deadmines: its
+manifest is derived *only* from WDM and then compared field-for-field, in order,
+against a manifest authored independently. It matches exactly, on both the
+semantic block and the artwork content block.
 
 ## Constraints honoured
 
@@ -142,32 +253,38 @@ both the semantic block and the artwork content block.
    Deadmines interleaves floors 166/167 and is not ID-sorted; grouping by floor
    produces a different DBC. This was a real bug caught during development and
    is now pinned by two tests.
-4. **No DBCs in packages** — a package ships artwork plus a manifest.
-5. **Deterministic** — canonical JSON manifests; uncompressed EPFs with a fixed
+4. **References are references** — `dungeonMapId` is carried through signed and
+   exact, and never becomes a row of its own.
+5. **No invented transforms** — a transform is WDM's or absent; `NewDungeonMapID`
+   is never guessed and no transform ID is ever allocated.
+6. **No DBCs in packages** — a package ships artwork plus a manifest.
+7. **Deterministic** — canonical JSON manifests; uncompressed EPFs with a fixed
    1980 timestamp, verified byte-reproducible.
-6. **Upstream immutable** — vendored, checksummed, never edited.
-7. **Prohibited repos untouched** — `mod-content-manager`,
-   `wdm-stock-dbc/`, and `upstream/` are all read-only inputs.
+8. **Upstream immutable** — vendored, checksummed, never edited.
+9. **Prohibited repos untouched** — `mod-content-manager`, `WDM-patch`,
+   `wdm-stock-dbc/` and `upstream/` are all read-only inputs. Nothing was
+   committed or pushed.
 
 ## Recommendations
 
-- **Do not relax the transform requirement.** 53 of the 55 withheld maps are
-  blocked on a single missing `WorldMapTransforms` row. If
-  `mod-content-manager` ever gains an explicitly "no transform" mode, those maps
-  become expressible without any authoring on our side — that is the
-  highest-leverage change, and it belongs upstream, not here.
-- **Do not synthesise the missing rows.** A hand-written transform for, say,
+- **Keep publication explicit.** 41 SAFE maps are now available and only four are
+  generated. Widening `content/publish.json` is a project-owner decision, not a
+  consequence of fixing the classifier.
+- **Do not synthesise transforms.** A hand-written transform for, say,
   *Blackrock Spire* would be a guess about client-baked behaviour wearing WDM's
-  fixed ID. It would also be indistinguishable, in the composed DBC, from real
-  WDM data. That is precisely the failure mode the SAFE/REVIEW split exists to
-  prevent.
-- **The `-1` sentinel is arguably a `mod-content-manager` bug.** Treating every
-  non-zero `dungeonMapId` as a reference makes a legitimate client value
-  unloadable. Worth raising upstream as a validator fix, not worked around
-  here.
-- **Re-run `make check` after any upstream refresh.** The reports are
-  generated, so `--check` turns a stale classification into a build failure
-  rather than a silent drift.
+  fixed ID, and it would be indistinguishable, in the composed DBC, from real
+  WDM data. A missing transform is a complete row set, not a gap to fill.
+- **The `-1` sentinel was a `mod-content-manager` validator bug**, now fixed
+  upstream: treating every non-zero `dungeonMapId` as an unresolvable reference
+  made a legitimate client value unloadable.
+- **Karazhan is unproven in-game.** It is byte-for-byte WDM's data, composed by
+  the same append-only path as three maps that were already known good, and it
+  declares no transform because WDM has none. That is the strongest claim the
+  evidence supports. Whether the client renders map 532 as WDM intends is a
+  question only a live client can answer, and no such claim is made here.
+- **Re-run `make check` after any upstream refresh.** The reports are generated,
+  so `--check` turns a stale classification into a build failure rather than a
+  silent drift.
 
 ## Reproducing
 
@@ -176,6 +293,6 @@ make check
 ```
 
 Regenerates `reports/`, `content/` and `dist/` from the vendored WDM tree, runs
-the 52-test suite, and revalidates every EPF against the
-`mod-content-manager` checkout. `make verify` is the CI gate: it writes
-nothing and fails if any committed artifact is out of date.
+the 111-test suite, and drives every EPF through the `mod-content-manager`
+checkout. `make verify` is the CI gate: it writes nothing and fails if any
+committed artifact is out of date.

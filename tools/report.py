@@ -205,9 +205,22 @@ def candidates_markdown(discovery: Discovery) -> str:
     )
     add("")
     add(
+        "A `WorldMapTransforms` row is **not** part of that requirement. The four tables "
+        "describe a native instance map completely without one, and stock 3.3.5a and WDM "
+        "Stable both ship large multi-floor instances with no transform row (Karazhan, map "
+        "532, has seventeen floors and none). A transform WDM does supply is preserved "
+        "byte for byte; a transform WDM does not supply is omitted from the declaration "
+        "entirely. Nothing is derived, defaulted or allocated. `WorldMapArea.dungeonMapId` "
+        "is likewise a signed reference the client reads, not an owned row, so `0`, `-1` "
+        "and a cross-map reference are all carried through unchanged."
+    )
+    add("")
+    add(
         "**REVIEW** — WDM's rows are additive and internally consistent, but they do not "
-        "add up to a shippable package. Typically a required `WorldMapTransforms` row is "
-        "absent, or a `dungeonMapId` reference cannot be satisfied. Closing the gap means "
+        "add up to a shippable package: a required row is missing (no floors, no chunks, "
+        "no `WorldMapArea`), the artwork is absent or its directory name disagrees with the "
+        "area's `internalName`, the rows already exist in stock so there is nothing "
+        "additive to ship, or the source data is ambiguous. Closing such a gap would mean "
         "authoring rows outside WDM's fixed ID space, so a human decides, not the tool."
     )
     add("")
@@ -233,6 +246,7 @@ def candidates_markdown(discovery: Discovery) -> str:
         rows = []
         for item in items:
             digest = ""
+            transform = item.transform_ids[0] if item.transform_ids else None
             if level == SAFE:
                 declaration = semantic.world_map_declaration(
                     discovery.tables,
@@ -240,7 +254,7 @@ def candidates_markdown(discovery: Discovery) -> str:
                     item.world_map_area_ids,
                     item.floor_ids,
                     item.chunk_ids,
-                    item.transform_ids[0],
+                    transform,
                 )
                 digest = f"`{semantic.semantic_digest(declaration)}`"
             rows.append(
@@ -250,6 +264,7 @@ def candidates_markdown(discovery: Discovery) -> str:
                     "Floors": len(item.floor_ids),
                     "Chunks": len(item.chunk_ids),
                     "BLPs": len(item.blps),
+                    "Transform": transform if transform is not None else "none",
                     "Declaration": digest,
                     "Reasons": ", ".join(f"`{r}`" for r in item.reason_codes) or "—",
                 }
@@ -257,7 +272,16 @@ def candidates_markdown(discovery: Discovery) -> str:
         out.extend(
             _table(
                 rows,
-                ["Internal name", "MapID", "Floors", "Chunks", "BLPs", "Declaration", "Reasons"],
+                [
+                    "Internal name",
+                    "MapID",
+                    "Floors",
+                    "Chunks",
+                    "BLPs",
+                    "Transform",
+                    "Declaration",
+                    "Reasons",
+                ],
             )
         )
         add("")

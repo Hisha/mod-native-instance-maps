@@ -1,0 +1,1721 @@
+{
+ "content": [
+  {
+   "source": "artwork/Karazhan1_1.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan1_2.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan1_3.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan1_4.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan1_5.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan1_6.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan1_7.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan1_8.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan1_9.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan1_10.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan1_11.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan1_12.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan1_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan2_1.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan2_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan2_2.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan2_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan2_3.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan2_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan2_4.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan2_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan2_5.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan2_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan2_6.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan2_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan2_7.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan2_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan2_8.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan2_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan2_9.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan2_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan2_10.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan2_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan2_11.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan2_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan2_12.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan2_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan3_1.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan3_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan3_2.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan3_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan3_3.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan3_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan3_4.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan3_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan3_5.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan3_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan3_6.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan3_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan3_7.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan3_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan3_8.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan3_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan3_9.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan3_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan3_10.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan3_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan3_11.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan3_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan3_12.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan3_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan4_1.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan4_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan4_2.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan4_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan4_3.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan4_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan4_4.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan4_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan4_5.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan4_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan4_6.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan4_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan4_7.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan4_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan4_8.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan4_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan4_9.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan4_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan4_10.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan4_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan4_11.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan4_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan4_12.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan4_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan5_1.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan5_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan5_2.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan5_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan5_3.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan5_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan5_4.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan5_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan5_5.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan5_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan5_6.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan5_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan5_7.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan5_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan5_8.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan5_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan5_9.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan5_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan5_10.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan5_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan5_11.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan5_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan5_12.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan5_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan6_1.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan6_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan6_2.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan6_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan6_3.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan6_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan6_4.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan6_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan6_5.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan6_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan6_6.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan6_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan6_7.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan6_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan6_8.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan6_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan6_9.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan6_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan6_10.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan6_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan6_11.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan6_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan6_12.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan6_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan7_1.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan7_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan7_2.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan7_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan7_3.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan7_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan7_4.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan7_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan7_5.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan7_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan7_6.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan7_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan7_7.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan7_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan7_8.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan7_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan7_9.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan7_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan7_10.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan7_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan7_11.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan7_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan7_12.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan7_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan8_1.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan8_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan8_2.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan8_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan8_3.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan8_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan8_4.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan8_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan8_5.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan8_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan8_6.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan8_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan8_7.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan8_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan8_8.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan8_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan8_9.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan8_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan8_10.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan8_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan8_11.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan8_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan8_12.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan8_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan9_1.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan9_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan9_2.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan9_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan9_3.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan9_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan9_4.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan9_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan9_5.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan9_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan9_6.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan9_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan9_7.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan9_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan9_8.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan9_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan9_9.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan9_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan9_10.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan9_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan9_11.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan9_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan9_12.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan9_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan10_1.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan10_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan10_2.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan10_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan10_3.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan10_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan10_4.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan10_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan10_5.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan10_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan10_6.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan10_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan10_7.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan10_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan10_8.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan10_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan10_9.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan10_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan10_10.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan10_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan10_11.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan10_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan10_12.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan10_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan11_1.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan11_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan11_2.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan11_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan11_3.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan11_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan11_4.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan11_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan11_5.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan11_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan11_6.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan11_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan11_7.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan11_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan11_8.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan11_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan11_9.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan11_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan11_10.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan11_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan11_11.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan11_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan11_12.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan11_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan12_1.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan12_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan12_2.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan12_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan12_3.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan12_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan12_4.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan12_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan12_5.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan12_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan12_6.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan12_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan12_7.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan12_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan12_8.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan12_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan12_9.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan12_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan12_10.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan12_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan12_11.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan12_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan12_12.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan12_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan13_1.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan13_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan13_2.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan13_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan13_3.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan13_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan13_4.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan13_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan13_5.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan13_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan13_6.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan13_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan13_7.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan13_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan13_8.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan13_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan13_9.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan13_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan13_10.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan13_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan13_11.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan13_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan13_12.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan13_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan14_1.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan14_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan14_2.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan14_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan14_3.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan14_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan14_4.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan14_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan14_5.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan14_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan14_6.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan14_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan14_7.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan14_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan14_8.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan14_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan14_9.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan14_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan14_10.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan14_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan14_11.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan14_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan14_12.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan14_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan15_1.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan15_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan15_2.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan15_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan15_3.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan15_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan15_4.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan15_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan15_5.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan15_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan15_6.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan15_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan15_7.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan15_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan15_8.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan15_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan15_9.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan15_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan15_10.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan15_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan15_11.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan15_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan15_12.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan15_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan16_1.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan16_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan16_2.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan16_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan16_3.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan16_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan16_4.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan16_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan16_5.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan16_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan16_6.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan16_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan16_7.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan16_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan16_8.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan16_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan16_9.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan16_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan16_10.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan16_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan16_11.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan16_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan16_12.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan16_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan17_1.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan17_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan17_2.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan17_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan17_3.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan17_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan17_4.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan17_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan17_5.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan17_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan17_6.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan17_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan17_7.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan17_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan17_8.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan17_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan17_9.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan17_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan17_10.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan17_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan17_11.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan17_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Karazhan17_12.blp",
+   "target": "Interface/WorldMap/Karazhan/Karazhan17_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Karazhan instance map: 17 DungeonMap floors, 86 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 204 client BLP tiles.",
+ "name": "Karazhan",
+ "package": "mod-native-instance-maps.karazhan",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 3457,
+     "chunks": [
+      {
+       "dungeonMapId": 383,
+       "field2": 19619,
+       "field4": -10000.0,
+       "id": 4435
+      },
+      {
+       "dungeonMapId": 389,
+       "field2": 19620,
+       "field4": -10000.0,
+       "id": 4477
+      },
+      {
+       "dungeonMapId": 390,
+       "field2": 19620,
+       "field4": 100.0,
+       "id": 4478
+      },
+      {
+       "dungeonMapId": 403,
+       "field2": 19620,
+       "field4": 225.0,
+       "id": 4506
+      },
+      {
+       "dungeonMapId": 405,
+       "field2": 19620,
+       "field4": 260.0,
+       "id": 4515
+      },
+      {
+       "dungeonMapId": 406,
+       "field2": 19620,
+       "field4": 270.0,
+       "id": 4519
+      },
+      {
+       "dungeonMapId": 385,
+       "field2": 19621,
+       "field4": 65.0,
+       "id": 4442
+      },
+      {
+       "dungeonMapId": 383,
+       "field2": 19622,
+       "field4": -10000.0,
+       "id": 4438
+      },
+      {
+       "dungeonMapId": 387,
+       "field2": 19625,
+       "field4": -10000.0,
+       "id": 4447
+      },
+      {
+       "dungeonMapId": 387,
+       "field2": 19626,
+       "field4": -10000.0,
+       "id": 4452
+      },
+      {
+       "dungeonMapId": 387,
+       "field2": 19627,
+       "field4": -10000.0,
+       "id": 4453
+      },
+      {
+       "dungeonMapId": 387,
+       "field2": 19628,
+       "field4": -10000.0,
+       "id": 4454
+      },
+      {
+       "dungeonMapId": 387,
+       "field2": 19629,
+       "field4": -10000.0,
+       "id": 4451
+      },
+      {
+       "dungeonMapId": 387,
+       "field2": 19633,
+       "field4": -10000.0,
+       "id": 4461
+      },
+      {
+       "dungeonMapId": 387,
+       "field2": 19634,
+       "field4": -10000.0,
+       "id": 4462
+      },
+      {
+       "dungeonMapId": 388,
+       "field2": 19634,
+       "field4": 105.0,
+       "id": 4466
+      },
+      {
+       "dungeonMapId": 389,
+       "field2": 19634,
+       "field4": 115.0,
+       "id": 4469
+      },
+      {
+       "dungeonMapId": 387,
+       "field2": 19635,
+       "field4": -10000.0,
+       "id": 4448
+      },
+      {
+       "dungeonMapId": 387,
+       "field2": 19636,
+       "field4": -10000.0,
+       "id": 4464
+      },
+      {
+       "dungeonMapId": 387,
+       "field2": 19637,
+       "field4": -10000.0,
+       "id": 4459
+      },
+      {
+       "dungeonMapId": 389,
+       "field2": 19638,
+       "field4": -10000.0,
+       "id": 4468
+      },
+      {
+       "dungeonMapId": 389,
+       "field2": 19639,
+       "field4": -10000.0,
+       "id": 4467
+      },
+      {
+       "dungeonMapId": 387,
+       "field2": 19640,
+       "field4": -10000.0,
+       "id": 4474
+      },
+      {
+       "dungeonMapId": 389,
+       "field2": 19641,
+       "field4": -10000.0,
+       "id": 4472
+      },
+      {
+       "dungeonMapId": 389,
+       "field2": 19643,
+       "field4": -10000.0,
+       "id": 4476
+      },
+      {
+       "dungeonMapId": 390,
+       "field2": 19644,
+       "field4": -10000.0,
+       "id": 4480
+      },
+      {
+       "dungeonMapId": 391,
+       "field2": 19644,
+       "field4": 140.0,
+       "id": 4482
+      },
+      {
+       "dungeonMapId": 393,
+       "field2": 19644,
+       "field4": 155.0,
+       "id": 4484
+      },
+      {
+       "dungeonMapId": 390,
+       "field2": 19645,
+       "field4": -10000.0,
+       "id": 4481
+      },
+      {
+       "dungeonMapId": 391,
+       "field2": 19645,
+       "field4": 144.0,
+       "id": 4483
+      },
+      {
+       "dungeonMapId": 389,
+       "field2": 19646,
+       "field4": -10000.0,
+       "id": 4470
+      },
+      {
+       "dungeonMapId": 389,
+       "field2": 19647,
+       "field4": -10000.0,
+       "id": 4471
+      },
+      {
+       "dungeonMapId": 390,
+       "field2": 19647,
+       "field4": 120.0,
+       "id": 4479
+      },
+      {
+       "dungeonMapId": 383,
+       "field2": 19648,
+       "field4": -10000.0,
+       "id": 4434
+      },
+      {
+       "dungeonMapId": 386,
+       "field2": 19649,
+       "field4": -10000.0,
+       "id": 4446
+      },
+      {
+       "dungeonMapId": 386,
+       "field2": 19650,
+       "field4": -10000.0,
+       "id": 4445
+      },
+      {
+       "dungeonMapId": 387,
+       "field2": 19650,
+       "field4": 86.0,
+       "id": 4450
+      },
+      {
+       "dungeonMapId": 383,
+       "field2": 19651,
+       "field4": -10000.0,
+       "id": 4436
+      },
+      {
+       "dungeonMapId": 386,
+       "field2": 19652,
+       "field4": -10000.0,
+       "id": 4444
+      },
+      {
+       "dungeonMapId": 387,
+       "field2": 19652,
+       "field4": 86.0,
+       "id": 4455
+      },
+      {
+       "dungeonMapId": 393,
+       "field2": 19656,
+       "field4": -10000.0,
+       "id": 4485
+      },
+      {
+       "dungeonMapId": 393,
+       "field2": 19657,
+       "field4": -10000.0,
+       "id": 4486
+      },
+      {
+       "dungeonMapId": 403,
+       "field2": 19658,
+       "field4": -10000.0,
+       "id": 4505
+      },
+      {
+       "dungeonMapId": 404,
+       "field2": 19659,
+       "field4": -10000.0,
+       "id": 4512
+      },
+      {
+       "dungeonMapId": 406,
+       "field2": 19660,
+       "field4": -10000.0,
+       "id": 4520
+      },
+      {
+       "dungeonMapId": 403,
+       "field2": 19661,
+       "field4": -10000.0,
+       "id": 4508
+      },
+      {
+       "dungeonMapId": 404,
+       "field2": 19662,
+       "field4": -10000.0,
+       "id": 4510
+      },
+      {
+       "dungeonMapId": 404,
+       "field2": 19663,
+       "field4": -10000.0,
+       "id": 4513
+      },
+      {
+       "dungeonMapId": 403,
+       "field2": 19664,
+       "field4": -10000.0,
+       "id": 4507
+      },
+      {
+       "dungeonMapId": 404,
+       "field2": 19664,
+       "field4": 245.0,
+       "id": 4514
+      },
+      {
+       "dungeonMapId": 405,
+       "field2": 19664,
+       "field4": 260.0,
+       "id": 4517
+      },
+      {
+       "dungeonMapId": 406,
+       "field2": 19664,
+       "field4": 270.0,
+       "id": 4528
+      },
+      {
+       "dungeonMapId": 404,
+       "field2": 19665,
+       "field4": -10000.0,
+       "id": 4511
+      },
+      {
+       "dungeonMapId": 406,
+       "field2": 19666,
+       "field4": -10000.0,
+       "id": 4527
+      },
+      {
+       "dungeonMapId": 406,
+       "field2": 19667,
+       "field4": -10000.0,
+       "id": 4521
+      },
+      {
+       "dungeonMapId": 406,
+       "field2": 19668,
+       "field4": -10000.0,
+       "id": 4522
+      },
+      {
+       "dungeonMapId": 406,
+       "field2": 19669,
+       "field4": -10000.0,
+       "id": 4523
+      },
+      {
+       "dungeonMapId": 406,
+       "field2": 19670,
+       "field4": -10000.0,
+       "id": 4524
+      },
+      {
+       "dungeonMapId": 406,
+       "field2": 19671,
+       "field4": -10000.0,
+       "id": 4525
+      },
+      {
+       "dungeonMapId": 406,
+       "field2": 19672,
+       "field4": -10000.0,
+       "id": 4526
+      },
+      {
+       "dungeonMapId": 405,
+       "field2": 19674,
+       "field4": -10000.0,
+       "id": 4516
+      },
+      {
+       "dungeonMapId": 398,
+       "field2": 19675,
+       "field4": -10000.0,
+       "id": 4494
+      },
+      {
+       "dungeonMapId": 401,
+       "field2": 19676,
+       "field4": -10000.0,
+       "id": 4501
+      },
+      {
+       "dungeonMapId": 398,
+       "field2": 19677,
+       "field4": -10000.0,
+       "id": 4495
+      },
+      {
+       "dungeonMapId": 398,
+       "field2": 19678,
+       "field4": -10000.0,
+       "id": 4496
+      },
+      {
+       "dungeonMapId": 399,
+       "field2": 19679,
+       "field4": -10000.0,
+       "id": 4498
+      },
+      {
+       "dungeonMapId": 399,
+       "field2": 19680,
+       "field4": -10000.0,
+       "id": 4499
+      },
+      {
+       "dungeonMapId": 398,
+       "field2": 19681,
+       "field4": -10000.0,
+       "id": 4497
+      },
+      {
+       "dungeonMapId": 402,
+       "field2": 19682,
+       "field4": -10000.0,
+       "id": 4503
+      },
+      {
+       "dungeonMapId": 402,
+       "field2": 19683,
+       "field4": -10000.0,
+       "id": 4504
+      },
+      {
+       "dungeonMapId": 406,
+       "field2": 19684,
+       "field4": -10000.0,
+       "id": 4518
+      },
+      {
+       "dungeonMapId": 393,
+       "field2": 19685,
+       "field4": -10000.0,
+       "id": 4489
+      },
+      {
+       "dungeonMapId": 398,
+       "field2": 19685,
+       "field4": 190.0,
+       "id": 4493
+      },
+      {
+       "dungeonMapId": 401,
+       "field2": 19685,
+       "field4": 234.0,
+       "id": 4500
+      },
+      {
+       "dungeonMapId": 402,
+       "field2": 19685,
+       "field4": 275.0,
+       "id": 4502
+      },
+      {
+       "dungeonMapId": 383,
+       "field2": 19686,
+       "field4": -10000.0,
+       "id": 4439
+      },
+      {
+       "dungeonMapId": 385,
+       "field2": 19686,
+       "field4": 67.0,
+       "id": 4443
+      },
+      {
+       "dungeonMapId": 385,
+       "field2": 19698,
+       "field4": -10000.0,
+       "id": 4441
+      },
+      {
+       "dungeonMapId": 387,
+       "field2": 19747,
+       "field4": -10000.0,
+       "id": 4449
+      },
+      {
+       "dungeonMapId": 387,
+       "field2": 19748,
+       "field4": -10000.0,
+       "id": 4460
+      },
+      {
+       "dungeonMapId": 403,
+       "field2": 20085,
+       "field4": -10000.0,
+       "id": 4509
+      },
+      {
+       "dungeonMapId": 389,
+       "field2": 20096,
+       "field4": -10000.0,
+       "id": 4475
+      },
+      {
+       "dungeonMapId": 393,
+       "field2": 20099,
+       "field4": -10000.0,
+       "id": 4488
+      },
+      {
+       "dungeonMapId": 393,
+       "field2": 20100,
+       "field4": -10000.0,
+       "id": 4487
+      },
+      {
+       "dungeonMapId": 387,
+       "field2": 22148,
+       "field4": -10000.0,
+       "id": 4465
+      },
+      {
+       "dungeonMapId": 383,
+       "field2": 22149,
+       "field4": -10000.0,
+       "id": 4437
+      }
+     ],
+     "dungeonMapId": 0,
+     "floors": [
+      {
+       "field3": -2225.0244140625,
+       "field4": -1674.9755859375,
+       "field5": -11189.599609375,
+       "field6": -10822.900390625,
+       "field7": 32,
+       "floor": 1,
+       "id": 383
+      },
+      {
+       "field3": -2081.419921875,
+       "field4": -1823.56005859375,
+       "field5": -11189.0029296875,
+       "field6": -11017.0966796875,
+       "field7": 32,
+       "floor": 2,
+       "id": 385
+      },
+      {
+       "field3": -2132.57470703125,
+       "field4": -1787.42529296875,
+       "field5": -11066.2998046875,
+       "field6": -10836.2001953125,
+       "field7": 32,
+       "floor": 3,
+       "id": 386
+      },
+      {
+       "field3": -2190.0244140625,
+       "field4": -1669.9755859375,
+       "field5": -11119.599609375,
+       "field6": -10772.900390625,
+       "field7": 32,
+       "floor": 4,
+       "id": 387
+      },
+      {
+       "field3": -1932.5799560546875,
+       "field4": -1698.4300537109375,
+       "field5": -10969.2998046875,
+       "field6": -10813.2001953125,
+       "field7": 32,
+       "floor": 5,
+       "id": 388
+      },
+      {
+       "field3": -2205.7744140625,
+       "field4": -1624.2255859375,
+       "field5": -11190.599609375,
+       "field6": -10802.900390625,
+       "field7": 32,
+       "floor": 6,
+       "id": 389
+      },
+      {
+       "field3": -2066.7744140625,
+       "field4": -1875.2255859375,
+       "field5": -11115.599609375,
+       "field6": -10987.900390625,
+       "field7": 32,
+       "floor": 7,
+       "id": 390
+      },
+      {
+       "field3": -2037.6802978515625,
+       "field4": -1898.3297119140625,
+       "field5": -11105.2001953125,
+       "field6": -11012.2998046875,
+       "field7": 32,
+       "floor": 8,
+       "id": 391
+      },
+      {
+       "field3": -2270.0244140625,
+       "field4": -1509.9755859375,
+       "field5": -11459.599609375,
+       "field6": -10952.900390625,
+       "field7": 32,
+       "floor": 9,
+       "id": 393
+      },
+      {
+       "field3": -2040.1300048828125,
+       "field4": -1589.8800048828125,
+       "field5": -11386.3330078125,
+       "field6": -11086.1669921875,
+       "field7": 32,
+       "floor": 10,
+       "id": 398
+      },
+      {
+       "field3": -1825.530029296875,
+       "field4": -1554.47998046875,
+       "field5": -11285.099609375,
+       "field6": -11104.400390625,
+       "field7": 32,
+       "floor": 11,
+       "id": 399
+      },
+      {
+       "field3": -2182.5244140625,
+       "field4": -1587.4755859375,
+       "field5": -11444.599609375,
+       "field6": -11047.900390625,
+       "field7": 32,
+       "floor": 12,
+       "id": 401
+      },
+      {
+       "field3": -1963.0244140625,
+       "field4": -1433.9755859375,
+       "field5": -11339.099609375,
+       "field6": -10986.400390625,
+       "field7": 32,
+       "floor": 13,
+       "id": 402
+      },
+      {
+       "field3": -2032.6300048828125,
+       "field4": -1787.3800048828125,
+       "field5": -11143.0,
+       "field6": -10979.5,
+       "field7": 32,
+       "floor": 14,
+       "id": 403
+      },
+      {
+       "field3": -2025.0799560546875,
+       "field4": -1813.9300537109375,
+       "field5": -11113.6328125,
+       "field6": -10972.8671875,
+       "field7": 32,
+       "floor": 15,
+       "id": 404
+      },
+      {
+       "field3": -2020.1300048828125,
+       "field4": -1918.8800048828125,
+       "field5": -11097.0,
+       "field6": -11029.5,
+       "field7": 32,
+       "floor": 16,
+       "id": 405
+      },
+      {
+       "field3": -2155.1298828125,
+       "field4": -1813.8798828125,
+       "field5": -11102.0,
+       "field6": -10874.5,
+       "field7": 32,
+       "floor": 17,
+       "id": 406
+      }
+     ],
+     "id": 799,
+     "internalName": "Karazhan",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": -10389.5830078125,
+     "x2": -11562.5,
+     "y1": -1191.6666259765625,
+     "y2": -2950.0
+    }
+   ],
+   "mapId": 532
+  }
+ ]
+}

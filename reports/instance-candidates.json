@@ -1,6 +1,7 @@
 {
   "candidates": [
     {
+      "areaDungeonMapId": 2,
       "artworkDirectory": "Interface/WorldMap/AhnQiraj",
       "artworkNameAlias": null,
       "blpCount": 36,
@@ -206,10 +207,8 @@
           "id": 2918
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WorldMapArea 766 references dungeonMap_id 2, but DungeonMap 2 belongs to map 574 and is a stock row, so the fixed-ID allocator will never lease it again; mod-content-manager requires the reference to resolve to a floor of map 531"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -227,9 +226,7 @@
       "internalName": "AhnQiraj",
       "mapId": 531,
       "package": "mod-native-instance-maps.ahnqiraj",
-      "reasonCodes": [
-        "area-floor-reference-unresolvable"
-      ],
+      "reasonCodes": [],
       "slug": "ahnqiraj",
       "title": "AhnQiraj",
       "transforms": [
@@ -246,6 +243,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/ArathiBasin",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -254,8 +252,7 @@
       "findings": [
         "WorldMapArea 461 is a stock row that WDM leaves untouched; the client already has it and there is nothing additive to ship",
         "WDM Stable declares no DungeonMap floor for map 529; the instance has no floor geometry to compose",
-        "WDM Stable declares no DungeonMapChunk for the floors of map 529",
-        "WDM Stable supplies no WorldMapTransforms row for map 529; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+        "WDM Stable declares no DungeonMapChunk for the floors of map 529"
       ],
       "floors": [],
       "internalName": "ArathiBasin",
@@ -264,7 +261,6 @@
       "reasonCodes": [
         "no-chunks",
         "no-floors",
-        "no-transform",
         "stock-world-map-area"
       ],
       "slug": "arathibasin",
@@ -278,6 +274,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/AuchenaiCrypts",
       "artworkNameAlias": null,
       "blpCount": 24,
@@ -339,10 +336,8 @@
           "id": 3222
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 558; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -356,9 +351,7 @@
       "internalName": "AuchenaiCrypts",
       "mapId": 558,
       "package": "mod-native-instance-maps.auchenaicrypts",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "auchenaicrypts",
       "title": "AuchenaiCrypts",
       "transforms": [],
@@ -370,6 +363,7 @@
       ]
     },
     {
+      "areaDungeonMapId": null,
       "artworkDirectory": "Interface/WorldMap/BlackFathomDeeps",
       "artworkNameAlias": null,
       "blpCount": 36,
@@ -391,6 +385,7 @@
       "worldMapArea": []
     },
     {
+      "areaDungeonMapId": -1,
       "artworkDirectory": "Interface/WorldMap/BlackTemple",
       "artworkNameAlias": null,
       "blpCount": 96,
@@ -556,11 +551,8 @@
           "id": 4572
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 564; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space",
-        "WorldMapArea 796 sets dungeonMap_id -1, WDM's \"not an instance\" sentinel. mod-content-manager treats any non-zero dungeonMapId as a reference (it casts to uint32 at ContentPackage.cpp:360, so -1 becomes 4294967295) and rejects the package unless it names a floor of map 564; carrying the sentinel through and dropping the field are not the same row"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -594,10 +586,7 @@
       "internalName": "BlackTemple",
       "mapId": 564,
       "package": "mod-native-instance-maps.blacktemple",
-      "reasonCodes": [
-        "area-floor-reference-unresolvable",
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "blacktemple",
       "title": "BlackTemple",
       "transforms": [],
@@ -609,6 +598,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/BlackfathomDeeps",
       "artworkNameAlias": "BlackFathomDeeps",
       "blpCount": 0,
@@ -720,8 +710,7 @@
       ],
       "classification": "REVIEW",
       "findings": [
-        "WDM Stable draws this map from Interface/WorldMap/BlackFathomDeeps/, but the WorldMapArea internal_name is 'BlackfathomDeeps'; the client derives the directory from internal_name, and inventing or re-casing either name would change a client-baked identity",
-        "WDM Stable supplies no WorldMapTransforms row for map 48; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+        "WDM Stable draws this map from Interface/WorldMap/BlackFathomDeeps/, but the WorldMapArea internal_name is 'BlackfathomDeeps'; the client derives the directory from internal_name, and inventing or re-casing either name would change a client-baked identity"
       ],
       "floors": [
         {
@@ -741,8 +730,7 @@
       "mapId": 48,
       "package": "mod-native-instance-maps.blackfathomdeeps",
       "reasonCodes": [
-        "artwork-name-mismatch",
-        "no-transform"
+        "artwork-name-mismatch"
       ],
       "slug": "blackfathomdeeps",
       "title": "BlackfathomDeeps",
@@ -755,6 +743,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/BlackrockDepths",
       "artworkNameAlias": null,
       "blpCount": 24,
@@ -968,10 +957,8 @@
           "id": 2978
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 230; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -985,9 +972,7 @@
       "internalName": "BlackrockDepths",
       "mapId": 230,
       "package": "mod-native-instance-maps.blackrockdepths",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "blackrockdepths",
       "title": "BlackrockDepths",
       "transforms": [],
@@ -999,6 +984,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/BlackrockSpire",
       "artworkNameAlias": null,
       "blpCount": 84,
@@ -1304,10 +1290,8 @@
           "id": 3107
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 229; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -1341,9 +1325,7 @@
       "internalName": "BlackrockSpire",
       "mapId": 229,
       "package": "mod-native-instance-maps.blackrockspire",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "blackrockspire",
       "title": "BlackrockSpire",
       "transforms": [],
@@ -1355,6 +1337,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/BlackwingLair",
       "artworkNameAlias": null,
       "blpCount": 48,
@@ -1448,10 +1431,8 @@
           "id": 2857
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 469; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -1473,9 +1454,7 @@
       "internalName": "BlackwingLair",
       "mapId": 469,
       "package": "mod-native-instance-maps.blackwinglair",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "blackwinglair",
       "title": "BlackwingLair",
       "transforms": [],
@@ -1487,6 +1466,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/CoTHillsbradFoothills",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -1494,8 +1474,7 @@
       "classification": "REVIEW",
       "findings": [
         "WDM Stable declares no DungeonMap floor for map 560; the instance has no floor geometry to compose",
-        "WDM Stable declares no DungeonMapChunk for the floors of map 560",
-        "WDM Stable supplies no WorldMapTransforms row for map 560; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+        "WDM Stable declares no DungeonMapChunk for the floors of map 560"
       ],
       "floors": [],
       "internalName": "CoTHillsbradFoothills",
@@ -1503,8 +1482,7 @@
       "package": "mod-native-instance-maps.cothillsbradfoothills",
       "reasonCodes": [
         "no-chunks",
-        "no-floors",
-        "no-transform"
+        "no-floors"
       ],
       "slug": "cothillsbradfoothills",
       "title": "CoTHillsbradFoothills",
@@ -1517,6 +1495,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/CoTMountHyjal",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -1524,8 +1503,7 @@
       "classification": "REVIEW",
       "findings": [
         "WDM Stable declares no DungeonMap floor for map 534; the instance has no floor geometry to compose",
-        "WDM Stable declares no DungeonMapChunk for the floors of map 534",
-        "WDM Stable supplies no WorldMapTransforms row for map 534; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+        "WDM Stable declares no DungeonMapChunk for the floors of map 534"
       ],
       "floors": [],
       "internalName": "CoTMountHyjal",
@@ -1533,8 +1511,7 @@
       "package": "mod-native-instance-maps.cotmounthyjal",
       "reasonCodes": [
         "no-chunks",
-        "no-floors",
-        "no-transform"
+        "no-floors"
       ],
       "slug": "cotmounthyjal",
       "title": "CoTMountHyjal",
@@ -1547,6 +1524,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/CoTTheBlackMorass",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -1554,8 +1532,7 @@
       "classification": "REVIEW",
       "findings": [
         "WDM Stable declares no DungeonMap floor for map 269; the instance has no floor geometry to compose",
-        "WDM Stable declares no DungeonMapChunk for the floors of map 269",
-        "WDM Stable supplies no WorldMapTransforms row for map 269; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+        "WDM Stable declares no DungeonMapChunk for the floors of map 269"
       ],
       "floors": [],
       "internalName": "CoTTheBlackMorass",
@@ -1563,8 +1540,7 @@
       "package": "mod-native-instance-maps.cottheblackmorass",
       "reasonCodes": [
         "no-chunks",
-        "no-floors",
-        "no-transform"
+        "no-floors"
       ],
       "slug": "cottheblackmorass",
       "title": "CoTTheBlackMorass",
@@ -1577,6 +1553,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/CoilfangReservoir",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -1630,10 +1607,8 @@
           "id": 4368
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 548; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -1643,9 +1618,7 @@
       "internalName": "CoilfangReservoir",
       "mapId": 548,
       "package": "mod-native-instance-maps.coilfangreservoir",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "coilfangreservoir",
       "title": "CoilfangReservoir",
       "transforms": [],
@@ -1657,6 +1630,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 741,
       "artworkDirectory": "Interface/WorldMap/DeeprunTram",
       "artworkNameAlias": null,
       "blpCount": 24,
@@ -1722,6 +1696,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/DireMaul",
       "artworkNameAlias": null,
       "blpCount": 84,
@@ -2019,10 +1994,8 @@
           "id": 3683
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 429; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -2052,9 +2025,7 @@
       "internalName": "DireMaul",
       "mapId": 429,
       "package": "mod-native-instance-maps.diremaul",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "diremaul",
       "title": "DireMaul",
       "transforms": [],
@@ -2066,6 +2037,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/Expansion01",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -2107,6 +2079,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/Gnomeregan",
       "artworkNameAlias": null,
       "blpCount": 48,
@@ -2428,10 +2401,8 @@
           "id": 2577
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 90; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -2453,9 +2424,7 @@
       "internalName": "Gnomeregan",
       "mapId": 90,
       "package": "mod-native-instance-maps.gnomeregan",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "gnomeregan",
       "title": "Gnomeregan",
       "transforms": [],
@@ -2467,6 +2436,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/GruulsLair",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -2488,10 +2458,8 @@
           "id": 4165
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 565; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -2501,9 +2469,7 @@
       "internalName": "GruulsLair",
       "mapId": 565,
       "package": "mod-native-instance-maps.gruulslair",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "gruulslair",
       "title": "GruulsLair",
       "transforms": [],
@@ -2515,6 +2481,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/HellfireRamparts",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -2532,10 +2499,8 @@
           "id": 3270
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 543; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -2545,9 +2510,7 @@
       "internalName": "HellfireRamparts",
       "mapId": 543,
       "package": "mod-native-instance-maps.hellfireramparts",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "hellfireramparts",
       "title": "HellfireRamparts",
       "transforms": [],
@@ -2559,6 +2522,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/Karazhan",
       "artworkNameAlias": null,
       "blpCount": 204,
@@ -2908,10 +2872,8 @@
           "id": 4437
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 532; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -2985,9 +2947,7 @@
       "internalName": "Karazhan",
       "mapId": 532,
       "package": "mod-native-instance-maps.karazhan",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "karazhan",
       "title": "Karazhan",
       "transforms": [],
@@ -2999,6 +2959,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/MagistersTerrace",
       "artworkNameAlias": null,
       "blpCount": 24,
@@ -3080,10 +3041,8 @@
           "id": 3370
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 585; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -3097,9 +3056,7 @@
       "internalName": "MagistersTerrace",
       "mapId": 585,
       "package": "mod-native-instance-maps.magistersterrace",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "magistersterrace",
       "title": "MagistersTerrace",
       "transforms": [],
@@ -3111,6 +3068,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/MagtheridonsLair",
       "artworkNameAlias": "Magtheridonslair",
       "blpCount": 0,
@@ -3146,8 +3104,7 @@
       ],
       "classification": "REVIEW",
       "findings": [
-        "WDM Stable draws this map from Interface/WorldMap/Magtheridonslair/, but the WorldMapArea internal_name is 'MagtheridonsLair'; the client derives the directory from internal_name, and inventing or re-casing either name would change a client-baked identity",
-        "WDM Stable supplies no WorldMapTransforms row for map 544; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+        "WDM Stable draws this map from Interface/WorldMap/Magtheridonslair/, but the WorldMapArea internal_name is 'MagtheridonsLair'; the client derives the directory from internal_name, and inventing or re-casing either name would change a client-baked identity"
       ],
       "floors": [
         {
@@ -3159,8 +3116,7 @@
       "mapId": 544,
       "package": "mod-native-instance-maps.magtheridonslair",
       "reasonCodes": [
-        "artwork-name-mismatch",
-        "no-transform"
+        "artwork-name-mismatch"
       ],
       "slug": "magtheridonslair",
       "title": "MagtheridonsLair",
@@ -3173,6 +3129,7 @@
       ]
     },
     {
+      "areaDungeonMapId": null,
       "artworkDirectory": "Interface/WorldMap/Magtheridonslair",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -3194,6 +3151,7 @@
       "worldMapArea": []
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/ManaTombs",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -3255,10 +3213,8 @@
           "id": 3373
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 557; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -3268,9 +3224,7 @@
       "internalName": "ManaTombs",
       "mapId": 557,
       "package": "mod-native-instance-maps.manatombs",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "manatombs",
       "title": "ManaTombs",
       "transforms": [],
@@ -3282,6 +3236,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/Maraudon",
       "artworkNameAlias": null,
       "blpCount": 24,
@@ -3459,10 +3414,8 @@
           "id": 3501
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 349; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -3476,9 +3429,7 @@
       "internalName": "Maraudon",
       "mapId": 349,
       "package": "mod-native-instance-maps.maraudon",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "maraudon",
       "title": "Maraudon",
       "transforms": [],
@@ -3490,6 +3441,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/MoltenCore",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -3543,10 +3495,8 @@
           "id": 2831
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 409; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -3556,9 +3506,7 @@
       "internalName": "MoltenCore",
       "mapId": 409,
       "package": "mod-native-instance-maps.moltencore",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "moltencore",
       "title": "MoltenCore",
       "transforms": [],
@@ -3570,6 +3518,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/NetherstormArena",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -3578,8 +3527,7 @@
       "findings": [
         "WorldMapArea 482 is a stock row that WDM leaves untouched; the client already has it and there is nothing additive to ship",
         "WDM Stable declares no DungeonMap floor for map 566; the instance has no floor geometry to compose",
-        "WDM Stable declares no DungeonMapChunk for the floors of map 566",
-        "WDM Stable supplies no WorldMapTransforms row for map 566; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+        "WDM Stable declares no DungeonMapChunk for the floors of map 566"
       ],
       "floors": [],
       "internalName": "NetherstormArena",
@@ -3588,7 +3536,6 @@
       "reasonCodes": [
         "no-chunks",
         "no-floors",
-        "no-transform",
         "stock-world-map-area"
       ],
       "slug": "netherstormarena",
@@ -3602,6 +3549,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/Northrend",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -4188,8 +4136,7 @@
         "WorldMapArea 485 is a stock row that WDM leaves untouched; the client already has it and there is nothing additive to ship",
         "DungeonMap floor 27 is already a stock row; the client already has this floor and there is nothing additive to ship",
         "DungeonMap floor 26 is already a stock row; the client already has this floor and there is nothing additive to ship",
-        "DungeonMapChunk row(s) 1182, 1183, 1184, 1185, 1186, 1179, 1180, 1153 already exist in the stock client; the client already has this tile set and there is nothing additive to ship",
-        "WDM Stable supplies no WorldMapTransforms row for map 571; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+        "DungeonMapChunk row(s) 1182, 1183, 1184, 1185, 1186, 1179, 1180, 1153 already exist in the stock client; the client already has this tile set and there is nothing additive to ship"
       ],
       "floors": [
         {
@@ -4205,7 +4152,6 @@
       "mapId": 571,
       "package": "mod-native-instance-maps.northrend",
       "reasonCodes": [
-        "no-transform",
         "stock-chunk",
         "stock-floor",
         "stock-world-map-area"
@@ -4221,6 +4167,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/OnyxiasLair",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -4258,10 +4205,8 @@
           "id": 2941
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 249; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -4271,9 +4216,7 @@
       "internalName": "OnyxiasLair",
       "mapId": 249,
       "package": "mod-native-instance-maps.onyxiaslair",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "onyxiaslair",
       "title": "OnyxiasLair",
       "transforms": [],
@@ -4285,6 +4228,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/Ragefire",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -4314,10 +4258,8 @@
           "id": 1993
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 389; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -4327,9 +4269,7 @@
       "internalName": "Ragefire",
       "mapId": 389,
       "package": "mod-native-instance-maps.ragefire",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "ragefire",
       "title": "Ragefire",
       "transforms": [],
@@ -4341,6 +4281,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/RazorfenDowns",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -4390,10 +4331,8 @@
           "id": 2165
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 129; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -4403,9 +4342,7 @@
       "internalName": "RazorfenDowns",
       "mapId": 129,
       "package": "mod-native-instance-maps.razorfendowns",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "razorfendowns",
       "title": "RazorfenDowns",
       "transforms": [],
@@ -4417,6 +4354,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/RazorfenKraul",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -4522,10 +4460,8 @@
           "id": 2159
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 47; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -4535,9 +4471,7 @@
       "internalName": "RazorfenKraul",
       "mapId": 47,
       "package": "mod-native-instance-maps.razorfenkraul",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "razorfenkraul",
       "title": "RazorfenKraul",
       "transforms": [],
@@ -4549,6 +4483,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/RuinsofAhnQiraj",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -4556,8 +4491,7 @@
       "classification": "REVIEW",
       "findings": [
         "WDM Stable declares no DungeonMap floor for map 509; the instance has no floor geometry to compose",
-        "WDM Stable declares no DungeonMapChunk for the floors of map 509",
-        "WDM Stable supplies no WorldMapTransforms row for map 509; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+        "WDM Stable declares no DungeonMapChunk for the floors of map 509"
       ],
       "floors": [],
       "internalName": "RuinsofAhnQiraj",
@@ -4565,8 +4499,7 @@
       "package": "mod-native-instance-maps.ruinsofahnqiraj",
       "reasonCodes": [
         "no-chunks",
-        "no-floors",
-        "no-transform"
+        "no-floors"
       ],
       "slug": "ruinsofahnqiraj",
       "title": "RuinsofAhnQiraj",
@@ -4579,6 +4512,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/ScarletMonastery",
       "artworkNameAlias": null,
       "blpCount": 48,
@@ -4940,10 +4874,8 @@
           "id": 2781
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 189; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -4965,9 +4897,7 @@
       "internalName": "ScarletMonastery",
       "mapId": 189,
       "package": "mod-native-instance-maps.scarletmonastery",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "scarletmonastery",
       "title": "ScarletMonastery",
       "transforms": [],
@@ -4979,6 +4909,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/Scholomance",
       "artworkNameAlias": null,
       "blpCount": 48,
@@ -5088,10 +5019,8 @@
           "id": 2185
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 289; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -5113,9 +5042,7 @@
       "internalName": "Scholomance",
       "mapId": 289,
       "package": "mod-native-instance-maps.scholomance",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "scholomance",
       "title": "Scholomance",
       "transforms": [],
@@ -5127,6 +5054,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/SethekkHalls",
       "artworkNameAlias": null,
       "blpCount": 24,
@@ -5208,10 +5136,8 @@
           "id": 3237
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 556; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -5225,9 +5151,7 @@
       "internalName": "SethekkHalls",
       "mapId": 556,
       "package": "mod-native-instance-maps.sethekkhalls",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "sethekkhalls",
       "title": "SethekkHalls",
       "transforms": [],
@@ -5239,6 +5163,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/ShadowLabyrinth",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -5328,10 +5253,8 @@
           "id": 3265
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 555; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -5341,9 +5264,7 @@
       "internalName": "ShadowLabyrinth",
       "mapId": 555,
       "package": "mod-native-instance-maps.shadowlabyrinth",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "shadowlabyrinth",
       "title": "ShadowLabyrinth",
       "transforms": [],
@@ -5355,6 +5276,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/ShadowfangKeep",
       "artworkNameAlias": null,
       "blpCount": 84,
@@ -5676,10 +5598,8 @@
           "id": 2123
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 33; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -5713,9 +5633,7 @@
       "internalName": "ShadowfangKeep",
       "mapId": 33,
       "package": "mod-native-instance-maps.shadowfangkeep",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "shadowfangkeep",
       "title": "ShadowfangKeep",
       "transforms": [],
@@ -5727,6 +5645,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/Stratholme",
       "artworkNameAlias": null,
       "blpCount": 24,
@@ -6052,10 +5971,8 @@
           "id": 2200
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 329; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -6069,9 +5986,7 @@
       "internalName": "Stratholme",
       "mapId": 329,
       "package": "mod-native-instance-maps.stratholme",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "stratholme",
       "title": "Stratholme",
       "transforms": [],
@@ -6083,6 +5998,7 @@
       ]
     },
     {
+      "areaDungeonMapId": -1,
       "artworkDirectory": "Interface/WorldMap/SunwellPlateau",
       "artworkNameAlias": null,
       "blpCount": 24,
@@ -6096,11 +6012,8 @@
           "id": 4612
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 580; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space",
-        "WorldMapArea 789 sets dungeonMap_id -1, WDM's \"not an instance\" sentinel. mod-content-manager treats any non-zero dungeonMapId as a reference (it casts to uint32 at ContentPackage.cpp:360, so -1 becomes 4294967295) and rejects the package unless it names a floor of map 580; carrying the sentinel through and dropping the field are not the same row"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -6110,10 +6023,7 @@
       "internalName": "SunwellPlateau",
       "mapId": 580,
       "package": "mod-native-instance-maps.sunwellplateau",
-      "reasonCodes": [
-        "area-floor-reference-unresolvable",
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "sunwellplateau",
       "title": "SunwellPlateau",
       "transforms": [],
@@ -6125,6 +6035,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/TempestKeep",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -6194,10 +6105,8 @@
           "id": 4320
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 550; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -6207,9 +6116,7 @@
       "internalName": "TempestKeep",
       "mapId": 550,
       "package": "mod-native-instance-maps.tempestkeep",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "tempestkeep",
       "title": "TempestKeep",
       "transforms": [],
@@ -6221,6 +6128,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/TheArcatraz",
       "artworkNameAlias": null,
       "blpCount": 36,
@@ -6310,10 +6218,8 @@
           "id": 3344
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 552; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -6331,9 +6237,7 @@
       "internalName": "TheArcatraz",
       "mapId": 552,
       "package": "mod-native-instance-maps.thearcatraz",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "thearcatraz",
       "title": "TheArcatraz",
       "transforms": [],
@@ -6345,6 +6249,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/TheBloodFurnace",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -6378,10 +6283,8 @@
           "id": 3277
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 542; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -6391,9 +6294,7 @@
       "internalName": "TheBloodFurnace",
       "mapId": 542,
       "package": "mod-native-instance-maps.thebloodfurnace",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "thebloodfurnace",
       "title": "TheBloodFurnace",
       "transforms": [],
@@ -6405,6 +6306,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/TheBotanica",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -6434,10 +6336,8 @@
           "id": 3314
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 553; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -6447,9 +6347,7 @@
       "internalName": "TheBotanica",
       "mapId": 553,
       "package": "mod-native-instance-maps.thebotanica",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "thebotanica",
       "title": "TheBotanica",
       "transforms": [],
@@ -6461,6 +6359,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/TheDeadmines",
       "artworkNameAlias": null,
       "blpCount": 24,
@@ -6614,6 +6513,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/TheMechanar",
       "artworkNameAlias": null,
       "blpCount": 24,
@@ -6679,10 +6579,8 @@
           "id": 3319
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 554; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -6696,9 +6594,7 @@
       "internalName": "TheMechanar",
       "mapId": 554,
       "package": "mod-native-instance-maps.themechanar",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "themechanar",
       "title": "TheMechanar",
       "transforms": [],
@@ -6710,6 +6606,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/TheShatteredHalls",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -6763,10 +6660,8 @@
           "id": 3295
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 540; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -6776,9 +6671,7 @@
       "internalName": "TheShatteredHalls",
       "mapId": 540,
       "package": "mod-native-instance-maps.theshatteredhalls",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "theshatteredhalls",
       "title": "TheShatteredHalls",
       "transforms": [],
@@ -6790,6 +6683,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/TheSlavePens",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -6815,10 +6709,8 @@
           "id": 3311
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 547; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -6828,9 +6720,7 @@
       "internalName": "TheSlavePens",
       "mapId": 547,
       "package": "mod-native-instance-maps.theslavepens",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "theslavepens",
       "title": "TheSlavePens",
       "transforms": [],
@@ -6842,6 +6732,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/TheSteamvault",
       "artworkNameAlias": null,
       "blpCount": 24,
@@ -6887,10 +6778,8 @@
           "id": 4161
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 545; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -6904,9 +6793,7 @@
       "internalName": "TheSteamvault",
       "mapId": 545,
       "package": "mod-native-instance-maps.thesteamvault",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "thesteamvault",
       "title": "TheSteamvault",
       "transforms": [],
@@ -6918,6 +6805,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/TheStockade",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -7151,10 +7039,8 @@
           "id": 4090
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 34; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -7164,9 +7050,7 @@
       "internalName": "TheStockade",
       "mapId": 34,
       "package": "mod-native-instance-maps.thestockade",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "thestockade",
       "title": "TheStockade",
       "transforms": [],
@@ -7178,6 +7062,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/TheTempleOfAtalHakkar",
       "artworkNameAlias": null,
       "blpCount": 36,
@@ -7519,6 +7404,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/TheUnderbog",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -7528,10 +7414,8 @@
           "id": 3299
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 546; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -7541,9 +7425,7 @@
       "internalName": "TheUnderbog",
       "mapId": 546,
       "package": "mod-native-instance-maps.theunderbog",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "theunderbog",
       "title": "TheUnderbog",
       "transforms": [],
@@ -7555,6 +7437,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/Uldaman",
       "artworkNameAlias": null,
       "blpCount": 24,
@@ -7768,10 +7651,8 @@
           "id": 2606
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable supplies no WorldMapTransforms row for map 70; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -7785,9 +7666,7 @@
       "internalName": "Uldaman",
       "mapId": 70,
       "package": "mod-native-instance-maps.uldaman",
-      "reasonCodes": [
-        "no-transform"
-      ],
+      "reasonCodes": [],
       "slug": "uldaman",
       "title": "Uldaman",
       "transforms": [],
@@ -7799,6 +7678,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/WailingCaverns",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -7955,8 +7835,7 @@
       "classification": "UNSAFE",
       "findings": [
         "DungeonMap floor 28 is a stock row that WDM mutates; the instance only works with WDM's replacement geometry, and the append-only composer cannot express that",
-        "DungeonMapChunk row(s) 1209, 1218, 1210, 1219, 1211, 1220, 1212, 1213 already exist in the stock client; the client already has this tile set and there is nothing additive to ship",
-        "WDM Stable supplies no WorldMapTransforms row for map 43; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+        "DungeonMapChunk row(s) 1209, 1218, 1210, 1219, 1211, 1220, 1212, 1213 already exist in the stock client; the client already has this tile set and there is nothing additive to ship"
       ],
       "floors": [
         {
@@ -7968,7 +7847,6 @@
       "mapId": 43,
       "package": "mod-native-instance-maps.wailingcaverns",
       "reasonCodes": [
-        "no-transform",
         "stock-chunk",
         "stock-mutation-required"
       ],
@@ -7983,6 +7861,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/WarsongGulch",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -7991,8 +7870,7 @@
       "findings": [
         "WorldMapArea 443 is a stock row that WDM leaves untouched; the client already has it and there is nothing additive to ship",
         "WDM Stable declares no DungeonMap floor for map 489; the instance has no floor geometry to compose",
-        "WDM Stable declares no DungeonMapChunk for the floors of map 489",
-        "WDM Stable supplies no WorldMapTransforms row for map 489; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+        "WDM Stable declares no DungeonMapChunk for the floors of map 489"
       ],
       "floors": [],
       "internalName": "WarsongGulch",
@@ -8001,7 +7879,6 @@
       "reasonCodes": [
         "no-chunks",
         "no-floors",
-        "no-transform",
         "stock-world-map-area"
       ],
       "slug": "warsonggulch",
@@ -8015,6 +7892,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/ZulAman",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -8022,8 +7900,7 @@
       "classification": "REVIEW",
       "findings": [
         "WDM Stable declares no DungeonMap floor for map 568; the instance has no floor geometry to compose",
-        "WDM Stable declares no DungeonMapChunk for the floors of map 568",
-        "WDM Stable supplies no WorldMapTransforms row for map 568; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+        "WDM Stable declares no DungeonMapChunk for the floors of map 568"
       ],
       "floors": [],
       "internalName": "ZulAman",
@@ -8031,8 +7908,7 @@
       "package": "mod-native-instance-maps.zulaman",
       "reasonCodes": [
         "no-chunks",
-        "no-floors",
-        "no-transform"
+        "no-floors"
       ],
       "slug": "zulaman",
       "title": "ZulAman",
@@ -8045,6 +7921,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/ZulFarrak",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -8052,8 +7929,7 @@
       "classification": "REVIEW",
       "findings": [
         "WDM Stable declares no DungeonMap floor for map 209; the instance has no floor geometry to compose",
-        "WDM Stable declares no DungeonMapChunk for the floors of map 209",
-        "WDM Stable supplies no WorldMapTransforms row for map 209; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+        "WDM Stable declares no DungeonMapChunk for the floors of map 209"
       ],
       "floors": [],
       "internalName": "ZulFarrak",
@@ -8061,8 +7937,7 @@
       "package": "mod-native-instance-maps.zulfarrak",
       "reasonCodes": [
         "no-chunks",
-        "no-floors",
-        "no-transform"
+        "no-floors"
       ],
       "slug": "zulfarrak",
       "title": "ZulFarrak",
@@ -8075,6 +7950,7 @@
       ]
     },
     {
+      "areaDungeonMapId": 0,
       "artworkDirectory": "Interface/WorldMap/ZulGurub",
       "artworkNameAlias": null,
       "blpCount": 12,
@@ -8082,8 +7958,7 @@
       "classification": "REVIEW",
       "findings": [
         "WDM Stable declares no DungeonMap floor for map 309; the instance has no floor geometry to compose",
-        "WDM Stable declares no DungeonMapChunk for the floors of map 309",
-        "WDM Stable supplies no WorldMapTransforms row for map 309; a mod-content-manager worldMaps[] entry requires exactly one, and authoring one would invent a client-baked row outside WDM's fixed ID space"
+        "WDM Stable declares no DungeonMapChunk for the floors of map 309"
       ],
       "floors": [],
       "internalName": "ZulGurub",
@@ -8091,8 +7966,7 @@
       "package": "mod-native-instance-maps.zulgurub",
       "reasonCodes": [
         "no-chunks",
-        "no-floors",
-        "no-transform"
+        "no-floors"
       ],
       "slug": "zulgurub",
       "title": "ZulGurub",
@@ -8106,8 +7980,8 @@
     }
   ],
   "counts": {
-    "REVIEW": 54,
-    "SAFE": 3,
+    "REVIEW": 16,
+    "SAFE": 41,
     "UNSAFE": 1,
     "candidates": 58
   },

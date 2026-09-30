@@ -29,8 +29,10 @@ epf: packages
 test:
 	$(PYTHON) tests/run_tests.py
 
-# Compiles a throwaway validator against the mod-content-manager checkout and
-# runs every generated EPF through ContentPackage::Validate/StageInto. Skipped
+# Compiles a throwaway harness against the mod-content-manager checkout and runs
+# every generated EPF through the real pipeline: ContentPackage::Validate,
+# StageInto, WorldMapDbcComposer::AppendRequests/Compose/Stage against the
+# verified stock DBC baseline, and ContentServerBundle::VerifyParity. Skipped
 # when that checkout is absent.
 validate:
 	$(PYTHON) tests/validate_epfs.py

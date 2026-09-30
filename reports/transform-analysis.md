@@ -6,13 +6,19 @@ edit this file by hand.
 
 ## Scope
 
-54 REVIEW candidates exist because mod-content-manager's `worldMaps[]` contract
-requires exactly one `WorldMapTransforms` row per map, and 50 of those candidates
-have no WDM-supplied transform. This report asks whether such a row can be
-*derived* from the other three WDM tables, and reports what the data supports.
+Most candidate maps have no WDM-supplied `WorldMapTransforms` row. This report
+asks whether such a row could be *derived* from the other three WDM tables, and
+reports what the data supports, because the answer determines whether this project
+could ever author one.
 
 **Short answer: partially. Eight of the ten fields are provable. The tenth,
 `NewDungeonMapID`, is not provable for any map with more than one floor.**
+
+That negative result is why no transform is ever synthesised here. It is no longer
+a blocker on shipping the map: `mod-content-manager` treats
+`worldMaps[].transform` as optional, so a map WDM ships without one is composed
+from its area, floors, chunks and artwork alone. See
+"How this applies to the candidate set" below.
 
 ## Method and its limits
 
@@ -188,72 +194,104 @@ Three things this analysis cannot establish, stated so they are not over-read:
 3. It says nothing about whether a correct transform row is *sufficient* for the
    client to display a map correctly. That requires in-game validation.
 
-## How far the narrow rule reaches in the candidate set
+## How this applies to the candidate set
 
-Of the 35 candidates whose *only* REVIEW reason is a missing transform,
-**17 are single-floor** and therefore value-derivable, and **18 are multi-floor** and therefore not.
+The derivation result is no longer load-bearing. `mod-content-manager` treats
+`worldMaps[].transform` as optional, so a map WDM ships without a transform row
+is a complete, valid contribution: no request, no fixed ID, no lease, no composed
+row, and `WorldMapTransforms.dbc` left byte for byte as the verified stock file.
 
-This is a property of the candidate set, not a new classification: no candidate has
-been reclassified, and the published counts in `reports/instance-candidates.md` are
-unchanged. Single-floor, transform-only, in map order:
+Of the 51 candidates whose map has no WDM `WorldMapTransforms` row,
+**none needs a derived one**, and none gets one. Absence is expressed as an absent
+key in the semantic declaration, never as `null` and never as a borrowed row.
 
-| internalName | mapId | floor | floors | chunks | artwork | derivable `NewDungeonMapID` |
-|---|---:|---:|---:|---:|---:|---|
-| TheStockade | 34 | 165 | 1 | 57 | 12 | 165 (forced) |
-| RazorfenKraul | 47 | 149 | 1 | 25 | 12 | 149 (forced) |
-| RazorfenDowns | 129 | 150 | 1 | 11 | 12 | 150 (forced) |
-| OnyxiasLair | 249 | 196 | 1 | 8 | 12 | 196 (forced) |
-| Ragefire | 389 | 136 | 1 | 6 | 12 | 136 (forced) |
-| MoltenCore | 409 | 181 | 1 | 12 | 12 | 181 (forced) |
-| TheShatteredHalls | 540 | 222 | 1 | 12 | 12 | 222 (forced) |
-| TheBloodFurnace | 542 | 221 | 1 | 7 | 12 | 221 (forced) |
-| HellfireRamparts | 543 | 219 | 1 | 3 | 12 | 219 (forced) |
-| TheUnderbog | 546 | 223 | 1 | 1 | 12 | 223 (forced) |
-| TheSlavePens | 547 | 228 | 1 | 5 | 12 | 228 (forced) |
-| CoilfangReservoir | 548 | 355 | 1 | 12 | 12 | 355 (forced) |
-| TempestKeep | 550 | 349 | 1 | 16 | 12 | 349 (forced) |
-| TheBotanica | 553 | 230 | 1 | 6 | 12 | 230 (forced) |
-| ShadowLabyrinth | 555 | 218 | 1 | 21 | 12 | 218 (forced) |
-| ManaTombs | 557 | 238 | 1 | 14 | 12 | 238 (forced) |
-| GruulsLair | 565 | 322 | 1 | 4 | 12 | 322 (forced) |
+The remaining 5 candidates whose map WDM *does* give a transform
+row carry it forward byte for byte, and are the only packages in which
+`WorldMapTransforms` is composed at all. In map order:
 
-Multi-floor, transform-only, largest first. These stay non-derivable regardless of
-how much other evidence is gathered:
+| internalName | mapId | transform | floors | chunks |
+|---|---:|---:|---:|---:|
+| TheDeadmines | 36 | 11 | 2 | 29 |
+| TheTempleOfAtalHakkar | 109 | 14 | 3 | 75 |
+| DeeprunTram | 369 | 12 | 2 | 7 |
+| Expansion01 | 530 | 2, 3 | 0 | 0 |
+| AhnQiraj | 531 | 13 | 3 | 50 |
 
-| internalName | mapId | floors | chunks |
-|---|---:|---:|---:|
-| Karazhan | 532 | 17 | 86 |
-| BlackrockSpire | 229 | 7 | 75 |
-| ShadowfangKeep | 33 | 7 | 79 |
-| DireMaul | 429 | 6 | 73 |
-| BlackwingLair | 469 | 4 | 22 |
-| Gnomeregan | 90 | 4 | 79 |
-| ScarletMonastery | 189 | 4 | 89 |
-| Scholomance | 289 | 4 | 26 |
-| TheArcatraz | 552 | 3 | 21 |
-| AuchenaiCrypts | 558 | 2 | 14 |
-| BlackrockDepths | 230 | 2 | 52 |
-| MagistersTerrace | 585 | 2 | 19 |
-| Maraudon | 349 | 2 | 43 |
-| SethekkHalls | 556 | 2 | 19 |
-| Stratholme | 329 | 2 | 80 |
-| TheMechanar | 554 | 2 | 15 |
-| TheSteamvault | 545 | 2 | 10 |
-| Uldaman | 70 | 2 | 52 |
+Maps with no WDM transform row, in map order. The floor count is the quantity the
+old rule could not resolve, and it is now simply carried as data:
 
-Note the consequence for the pilot the brief asked for: **Karazhan has 17 floors**,
-so it sits in the non-derivable table, and so do Blackrock Spire, Shadowfang Keep,
-Dire Maul, Gnomeregan and Scarlet Monastery. The multi-floor stress test the brief
-wanted cannot be satisfied by derivation from WDM data, and no amount of tuning the
-rule will change that, because the discriminator is absent from the source.
+| internalName | mapId | floors | chunks | artwork |
+|---|---:|---:|---:|---:|
+| ShadowfangKeep | 33 | 7 | 79 | 84 |
+| TheStockade | 34 | 1 | 57 | 12 |
+| WailingCaverns | 43 | 1 | 37 | 12 |
+| RazorfenKraul | 47 | 1 | 25 | 12 |
+| BlackfathomDeeps | 48 | 3 | 26 | 0 |
+| Uldaman | 70 | 2 | 52 | 24 |
+| Gnomeregan | 90 | 4 | 79 | 48 |
+| RazorfenDowns | 129 | 1 | 11 | 12 |
+| ScarletMonastery | 189 | 4 | 89 | 48 |
+| ZulFarrak | 209 | 0 | 0 | 12 |
+| BlackrockSpire | 229 | 7 | 75 | 84 |
+| BlackrockDepths | 230 | 2 | 52 | 24 |
+| OnyxiasLair | 249 | 1 | 8 | 12 |
+| CoTTheBlackMorass | 269 | 0 | 0 | 12 |
+| Scholomance | 289 | 4 | 26 | 48 |
+| ZulGurub | 309 | 0 | 0 | 12 |
+| Stratholme | 329 | 2 | 80 | 24 |
+| Maraudon | 349 | 2 | 43 | 24 |
+| Ragefire | 389 | 1 | 6 | 12 |
+| MoltenCore | 409 | 1 | 12 | 12 |
+| DireMaul | 429 | 6 | 73 | 84 |
+| BlackwingLair | 469 | 4 | 22 | 48 |
+| WarsongGulch | 489 | 0 | 0 | 12 |
+| RuinsofAhnQiraj | 509 | 0 | 0 | 12 |
+| ArathiBasin | 529 | 0 | 0 | 12 |
+| Karazhan | 532 | 17 | 86 | 204 |
+| CoTMountHyjal | 534 | 0 | 0 | 12 |
+| TheShatteredHalls | 540 | 1 | 12 | 12 |
+| TheBloodFurnace | 542 | 1 | 7 | 12 |
+| HellfireRamparts | 543 | 1 | 3 | 12 |
+| MagtheridonsLair | 544 | 1 | 7 | 0 |
+| TheSteamvault | 545 | 2 | 10 | 24 |
+| TheUnderbog | 546 | 1 | 1 | 12 |
+| TheSlavePens | 547 | 1 | 5 | 12 |
+| CoilfangReservoir | 548 | 1 | 12 | 12 |
+| TempestKeep | 550 | 1 | 16 | 12 |
+| TheArcatraz | 552 | 3 | 21 | 36 |
+| TheBotanica | 553 | 1 | 6 | 12 |
+| TheMechanar | 554 | 2 | 15 | 24 |
+| ShadowLabyrinth | 555 | 1 | 21 | 12 |
+| SethekkHalls | 556 | 2 | 19 | 24 |
+| ManaTombs | 557 | 1 | 14 | 12 |
+| AuchenaiCrypts | 558 | 2 | 14 | 24 |
+| CoTHillsbradFoothills | 560 | 0 | 0 | 12 |
+| BlackTemple | 564 | 7 | 40 | 96 |
+| GruulsLair | 565 | 1 | 4 | 12 |
+| NetherstormArena | 566 | 0 | 0 | 12 |
+| ZulAman | 568 | 0 | 0 | 12 |
+| Northrend | 571 | 2 | 144 | 12 |
+| SunwellPlateau | 580 | 1 | 2 | 24 |
+| MagistersTerrace | 585 | 2 | 19 | 24 |
 
-## Independent blocker: mod-content-manager cannot allocate a transform ID
+**Karazhan (map 532) is the concrete case this report is now anchored to:** 17
+`DungeonMap` floors, 86 `DungeonMapChunk` rows, one `WorldMapArea` (ID 799) with
+`dungeonMapId 0`, 204 client tiles, and zero `WorldMapTransforms` rows. It is a
+large multi-floor native instance that WDM itself ships with no transform, which
+is the direct evidence that the row is not part of a map's identity.
 
-Even for the 17 single-floor maps, where every value is derivable, the row still
-needs an identity, and mod-content-manager will not supply one. This is a separate
-issue from the floor-selection finding above and would block the phase on its own.
+## No transform is ever authored
 
-World-map rows are deliberately excluded from the searching allocator:
+Two independent facts each make authoring one the wrong answer, and they are
+recorded here so the omission is a decision rather than an oversight.
+
+**1. The value is not derivable.** The `NewDungeonMapID` analysis above refutes
+every discriminator the four WDM tables offer. A synthesised row would carry a
+guessed floor ID, and `NewDungeonMapID` is a client-baked identity that the
+`+/-20000` structural rules do not determine.
+
+**2. There is no allocator for the row.** World-map rows are deliberately
+excluded from the searching allocator:
 
 ```cpp
 // src/ContentResourceAllocator.h:14
@@ -268,32 +306,18 @@ static ResourceAllocationPolicy FixedRowIdPolicy(std::string const& resourceKind
 { return {std::move(resourceKind), 1, 0xffffffffu}; }
 ```
 
-`worldmap.world-map-transforms.id` is routed through that policy at
-`src/ContentBuildService.cpp:402`, and `PlanFixed` throws when a request declares no
-value (`src/ContentResourceAllocator.cpp:145`). `docs/WORLD_MAP_DBC.md:131` states it
-plainly: *"There is no allocator for these rows."*
+`worldmap.world-map-transforms.id` is routed through that policy, and `PlanFixed`
+throws when a request declares no value
+(`src/ContentResourceAllocator.cpp:145`). `docs/WORLD_MAP_DBC.md` states it
+plainly: *"There is no allocator for these rows."* A package could hand-pick an
+ID, but it would be leased durably and is effectively permanent, so the identity
+would be frozen into the project by a guess about a field the data does not
+contain. Omitting the key avoids that entirely.
 
-The consequences are exact:
-
-- A package **must** author-declare the transform ID; there is no
-  allocate-next-free path for this resource kind.
-- The declared ID is leased **durably** on first build and is "effectively
-  permanent"; a retired lease is never handed to another owner.
-- CM does validate the choice: `PlanFixed` rejects an ID already present in the
-  verified stock baseline or held by another package, so a collision fails the
-  build loudly rather than corrupting a row.
-
-So an authored transform is *representable* and would be safely owned, but the ID
-would have to be hand-picked and would be frozen into the project permanently.
-That is precisely the outcome the phase brief said to refuse rather than work
-around, so the implementation path is stopped here. Resolving it needs a decision
-from the project owner, not a code change in this repository:
-
-1. Author a fixed ID under an explicitly reserved range and accept permanence, or
-2. Upstream a change to mod-content-manager giving world-map rows a real allocator,
-   or
-3. Restrict published maps to those where WDM supplies the transform, i.e. the
-   three already published.
-
-Option 1 is the only one available without touching mod-content-manager, and it is
-a policy decision about permanent public identity, not a technical question.
+This report therefore states a narrower conclusion than it used to. It does **not**
+claim to know what the client does with `NewDungeonMapID` or with
+`WorldMapTransforms` at runtime; that needs client reverse engineering or in-game
+observation. The established facts are narrower: WDM supplies four such rows, they
+are preserved exactly, maps it does not supply one for need none, and the Deadmines
+"default floor" idea remains an unproven hypothesis until a separate in-game A/B
+test.

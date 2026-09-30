@@ -1,12 +1,18 @@
 #!/usr/bin/env python3
 """Generate ``content/`` manifests and deterministic ``dist/`` EPFs.
 
-Two rules shape everything here.
+Three rules shape everything here.
 
 **The manifest is the only authored artifact.**  It is bare JSON so it reviews
 as a diff, and it declares the semantic ``worldMaps[]`` entry exactly as
 ``mod-content-manager`` will consume it.  Nothing here re-derives a value the
 manifest already states.
+
+**Publication is a separate decision from classification.**  The classifier in
+``tools/instances.py`` answers whether a map *can* ship; ``content/publish.json``
+is the hand-maintained list of maps that are actually being shipped.  Only their
+intersection is generated, so fixing a classifier rule cannot silently publish a
+backlog.
 
 **The EPF is a build product.**  Artwork bytes are read from the vendored WDM
 tree at build time rather than committed twice, and the archive is byte-stable:
@@ -61,6 +67,39 @@ def artwork_targets(candidate: Candidate) -> List[Dict[str, str]]:
     ]
 
 
+def published_candidates(discovery: Discovery) -> List[Candidate]:
+    """The SAFE candidates this project has decided to publish, in natural name order.
+
+    Classification and publication are separate decisions.  ``content/publish.json``
+    is the hand-maintained list of candidates whose packages are approved; the
+    classifier only says whether a map *can* ship.  Without this gate a classifier
+    correction would mass-publish every newly packageable map, which is not a
+    consequence anyone chose.
+    """
+    selection = publish_slugs()
+    by_name = {item.internal_name: item for item in discovery.candidates}
+    chosen: List[Candidate] = []
+    for internal_name, slug in sorted(selection.items()):
+        candidate = by_name.get(internal_name)
+        if candidate is None:
+            raise SystemExit(
+                f"content/publish.json names {internal_name!r}, which WDM Stable does "
+                "not ship as a candidate"
+            )
+        if candidate.classification != SAFE:
+            raise SystemExit(
+                f"content/publish.json names {internal_name!r}, which is "
+                f"{candidate.classification}: {', '.join(candidate.findings)}"
+            )
+        if candidate.slug != slug:
+            raise SystemExit(
+                f"content/publish.json maps {internal_name!r} to slug {slug!r} but "
+                f"content/titles.json says {candidate.slug!r}"
+            )
+        chosen.append(candidate)
+    return chosen
+
+
 def manifest_for(candidate: Candidate, discovery: Discovery) -> Dict[str, object]:
     """Build the full schema-3 manifest for one SAFE candidate."""
     if candidate.classification != SAFE:
@@ -74,10 +113,21 @@ def manifest_for(candidate: Candidate, discovery: Discovery) -> Dict[str, object
         candidate.world_map_area_ids,
         candidate.floor_ids,
         candidate.chunk_ids,
-        candidate.transform_ids[0],
+        # WDM's own transform ID when it supplies one, otherwise absent.  Never a
+        # synthesised row: see semantic.world_map_declaration.
+        candidate.transform_ids[0] if candidate.transform_ids else None,
     )
     tiles = artwork_targets(candidate)
     floors = len(candidate.floor_ids)
+    # The description states only what the package actually contains, so a map
+    # with no WDM transform does not advertise one.  A map that does carry WDM's
+    # row keeps the wording it has always shipped with, so regenerating an
+    # existing package produces byte-identical output.
+    transform_clause = (
+        "the instance WorldMapTransforms row"
+        if candidate.transform_ids
+        else "no WorldMapTransforms row (WDM supplies none for this map)"
+    )
     return {
         "schema": SCHEMA,
         "package": paths.package_key(candidate.slug),
@@ -86,8 +136,8 @@ def manifest_for(candidate: Candidate, discovery: Discovery) -> Dict[str, object
         "description": (
             f"Native pre-Cataclysm {candidate.title} instance map: {floors} DungeonMap "
             f"floor{'' if floors == 1 else 's'}, {len(candidate.chunk_ids)} "
-            f"DungeonMapChunk entries, one WorldMapArea, the instance "
-            f"WorldMapTransforms row and {len(tiles)} client BLP tiles."
+            f"DungeonMapChunk entries, one WorldMapArea, {transform_clause} and "
+            f"{len(tiles)} client BLP tiles."
         ),
         "content": tiles,
         "worldMaps": [declaration],
@@ -106,9 +156,17 @@ def serialise(manifest: Dict[str, object]) -> bytes:
     )
 
 
+def publish_slugs() -> Dict[str, str]:
+    """``internalName -> slug`` from ``content/publish.json``."""
+    if not paths.PUBLISH_FILE.is_file():
+        return {}
+    data = json.loads(paths.PUBLISH_FILE.read_text(encoding="utf-8"))
+    return {str(key): str(value) for key, value in data.items()}
+
+
 def write_manifests(discovery: Discovery, write: bool = True) -> List[Path]:
     written: List[Path] = []
-    for candidate in discovery.by_classification(SAFE):
+    for candidate in published_candidates(discovery):
         target = paths.CONTENT_DIR / candidate.slug / "manifest.json"
         payload = serialise(manifest_for(candidate, discovery))
         if not write:
@@ -174,7 +232,7 @@ def build_epf(
 
 def build_all(discovery: Discovery) -> List[Path]:
     outputs: List[Path] = []
-    for candidate in discovery.by_classification(SAFE):
+    for candidate in published_candidates(discovery):
         manifest_path = paths.CONTENT_DIR / candidate.slug / "manifest.json"
         if not manifest_path.is_file():
             raise SystemExit(f"missing manifest: {manifest_path}")

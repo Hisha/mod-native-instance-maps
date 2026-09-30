@@ -75,6 +75,14 @@ def wdm_deadmines_golden_dbc_dir() -> Path:
     return root / "minimal-deadmines" / "DBFilesClient"
 
 
+#: Explicit list of candidates this project has decided to package.  The
+#: classifier answers "can this ship?"; this file is the separate, human decision
+#: of which shippable maps are actually being published.  A SAFE candidate absent
+#: from this list is reported but not generated, so a classifier correction can
+#: never mass-publish a backlog on its own.
+PUBLISH_FILE = CONTENT_DIR / "publish.json"
+
+
 def package_key(slug: str) -> str:
     return f"mod-native-instance-maps.{slug}"
 
