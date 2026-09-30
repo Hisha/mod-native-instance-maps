@@ -52,6 +52,10 @@ UNITS = (
     "DbcReader",
     "DbcDescriptor",
     "SpellDbcComposer",
+    "ContentFrameXml",
+    # Real SHA-256 for the generated FrameXML files recorded in parity.  Parity
+    # pins these at activation, so a placeholder would defeat the check.
+    "ContentBuildHash",
 )
 
 # The four client tables a native instance map composes into.
@@ -108,6 +112,8 @@ def main(argv: list[str] | None = None) -> int:
             ]
             command += [str(root / "src" / f"{unit}.cpp") for unit in UNITS]
             command.append(str(root / "src" / "third_party" / "miniz" / "miniz.c"))
+            if "ContentBuildHash" in UNITS:
+                command.append("-lcrypto")
             command += ["-o", str(binary)]
             subprocess.run(command, check=True)
 

@@ -1,4 +1,8 @@
 {
+ "clientFrameXml": {
+  "stockTocSha256": "36ccfed8ad8e424fb312c942a75bd17c6091dd264df8653f117dcfe8417d91a3",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
  "content": [
   {
    "source": "artwork/TheTempleOfAtalHakkar1_1.blp",
@@ -181,7 +185,7 @@
    "type": "file"
   }
  ],
- "description": "Native pre-Cataclysm Temple of Atal Hakkar instance map: 3 DungeonMap floors, 75 DungeonMapChunk entries, one WorldMapArea, the instance WorldMapTransforms row and 36 client BLP tiles.",
+ "description": "Native pre-Cataclysm Temple of Atal Hakkar instance map: 3 DungeonMap floors, 75 DungeonMapChunk entries, one WorldMapArea, the instance WorldMapTransforms row and 36 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
  "name": "Temple of Atal Hakkar",
  "package": "mod-native-instance-maps.temple-of-atal-hakkar",
  "schema": 3,
@@ -644,6 +648,63 @@
       }
      ],
      "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Der Tempel von Atal'Hakkar",
+       "2": "Große Halle",
+       "3": "Die Grube der Weigerung"
+      },
+      "enCN": {
+       "1": "阿塔哈卡神庙",
+       "2": "大厅",
+       "3": "抛弃之池"
+      },
+      "enGB": {
+       "1": "The Temple of Atal' Hakkar",
+       "2": "Great Hall",
+       "3": "The Pit of Refuse"
+      },
+      "enUS": {
+       "1": "The Temple of Atal' Hakkar",
+       "2": "Great Hall",
+       "3": "The Pit of Refuse"
+      },
+      "esES": {
+       "1": "El Templo de Atal' Hakkar",
+       "2": "Gran Sala",
+       "3": "La Fosa del Rechazo"
+      },
+      "esMX": {
+       "1": "El Templo de Atal' Hakkar",
+       "2": "Gran Sala",
+       "3": "La Fosa del Rechazo"
+      },
+      "frFR": {
+       "1": "Le temple d'Atal'Hakkar",
+       "2": "Grande salle",
+       "3": "La Fosse aux ordures"
+      },
+      "koKR": {
+       "1": "아탈학카르 신전",
+       "2": "연회실",
+       "3": "앙금의 구덩이"
+      },
+      "ruRU": {
+       "1": "Храм Атал'Хаккара",
+       "2": "Главный зал",
+       "3": "Мусорная яма"
+      },
+      "zhCN": {
+       "1": "阿塔哈卡神庙",
+       "2": "大厅",
+       "3": "抛弃之池"
+      },
+      "zhTW": {
+       "1": "阿塔哈卡神廟",
+       "2": "大廳",
+       "3": "拋棄之池"
+      }
+     },
      "floors": [
       {
        "field3": -252.27099609375,

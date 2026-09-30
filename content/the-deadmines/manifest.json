@@ -1,4 +1,8 @@
 {
+ "clientFrameXml": {
+  "stockTocSha256": "36ccfed8ad8e424fb312c942a75bd17c6091dd264df8653f117dcfe8417d91a3",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
  "content": [
   {
    "source": "artwork/TheDeadmines1_1.blp",
@@ -121,7 +125,7 @@
    "type": "file"
   }
  ],
- "description": "Native pre-Cataclysm The Deadmines instance map: 2 DungeonMap floors, 29 DungeonMapChunk entries, one WorldMapArea, the instance WorldMapTransforms row and 24 client BLP tiles.",
+ "description": "Native pre-Cataclysm The Deadmines instance map: 2 DungeonMap floors, 29 DungeonMapChunk entries, one WorldMapArea, the instance WorldMapTransforms row and 24 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
  "name": "The Deadmines",
  "package": "mod-native-instance-maps.the-deadmines",
  "schema": 3,
@@ -308,6 +312,52 @@
       }
      ],
      "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Die Todesminen",
+       "2": "Eiserne Bucht"
+      },
+      "enCN": {
+       "1": "死亡矿井",
+       "2": "铁甲湾"
+      },
+      "enGB": {
+       "1": "The Deadmines",
+       "2": "Ironclad Cove"
+      },
+      "enUS": {
+       "1": "The Deadmines",
+       "2": "Ironclad Cove"
+      },
+      "esES": {
+       "1": "Las Minas de la Muerte",
+       "2": "Cala del Acorazado"
+      },
+      "esMX": {
+       "1": "Las Minas de la Muerte",
+       "2": "Cala del Acorazado"
+      },
+      "frFR": {
+       "1": "Les Mortemines",
+       "2": "Crique du Cuirassé"
+      },
+      "koKR": {
+       "1": "죽음의 폐광",
+       "2": "철갑 동굴"
+      },
+      "ruRU": {
+       "1": "Мертвые копи",
+       "2": "Потайная бухта"
+      },
+      "zhCN": {
+       "1": "死亡矿井",
+       "2": "铁甲湾"
+      },
+      "zhTW": {
+       "1": "死亡礦坑",
+       "2": "鐵甲灣"
+      }
+     },
      "floors": [
       {
        "field3": -796.6220092773438,

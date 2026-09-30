@@ -34,6 +34,7 @@
 #include <cassert>
 #include <cstdint>
 #include <filesystem>
+#include <fstream>
 #include <iostream>
 #include <map>
 #include <set>
@@ -43,6 +44,7 @@
 #include "ContentAllocationRegistry.h"
 #include "ContentBaselineRegistry.h"
 #include "ContentBuildHash.h"
+#include "ContentFrameXml.h"
 #include "ContentPackage.h"
 #include "ContentResourceAllocator.h"
 #include "ContentServerBundle.h"
@@ -51,14 +53,6 @@
 #include "WorldMapDbcComposer.h"
 
 namespace fs = std::filesystem;
-
-// The real SHA-256 implementation pulls in OpenSSL. Nothing this harness does
-// hashes anything -- it only links ContentServerBundle, which references the
-// shape check -- so mirror the standalone suites' stub exactly.
-bool ContentBuildHash::Valid(std::string const &hash) {
-    return hash.size() == 64 &&
-           hash.find_first_not_of("0123456789abcdef") == std::string::npos;
-}
 
 namespace {
 
@@ -126,9 +120,116 @@ struct Pipeline {
     std::map<std::string, std::string> hashes;
     std::map<std::string, std::vector<ResourceAllocationRequest>> requests;
     std::vector<ResolvedWorldMap> resolved;
+    std::map<std::string, std::string> frameXmlHashes;
+    std::size_t frameXmlFiles = 0;
+    std::size_t frameXmlTocGrowth = 0;
     bool parityOk = false;
     std::string parityError;
 };
+
+// The generated client FrameXML, composed and staged exactly as the build
+// service does.  This is what proves the floor labels actually reach the client
+// dropdown rather than merely parsing: the stock table of contents is rebuilt
+// from the bytes this EPF shipped, the Lua is generated from the manifest's own
+// declarations, and both are read back from disk.
+void RunFrameXmlPipeline(fs::path const &package, fs::path const &workspace,
+                         ContentPackageManifest const &manifest, Pipeline& out) {
+    ContentFrameXml::Declared declared;
+    std::string error;
+    Expect(ContentFrameXml::Collect(manifest.worldMaps, declared, error), package,
+           "Collect: " + error);
+
+    if (declared.empty()) {
+        // No labels means no generated files and no requirement: stock behaviour,
+        // unchanged.  Assert the absence rather than tolerating it.
+        Expect(manifest.clientRequirements ==
+                   std::vector<std::string>{"protected-framexml"},
+               package,
+               "a package with no floor labels requested protected-framexml");
+        return;
+    }
+
+    Expect(manifest.clientRequirements ==
+               std::vector<std::string>{"protected-framexml"},
+           package,
+           "floor labels declared without requesting protected-framexml");
+
+    std::string lua;
+    Expect(ContentFrameXml::ComposeLua(declared, lua, error), package,
+           "ComposeLua: " + error);
+
+    // The generated module must delegate: a map or locale it has no labels for
+    // keeps the stock "Floor %d" text.  Overriding the whole dropdown with a
+    // table that always answers would break every unlabelled map in the game.
+    Expect(lua.find("WorldMapLevelDropDown_Initialize") != std::string::npos, package,
+           "generated module does not override WorldMapLevelDropDown_Initialize");
+    Expect(lua.find("FLOOR_NUMBER") != std::string::npos, package,
+           "generated module does not fall back to the stock FLOOR_NUMBER label");
+    // The header comment names the stock files it does *not* touch, so the real
+    // safety property is that nothing is loaded or replaced at runtime.
+    for (auto const& forbidden : {"dofile", "loadfile", "loadstring", "require",
+                                  "LoadAddOn", "SetAddOn"}) {
+        Expect(lua.find(forbidden) == std::string::npos, package,
+               std::string("generated module calls ") + forbidden +
+                   ", so it depends on stock files at runtime");
+    }
+    Expect(lua.find("WorldMapFrame.xml") != std::string::npos, package,
+           "generated module does not state the stock file it loads after");
+
+    // The stock table of contents the EPF shipped, read back from the package's
+    // own manifest pin.  ContentPackage already verified its digest; this proves
+    // the composer's insertion is the only difference.
+    Expect(manifest.clientFrameXml.has_value(), package,
+           "floor labels declared without clientFrameXml");
+    std::vector<std::uint8_t> stock;
+    Expect(ContentPackage::ReadMember(package,
+                                      manifest.clientFrameXml->stockTocSource,
+                                      stock, error),
+           package, "ReadMember " + manifest.clientFrameXml->stockTocSource + ": " + error);
+    std::string const stockBytes(stock.begin(), stock.end());
+    std::string toc;
+    Expect(ContentFrameXml::ComposeToc(stock, toc, error), package,
+           "ComposeToc: " + error);
+
+    // Exactly one added line, and it is the module.  Byte counts prove nothing
+    // else moved: stock 2456 bytes plus one CRLF-terminated module name.
+    // A table of contents line is a bare leaf name, not a path.
+    std::string const module =
+        fs::path(ContentFrameXml::GeneratedLuaTarget()).filename().string();
+    Expect(toc.size() > stockBytes.size(), package,
+           "composed table of contents is not larger than stock");
+    std::size_t const added = toc.size() - stockBytes.size();
+    Expect(added == module.size() + 2, package,
+           "table of contents grew by " + Number(added) + " bytes, not one "
+           "CRLF-terminated module line of " + Number(module.size() + 2));
+    Expect(toc.find(module) != std::string::npos, package,
+           "generated module is absent from the table of contents");
+    Expect(toc.find(ContentFrameXml::TocInsertionMarker()) != std::string::npos,
+           package,
+           "the insertion marker vanished from the composed table of contents");
+    out.frameXmlTocGrowth = added;
+
+    // Stage both files through the real composer and read them back.
+    for (auto const& target : ContentFrameXml::Targets()) {
+        std::string const& text =
+            target == ContentFrameXml::GeneratedLuaTarget() ? lua : toc;
+        Expect(ContentFrameXml::Stage(target, text, workspace, error), package,
+               "Stage " + target + ": " + error);
+        out.frameXmlHashes[target] = ContentBuildHash::Bytes(
+            std::vector<std::uint8_t>(text.begin(), text.end()));
+        out.frameXmlFiles += 1;
+        std::ifstream read(workspace / target, std::ios::binary);
+        std::string const stagedText((std::istreambuf_iterator<char>(read)),
+                                     std::istreambuf_iterator<char>());
+        Expect(stagedText == text, package, "staged " + target + " differs from "
+               "the bytes composed for it");
+    }
+
+    // The stock table of contents must not have been shipped pre-modified: the
+    // composer, not this repository, is what adds the module.
+    Expect(toc != stockBytes, package,
+           "composed table of contents is identical to stock");
+}
 
 // Plan, compose, stage and read back every world-map table.
 bool RunPipeline(fs::path const &package, fs::path const &baselineDirectory,
@@ -273,11 +374,13 @@ bool RunPipeline(fs::path const &package, fs::path const &baselineDirectory,
     // stock file instead -- see the stockPreserved and stockIdentical checks.
     auto const parity = ContentServerBundle::ParityJson(
         kRealm, 7, out.leases, {}, "", "", "mpq", "server", "", "", {},
-        out.baselines, "", {}, {}, {}, {}, {}, {}, "", false, out.hashes);
+        out.baselines, "", {}, {}, {}, {}, {}, {}, "", false, out.hashes,
+        out.frameXmlHashes);
     out.parityOk = ContentServerBundle::VerifyParity(parity, kRealm, 7, "", "mpq",
                                                      "server", {}, out.leases,
                                                      out.parityError, {}, {}, {}, {},
-                                                     {}, {}, out.hashes);
+                                                     {}, {}, out.hashes,
+                                                     out.frameXmlHashes);
     Expect(out.parityOk, package, "VerifyParity rejected the artifact: " + out.parityError);
     // Every table holding a lease must also carry a composed hash.  That pairing
     // is what makes "stock byte-identical" auditable at activation: an orphan
@@ -568,8 +671,19 @@ void Check(fs::path const &epf, fs::path const &baselineDirectory, fs::path cons
     std::cout << "  staged  " << epf.filename().string() << ": "
               << staged.stagedFiles.size() << " file(s) verified\n";
 
-    // -- the real world-map pipeline -----------------------------------------
+    // -- generated client FrameXML --------------------------------------------
     Pipeline pipeline;
+    RunFrameXmlPipeline(epf, workspace, manifest, pipeline);
+    if (pipeline.frameXmlFiles)
+        std::cout << "  framexml " << epf.filename().string() << ": "
+                  << Number(pipeline.frameXmlFiles)
+                  << " generated file(s) staged, TOC +"
+                  << Number(pipeline.frameXmlFiles == 2
+                                ? pipeline.frameXmlTocGrowth
+                                : 0)
+                  << " byte(s)\n";
+
+    // -- the real world-map pipeline -----------------------------------------
     if (!RunPipeline(epf, baselineDirectory, workspace, manifest, pipeline)) return;
 
     for (auto const &table : WorldMapDbcTables()) {

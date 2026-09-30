@@ -25,6 +25,29 @@ UPSTREAM_SHA256SUMS = UPSTREAM_PATCH_DIR / "SHA256SUMS"
 UPSTREAM_SOURCE_JSON = UPSTREAM_PATCH_DIR / "SOURCE.json"
 UPSTREAM_SOURCE_MD = UPSTREAM_PATCH_DIR / "SOURCE.md"
 
+#: WDM-addons carries the author's own instance floor names as Lua globals.  The
+#: vendored copies are the sole source for every floor label this project emits,
+#: so regenerating a manifest never depends on an external WDM checkout.
+UPSTREAM_ADDONS_DIR = REPO_ROOT / "upstream" / "WDM-addons"
+WDM_LOCALE_DIR = UPSTREAM_ADDONS_DIR / "WDM" / "locales" / "global"
+WDM_LOCALE_SHA256SUMS = UPSTREAM_ADDONS_DIR / "SHA256SUMS"
+
+#: The stock build-12340 ``Interface/FrameXML/FrameXML.toc``.  mod-content-manager
+#: never regenerates FrameXML; it inserts one module line into this exact,
+#: digest-pinned file.  Vendoring it keeps the EPF self-contained and lets the
+#: pinned digest be reviewed without the client installed.
+STOCK_FRAMEXML_DIR = REPO_ROOT / "upstream" / "wow-3.3.5a-build-12340"
+STOCK_FRAMEXML_TOC = (
+    STOCK_FRAMEXML_DIR / "Interface" / "FrameXML" / "FrameXML.toc"
+)
+STOCK_FRAMEXML_SOURCE_JSON = STOCK_FRAMEXML_DIR / "SOURCE.json"
+STOCK_FRAMEXML_SHA256SUMS = STOCK_FRAMEXML_DIR / "SHA256SUMS"
+
+
+def wdm_locale_dir() -> Path:
+    """Vendored WDM-addons locale string tables, one file per client locale."""
+    return WDM_LOCALE_DIR
+
 #: WDM Stable ships identical DBFilesClient for every client locale.  enUS is the
 #: representative tree; :func:`verify_locale_parity` proves that at run time.
 DEFAULT_LOCALE = "enUS"

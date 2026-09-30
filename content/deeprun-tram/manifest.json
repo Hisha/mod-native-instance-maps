@@ -1,4 +1,8 @@
 {
+ "clientFrameXml": {
+  "stockTocSha256": "36ccfed8ad8e424fb312c942a75bd17c6091dd264df8653f117dcfe8417d91a3",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
  "content": [
   {
    "source": "artwork/DeeprunTram1_1.blp",
@@ -121,7 +125,7 @@
    "type": "file"
   }
  ],
- "description": "Native pre-Cataclysm Deeprun Tram instance map: 2 DungeonMap floors, 7 DungeonMapChunk entries, one WorldMapArea, the instance WorldMapTransforms row and 24 client BLP tiles.",
+ "description": "Native pre-Cataclysm Deeprun Tram instance map: 2 DungeonMap floors, 7 DungeonMapChunk entries, one WorldMapArea, the instance WorldMapTransforms row and 24 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
  "name": "Deeprun Tram",
  "package": "mod-native-instance-maps.deeprun-tram",
  "schema": 3,
@@ -176,6 +180,52 @@
       }
      ],
      "dungeonMapId": 741,
+     "floorNames": {
+      "deDE": {
+       "1": "Sturmwind",
+       "2": "Eisenschmiede"
+      },
+      "enCN": {
+       "1": "暴风城",
+       "2": "铁炉堡"
+      },
+      "enGB": {
+       "1": "Stormwind",
+       "2": "Ironforge"
+      },
+      "enUS": {
+       "1": "Stormwind",
+       "2": "Ironforge"
+      },
+      "esES": {
+       "1": "Ventormenta",
+       "2": "Forjaz"
+      },
+      "esMX": {
+       "1": "Ventormenta",
+       "2": "Forjaz"
+      },
+      "frFR": {
+       "1": "Hurlevent",
+       "2": "Forgefer"
+      },
+      "koKR": {
+       "1": "스톰윈드",
+       "2": "아이언포지"
+      },
+      "ruRU": {
+       "1": "Штормград",
+       "2": "Стальгорн"
+      },
+      "zhCN": {
+       "1": "暴风城",
+       "2": "铁炉堡"
+      },
+      "zhTW": {
+       "1": "暴風城",
+       "2": "鐵爐堡"
+      }
+     },
      "floors": [
       {
        "field3": 2311.5,

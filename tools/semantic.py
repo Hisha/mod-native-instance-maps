@@ -24,6 +24,14 @@ relationships:
     A signed 32-bit *reference* the client reads, not an owned row.  WDM writes
     ``0``, writes ``-1`` as a sentinel, and can point at a ``DungeonMap`` row of a
     different map.  The decoded signed value is written through unchanged.
+
+``areas[].floorNames``
+    Optional.  Present only when the map's own WDM locale tables publish floor
+    names, and then only for the locales that do.  Keys are the stock
+    ``WorldMapLevelDropDown_Initialize`` loop index, which is the trailing number
+    in WDM's ``DUNGEON_FLOOR_<TOKEN><n>`` global; values are WDM's string verbatim.
+    Absent for a map WDM names only as an instance, which leaves the stock
+    ``Floor %d`` label in place.
 """
 
 from __future__ import annotations
@@ -31,6 +39,7 @@ from __future__ import annotations
 import hashlib
 from typing import Dict, List, Optional
 
+import floornames
 from wdbc import DbcFile
 
 # DBC field name -> manifest key, per manifest section.  Anything absent from
@@ -105,6 +114,12 @@ def area_declaration(
     record = areas.get(identifier)
     declaration = {"id": identifier, "internalName": record.value("internal_name")}
     declaration.update(_project(record, AREA_FIELDS))
+    # Floor labels come from WDM's own locale strings, keyed by the dropdown's loop
+    # index.  Omitted entirely when WDM names no floor for this map, so the client
+    # keeps its own label rather than a synthesised empty string.
+    labels = floornames.floor_labels(declaration["internalName"])
+    if labels:
+        declaration["floorNames"] = labels
     # Order follows WDM, not ID.  The client walks floors in declaration order.
     declaration["floors"] = [floor_declaration(floors, i) for i in floor_ids]
     declaration["chunks"] = [chunk_declaration(chunks, i) for i in chunk_ids]

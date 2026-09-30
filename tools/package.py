@@ -29,6 +29,7 @@ Usage::
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import sys
 import zipfile
@@ -46,12 +47,53 @@ FIXED_TIME = (1980, 1, 1, 0, 0, 0)
 SCHEMA = 3
 VERSION = "1.0.0"
 
+#: Where the vendored stock table of contents travels inside the EPF, and the
+#: EPF-relative name mod-content-manager resolves ``clientFrameXml.stockTocSource``
+#: against.  It must be the stock client's own path: the composer verifies the
+#: digest, then writes it back to exactly this target.
+STOCK_TOC_MEMBER = "Interface/FrameXML/FrameXML.toc"
+
+#: The generated module the stock dropdown ends up loading.
+STOCK_MODULE_NAME = "ContentManagerWorldMapFloorNames"
+
 #: Tile targets are ``Interface/WorldMap/<internalName>/<leaf>``.  The client
 #: derives that directory from ``internalName``, and mod-content-manager
 #: rejects artwork that lands anywhere else, so the target is generated from
 #: the same string the WorldMapArea row carries rather than typed in.
 ARTWORK_PREFIX = "Interface/WorldMap/"
 SOURCE_PREFIX = "artwork/"
+
+
+def stock_toc_bytes() -> bytes:
+    """The vendored stock ``FrameXML.toc``, read verbatim.
+
+    A missing vendored copy is a hard error rather than a reason to regenerate or
+    substitute one.  The composer refuses any TOC whose digest does not match the
+    manifest, so shipping a locally rebuilt file would only fail later, further
+    from the cause.
+    """
+    if not paths.STOCK_FRAMEXML_TOC.is_file():
+        raise SystemExit(
+            f"missing vendored stock FrameXML table of contents: "
+            f"{paths.STOCK_FRAMEXML_TOC}"
+        )
+    return paths.STOCK_FRAMEXML_TOC.read_bytes()
+
+
+def stock_toc_sha256() -> str:
+    return hashlib.sha256(stock_toc_bytes()).hexdigest()
+
+
+def floor_label_locales(world_map: Dict[str, object]) -> List[str]:
+    """Client locales this one ``worldMaps[]`` entry labels, sorted.
+
+    Counted per map, not per package, so the description states the truth for a
+    map whose area WDM names only as an instance and therefore has no labels.
+    """
+    locales = set()
+    for area in world_map.get("areas", []):
+        locales.update(area.get("floorNames", {}))
+    return sorted(locales)
 
 
 def artwork_targets(candidate: Candidate) -> List[Dict[str, str]]:
@@ -128,7 +170,7 @@ def manifest_for(candidate: Candidate, discovery: Discovery) -> Dict[str, object
         if candidate.transform_ids
         else "no WorldMapTransforms row (WDM supplies none for this map)"
     )
-    return {
+    manifest = {
         "schema": SCHEMA,
         "package": paths.package_key(candidate.slug),
         "name": candidate.title,
@@ -142,6 +184,21 @@ def manifest_for(candidate: Candidate, discovery: Discovery) -> Dict[str, object
         "content": tiles,
         "worldMaps": [declaration],
     }
+    locales = floor_label_locales(declaration)
+    if locales:
+        # Declaring floor labels obliges the package to name the exact stock
+        # FrameXML table of contents mod-content-manager will extend.  The digest
+        # is read from the vendored file, so a manifest can never claim a TOC the
+        # composer would not accept.
+        manifest["clientFrameXml"] = {
+            "stockTocSource": STOCK_TOC_MEMBER,
+            "stockTocSha256": stock_toc_sha256(),
+        }
+        manifest["description"] += (
+            f" Dungeon floor labels for {len(locales)} client locales, added to "
+            f"the stock FrameXML by one added module."
+        )
+    return manifest
 
 
 def serialise(manifest: Dict[str, object]) -> bytes:
@@ -212,6 +269,27 @@ def build_epf(
     if not entries:
         raise SystemExit(f"{manifest_path}: no artwork declared")
 
+    # ``clientFrameXml`` is declared, so the stock table of contents travels in the
+    # EPF unchanged.  The digest is re-derived here and compared with the manifest,
+    # so an EPF can never disagree with the pin mod-content-manager enforces.
+    toc_bytes = b""
+    declared = manifest.get("clientFrameXml")
+    if declared is not None:
+        if declared.get("stockTocSource") != STOCK_TOC_MEMBER:
+            raise SystemExit(
+                f"{manifest_path}: clientFrameXml.stockTocSource must be "
+                f"{STOCK_TOC_MEMBER}"
+            )
+        toc_bytes = stock_toc_bytes()
+        digest = hashlib.sha256(toc_bytes).hexdigest()
+        if digest != declared.get("stockTocSha256"):
+            raise SystemExit(
+                f"{manifest_path}: vendored FrameXML.toc digest {digest} does not "
+                f"match declared {declared.get('stockTocSha256')}"
+            )
+        if STOCK_TOC_MEMBER in targets:
+            raise SystemExit(f"{manifest_path}: stock FrameXML.toc declared twice")
+
     root = artwork_root or paths.wdm_artwork_dir()
     payloads = [
         (item["source"], _artwork_source(candidate, item, root).read_bytes())
@@ -225,6 +303,8 @@ def build_epf(
     # filesystem ordering.  Same inputs, same bytes.
     with zipfile.ZipFile(output, "w", zipfile.ZIP_STORED) as archive:
         archive.writestr(zipfile.ZipInfo("manifest.json", FIXED_TIME), manifest_bytes)
+        if toc_bytes:
+            archive.writestr(zipfile.ZipInfo(STOCK_TOC_MEMBER, FIXED_TIME), toc_bytes)
         for name, blob in payloads:
             archive.writestr(zipfile.ZipInfo(name, FIXED_TIME), blob)
     return output

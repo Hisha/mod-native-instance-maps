@@ -13,15 +13,22 @@ world-map DBCs is `mod-content-manager`'s job, not this repository's.
 
 Four packages, all validated against `mod-content-manager`'s real pipeline —
 `ContentPackage::Validate()`, `StageInto()`, `WorldMapDbcComposer`
-`AppendRequests`/`Compose`/`Stage` against the verified stock baseline, and
+`AppendRequests`/`Compose`/`Stage` against the verified stock baseline,
+`ContentFrameXml::ComposeLua`/`ComposeToc`/`Stage`, and
 `ContentServerBundle::VerifyParity()`:
 
-| Package | Map | Area | Floors | Chunks | Transform | Tiles |
-|---|---:|---|---:|---:|---|---:|
-| `mod-native-instance-maps.deeprun-tram` | 369 | `DeeprunTram` | 2 | 7 | WDM 12 | 24 |
-| `mod-native-instance-maps.karazhan` | 532 | `Karazhan` | 17 | 86 | none in WDM | 204 |
-| `mod-native-instance-maps.temple-of-atal-hakkar` | 109 | `TheTempleOfAtalHakkar` | 3 | 75 | WDM 14 | 36 |
-| `mod-native-instance-maps.the-deadmines` | 36 | `TheDeadmines` | 2 | 29 | WDM 11 | 24 |
+| Package | Map | Area | Floors | Chunks | Transform | Tiles | Floor labels |
+|---|---:|---|---:|---:|---|---:|---|
+| `mod-native-instance-maps.deeprun-tram` | 369 | `DeeprunTram` | 2 | 7 | WDM 12 | 24 | 11 locales |
+| `mod-native-instance-maps.karazhan` | 532 | `Karazhan` | 17 | 86 | none in WDM | 204 | 11 locales |
+| `mod-native-instance-maps.temple-of-atal-hakkar` | 109 | `TheTempleOfAtalHakkar` | 3 | 75 | WDM 14 | 36 | 11 locales |
+| `mod-native-instance-maps.the-deadmines` | 36 | `TheDeadmines` | 2 | 29 | WDM 11 | 24 | 11 locales |
+
+Every map's floors are named in all eleven locales WDM publishes, taken verbatim
+from WDM-addons' own `DUNGEON_FLOOR_<INSTANCE><n>` strings. Karazhan's seventeen
+read `Servant's Quarters`, `Upper Livery Stables`, `The Banquet Hall` and so on
+instead of the stock `Floor 1`…`Floor 17`. See
+[Dungeon floor names](#dungeon-floor-names).
 
 Karazhan carries no `WorldMapTransforms` row because WDM has none for it. The
 manifest omits the key entirely, so `mod-content-manager` requests no row, leases
@@ -109,6 +116,32 @@ The three levels answer "can this ship?", not "is this data good?".
 Only one map is UNSAFE (`WailingCaverns`, which needs WDM's rewritten
 `DungeonMap 28` and its two deleted chunk rows). The 16 REVIEW maps are blocked
 on missing or mismatched source data, not on a missing transform.
+
+## Dungeon floor names
+
+The stock client's floor dropdown numbers a map's floors `Floor 1`…`Floor N`.
+The client has the names; they are just not where the dropdown looks. WDM-addons
+publishes them as ordinary Lua globals, and this project ships them:
+
+    DUNGEON_FLOOR_KARAZHAN1 = "Servant's Quarters";
+    DUNGEON_FLOOR_KARAZHAN7 = "Lower Broken Stair";
+
+Those strings are read verbatim from the vendored WDM-addons locale tables and
+declared per area as `worldMaps[].areas[].floorNames`, keyed by the same index
+the stock dropdown loop produces. Nothing is retyped, translated, or inferred.
+
+**Only one stock function is replaced.** A package declaring floor labels
+carries `clientFrameXml` and requests `protected-framexml`. At build time
+`mod-content-manager` generates one Lua module that overrides
+`WorldMapLevelDropDown_Initialize` and delegates back to the stock function for
+any map or locale it has no label for. The stock table of contents travels in the
+EPF unmodified, digest-pinned, and exactly one module line is inserted into it.
+`GlobalStrings.lua` and `WorldMapFrame.lua` are never read, replaced or
+required — see [THIRD_PARTY.md](THIRD_PARTY.md) for the stock file's provenance.
+
+A map whose locale tables WDM does not publish keeps the stock label for that
+locale. WDM ships no `itIT` or `ptBR` table, so those two locales keep stock
+labels everywhere — that is stock behaviour, not a gap in the import.
 
 ## Transforms are optional, and never derived
 
@@ -207,10 +240,20 @@ derived transform would work on PTR.
    uncompressed ZIPs with `manifest.json` first, artwork in manifest order, and
    a fixed 1980 timestamp. Identical inputs produce identical bytes.
 8. **Upstream is immutable.** `upstream/` is vendored, checksummed against
-   `upstream/WDM-patch/SHA256SUMS` (17,072 entries), and never edited.
+   `upstream/WDM-patch/SHA256SUMS` (17,072 entries),
+   `upstream/WDM-addons/SHA256SUMS` and
+   `upstream/wow-3.3.5a-build-12340/SHA256SUMS`, and never edited.
 9. **Artwork paths are generated, not typed.** Targets are always
    `Interface/WorldMap/<internalName>/<leaf>`, the directory the client derives
    from the `WorldMapArea` row. `mod-content-manager` rejects anything else.
+10. **Floor names are WDM's words.** A label is copied verbatim from a vendored
+    `DUNGEON_FLOOR_<INSTANCE><n>` global. A locale WDM does not publish gets no
+    label, and the stock client text stays. Nothing is translated, abbreviated
+    or padded to fill a gap.
+11. **One stock function, never the file.** Floor labels replace
+    `WorldMapLevelDropDown_Initialize` and nothing else. The stock
+    `FrameXML.toc` is shipped unmodified and digest-pinned; the generated module
+    is added to it as one line.
 
 ## Layout
 
@@ -224,12 +267,16 @@ tools/wdbc.py                 strict WDBC reader
 tools/forensics.py            stock-versus-WDM comparison
 tools/instances.py            candidate discovery and classification
 tools/semantic.py             DBC rows -> mod-content-manager manifest keys
+tools/floornames.py           WDM locale tables -> dungeon floor labels
 tools/report.py               report generation
 tools/package.py              manifest + EPF generation
 tests/run_tests.py            the suite
 tests/validate_epf.cpp        harness: runs EPFs through the real CM pipeline
 tests/validate_epfs.py        builds and runs the harness
 upstream/WDM-patch/           vendored source data (immutable)
+upstream/WDM-addons/          vendored WDM locale tables (immutable)
+upstream/wow-3.3.5a-build-12340/
+                             vendored stock FrameXML.toc (immutable)
 ```
 
 ## Testing
@@ -265,6 +312,15 @@ would be invisible in review:
 - **EPFs** — `manifest.json` first; stored entries with a fixed timestamp;
   byte-reproducible; member order follows manifest order; payloads equal the
   WDM artwork; no DBC.
+- **Floor names** — the vendored locale tables match their recorded SHA-256s;
+  Karazhan resolves to floors 1..17 with no gap in every published locale;
+  every emitted label equals the WDM global it came from; unpublished locales
+  are absent rather than invented; a level-0 global is skipped, never shifted to
+  1; an instance WDM names only as an instance yields no labels; the token fold
+  matches the client's upper-case fold and refuses non-ASCII.
+- **Stock FrameXML** — the vendored `FrameXML.toc` matches its recorded hash,
+  still carries exactly one `## add new modules above here` marker ahead of
+  `LocalizationPost.xml`, and the Karazhan manifest pin equals that hash.
 
 Run one group with `python3 tests/run_tests.py TestParser` or `-k golden`.
 
@@ -273,7 +329,8 @@ throwaway binary from the `mod-content-manager` sources (read-only) and drives
 every EPF through the pipeline the build service uses:
 
 ```
-Validate -> StageInto -> AppendRequests -> PlanFixed -> Compose -> Stage -> VerifyParity
+Validate -> StageInto -> FrameXml ComposeLua/ComposeToc/Stage
+         -> AppendRequests -> PlanFixed -> Compose -> Stage -> VerifyParity
 ```
 
 against the verified stock 3.3.5a build-12340 baseline. It checks that each
@@ -284,6 +341,13 @@ with no transform it additionally asserts that
 `WorldMapTransforms.dbc` composes to the stock file byte for byte, and runs a
 counterfactual showing that supplying a transform *would* have produced a
 request, a lease and a row — so the zeroes are measured, not unchecked.
+
+For floor labels it additionally asserts that the stock table of contents read
+back from the package composes to stock **plus exactly one CRLF-terminated module
+line**, that the generated module delegates to `FLOOR_NUMBER` and calls no loader
+(`dofile`, `loadfile`, `require`, `LoadAddOn`, `SetAddOn`), that both generated
+files stage and read back identically, and that their SHA-256s reach the parity
+artifact.
 
 ## Known limitations
 

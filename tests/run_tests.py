@@ -14,6 +14,7 @@ those trees are absent, so a partial checkout still gets real coverage.
 
 from __future__ import annotations
 
+import hashlib
 import json
 import sys
 import unittest
@@ -22,6 +23,7 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(REPO_ROOT / "tools"))
 
+import floornames  # noqa: E402
 import paths  # noqa: E402
 import semantic  # noqa: E402
 from instances import (  # noqa: E402
@@ -34,11 +36,14 @@ from instances import (  # noqa: E402
 )
 from package import (  # noqa: E402
     FIXED_TIME,
+    STOCK_TOC_MEMBER,
     build_epf,
+    floor_label_locales,
     manifest_for,
     publish_slugs,
     published_candidates,
     serialise,
+    stock_toc_sha256,
 )
 from transform import (  # noqa: E402
     FULL_REGION_BOTTOM,
@@ -414,8 +419,23 @@ class TestSemantic(_DiscoveryMixin, unittest.TestCase):
 
     @require_fixture
     def test_deadmines_matches_golden_fixture(self):
-        golden = json.loads(paths.deadmines_golden_fixture().read_text())
-        self.assertEqual(self.declaration(DEADMINES), golden["worldMaps"][0])
+        """Every field the reviewed fixture states must still match, exactly.
+
+        ``floorNames`` is compared separately in :class:`TestFloorNames`, against
+        WDM's own strings, because the reviewed fixture predates floor labels and
+        cannot be the oracle for them.  Everything else must be byte-identical, so
+        a future projection change still fails here.
+        """
+        golden = json.loads(paths.deadmines_golden_fixture().read_text())["worldMaps"][0]
+        self.assertEqual(len(golden["areas"]), 1)
+        self.assertNotIn("floorNames", golden["areas"][0], "the reviewed fixture grew floor labels")
+        (declaration,) = [self.declaration(DEADMINES)]
+        (area,) = declaration["areas"]
+        self.assertIn("floorNames", area)
+        self.assertEqual(
+            {**declaration, "areas": [{k: v for k, v in area.items() if k != "floorNames"}]},
+            golden,
+        )
 
     # -- the two transform cases are both valid source shapes --------------
 
@@ -836,7 +856,10 @@ class TestEpf(_DiscoveryMixin, unittest.TestCase):
                 with zipfile.ZipFile(output) as archive:
                     names = archive.namelist()
                 self.assertEqual(names[0], "manifest.json")
-                self.assertEqual(len(names), 1 + len(item.blps))
+                # manifest, the stock table of contents, then the artwork.  The TOC
+                # is present because every published map declares floor labels.
+                self.assertEqual(len(names), 2 + len(item.blps))
+                self.assertEqual(names[1], STOCK_TOC_MEMBER)
 
     def test_epf_entries_are_stored_with_a_fixed_timestamp(self):
         import zipfile
@@ -872,6 +895,9 @@ class TestEpf(_DiscoveryMixin, unittest.TestCase):
                 expected = ["manifest.json"] + [
                     e["source"] for e in manifest["content"]
                 ]
+                # The stock TOC sits between the manifest and the artwork, in the
+                # order build_epf writes it, and never in artwork order.
+                expected.insert(1, STOCK_TOC_MEMBER)
                 _, output = self.build(item.internal_name)
                 with zipfile.ZipFile(output) as archive:
                     self.assertEqual(archive.namelist(), expected)
@@ -885,6 +911,8 @@ class TestEpf(_DiscoveryMixin, unittest.TestCase):
                 with zipfile.ZipFile(output) as archive:
                     for name in archive.namelist():
                         if name == "manifest.json":
+                            continue
+                        if name == STOCK_TOC_MEMBER:
                             continue
                         leaf = Path(name).name
                         expected = (
@@ -1223,6 +1251,122 @@ class TestSourceProvenance(_DiscoveryMixin, unittest.TestCase):
                 self.assertTrue((stock / f"{table}.dbc").is_file())
 
 
+class TestFloorNames(unittest.TestCase):
+    """Floor labels are WDM's own strings, read from the vendored locale files.
+
+    Nothing in this class invents a name.  Every assertion compares the importer's
+    output against bytes in ``upstream/WDM-addons``, which are themselves pinned
+    by ``SHA256SUMS``.
+    """
+
+    def test_vendored_locale_tables_match_their_recorded_hashes(self):
+        recorded = {}
+        for line in paths.WDM_LOCALE_SHA256SUMS.read_text().splitlines():
+            digest, name = line.split(None, 1)
+            recorded[name.strip()] = digest
+        vendored = sorted(p.name for p in paths.wdm_locale_dir().glob("*.lua"))
+        self.assertEqual(vendored, sorted(recorded), "SHA256SUMS covers every locale file")
+        for name, digest in recorded.items():
+            with self.subTest(locale=name):
+                self.assertEqual(
+                    hashlib.sha256(
+                        (paths.wdm_locale_dir() / name).read_bytes()
+                    ).hexdigest(),
+                    digest,
+                )
+
+    def test_karazhan_reads_every_floor_in_every_published_locale(self):
+        labels = floornames.floor_labels("Karazhan")
+        expected = set(floornames.CLIENT_LOCALES) - set(
+            floornames.missing_locales("Karazhan")
+        )
+        self.assertEqual(sorted(labels), sorted(expected))
+        for locale, table in labels.items():
+            with self.subTest(locale=locale):
+                # Karazhan is 17 floors, so a complete table is 1..17 with no gap.
+                self.assertEqual(
+                    sorted(int(level) for level in table), list(range(1, 18))
+                )
+
+    def test_labels_are_wdms_own_strings_not_retyped(self):
+        # Read straight from the vendored enUS file rather than restating it, so a
+        # change upstream shows up as a test failure instead of a silent drift.
+        table = floornames.read_locale_table(
+            paths.wdm_locale_dir() / "enus.lua"
+        )
+        labels = floornames.floor_labels("Karazhan")
+        for level, label in labels["enUS"].items():
+            with self.subTest(level=level):
+                self.assertEqual(label, table["KARAZHAN" + level])
+
+    def test_missing_locales_are_absent_not_invented(self):
+        labels = floornames.floor_labels("Karazhan")
+        for locale in floornames.missing_locales("Karazhan"):
+            with self.subTest(locale=locale):
+                self.assertNotIn(locale, labels)
+
+    def test_an_instance_named_only_as_an_instance_yields_no_labels(self):
+        # WDM publishes DUNGEON_FLOOR_ZULFARRAK with no floor number.  Promoting it
+        # to "floor 1" would be a mapping WDM's own code never makes, so Zul'Farrak
+        # keeps the stock "Floor 1" label.
+        self.assertEqual(floornames.floor_labels("ZulFarrak"), {})
+
+    def test_floor_token_matches_the_clients_upper_case_fold(self):
+        self.assertEqual(floornames.floor_token("Karazhan"), "KARAZHAN")
+        self.assertEqual(
+            floornames.floor_token("TheTempleOfAtalHakkar"), "THETEMPLEOFATALHAKKAR"
+        )
+        with self.assertRaises(floornames.FloorNameError):
+            floornames.floor_token("Karazhán")
+        with self.assertRaises(floornames.FloorNameError):
+            floornames.floor_token("")
+
+    def test_locales_with_identical_tables_stay_identical(self):
+        # enUS, enGB, enCN and zhCN ship the same bytes upstream; a per-locale
+        # transformation would silently diverge them.
+        labels = floornames.floor_labels("Karazhan")
+        self.assertEqual(labels["enUS"], labels["enGB"])
+        self.assertEqual(len(labels["enUS"]), 17)
+
+
+class TestStockFrameXml(unittest.TestCase):
+    """The stock table of contents is shipped unmodified and digest-pinned."""
+
+    def test_vendored_toc_matches_its_recorded_hash(self):
+        recorded = {}
+        for line in paths.STOCK_FRAMEXML_SHA256SUMS.read_text().splitlines():
+            digest, name = line.split(None, 1)
+            recorded[name.strip()] = digest
+        self.assertEqual(stock_toc_sha256(), recorded["FrameXML.toc"])
+
+    def test_vendored_toc_still_carries_the_insertion_marker(self):
+        text = paths.STOCK_FRAMEXML_TOC.read_text(encoding="utf-8")
+        marker = "## add new modules above here"
+        self.assertEqual(text.count(marker), 1)
+        # The generated module is a TOC line, so it must be inserted while the
+        # marker that opens the stock load order is still present.
+        self.assertLess(
+            text.index(marker), text.index("LocalizationPost.xml")
+        )
+
+    def test_manifest_pin_matches_the_vendored_toc(self):
+        self.assertEqual(
+            json.loads(
+                (paths.CONTENT_DIR / "karazhan" / "manifest.json").read_text()
+            )["clientFrameXml"],
+            {
+                "stockTocSha256": stock_toc_sha256(),
+                "stockTocSource": STOCK_TOC_MEMBER,
+            },
+        )
+
+    def test_provenance_records_the_container_it_came_from(self):
+        record = json.loads(paths.STOCK_FRAMEXML_SOURCE_JSON.read_text())
+        self.assertEqual(record["sha256"], stock_toc_sha256())
+        self.assertIn("FrameXML.toc", record["member"])
+        self.assertFalse(record["modified"])
+
+
 class TestKarazhanSource(_DiscoveryMixin, unittest.TestCase):
     """The generated declaration must be WDM's Karazhan, row for row.
 
@@ -1307,11 +1451,15 @@ class TestKarazhanSource(_DiscoveryMixin, unittest.TestCase):
         for source, key in semantic.AREA_FIELDS:
             with self.subTest(field=source):
                 self.assertEqual(self.area[key], record.value(source))
+        # floorNames is not a WorldMapArea field: it is added from WDM's locale
+        # tables and is projected in TestFloorNames, not here.
         self.assertEqual(
             set(self.area),
-            {"id", "internalName", "floors", "chunks"}
+            {"id", "internalName", "floors", "chunks", "floorNames"}
             | {key for _, key in semantic.AREA_FIELDS},
         )
+        for floor in self.area["floors"]:
+            self.assertNotIn("floorNames", floor)
 
     def test_dungeon_map_id_is_preserved_not_normalised(self):
         record = self.tables["WorldMapArea"].get(KARAZHAN_AREA_ID)
@@ -1442,9 +1590,13 @@ class TestKarazhanSource(_DiscoveryMixin, unittest.TestCase):
             payloads = {
                 Path(name).name: hashlib.sha256(archive.read(name)).hexdigest()
                 for name in archive.namelist()
-                if name != "manifest.json"
+                if name not in ("manifest.json", STOCK_TOC_MEMBER)
             }
+            # The stock TOC is a separate payload with its own provenance, checked
+            # against the vendored file in TestStockFrameXml rather than WDM's.
+            toc = hashlib.sha256(archive.read(STOCK_TOC_MEMBER)).hexdigest()
         self.assertEqual(payloads, expected)
+        self.assertEqual(toc, stock_toc_sha256())
 
     # -- determinism --------------------------------------------------------
 
