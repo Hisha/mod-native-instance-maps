@@ -53,6 +53,11 @@ def _fmt_float(value: object) -> str:
     return f"{value:.7g}"
 
 
+def _source_path(path: Path) -> str:
+    """Stable report spelling for a repository-owned input."""
+    return path.relative_to(paths.REPO_ROOT).as_posix()
+
+
 def audit_markdown(discovery: Discovery, forensics: Dict[str, TableForensics]) -> str:
     out: List[str] = []
     add = out.append
@@ -70,9 +75,13 @@ def audit_markdown(discovery: Discovery, forensics: Dict[str, TableForensics]) -
         source = json.loads(paths.UPSTREAM_SOURCE_JSON.read_text(encoding="utf-8"))
         add(f"- WDM revision: `{source.get('revision', 'unknown')}`")
         add(f"- Vendored tree modified by us: `{source.get('modified', 'unknown')}`")
-    add(f"- DBC tree: `{paths.wdm_dbc_dir()}`")
-    add(f"- Stock baseline: `{paths.stock_dbc_dir()}`")
-    add(f"- Checksum manifest: `{paths.UPSTREAM_SHA256SUMS}` (17072 entries, all OK)")
+    add(f"- DBC tree: `{_source_path(paths.wdm_dbc_dir())}`")
+    add(f"- Stock baseline: `{_source_path(paths.stock_dbc_dir())}`")
+    add(
+        f"- WDM checksum manifest: `{_source_path(paths.UPSTREAM_SHA256SUMS)}` "
+        "(17072 entries, all OK)"
+    )
+    add(f"- Stock checksum manifest: `{_source_path(paths.STOCK_DBC_SHA256SUMS)}`")
     add("")
 
     add("## Stock versus WDM")

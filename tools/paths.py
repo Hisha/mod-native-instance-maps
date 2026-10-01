@@ -2,14 +2,14 @@
 """Repository layout and default locations shared by every tool in ``tools/``.
 
 Everything is resolved relative to this file so a checkout can be moved or
-copied without editing anything.  External reference trees (the stock 3.3.5a
-DBC baseline and the mod-content-manager golden fixture) are *not* required to
-regenerate content; they are only needed by the validation commands and the
-test suite, which skip or fail loudly when they are absent.
+copied without editing anything. The WDM source material and stock build-12340
+baselines are immutable, repository-owned inputs. Only the mod-content-manager
+source integration is external, selected explicitly or from a sibling checkout.
 """
 
 from __future__ import annotations
 
+import hashlib
 import os
 from pathlib import Path
 
@@ -42,6 +42,16 @@ STOCK_FRAMEXML_TOC = (
 )
 STOCK_FRAMEXML_SOURCE_JSON = STOCK_FRAMEXML_DIR / "SOURCE.json"
 STOCK_FRAMEXML_SHA256SUMS = STOCK_FRAMEXML_DIR / "SHA256SUMS"
+STOCK_DBC_DIR = STOCK_FRAMEXML_DIR / "DBFilesClient"
+STOCK_DBC_SHA256SUMS = STOCK_DBC_DIR / "SHA256SUMS"
+STOCK_DBC_SOURCE_JSON = STOCK_DBC_DIR / "SOURCE.json"
+
+WORLD_MAP_TABLES = (
+    "DungeonMap",
+    "DungeonMapChunk",
+    "WorldMapArea",
+    "WorldMapTransforms",
+)
 
 
 def wdm_locale_dir() -> Path:
@@ -67,35 +77,39 @@ def wdm_artwork_dir(locale: str = DEFAULT_LOCALE) -> Path:
 
 
 def stock_dbc_dir() -> Path:
-    """Stock 3.3.5a build-12340 baseline used by mod-content-manager.
-
-    Overridable with ``MOD_NATIVE_INSTANCE_MAPS_STOCK_DBC``; the directory is
-    read-only reference data and is never written to.
-    """
-    override = os.environ.get("MOD_NATIVE_INSTANCE_MAPS_STOCK_DBC")
-    if override:
-        return Path(override).expanduser()
-    return Path("/home/smithkt/git/WDM-patch/wdm-stock-dbc")
+    """Return the hash-verified, vendored stock build-12340 baseline."""
+    expected = {}
+    if not STOCK_DBC_SHA256SUMS.is_file():
+        raise RuntimeError(f"missing stock DBC checksum manifest: {STOCK_DBC_SHA256SUMS}")
+    for line in STOCK_DBC_SHA256SUMS.read_text(encoding="ascii").splitlines():
+        digest, name = line.split(None, 1)
+        expected[name.strip()] = digest
+    wanted = {f"{table}.dbc" for table in WORLD_MAP_TABLES}
+    if set(expected) != wanted:
+        raise RuntimeError("stock DBC checksum manifest must name exactly four world-map DBCs")
+    for name, digest in expected.items():
+        source = STOCK_DBC_DIR / name
+        if not source.is_file():
+            raise RuntimeError(f"missing vendored stock DBC: {source}")
+        actual = hashlib.sha256(source.read_bytes()).hexdigest()
+        if actual != digest:
+            raise RuntimeError(
+                f"vendored stock DBC hash mismatch for {name}: {actual}, expected {digest}"
+            )
+    return STOCK_DBC_DIR
 
 
 def content_manager_dir() -> Path:
-    """mod-content-manager checkout, used only for cross-validation."""
+    """Declared or sibling mod-content-manager checkout for cross-validation."""
     override = os.environ.get("MOD_CONTENT_MANAGER_DIR")
     if override:
         return Path(override).expanduser()
-    return Path("/home/smithkt/git/mod-content-manager")
+    return REPO_ROOT.parent / "mod-content-manager"
 
 
 def deadmines_golden_fixture() -> Path:
     """Known-good Content Manager Deadmines manifest."""
     return content_manager_dir() / "tests" / "fixtures" / "deadmines" / "manifest.json"
-
-
-def wdm_deadmines_golden_dbc_dir() -> Path:
-    """WDM project's own minimal Deadmines composition, a byte-level oracle."""
-    override = os.environ.get("WDM_PATCH_DIR")
-    root = Path(override).expanduser() if override else Path("/home/smithkt/git/WDM-patch")
-    return root / "minimal-deadmines" / "DBFilesClient"
 
 
 #: Explicit list of candidates this project has decided to package.  The

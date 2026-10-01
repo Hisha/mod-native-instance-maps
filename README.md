@@ -78,16 +78,19 @@ make verify                        # CI gate: committed artifacts are current
 make clean                         # remove generated dist/*.epf only
 ```
 
-External locations are resolved by `tools/paths.py` and can be overridden:
+All WDM and stock build inputs are repository-owned. The only external
+integration is `mod-content-manager`, selected explicitly or as a sibling
+checkout:
 
 | Variable | Default | Used for |
 |---|---|---|
-| `MOD_NATIVE_INSTANCE_MAPS_STOCK_DBC` | `/home/smithkt/git/WDM-patch/wdm-stock-dbc` | stock 3.3.5a build-12340 baseline |
-| `MOD_CONTENT_MANAGER_DIR` | `/home/smithkt/git/mod-content-manager` | validation harness and golden fixture |
-| `WDM_PATCH_DIR` | `/home/smithkt/git/WDM-patch` | WDM's own minimal-Deadmines byte oracle |
+| `MOD_CONTENT_MANAGER_DIR` | sibling `mod-content-manager` checkout | validation harness and golden fixture |
 
-Only `make check` and part of the test suite need these; report and manifest
-generation work from the vendored tree alone.
+The four stock build-12340 DBCs live under
+`upstream/wow-3.3.5a-build-12340/DBFilesClient/`. Every build entry point
+verifies their complete `SHA256SUMS` manifest before using them. Deadmines byte
+ordering is checked directly against the vendored WDM Stable DBC; no external
+WDM checkout or compatibility environment variable is consulted.
 
 ## How a map becomes a package
 
@@ -258,7 +261,8 @@ derived transform would work on PTR.
 8. **Upstream is immutable.** `upstream/` is vendored, checksummed against
    `upstream/WDM-patch/SHA256SUMS` (17,072 entries),
    `upstream/WDM-addons/SHA256SUMS` and
-   `upstream/wow-3.3.5a-build-12340/SHA256SUMS`, and never edited.
+   both checksum manifests under `upstream/wow-3.3.5a-build-12340/`, and never
+   edited.
 9. **Artwork paths are generated, not typed.** Targets are always
    `Interface/WorldMap/<internalName>/<leaf>`, the directory the client derives
    from the `WorldMapArea` row. `mod-content-manager` rejects anything else.
@@ -292,7 +296,7 @@ tests/validate_epfs.py        builds and runs the harness
 upstream/WDM-patch/           vendored source data (immutable)
 upstream/WDM-addons/          vendored WDM locale tables (immutable)
 upstream/wow-3.3.5a-build-12340/
-                             vendored stock FrameXML.toc (immutable)
+                             vendored stock FrameXML.toc + four DBCs (immutable)
 ```
 
 ## Testing
@@ -310,7 +314,9 @@ would be invisible in review:
   missing transform is never a reason code; publication is a strict subset of
   SAFE.
 - **Source provenance** — the vendored WDM tree is pinned to a recorded,
-  unmodified upstream revision, and the stock baseline tables are present.
+  unmodified upstream revision; all four stock baseline tables are provenance
+  recorded and SHA-256 verified; required build logic is rejected if it gains a
+  developer-specific absolute path or legacy external-WDM override.
 - **Semantics** — Deadmines equals the `mod-content-manager` golden fixture;
   chunk order matches both the fixture and WDM's shipped DBC; floors interleave
   across chunk rows; fixed IDs survive; every declared value equals its source

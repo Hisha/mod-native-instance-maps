@@ -7,17 +7,20 @@ Run from the repository root::
     python3 tests/run_tests.py -k golden  # one pattern
 
 The suite is dependency-free (``unittest`` only) so it runs anywhere the
-generator runs.  Tests that need the stock 3.3.5a baseline, the WDM golden
-patch, or the mod-content-manager fixture are skipped — loudly, by name — when
-those trees are absent, so a partial checkout still gets real coverage.
+generator runs. Stock 3.3.5a and WDM inputs are repository-owned. The one test
+that compares a mod-content-manager fixture is skipped loudly when that declared
+integration is absent.
 """
 
 from __future__ import annotations
 
 import hashlib
 import json
+import os
+import re
 import sys
 import unittest
+from unittest import mock
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -63,16 +66,8 @@ from transform import (  # noqa: E402
 )
 from wdbc import TABLES, WdbcError, build_bytes, parse_bytes, parse_file  # noqa: E402
 
-STOCK_MISSING = "stock baseline not present"
-GOLDEN_MISSING = "WDM golden patch not present"
 FIXTURE_MISSING = "mod-content-manager fixture not present"
 
-require_stock = unittest.skipUnless(
-    paths.stock_dbc_dir().is_dir(), STOCK_MISSING
-)
-require_golden = unittest.skipUnless(
-    paths.wdm_deadmines_golden_dbc_dir().is_dir(), GOLDEN_MISSING
-)
 require_fixture = unittest.skipUnless(
     paths.deadmines_golden_fixture().is_file(), FIXTURE_MISSING
 )
@@ -607,11 +602,10 @@ class TestSemantic(_DiscoveryMixin, unittest.TestCase):
         mutated["areas"][0]["chunks"][0]["field4"] = 1.0
         self.assertNotEqual(first, semantic.semantic_digest(mutated))
 
-    @require_golden
-    def test_deadmines_chunk_order_matches_golden_dbc(self):
-        """Cross-check the projection against WDM's own shipped bytes."""
+    def test_deadmines_chunk_order_matches_vendored_wdm_dbc(self):
+        """Cross-check the projection against vendored WDM Stable bytes."""
         golden = parse_file(
-            paths.wdm_deadmines_golden_dbc_dir() / "DungeonMapChunk.dbc",
+            paths.wdm_dbc_dir() / "DungeonMapChunk.dbc",
             "DungeonMapChunk",
         )
         physical = [r.id for r in golden.records if r.map_id() == 36]
@@ -1350,6 +1344,52 @@ class TestSourceProvenance(_DiscoveryMixin, unittest.TestCase):
         for table in ("DungeonMap", "DungeonMapChunk", "WorldMapArea", "WorldMapTransforms"):
             with self.subTest(table=table):
                 self.assertTrue((stock / f"{table}.dbc").is_file())
+
+    def test_stock_baseline_provenance_and_hashes_are_repository_owned(self):
+        self.assertTrue(paths.STOCK_DBC_SOURCE_JSON.is_file())
+        source = json.loads(paths.STOCK_DBC_SOURCE_JSON.read_text())
+        self.assertEqual(source["revision"], "build 12340 (enUS)")
+        self.assertFalse(source["modified"])
+        self.assertTrue(paths.STOCK_DBC_DIR.is_relative_to(paths.REPO_ROOT))
+        # stock_dbc_dir() verifies the complete SHA256SUMS manifest before it
+        # returns; reaching this assertion proves all four immutable inputs.
+        self.assertEqual(paths.stock_dbc_dir(), paths.STOCK_DBC_DIR)
+
+
+class TestPortableBuildInputs(unittest.TestCase):
+    """Build entry points must never acquire a developer-checkout dependency."""
+
+    def test_legacy_external_overrides_cannot_redirect_repository_inputs(self):
+        poisoned = {
+            "MOD_NATIVE_INSTANCE_MAPS_STOCK_DBC": "/definitely/missing/stock",
+            "WDM_PATCH_DIR": "/definitely/missing/wdm",
+        }
+        with mock.patch.dict(os.environ, poisoned):
+            self.assertEqual(paths.stock_dbc_dir(), paths.STOCK_DBC_DIR)
+            self.assertEqual(
+                paths.wdm_dbc_dir(),
+                paths.UPSTREAM_STABLE_DIR / "enUS" / "DBFilesClient",
+            )
+
+    def test_required_build_logic_contains_no_developer_absolute_path(self):
+        inputs = [paths.REPO_ROOT / "Makefile", paths.REPO_ROOT / "README.md"]
+        inputs += sorted((paths.REPO_ROOT / "tools").glob("*.py"))
+        inputs += [paths.REPO_ROOT / "tests" / "validate_epfs.py"]
+        inputs += sorted((paths.REPO_ROOT / "reports").glob("*.md"))
+        developer_path = re.compile(
+            r"(?:/home/[^/]+|/Users/[^/]+|[A-Za-z]:\\\\Users\\\\)"
+        )
+        for source in inputs:
+            with self.subTest(source=source.relative_to(paths.REPO_ROOT)):
+                text = source.read_text(encoding="utf-8")
+                self.assertIsNone(developer_path.search(text))
+        production = "\n".join(
+            source.read_text(encoding="utf-8")
+            for source in [paths.REPO_ROOT / "Makefile", paths.REPO_ROOT / "README.md"]
+            + sorted((paths.REPO_ROOT / "tools").glob("*.py"))
+        )
+        self.assertNotIn("MOD_NATIVE_INSTANCE_MAPS_STOCK_DBC", production)
+        self.assertNotIn("WDM_PATCH_DIR", production)
 
 
 class TestFloorNames(unittest.TestCase):
