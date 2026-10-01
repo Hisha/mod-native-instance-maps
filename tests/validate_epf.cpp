@@ -165,6 +165,17 @@ void RunFrameXmlPipeline(fs::path const &package, fs::path const &workspace,
            "generated module does not override WorldMapLevelDropDown_Initialize");
     Expect(lua.find("FLOOR_NUMBER") != std::string::npos, package,
            "generated module does not fall back to the stock FLOOR_NUMBER label");
+    Expect(lua.find("DungeonUsesTerrainMap()") != std::string::npos, package,
+           "generated module does not preserve the stock terrain-map floor numbering");
+    Expect(lua.find("floorNum = i - 1") != std::string::npos, package,
+           "generated module does not preserve the stock zero-based terrain floor number");
+    Expect(lua.find("_G[\"DUNGEON_FLOOR_\"") != std::string::npos, package,
+           "generated module does not preserve the stock localized floor lookup");
+    Expect(lua.find("labels[i] or floorname or string.format(FLOOR_NUMBER, i)") !=
+               std::string::npos,
+           package, "generated module does not use custom, stock, generic label precedence");
+    Expect(lua.find("return stockInitialize()") != std::string::npos, package,
+           "generated module does not delegate unlabelled maps/locales to stock");
     // The header comment names the stock files it does *not* touch, so the real
     // safety property is that nothing is loaded or replaced at runtime.
     for (auto const& forbidden : {"dofile", "loadfile", "loadstring", "require",
@@ -395,7 +406,9 @@ bool RunPipeline(fs::path const &package, fs::path const &baselineDirectory,
     return true;
 }
 
-// The transform contract, read straight off the validated manifest.
+// The transform contract, read straight off the validated manifest.  Requests,
+// rows, and pipeline counts are package-wide so this also covers packages that
+// combine maps with and without transforms.
 void CheckTransformContract(fs::path const &package, ContentPackageManifest const &manifest,
                             Pipeline const &pipeline) {
     std::map<std::string, std::vector<ResourceAllocationRequest>> requests;
@@ -404,39 +417,34 @@ void CheckTransformContract(fs::path const &package, ContentPackageManifest cons
     for (auto const &map : manifest.worldMaps)
         resolved.push_back(ResolvedWorldMap{manifest.packageKey, map});
 
+    std::size_t const wanted = static_cast<std::size_t>(std::count_if(
+        manifest.worldMaps.begin(), manifest.worldMaps.end(),
+        [](ContentWorldMap const& entry) { return bool(entry.transform); }));
+    std::size_t const requested = requests.count("WorldMapTransforms")
+                                      ? requests.at("WorldMapTransforms").size()
+                                      : 0;
+    auto const transformRows = WorldMapDbcComposer::Rows("WorldMapTransforms", resolved);
+    Expect(requested == wanted, package,
+           "expected " + Number(wanted) + " WorldMapTransforms request(s), got " +
+               Number(requested));
+    Expect(transformRows.size() == wanted, package,
+           "unexpected number of composed WorldMapTransforms rows");
+    Expect(pipeline.tables.at("WorldMapTransforms").addedRows == wanted, package,
+           "unexpected number of staged WorldMapTransforms rows");
+    Expect(pipeline.tables.at("WorldMapTransforms").stockIdentical == (wanted == 0), package,
+           "WorldMapTransforms stock identity does not match the package-wide declarations");
+
     for (auto const &map : manifest.worldMaps) {
         std::set<std::uint32_t> declaredFloors;
         for (auto const &area : map.areas)
             for (auto const &floor : area.floors) declaredFloors.insert(floor.id);
 
         if (!map.transform) {
-            // No transform in the source.  Nothing may supply one.
-            Expect(requests.count("WorldMapTransforms") == 0 ||
-                       requests.at("WorldMapTransforms").empty(),
-                   package,
-                   "a package without a transform requested a WorldMapTransforms row");
-            Expect(WorldMapDbcComposer::Rows("WorldMapTransforms", resolved).empty(),
-                   package,
-                   "a package without a transform composed WorldMapTransforms rows");
-            Expect(pipeline.tables.at("WorldMapTransforms").addedRows == 0, package,
-                   "a package without a transform added a WorldMapTransforms record");
-            Expect(pipeline.tables.at("WorldMapTransforms").stockIdentical, package,
-                   "WorldMapTransforms is not byte-identical to the verified stock file");
             // NewDungeonMapID is never guessed from a floor.  With no transform
-            // there is no such field to guess into.
+            // there is no such field to guess into for this map.  Other maps in
+            // the same combined package may legitimately contribute transforms.
             Expect(!map.transform, package, "unreachable: transform appeared");
         } else {
-            auto const& transformRequests = requests.at("WorldMapTransforms");
-            std::size_t const wanted =
-                static_cast<std::size_t>(std::count_if(
-                    manifest.worldMaps.begin(), manifest.worldMaps.end(),
-                    [](ContentWorldMap const& entry) { return bool(entry.transform); }));
-            Expect(transformRequests.size() == wanted, package,
-                   "expected " + Number(wanted) +
-                       " WorldMapTransforms request(s), got " +
-                       Number(transformRequests.size()));
-            Expect(WorldMapDbcComposer::Rows("WorldMapTransforms", resolved).size() == wanted,
-                   package, "unexpected number of composed WorldMapTransforms rows");
             // The composed row is exactly the declared one, unmodified.
             Expect(map.transform->newMapId == map.mapId, package,
                    "the transform does not point back at its own map");
@@ -495,9 +503,9 @@ void CheckRowReadback(fs::path const &package, fs::path const &baselineDirectory
 
     // DungeonMap and DungeonMapChunk: the composed row carries the declared ID,
     // the map it belongs to, and its own declared fields.
+    std::size_t floorOffset = pipeline.tables.at("DungeonMap").stockRows;
+    std::size_t chunkOffset = pipeline.tables.at("DungeonMapChunk").stockRows;
     for (auto const &map : manifest.worldMaps) {
-        std::size_t floorOffset = pipeline.tables.at("DungeonMap").stockRows;
-        std::size_t chunkOffset = pipeline.tables.at("DungeonMapChunk").stockRows;
         for (auto const &area : map.areas) {
             for (auto const &floor : area.floors) {
                 auto const row = Row(pipeline.tables.at("DungeonMap").staged, floorOffset++);
@@ -517,11 +525,11 @@ void CheckRowReadback(fs::path const &package, fs::path const &baselineDirectory
     // WorldMapArea: the appended internal-name string follows every stock byte,
     // so no stock offset can move.
     std::size_t areaOffset = pipeline.tables.at("WorldMapArea").stockRows;
+    std::uint32_t const stockStringBytes =
+        Stock("WorldMapArea", baselineDirectory).stringBlockSize;
+    std::uint32_t interned = stockStringBytes;
     std::set<std::uint32_t> declaredFloors, declaredChunks;
     for (auto const &map : manifest.worldMaps) {
-        std::uint32_t const stockStringBytes =
-            Stock("WorldMapArea", baselineDirectory).stringBlockSize;
-        std::uint32_t interned = stockStringBytes;
         for (auto const &area : map.areas) {
             // Every contributed row must sit after the stock string block and
             // point at an appended string, never at a stock one.

@@ -48,18 +48,34 @@ cannot be derived about a missing `WorldMapTransforms` row.
 ## Quick start
 
 ```bash
-make            # regenerate reports, manifests and EPFs, then run the tests
-make check      # the above, plus validation against mod-content-manager
-make verify     # CI gate: fail if any committed artifact is out of date
+make help
+make epf MAP=karazhan   # one approved individual EPF
+make epf MAP=all        # all approved individual EPFs
+make release            # one combined dist/mod-native-instance-maps.epf
+make check              # comprehensive developer verification
 ```
 
-Individual steps:
+The accepted individual-map slugs are `karazhan`, `the-deadmines`,
+`deeprun-tram`, and `temple-of-atal-hakkar`. Both single-map selection and
+`MAP=all` are resolved through the explicit `content/publish.json` allowlist;
+classification as SAFE alone never makes a map selectable. A bare `make epf`
+prints usage instead of choosing a publication scope.
+
+`MAP=all` creates the four approved EPFs separately. `make release` instead
+creates one ordinary Content Manager package containing those maps and their
+resources directly; it does not nest the individual ZIPs.
+
+Canonical tool equivalents and developer commands:
 
 ```bash
 python3 tools/report.py            # reports/
-python3 tools/package.py           # content/ manifests + dist/ EPFs
-python3 tests/run_tests.py         # 111 tests, stdlib only
+python3 tools/package.py --map karazhan
+python3 tools/package.py --all-approved
+python3 tools/package.py --release
+python3 tests/run_tests.py         # project unit/regression suite, stdlib only
 python3 tests/validate_epfs.py     # needs a mod-content-manager checkout
+make verify                        # CI gate: committed artifacts are current
+make clean                         # remove generated dist/*.epf only
 ```
 
 External locations are resolved by `tools/paths.py` and can be overridden:

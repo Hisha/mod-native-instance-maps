@@ -1,8 +1,9 @@
 # Single-command entry points for the native instance map toolchain.
 #
-#   make            reports + packages + tests
-#   make check      everything, including the mod-content-manager harness
-#   make verify     assert the generated artifacts are up to date (CI gate)
+#   make check              comprehensive developer verification
+#   make epf MAP=karazhan   one approved individual package
+#   make epf MAP=all        every approved individual package
+#   make release            one combined approved release package
 #
 # Every recipe is a thin wrapper over tools/ and tests/; nothing here holds
 # logic that a Python entry point does not.
@@ -10,21 +11,37 @@
 PYTHON ?= python3
 CXX    ?= g++
 
-.PHONY: all reports packages epf test validate check verify clean help
+.PHONY: all reports packages epf release test validate check verify clean help
 
 all: reports packages test
 
 help:
-	@sed -n '1,8p' $(MAKEFILE_LIST)
+	@echo 'Native instance-map build commands:'
+	@echo '  make check              regenerate and comprehensively verify approved content'
+	@echo '  make epf MAP=<map>      build one approved individual map EPF'
+	@echo '  make epf MAP=all        build all approved individual map EPFs'
+	@echo '  make release            build dist/mod-native-instance-maps.epf'
+	@echo '  make clean              remove generated dist/*.epf files only'
 
 reports:
 	$(PYTHON) tools/report.py
 	$(PYTHON) tools/transform.py
 
 packages:
-	$(PYTHON) tools/package.py
+	$(PYTHON) tools/package.py --all-approved
 
-epf: packages
+epf:
+	@if [ -z "$(MAP)" ]; then \
+		echo 'usage: make epf MAP=<approved-map-slug|all>' >&2; \
+		exit 2; \
+	elif [ "$(MAP)" = all ]; then \
+		$(PYTHON) tools/package.py --all-approved; \
+	else \
+		$(PYTHON) tools/package.py --map "$(MAP)"; \
+	fi
+
+release:
+	$(PYTHON) tools/package.py --release
 
 test:
 	$(PYTHON) tests/run_tests.py
@@ -37,7 +54,7 @@ test:
 validate:
 	$(PYTHON) tests/validate_epfs.py
 
-check: all validate
+check: all release validate
 
 # CI gate: regenerate everything in memory and fail if any tracked artifact
 # would change. Nothing is written.
@@ -48,5 +65,4 @@ verify:
 	$(PYTHON) tests/run_tests.py
 
 clean:
-	rm -rf dist/*.epf
-	find . -name '__pycache__' -type d -not -path './upstream/*' -exec rm -rf {} +
+	$(PYTHON) tools/package.py --clean

@@ -36,12 +36,18 @@ from instances import (  # noqa: E402
 )
 from package import (  # noqa: E402
     FIXED_TIME,
+    RELEASE_PACKAGE,
     STOCK_TOC_MEMBER,
+    build_release,
     build_epf,
+    build_selected,
+    clean_outputs,
+    combined_manifest_for,
     floor_label_locales,
     manifest_for,
     publish_slugs,
     published_candidates,
+    select_published,
     serialise,
     stock_toc_sha256,
 )
@@ -934,6 +940,101 @@ class TestEpf(_DiscoveryMixin, unittest.TestCase):
                 with zipfile.ZipFile(output) as archive:
                     for name in archive.namelist():
                         self.assertFalse(name.lower().endswith(".dbc"))
+
+
+class TestBuildWorkflow(_DiscoveryMixin, unittest.TestCase):
+    """Human selectors stay on the publication allowlist and remain reproducible."""
+
+    def setUp(self):
+        import shutil
+        import tempfile
+
+        self.scratch = Path(tempfile.mkdtemp(prefix="nim-workflow-"))
+        self._shutil = shutil
+
+    def tearDown(self):
+        self._shutil.rmtree(self.scratch, ignore_errors=True)
+
+    def test_single_map_builds_only_the_selected_approved_epf(self):
+        selected = select_published(self.discovery, "karazhan")
+        outputs = build_selected(self.discovery, selected, self.scratch)
+        self.assertEqual(
+            [path.name for path in outputs],
+            ["mod-native-instance-maps.karazhan.epf"],
+        )
+        self.assertEqual(sorted(path.name for path in self.scratch.glob("*.epf")),
+                         ["mod-native-instance-maps.karazhan.epf"])
+
+    def test_all_builds_all_and_only_the_publication_allowlist(self):
+        approved = published_candidates(self.discovery)
+        outputs = build_selected(self.discovery, approved, self.scratch)
+        expected = sorted(f"{paths.package_key(item.slug)}.epf" for item in approved)
+        self.assertEqual(sorted(path.name for path in outputs), expected)
+        self.assertEqual(sorted(path.name for path in self.scratch.glob("*.epf")),
+                         expected)
+        self.assertEqual({item.slug for item in approved}, set(publish_slugs().values()))
+
+    def test_unknown_and_safe_only_maps_are_not_selectable(self):
+        with self.assertRaisesRegex(SystemExit, "unknown or unapproved"):
+            select_published(self.discovery, "not-a-map")
+        safe_only = next(
+            item for item in self.discovery.candidates
+            if item.classification == SAFE and item.slug not in publish_slugs().values()
+        )
+        with self.assertRaisesRegex(SystemExit, "unknown or unapproved"):
+            select_published(self.discovery, safe_only.slug)
+
+    def test_single_and_all_karazhan_are_byte_identical(self):
+        one = self.scratch / "one"
+        all_dir = self.scratch / "all"
+        single = build_selected(
+            self.discovery, select_published(self.discovery, "karazhan"), one
+        )[0]
+        build_selected(self.discovery, published_candidates(self.discovery), all_dir)
+        from_all = all_dir / single.name
+        self.assertEqual(single.read_bytes(), from_all.read_bytes())
+
+    def test_combined_release_is_direct_and_deterministic(self):
+        import zipfile
+
+        first = build_release(self.discovery, self.scratch / "first.epf")
+        second = build_release(self.discovery, self.scratch / "second.epf")
+        self.assertEqual(first.read_bytes(), second.read_bytes())
+        approved = published_candidates(self.discovery)
+        expected_maps = {item.map_id for item in approved}
+        with zipfile.ZipFile(first) as archive:
+            names = archive.namelist()
+            manifest = json.loads(archive.read("manifest.json"))
+        self.assertEqual(manifest["package"], RELEASE_PACKAGE)
+        self.assertEqual({item["mapId"] for item in manifest["worldMaps"]}, expected_maps)
+        self.assertEqual(len(manifest["worldMaps"]), len(approved))
+        self.assertFalse(any(name.lower().endswith(".epf") for name in names))
+        self.assertEqual(names[0:2], ["manifest.json", STOCK_TOC_MEMBER])
+        self.assertEqual(names[2:], [item["source"] for item in manifest["content"]])
+
+    def test_combined_manifest_refuses_resource_conflicts(self):
+        approved = published_candidates(self.discovery)
+        # Repeating one approved component creates both source and target conflicts;
+        # the ordinary archive writer must reject it rather than hide ownership.
+        manifest = combined_manifest_for([approved[0], approved[0]], self.discovery)
+        with self.assertRaisesRegex(SystemExit, "duplicate package source"):
+            from package import _write_epf
+            payloads = [(item["source"], b"x") for item in manifest["content"]]
+            _write_epf(
+                manifest, serialise(manifest), payloads,
+                self.scratch / "conflict.epf", "test combined release",
+            )
+
+    def test_clean_removes_only_generated_epfs(self):
+        generated = self.scratch / "generated.epf"
+        unrelated = self.scratch / "keep.txt"
+        generated.write_bytes(b"generated")
+        unrelated.write_bytes(b"keep")
+        toc_before = paths.STOCK_FRAMEXML_TOC.read_bytes()
+        self.assertEqual(clean_outputs(self.scratch), [generated])
+        self.assertFalse(generated.exists())
+        self.assertEqual(unrelated.read_bytes(), b"keep")
+        self.assertEqual(paths.STOCK_FRAMEXML_TOC.read_bytes(), toc_before)
 
 
 class TestTransformForensics(_DiscoveryMixin, unittest.TestCase):

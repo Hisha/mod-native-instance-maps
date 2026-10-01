@@ -22,7 +22,9 @@ produces identical bytes.
 
 Usage::
 
-    python3 tools/package.py              # manifests + EPFs
+    python3 tools/package.py --map karazhan
+    python3 tools/package.py --all-approved
+    python3 tools/package.py --release
     python3 tools/package.py --manifests  # manifests only
 """
 
@@ -34,7 +36,7 @@ import json
 import sys
 import zipfile
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Sequence, Tuple
 
 import paths
 import semantic
@@ -62,6 +64,7 @@ STOCK_MODULE_NAME = "ContentManagerWorldMapFloorNames"
 #: the same string the WorldMapArea row carries rather than typed in.
 ARTWORK_PREFIX = "Interface/WorldMap/"
 SOURCE_PREFIX = "artwork/"
+RELEASE_PACKAGE = "mod-native-instance-maps"
 
 
 def stock_toc_bytes() -> bytes:
@@ -140,6 +143,19 @@ def published_candidates(discovery: Discovery) -> List[Candidate]:
             )
         chosen.append(candidate)
     return chosen
+
+
+def select_published(discovery: Discovery, slug: str) -> List[Candidate]:
+    """Select one approved slug, never merely a classifier-SAFE candidate."""
+    approved = published_candidates(discovery)
+    by_slug = {candidate.slug: candidate for candidate in approved}
+    candidate = by_slug.get(slug)
+    if candidate is None:
+        accepted = ", ".join(sorted(by_slug))
+        raise SystemExit(
+            f"unknown or unapproved map {slug!r}; approved map slugs: {accepted}"
+        )
+    return [candidate]
 
 
 def manifest_for(candidate: Candidate, discovery: Discovery) -> Dict[str, object]:
@@ -221,9 +237,13 @@ def publish_slugs() -> Dict[str, str]:
     return {str(key): str(value) for key, value in data.items()}
 
 
-def write_manifests(discovery: Discovery, write: bool = True) -> List[Path]:
+def write_manifests(
+    discovery: Discovery,
+    write: bool = True,
+    candidates: Sequence[Candidate] | None = None,
+) -> List[Path]:
     written: List[Path] = []
-    for candidate in published_candidates(discovery):
+    for candidate in candidates or published_candidates(discovery):
         target = paths.CONTENT_DIR / candidate.slug / "manifest.json"
         payload = serialise(manifest_for(candidate, discovery))
         if not write:
@@ -263,11 +283,35 @@ def build_epf(
     manifest_bytes = manifest_path.read_bytes()
     manifest = json.loads(manifest_bytes)
     entries = manifest["content"]
+    root = artwork_root or paths.wdm_artwork_dir()
+    payloads = [
+        (item["source"], _artwork_source(candidate, item, root).read_bytes())
+        for item in entries
+    ]
+    return _write_epf(manifest, manifest_bytes, payloads, output, str(manifest_path))
+
+
+def _write_epf(
+    manifest: Dict[str, object],
+    manifest_bytes: bytes,
+    payloads: Sequence[Tuple[str, bytes]],
+    output: Path,
+    label: str,
+) -> Path:
+    """Write one normal Content Manager EPF from validated direct resources."""
+    entries = manifest["content"]
+    sources = [item["source"] for item in entries]
     targets = [item["target"] for item in entries]
-    if len(targets) != len(set(targets)):
-        raise SystemExit(f"{manifest_path}: duplicate install target")
     if not entries:
-        raise SystemExit(f"{manifest_path}: no artwork declared")
+        raise SystemExit(f"{label}: no artwork declared")
+    if len(sources) != len(set(sources)):
+        raise SystemExit(f"{label}: duplicate package source")
+    if len(targets) != len(set(targets)):
+        raise SystemExit(f"{label}: duplicate install target")
+    if [name for name, _ in payloads] != sources:
+        raise SystemExit(f"{label}: payload order does not match manifest content")
+    if any(not blob for _, blob in payloads):
+        raise SystemExit(f"{label}: empty artwork payload")
 
     # ``clientFrameXml`` is declared, so the stock table of contents travels in the
     # EPF unchanged.  The digest is re-derived here and compared with the manifest,
@@ -277,26 +321,17 @@ def build_epf(
     if declared is not None:
         if declared.get("stockTocSource") != STOCK_TOC_MEMBER:
             raise SystemExit(
-                f"{manifest_path}: clientFrameXml.stockTocSource must be "
-                f"{STOCK_TOC_MEMBER}"
+                f"{label}: clientFrameXml.stockTocSource must be {STOCK_TOC_MEMBER}"
             )
         toc_bytes = stock_toc_bytes()
         digest = hashlib.sha256(toc_bytes).hexdigest()
         if digest != declared.get("stockTocSha256"):
             raise SystemExit(
-                f"{manifest_path}: vendored FrameXML.toc digest {digest} does not "
-                f"match declared {declared.get('stockTocSha256')}"
+                f"{label}: vendored FrameXML.toc digest {digest} does not match "
+                f"declared {declared.get('stockTocSha256')}"
             )
-        if STOCK_TOC_MEMBER in targets:
-            raise SystemExit(f"{manifest_path}: stock FrameXML.toc declared twice")
-
-    root = artwork_root or paths.wdm_artwork_dir()
-    payloads = [
-        (item["source"], _artwork_source(candidate, item, root).read_bytes())
-        for item in entries
-    ]
-    if any(not blob for _, blob in payloads):
-        raise SystemExit(f"{manifest_path}: empty artwork payload")
+        if STOCK_TOC_MEMBER in targets or STOCK_TOC_MEMBER in sources:
+            raise SystemExit(f"{label}: stock FrameXML.toc declared twice")
 
     output.parent.mkdir(parents=True, exist_ok=True)
     # ZIP_STORED plus a fixed timestamp: no clock, no compressor version, no
@@ -310,27 +345,112 @@ def build_epf(
     return output
 
 
-def build_all(discovery: Discovery) -> List[Path]:
+def build_selected(
+    discovery: Discovery,
+    candidates: Sequence[Candidate],
+    output_dir: Path = paths.DIST_DIR,
+) -> List[Path]:
     outputs: List[Path] = []
-    for candidate in published_candidates(discovery):
+    for candidate in candidates:
         manifest_path = paths.CONTENT_DIR / candidate.slug / "manifest.json"
         if not manifest_path.is_file():
             raise SystemExit(f"missing manifest: {manifest_path}")
-        output = paths.DIST_DIR / f"{paths.package_key(candidate.slug)}.epf"
+        output = output_dir / f"{paths.package_key(candidate.slug)}.epf"
         build_epf(candidate, manifest_path, output)
         outputs.append(output)
     return outputs
 
 
+def combined_manifest_for(
+    candidates: Sequence[Candidate], discovery: Discovery
+) -> Dict[str, object]:
+    """One schema-3 package containing the approved manifests' direct content."""
+    content: List[Dict[str, str]] = []
+    world_maps: List[Dict[str, object]] = []
+    frame_xml = None
+    for candidate in candidates:
+        component = manifest_for(candidate, discovery)
+        content.extend(component["content"])
+        world_maps.extend(component["worldMaps"])
+        declared = component.get("clientFrameXml")
+        if declared is not None:
+            if frame_xml is not None and frame_xml != declared:
+                raise SystemExit("approved maps disagree about the stock FrameXML baseline")
+            frame_xml = declared
+
+    manifest: Dict[str, object] = {
+        "schema": SCHEMA,
+        "package": RELEASE_PACKAGE,
+        "name": "Native Instance Maps",
+        "version": VERSION,
+        "description": (
+            f"Native pre-Cataclysm instance maps for {len(candidates)} approved maps, "
+            "packaged directly from the reviewed individual map declarations."
+        ),
+        "content": content,
+        "worldMaps": world_maps,
+    }
+    if frame_xml is not None:
+        manifest["clientFrameXml"] = frame_xml
+    return manifest
+
+
+def build_release(
+    discovery: Discovery,
+    output: Path = paths.DIST_DIR / f"{RELEASE_PACKAGE}.epf",
+) -> Path:
+    candidates = published_candidates(discovery)
+    manifest = combined_manifest_for(candidates, discovery)
+    payloads: List[Tuple[str, bytes]] = []
+    root = paths.wdm_artwork_dir()
+    for candidate in candidates:
+        for entry in artwork_targets(candidate):
+            payloads.append(
+                (entry["source"], _artwork_source(candidate, entry, root).read_bytes())
+            )
+    manifest_bytes = serialise(manifest)
+    return _write_epf(manifest, manifest_bytes, payloads, output, "combined release")
+
+
+def clean_outputs(output_dir: Path = paths.DIST_DIR) -> List[Path]:
+    """Remove generated EPFs only; source-controlled inputs are out of scope."""
+    removed: List[Path] = []
+    if not output_dir.is_dir():
+        return removed
+    for target in sorted(output_dir.glob("*.epf")):
+        if target.is_file():
+            target.unlink()
+            removed.append(target)
+    return removed
+
+
 def main(argv: List[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--manifests", action="store_true", help="write manifests only")
-    parser.add_argument(
+    mode = parser.add_mutually_exclusive_group(required=True)
+    mode.add_argument("--map", metavar="SLUG", help="build one approved map EPF")
+    mode.add_argument(
+        "--all-approved",
+        action="store_true",
+        help="build every map named by content/publish.json as an individual EPF",
+    )
+    mode.add_argument(
+        "--release", action="store_true", help="build one combined approved release EPF"
+    )
+    mode.add_argument("--manifests", action="store_true", help="write manifests only")
+    mode.add_argument(
         "--check",
         action="store_true",
         help="exit non-zero if manifests are out of date; never writes anything",
     )
+    mode.add_argument(
+        "--clean", action="store_true", help="remove generated dist/*.epf files only"
+    )
     options = parser.parse_args(argv)
+
+    if options.clean:
+        for target in clean_outputs():
+            print(f"removed {target.relative_to(paths.REPO_ROOT)}")
+        return 0
 
     discovery = discover(paths.wdm_dbc_dir(), paths.wdm_artwork_dir(), paths.stock_dbc_dir())
 
@@ -343,11 +463,23 @@ def main(argv: List[str] | None = None) -> int:
             return 1
         return 0
 
+    candidates = (
+        select_published(discovery, options.map)
+        if options.map
+        else published_candidates(discovery)
+    )
     paths.CONTENT_DIR.mkdir(parents=True, exist_ok=True)
-    for target in write_manifests(discovery, write=True):
+    for target in write_manifests(discovery, write=True, candidates=candidates):
         print(f"wrote: {target.relative_to(paths.REPO_ROOT)}")
 
-    for output in build_all(discovery):
+    if options.manifests:
+        return 0
+    if options.release:
+        output = build_release(discovery)
+        print(f"wrote {output.relative_to(paths.REPO_ROOT)} ({output.stat().st_size} bytes)")
+        return 0
+
+    for output in build_selected(discovery, candidates):
         size = output.stat().st_size
         print(f"wrote {output.relative_to(paths.REPO_ROOT)} ({size} bytes)")
     return 0
