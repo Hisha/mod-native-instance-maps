@@ -1000,11 +1000,23 @@ class TestBuildWorkflow(_DiscoveryMixin, unittest.TestCase):
             names = archive.namelist()
             manifest = json.loads(archive.read("manifest.json"))
         self.assertEqual(manifest["package"], RELEASE_PACKAGE)
+        self.assertEqual(
+            manifest["replaces"],
+            [
+                "mod-deadmines-dungeon-map",
+                "mod-native-instance-maps.karazhan",
+            ],
+        )
         self.assertEqual({item["mapId"] for item in manifest["worldMaps"]}, expected_maps)
         self.assertEqual(len(manifest["worldMaps"]), len(approved))
         self.assertFalse(any(name.lower().endswith(".epf") for name in names))
         self.assertEqual(names[0:2], ["manifest.json", STOCK_TOC_MEMBER])
         self.assertEqual(names[2:], [item["source"] for item in manifest["content"]])
+
+    def test_individual_packages_cannot_replace_canonical_owner(self):
+        for candidate in published_candidates(self.discovery):
+            manifest = manifest_for(candidate, self.discovery)
+            self.assertNotIn("replaces", manifest)
 
     def test_combined_manifest_refuses_resource_conflicts(self):
         approved = published_candidates(self.discovery)

@@ -63,7 +63,12 @@ prints usage instead of choosing a publication scope.
 
 `MAP=all` creates the four approved EPFs separately. `make release` instead
 creates one ordinary Content Manager package containing those maps and their
-resources directly; it does not nest the individual ZIPs.
+resources directly; it does not nest the individual ZIPs. The combined package
+is the canonical owner and explicitly migrates retained allocations from the
+historical `mod-native-instance-maps.karazhan` and
+`mod-deadmines-dungeon-map` packages. Individual-map packages do not declare a
+replacement, so installing one later cannot steal allocations back from the
+combined package.
 
 Canonical tool equivalents and developer commands:
 

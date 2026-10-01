@@ -387,6 +387,13 @@ def combined_manifest_for(
             f"Native pre-Cataclysm instance maps for {len(candidates)} approved maps, "
             "packaged directly from the reviewed individual map declarations."
         ),
+        # These are the two historical owners of resources now shipped by the
+        # canonical combined package.  Individual map packages intentionally
+        # omit this declaration: migration is one-way into the canonical owner.
+        "replaces": [
+            "mod-deadmines-dungeon-map",
+            "mod-native-instance-maps.karazhan",
+        ],
         "content": content,
         "worldMaps": world_maps,
     }
