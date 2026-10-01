@@ -1,0 +1,170 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/TheSlavePens1_1.blp",
+   "target": "Interface/WorldMap/TheSlavePens/TheSlavePens1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSlavePens1_2.blp",
+   "target": "Interface/WorldMap/TheSlavePens/TheSlavePens1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSlavePens1_3.blp",
+   "target": "Interface/WorldMap/TheSlavePens/TheSlavePens1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSlavePens1_4.blp",
+   "target": "Interface/WorldMap/TheSlavePens/TheSlavePens1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSlavePens1_5.blp",
+   "target": "Interface/WorldMap/TheSlavePens/TheSlavePens1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSlavePens1_6.blp",
+   "target": "Interface/WorldMap/TheSlavePens/TheSlavePens1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSlavePens1_7.blp",
+   "target": "Interface/WorldMap/TheSlavePens/TheSlavePens1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSlavePens1_8.blp",
+   "target": "Interface/WorldMap/TheSlavePens/TheSlavePens1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSlavePens1_9.blp",
+   "target": "Interface/WorldMap/TheSlavePens/TheSlavePens1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSlavePens1_10.blp",
+   "target": "Interface/WorldMap/TheSlavePens/TheSlavePens1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSlavePens1_11.blp",
+   "target": "Interface/WorldMap/TheSlavePens/TheSlavePens1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSlavePens1_12.blp",
+   "target": "Interface/WorldMap/TheSlavePens/TheSlavePens1_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm The Slave Pens instance map: 1 DungeonMap floor, 5 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 12 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "The Slave Pens",
+ "package": "mod-native-instance-maps.the-slave-pens",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 3717,
+     "chunks": [
+      {
+       "dungeonMapId": 228,
+       "field2": 22225,
+       "field4": -10000.0,
+       "id": 3309
+      },
+      {
+       "dungeonMapId": 228,
+       "field2": 22226,
+       "field4": -10000.0,
+       "id": 3307
+      },
+      {
+       "dungeonMapId": 228,
+       "field2": 22227,
+       "field4": -10000.0,
+       "id": 3310
+      },
+      {
+       "dungeonMapId": 228,
+       "field2": 22228,
+       "field4": -10000.0,
+       "id": 3308
+      },
+      {
+       "dungeonMapId": 228,
+       "field2": 22229,
+       "field4": -10000.0,
+       "id": 3311
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Die Sklavenunterkünfte"
+      },
+      "enCN": {
+       "1": "奴隶围栏"
+      },
+      "enGB": {
+       "1": "The Slave Pens"
+      },
+      "enUS": {
+       "1": "The Slave Pens"
+      },
+      "esES": {
+       "1": "Recinto de los Esclavos"
+      },
+      "esMX": {
+       "1": "Recinto de los Esclavos"
+      },
+      "frFR": {
+       "1": "Les enclos aux esclaves"
+      },
+      "koKR": {
+       "1": "강제 노역소"
+      },
+      "ruRU": {
+       "1": "Узилище"
+      },
+      "zhCN": {
+       "1": "奴隶围栏"
+      },
+      "zhTW": {
+       "1": "奴隸監獄"
+      }
+     },
+     "floors": [
+      {
+       "field3": -836.1240234375,
+       "field4": 53.93410110473633,
+       "field5": -391.65203857421875,
+       "field6": 201.72003173828125,
+       "field7": 467,
+       "floor": 1,
+       "id": 228
+      }
+     ],
+     "id": 728,
+     "internalName": "TheSlavePens",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 547
+  }
+ ]
+}

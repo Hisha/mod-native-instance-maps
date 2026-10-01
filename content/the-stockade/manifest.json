@@ -1,0 +1,482 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/TheStockade1_1.blp",
+   "target": "Interface/WorldMap/TheStockade/TheStockade1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheStockade1_2.blp",
+   "target": "Interface/WorldMap/TheStockade/TheStockade1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheStockade1_3.blp",
+   "target": "Interface/WorldMap/TheStockade/TheStockade1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheStockade1_4.blp",
+   "target": "Interface/WorldMap/TheStockade/TheStockade1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheStockade1_5.blp",
+   "target": "Interface/WorldMap/TheStockade/TheStockade1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheStockade1_6.blp",
+   "target": "Interface/WorldMap/TheStockade/TheStockade1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheStockade1_7.blp",
+   "target": "Interface/WorldMap/TheStockade/TheStockade1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheStockade1_8.blp",
+   "target": "Interface/WorldMap/TheStockade/TheStockade1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheStockade1_9.blp",
+   "target": "Interface/WorldMap/TheStockade/TheStockade1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheStockade1_10.blp",
+   "target": "Interface/WorldMap/TheStockade/TheStockade1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheStockade1_11.blp",
+   "target": "Interface/WorldMap/TheStockade/TheStockade1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheStockade1_12.blp",
+   "target": "Interface/WorldMap/TheStockade/TheStockade1_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm The Stockade instance map: 1 DungeonMap floor, 57 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 12 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "The Stockade",
+ "package": "mod-native-instance-maps.the-stockade",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 717,
+     "chunks": [
+      {
+       "dungeonMapId": 165,
+       "field2": 2810,
+       "field4": -10000.0,
+       "id": 4065
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2811,
+       "field4": -10000.0,
+       "id": 4076
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2812,
+       "field4": -10000.0,
+       "id": 4074
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2813,
+       "field4": -10000.0,
+       "id": 4075
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2814,
+       "field4": -10000.0,
+       "id": 4077
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2815,
+       "field4": -10000.0,
+       "id": 4072
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2817,
+       "field4": -10000.0,
+       "id": 4071
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2818,
+       "field4": -10000.0,
+       "id": 4070
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2819,
+       "field4": -10000.0,
+       "id": 4067
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2820,
+       "field4": -10000.0,
+       "id": 4068
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2821,
+       "field4": -10000.0,
+       "id": 4078
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2822,
+       "field4": -10000.0,
+       "id": 4080
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2823,
+       "field4": -10000.0,
+       "id": 4079
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2824,
+       "field4": -10000.0,
+       "id": 4081
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2825,
+       "field4": -10000.0,
+       "id": 4066
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2826,
+       "field4": -10000.0,
+       "id": 4069
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2827,
+       "field4": -10000.0,
+       "id": 4073
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2828,
+       "field4": -10000.0,
+       "id": 2503
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2829,
+       "field4": -10000.0,
+       "id": 2484
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2830,
+       "field4": -10000.0,
+       "id": 2488
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2831,
+       "field4": -10000.0,
+       "id": 2489
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2832,
+       "field4": -10000.0,
+       "id": 2504
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2833,
+       "field4": -10000.0,
+       "id": 2490
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2834,
+       "field4": -10000.0,
+       "id": 2505
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2835,
+       "field4": -10000.0,
+       "id": 2491
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2836,
+       "field4": -10000.0,
+       "id": 2506
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2837,
+       "field4": -10000.0,
+       "id": 2492
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2838,
+       "field4": -10000.0,
+       "id": 2487
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2839,
+       "field4": -10000.0,
+       "id": 2507
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2840,
+       "field4": -10000.0,
+       "id": 2493
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2841,
+       "field4": -10000.0,
+       "id": 2508
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2842,
+       "field4": -10000.0,
+       "id": 2494
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2843,
+       "field4": -10000.0,
+       "id": 2509
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2844,
+       "field4": -10000.0,
+       "id": 2495
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2845,
+       "field4": -10000.0,
+       "id": 2510
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2846,
+       "field4": -10000.0,
+       "id": 2485
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2847,
+       "field4": -10000.0,
+       "id": 2496
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2848,
+       "field4": -10000.0,
+       "id": 2511
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2849,
+       "field4": -10000.0,
+       "id": 2497
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2850,
+       "field4": -10000.0,
+       "id": 2512
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2851,
+       "field4": -10000.0,
+       "id": 2498
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2852,
+       "field4": -10000.0,
+       "id": 2513
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2853,
+       "field4": -10000.0,
+       "id": 2499
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2854,
+       "field4": -10000.0,
+       "id": 2514
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2855,
+       "field4": -10000.0,
+       "id": 2486
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2856,
+       "field4": -10000.0,
+       "id": 2500
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2857,
+       "field4": -10000.0,
+       "id": 2502
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 2858,
+       "field4": -10000.0,
+       "id": 2501
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 7262,
+       "field4": -10000.0,
+       "id": 4082
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 7263,
+       "field4": -10000.0,
+       "id": 4083
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 7264,
+       "field4": -10000.0,
+       "id": 4084
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 7265,
+       "field4": -10000.0,
+       "id": 4085
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 7266,
+       "field4": -10000.0,
+       "id": 4086
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 7267,
+       "field4": -10000.0,
+       "id": 4087
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 7268,
+       "field4": -10000.0,
+       "id": 4088
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 7269,
+       "field4": -10000.0,
+       "id": 4089
+      },
+      {
+       "dungeonMapId": 165,
+       "field2": 7270,
+       "field4": -10000.0,
+       "id": 4090
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Verlies von Sturmwind"
+      },
+      "enCN": {
+       "1": "暴风城监狱"
+      },
+      "enGB": {
+       "1": "Stormwind Stockade"
+      },
+      "enUS": {
+       "1": "Stormwind Stockade"
+      },
+      "esES": {
+       "1": "Mazmorras de Ventormenta"
+      },
+      "esMX": {
+       "1": "Mazmorras de Ventormenta"
+      },
+      "frFR": {
+       "1": "Prison de Hurlevent"
+      },
+      "koKR": {
+       "1": "스톰윈드 지하감옥"
+      },
+      "ruRU": {
+       "1": "Тюрьма Штормграда"
+      },
+      "zhCN": {
+       "1": "暴风城监狱"
+      },
+      "zhTW": {
+       "1": "暴風城監獄"
+      }
+     },
+     "floors": [
+      {
+       "field3": -188.33099365234375,
+       "field4": 189.82200622558594,
+       "field5": -31.469499588012695,
+       "field6": 220.63299560546875,
+       "field7": 301,
+       "floor": 1,
+       "id": 165
+      }
+     ],
+     "id": 690,
+     "internalName": "TheStockade",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 34
+  }
+ ]
+}

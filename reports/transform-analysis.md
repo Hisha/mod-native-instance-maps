@@ -226,7 +226,7 @@ old rule could not resolve, and it is now simply carried as data:
 | TheStockade | 34 | 1 | 57 | 12 |
 | WailingCaverns | 43 | 1 | 37 | 12 |
 | RazorfenKraul | 47 | 1 | 25 | 12 |
-| BlackfathomDeeps | 48 | 3 | 26 | 0 |
+| BlackfathomDeeps | 48 | 3 | 26 | 36 |
 | Uldaman | 70 | 2 | 52 | 24 |
 | Gnomeregan | 90 | 4 | 79 | 48 |
 | RazorfenDowns | 129 | 1 | 11 | 12 |
@@ -252,7 +252,7 @@ old rule could not resolve, and it is now simply carried as data:
 | TheShatteredHalls | 540 | 1 | 12 | 12 |
 | TheBloodFurnace | 542 | 1 | 7 | 12 |
 | HellfireRamparts | 543 | 1 | 3 | 12 |
-| MagtheridonsLair | 544 | 1 | 7 | 0 |
+| MagtheridonsLair | 544 | 1 | 7 | 12 |
 | TheSteamvault | 545 | 2 | 10 | 24 |
 | TheUnderbog | 546 | 1 | 1 | 12 |
 | TheSlavePens | 547 | 1 | 5 | 12 |

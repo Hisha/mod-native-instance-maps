@@ -1,0 +1,536 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/Scholomance1_1.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance1_2.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance1_3.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance1_4.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance1_5.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance1_6.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance1_7.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance1_8.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance1_9.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance1_10.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance1_11.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance1_12.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance1_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance2_1.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance2_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance2_2.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance2_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance2_3.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance2_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance2_4.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance2_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance2_5.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance2_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance2_6.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance2_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance2_7.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance2_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance2_8.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance2_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance2_9.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance2_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance2_10.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance2_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance2_11.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance2_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance2_12.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance2_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance3_1.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance3_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance3_2.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance3_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance3_3.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance3_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance3_4.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance3_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance3_5.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance3_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance3_6.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance3_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance3_7.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance3_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance3_8.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance3_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance3_9.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance3_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance3_10.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance3_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance3_11.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance3_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance3_12.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance3_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance4_1.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance4_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance4_2.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance4_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance4_3.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance4_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance4_4.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance4_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance4_5.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance4_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance4_6.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance4_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance4_7.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance4_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance4_8.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance4_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance4_9.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance4_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance4_10.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance4_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance4_11.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance4_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Scholomance4_12.blp",
+   "target": "Interface/WorldMap/Scholomance/Scholomance4_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Scholomance instance map: 4 DungeonMap floors, 26 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 48 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Scholomance",
+ "package": "mod-native-instance-maps.scholomance",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 2057,
+     "chunks": [
+      {
+       "dungeonMapId": 151,
+       "field2": 17294,
+       "field4": -10000.0,
+       "id": 2172
+      },
+      {
+       "dungeonMapId": 153,
+       "field2": 17304,
+       "field4": -10000.0,
+       "id": 2190
+      },
+      {
+       "dungeonMapId": 153,
+       "field2": 17305,
+       "field4": -10000.0,
+       "id": 2188
+      },
+      {
+       "dungeonMapId": 153,
+       "field2": 17306,
+       "field4": -10000.0,
+       "id": 2189
+      },
+      {
+       "dungeonMapId": 154,
+       "field2": 17307,
+       "field4": -10000.0,
+       "id": 2195
+      },
+      {
+       "dungeonMapId": 154,
+       "field2": 17308,
+       "field4": -10000.0,
+       "id": 2194
+      },
+      {
+       "dungeonMapId": 152,
+       "field2": 17311,
+       "field4": -10000.0,
+       "id": 2179
+      },
+      {
+       "dungeonMapId": 151,
+       "field2": 17311,
+       "field4": 127.0,
+       "id": 2173
+      },
+      {
+       "dungeonMapId": 151,
+       "field2": 17312,
+       "field4": 110.0,
+       "id": 2174
+      },
+      {
+       "dungeonMapId": 152,
+       "field2": 17313,
+       "field4": -10000.0,
+       "id": 2175
+      },
+      {
+       "dungeonMapId": 152,
+       "field2": 17314,
+       "field4": -10000.0,
+       "id": 2177
+      },
+      {
+       "dungeonMapId": 152,
+       "field2": 17315,
+       "field4": -10000.0,
+       "id": 2180
+      },
+      {
+       "dungeonMapId": 153,
+       "field2": 17316,
+       "field4": -10000.0,
+       "id": 2184
+      },
+      {
+       "dungeonMapId": 152,
+       "field2": 17316,
+       "field4": 104.0,
+       "id": 2178
+      },
+      {
+       "dungeonMapId": 154,
+       "field2": 17317,
+       "field4": -10000.0,
+       "id": 2197
+      },
+      {
+       "dungeonMapId": 152,
+       "field2": 17317,
+       "field4": 95.0,
+       "id": 2182
+      },
+      {
+       "dungeonMapId": 154,
+       "field2": 17318,
+       "field4": -10000.0,
+       "id": 2198
+      },
+      {
+       "dungeonMapId": 153,
+       "field2": 17319,
+       "field4": -10000.0,
+       "id": 2186
+      },
+      {
+       "dungeonMapId": 152,
+       "field2": 17319,
+       "field4": 90.0,
+       "id": 2181
+      },
+      {
+       "dungeonMapId": 154,
+       "field2": 17320,
+       "field4": -10000.0,
+       "id": 2193
+      },
+      {
+       "dungeonMapId": 153,
+       "field2": 17320,
+       "field4": 87.0,
+       "id": 2187
+      },
+      {
+       "dungeonMapId": 152,
+       "field2": 17321,
+       "field4": 95.0,
+       "id": 2183
+      },
+      {
+       "dungeonMapId": 152,
+       "field2": 17323,
+       "field4": -10000.0,
+       "id": 4091
+      },
+      {
+       "dungeonMapId": 154,
+       "field2": 17471,
+       "field4": -10000.0,
+       "id": 2196
+      },
+      {
+       "dungeonMapId": 152,
+       "field2": 17870,
+       "field4": -10000.0,
+       "id": 2199
+      },
+      {
+       "dungeonMapId": 153,
+       "field2": 18950,
+       "field4": -10000.0,
+       "id": 2185
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Das Reliquiarium",
+       "2": "Kammer der Beschwörung",
+       "3": "Das Obere Arbeitszimmer",
+       "4": "Das Arbeitszimmer des Direktors"
+      },
+      "enCN": {
+       "1": "遗骨之穴",
+       "2": "召唤大厅",
+       "3": "院长的书房",
+       "4": "巴罗夫家族宝库"
+      },
+      "enGB": {
+       "1": "The Reliquary",
+       "2": "Chamber of Summoning",
+       "3": "The Headmaster's Study",
+       "4": "Barov Family Vault"
+      },
+      "enUS": {
+       "1": "The Reliquary",
+       "2": "Chamber of Summoning",
+       "3": "The Headmaster's Study",
+       "4": "Barov Family Vault"
+      },
+      "esES": {
+       "1": "El Relicario",
+       "2": "Cámara de la Invocación",
+       "3": "El Estudio Superior",
+       "4": "Sala Rectoral"
+      },
+      "esMX": {
+       "1": "El Relicario",
+       "2": "Cámara de la Invocación",
+       "3": "El Estudio Superior",
+       "4": "Sala Rectoral"
+      },
+      "frFR": {
+       "1": "Le Reliquaire",
+       "2": "Chambre d'invocation",
+       "3": "Étude du Directeur",
+       "4": "Caveau de la famille Barov"
+      },
+      "koKR": {
+       "1": "성골 보관실",
+       "2": "소환의 방",
+       "3": "교장의 연구실",
+       "4": "바로브 가문 납골당"
+      },
+      "ruRU": {
+       "1": "Хранилище реликвий",
+       "2": "Чертог Призыва",
+       "3": "Верхний кабинет",
+       "4": "Кабинет ректора"
+      },
+      "zhCN": {
+       "1": "遗骨之穴",
+       "2": "召唤大厅",
+       "3": "院长的书房",
+       "4": "巴罗夫家族宝库"
+      },
+      "zhTW": {
+       "1": "遺骨之穴",
+       "2": "召喚之廳",
+       "3": "院長的書房",
+       "4": "巴羅夫家族寶庫"
+      }
+     },
+     "floors": [
+      {
+       "field3": -68.63890075683594,
+       "field4": 251.41000366210938,
+       "field5": 104.33300018310547,
+       "field6": 317.697998046875,
+       "field7": 22,
+       "floor": 1,
+       "id": 151
+      },
+      {
+       "field3": -128.63900756835938,
+       "field4": 311.4100036621094,
+       "field5": 44.33259963989258,
+       "field6": 337.6990051269531,
+       "field7": 22,
+       "floor": 2,
+       "id": 152
+      },
+      {
+       "field3": -113.63899993896484,
+       "field4": 296.4389953613281,
+       "field5": 34.32120132446289,
+       "field6": 307.7070007324219,
+       "field7": 22,
+       "floor": 3,
+       "id": 153
+      },
+      {
+       "field3": -174.1219940185547,
+       "field4": 356.9200134277344,
+       "field5": -66.32119750976562,
+       "field6": 287.7070007324219,
+       "field7": 22,
+       "floor": 4,
+       "id": 154
+      }
+     ],
+     "id": 763,
+     "internalName": "Scholomance",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 600.0,
+     "x2": -600.0,
+     "y1": 633.3333129882812,
+     "y2": -1166.6666259765625
+    }
+   ],
+   "mapId": 289
+  }
+ ]
+}

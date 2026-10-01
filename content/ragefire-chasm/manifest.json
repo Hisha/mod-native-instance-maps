@@ -1,0 +1,176 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/Ragefire1_1.blp",
+   "target": "Interface/WorldMap/Ragefire/Ragefire1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Ragefire1_2.blp",
+   "target": "Interface/WorldMap/Ragefire/Ragefire1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Ragefire1_3.blp",
+   "target": "Interface/WorldMap/Ragefire/Ragefire1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Ragefire1_4.blp",
+   "target": "Interface/WorldMap/Ragefire/Ragefire1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Ragefire1_5.blp",
+   "target": "Interface/WorldMap/Ragefire/Ragefire1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Ragefire1_6.blp",
+   "target": "Interface/WorldMap/Ragefire/Ragefire1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Ragefire1_7.blp",
+   "target": "Interface/WorldMap/Ragefire/Ragefire1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Ragefire1_8.blp",
+   "target": "Interface/WorldMap/Ragefire/Ragefire1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Ragefire1_9.blp",
+   "target": "Interface/WorldMap/Ragefire/Ragefire1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Ragefire1_10.blp",
+   "target": "Interface/WorldMap/Ragefire/Ragefire1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Ragefire1_11.blp",
+   "target": "Interface/WorldMap/Ragefire/Ragefire1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Ragefire1_12.blp",
+   "target": "Interface/WorldMap/Ragefire/Ragefire1_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Ragefire Chasm instance map: 1 DungeonMap floor, 6 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 12 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Ragefire Chasm",
+ "package": "mod-native-instance-maps.ragefire-chasm",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 2437,
+     "chunks": [
+      {
+       "dungeonMapId": 136,
+       "field2": 17670,
+       "field4": -10000.0,
+       "id": 1991
+      },
+      {
+       "dungeonMapId": 136,
+       "field2": 17671,
+       "field4": -10000.0,
+       "id": 1988
+      },
+      {
+       "dungeonMapId": 136,
+       "field2": 17672,
+       "field4": -10000.0,
+       "id": 1989
+      },
+      {
+       "dungeonMapId": 136,
+       "field2": 17673,
+       "field4": -10000.0,
+       "id": 1992
+      },
+      {
+       "dungeonMapId": 136,
+       "field2": 17674,
+       "field4": -10000.0,
+       "id": 1990
+      },
+      {
+       "dungeonMapId": 136,
+       "field2": 17681,
+       "field4": -10000.0,
+       "id": 1993
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Der Flammenschlund"
+      },
+      "enCN": {
+       "1": "怒焰裂谷"
+      },
+      "enGB": {
+       "1": "Ragefire Chasm"
+      },
+      "enUS": {
+       "1": "Ragefire Chasm"
+      },
+      "esES": {
+       "1": "Sima Ígnea"
+      },
+      "esMX": {
+       "1": "Sima Ígnea"
+      },
+      "frFR": {
+       "1": "Gouffre de Ragefeu"
+      },
+      "koKR": {
+       "1": "성난불길 협곡"
+      },
+      "ruRU": {
+       "1": "Огненная Пропасть"
+      },
+      "zhCN": {
+       "1": "怒焰裂谷"
+      },
+      "zhTW": {
+       "1": "怒焰裂谷"
+      }
+     },
+     "floors": [
+      {
+       "field3": -285.9930114746094,
+       "field4": 452.8710021972656,
+       "field5": -452.9530029296875,
+       "field6": 39.623199462890625,
+       "field7": 321,
+       "floor": 1,
+       "id": 136
+      }
+     ],
+     "id": 680,
+     "internalName": "Ragefire",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 389
+  }
+ ]
+}

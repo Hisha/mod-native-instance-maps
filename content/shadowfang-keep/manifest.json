@@ -1,0 +1,1094 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/ShadowfangKeep1_1.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep1_2.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep1_3.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep1_4.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep1_5.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep1_6.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep1_7.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep1_8.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep1_9.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep1_10.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep1_11.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep1_12.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep1_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep2_1.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep2_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep2_2.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep2_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep2_3.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep2_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep2_4.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep2_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep2_5.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep2_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep2_6.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep2_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep2_7.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep2_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep2_8.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep2_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep2_9.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep2_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep2_10.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep2_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep2_11.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep2_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep2_12.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep2_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep3_1.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep3_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep3_2.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep3_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep3_3.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep3_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep3_4.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep3_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep3_5.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep3_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep3_6.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep3_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep3_7.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep3_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep3_8.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep3_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep3_9.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep3_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep3_10.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep3_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep3_11.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep3_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep3_12.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep3_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep4_1.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep4_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep4_2.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep4_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep4_3.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep4_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep4_4.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep4_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep4_5.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep4_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep4_6.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep4_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep4_7.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep4_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep4_8.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep4_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep4_9.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep4_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep4_10.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep4_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep4_11.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep4_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep4_12.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep4_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep5_1.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep5_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep5_2.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep5_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep5_3.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep5_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep5_4.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep5_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep5_5.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep5_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep5_6.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep5_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep5_7.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep5_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep5_8.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep5_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep5_9.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep5_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep5_10.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep5_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep5_11.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep5_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep5_12.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep5_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep6_1.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep6_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep6_2.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep6_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep6_3.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep6_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep6_4.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep6_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep6_5.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep6_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep6_6.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep6_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep6_7.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep6_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep6_8.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep6_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep6_9.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep6_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep6_10.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep6_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep6_11.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep6_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep6_12.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep6_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep7_1.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep7_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep7_2.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep7_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep7_3.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep7_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep7_4.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep7_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep7_5.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep7_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep7_6.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep7_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep7_7.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep7_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep7_8.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep7_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep7_9.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep7_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep7_10.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep7_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep7_11.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep7_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowfangKeep7_12.blp",
+   "target": "Interface/WorldMap/ShadowfangKeep/ShadowfangKeep7_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Shadowfang Keep instance map: 7 DungeonMap floors, 79 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 84 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Shadowfang Keep",
+ "package": "mod-native-instance-maps.shadowfang-keep",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 209,
+     "chunks": [
+      {
+       "dungeonMapId": 148,
+       "field2": 1338,
+       "field4": -10000.0,
+       "id": 2130
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1339,
+       "field4": -10000.0,
+       "id": 2049
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1340,
+       "field4": -10000.0,
+       "id": 3881
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1341,
+       "field4": -10000.0,
+       "id": 2059
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1343,
+       "field4": -10000.0,
+       "id": 2057
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1344,
+       "field4": -10000.0,
+       "id": 2058
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1345,
+       "field4": -10000.0,
+       "id": 2056
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1346,
+       "field4": -10000.0,
+       "id": 2055
+      },
+      {
+       "dungeonMapId": 148,
+       "field2": 1347,
+       "field4": -10000.0,
+       "id": 2129
+      },
+      {
+       "dungeonMapId": 148,
+       "field2": 1348,
+       "field4": -10000.0,
+       "id": 2131
+      },
+      {
+       "dungeonMapId": 148,
+       "field2": 1349,
+       "field4": -10000.0,
+       "id": 2132
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1350,
+       "field4": -10000.0,
+       "id": 2051
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1351,
+       "field4": -10000.0,
+       "id": 2048
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1352,
+       "field4": -10000.0,
+       "id": 2050
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1353,
+       "field4": -10000.0,
+       "id": 2052
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1354,
+       "field4": -10000.0,
+       "id": 2046
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1355,
+       "field4": -10000.0,
+       "id": 2047
+      },
+      {
+       "dungeonMapId": 148,
+       "field2": 1357,
+       "field4": -10000.0,
+       "id": 2128
+      },
+      {
+       "dungeonMapId": 143,
+       "field2": 1359,
+       "field4": -10000.0,
+       "id": 2096
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1360,
+       "field4": -10000.0,
+       "id": 2061
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1361,
+       "field4": -10000.0,
+       "id": 2065
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1362,
+       "field4": -10000.0,
+       "id": 2066
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1363,
+       "field4": -10000.0,
+       "id": 2070
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1364,
+       "field4": -10000.0,
+       "id": 2068
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1365,
+       "field4": -10000.0,
+       "id": 2069
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1366,
+       "field4": -10000.0,
+       "id": 2067
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1367,
+       "field4": -10000.0,
+       "id": 2062
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1368,
+       "field4": -10000.0,
+       "id": 2063
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1369,
+       "field4": -10000.0,
+       "id": 2064
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1370,
+       "field4": -10000.0,
+       "id": 2071
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1371,
+       "field4": -10000.0,
+       "id": 2072
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1372,
+       "field4": -10000.0,
+       "id": 4162
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1373,
+       "field4": -10000.0,
+       "id": 2076
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1374,
+       "field4": -10000.0,
+       "id": 2077
+      },
+      {
+       "dungeonMapId": 148,
+       "field2": 1375,
+       "field4": -10000.0,
+       "id": 4163
+      },
+      {
+       "dungeonMapId": 148,
+       "field2": 1376,
+       "field4": -10000.0,
+       "id": 2135
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1377,
+       "field4": -10000.0,
+       "id": 2045
+      },
+      {
+       "dungeonMapId": 146,
+       "field2": 1379,
+       "field4": -10000.0,
+       "id": 2113
+      },
+      {
+       "dungeonMapId": 144,
+       "field2": 1380,
+       "field4": -10000.0,
+       "id": 2098
+      },
+      {
+       "dungeonMapId": 145,
+       "field2": 1380,
+       "field4": 127.0,
+       "id": 2105
+      },
+      {
+       "dungeonMapId": 144,
+       "field2": 1381,
+       "field4": -10000.0,
+       "id": 2099
+      },
+      {
+       "dungeonMapId": 144,
+       "field2": 1382,
+       "field4": -10000.0,
+       "id": 2100
+      },
+      {
+       "dungeonMapId": 144,
+       "field2": 1383,
+       "field4": -10000.0,
+       "id": 2102
+      },
+      {
+       "dungeonMapId": 144,
+       "field2": 1384,
+       "field4": -10000.0,
+       "id": 2103
+      },
+      {
+       "dungeonMapId": 144,
+       "field2": 1385,
+       "field4": -10000.0,
+       "id": 2101
+      },
+      {
+       "dungeonMapId": 145,
+       "field2": 1386,
+       "field4": -10000.0,
+       "id": 2106
+      },
+      {
+       "dungeonMapId": 145,
+       "field2": 1387,
+       "field4": -10000.0,
+       "id": 2107
+      },
+      {
+       "dungeonMapId": 145,
+       "field2": 1388,
+       "field4": -10000.0,
+       "id": 2108
+      },
+      {
+       "dungeonMapId": 145,
+       "field2": 1389,
+       "field4": -10000.0,
+       "id": 2109
+      },
+      {
+       "dungeonMapId": 145,
+       "field2": 1390,
+       "field4": -10000.0,
+       "id": 2110
+      },
+      {
+       "dungeonMapId": 146,
+       "field2": 1390,
+       "field4": 137.0,
+       "id": 2112
+      },
+      {
+       "dungeonMapId": 146,
+       "field2": 1391,
+       "field4": -10000.0,
+       "id": 2114
+      },
+      {
+       "dungeonMapId": 146,
+       "field2": 1392,
+       "field4": -10000.0,
+       "id": 2115
+      },
+      {
+       "dungeonMapId": 146,
+       "field2": 1393,
+       "field4": -10000.0,
+       "id": 2116
+      },
+      {
+       "dungeonMapId": 146,
+       "field2": 1394,
+       "field4": -10000.0,
+       "id": 2117
+      },
+      {
+       "dungeonMapId": 147,
+       "field2": 1394,
+       "field4": -10000.0,
+       "id": 2134
+      },
+      {
+       "dungeonMapId": 145,
+       "field2": 1395,
+       "field4": -10000.0,
+       "id": 2104
+      },
+      {
+       "dungeonMapId": 146,
+       "field2": 1395,
+       "field4": 136.0,
+       "id": 2111
+      },
+      {
+       "dungeonMapId": 147,
+       "field2": 1396,
+       "field4": -10000.0,
+       "id": 2120
+      },
+      {
+       "dungeonMapId": 147,
+       "field2": 1397,
+       "field4": 150.0,
+       "id": 2119
+      },
+      {
+       "dungeonMapId": 143,
+       "field2": 1398,
+       "field4": -10000.0,
+       "id": 2094
+      },
+      {
+       "dungeonMapId": 143,
+       "field2": 1399,
+       "field4": -10000.0,
+       "id": 2093
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1400,
+       "field4": -10000.0,
+       "id": 2054
+      },
+      {
+       "dungeonMapId": 143,
+       "field2": 1401,
+       "field4": -10000.0,
+       "id": 2095
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1402,
+       "field4": -10000.0,
+       "id": 2060
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1403,
+       "field4": -10000.0,
+       "id": 2073
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1404,
+       "field4": -10000.0,
+       "id": 2074
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1405,
+       "field4": -10000.0,
+       "id": 2075
+      },
+      {
+       "dungeonMapId": 148,
+       "field2": 1406,
+       "field4": -10000.0,
+       "id": 2124
+      },
+      {
+       "dungeonMapId": 148,
+       "field2": 1407,
+       "field4": -10000.0,
+       "id": 2125
+      },
+      {
+       "dungeonMapId": 148,
+       "field2": 1408,
+       "field4": -10000.0,
+       "id": 2126
+      },
+      {
+       "dungeonMapId": 148,
+       "field2": 1409,
+       "field4": -10000.0,
+       "id": 2127
+      },
+      {
+       "dungeonMapId": 148,
+       "field2": 1410,
+       "field4": -10000.0,
+       "id": 2133
+      },
+      {
+       "dungeonMapId": 144,
+       "field2": 1410,
+       "field4": 100.0,
+       "id": 2097
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 1411,
+       "field4": -10000.0,
+       "id": 2053
+      },
+      {
+       "dungeonMapId": 148,
+       "field2": 5542,
+       "field4": -10000.0,
+       "id": 2121
+      },
+      {
+       "dungeonMapId": 148,
+       "field2": 5543,
+       "field4": -10000.0,
+       "id": 2122
+      },
+      {
+       "dungeonMapId": 142,
+       "field2": 5544,
+       "field4": -10000.0,
+       "id": 2080
+      },
+      {
+       "dungeonMapId": 148,
+       "field2": 5544,
+       "field4": -10000.0,
+       "id": 2123
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Der Hof",
+       "2": "Speisesaal",
+       "3": "Die Verwaiste Höhle",
+       "4": "Das Tiefere Observatorium",
+       "5": "Das Obere Observatorium",
+       "6": "Lord Godfreys Kammer",
+       "7": "Der Wehrgang"
+      },
+      "enCN": {
+       "1": "庭院",
+       "2": "饭厅",
+       "3": "空巢",
+       "4": "下层瞭望台",
+       "5": "上层瞭望台",
+       "6": "高弗雷勋爵的大厅",
+       "7": "城墙走道"
+      },
+      "enGB": {
+       "1": "The Courtyard",
+       "2": "Dining Hall",
+       "3": "The Vacant Den",
+       "4": "Lower Observatory",
+       "5": "Upper Observatory",
+       "6": "Lord Godfrey's Chamber",
+       "7": "The Wall Walk"
+      },
+      "enUS": {
+       "1": "The Courtyard",
+       "2": "Dining Hall",
+       "3": "The Vacant Den",
+       "4": "Lower Observatory",
+       "5": "Upper Observatory",
+       "6": "Lord Godfrey's Chamber",
+       "7": "The Wall Walk"
+      },
+      "esES": {
+       "1": "El Patio",
+       "2": "Comedor",
+       "3": "El Cubil Vacío",
+       "4": "Observatorio inferior",
+       "5": "Observatorio superior",
+       "6": "Cámara de lord Godfrey",
+       "7": "El Camino de la Muralla"
+      },
+      "esMX": {
+       "1": "El Patio",
+       "2": "Comedor",
+       "3": "El Cubil Vacío",
+       "4": "Observatorio inferior",
+       "5": "Observatorio superior",
+       "6": "Cámara de lord Godfrey",
+       "7": "El Camino de la Muralla"
+      },
+      "frFR": {
+       "1": "La cour",
+       "2": "Salle à manger",
+       "3": "Antre Vacant",
+       "4": "Observatoire Inférieur",
+       "5": "Observatoire Supérieur",
+       "6": "Chambre du seigneur Godfrey",
+       "7": "Le chemin de ronde"
+      },
+      "koKR": {
+       "1": "안마당",
+       "2": "연회장",
+       "3": "텅 빈 굴",
+       "4": "관측소 하층",
+       "5": "관측소 상층",
+       "6": "고드프리 경의 방",
+       "7": "성벽 통로"
+      },
+      "ruRU": {
+       "1": "Внутренний двор",
+       "2": "Обеденный зал",
+       "3": "Свободная берлога",
+       "4": "Нижняя обсерватория",
+       "5": "Верхняя обсерватория",
+       "6": "Палата лорда Годфри",
+       "7": "Крепостной вал"
+      },
+      "zhCN": {
+       "1": "庭院",
+       "2": "饭厅",
+       "3": "空巢",
+       "4": "下层瞭望台",
+       "5": "上层瞭望台",
+       "6": "高弗雷勋爵的大厅",
+       "7": "城墙走道"
+      },
+      "zhTW": {
+       "1": "庭院",
+       "2": "餐廳",
+       "3": "空穴之地",
+       "4": "下層觀測所",
+       "5": "上層觀測所",
+       "6": "高佛雷領主的房間",
+       "7": "巨牆步道"
+      }
+     },
+     "floors": [
+      {
+       "field3": 2003.7698974609375,
+       "field4": 2356.199951171875,
+       "field5": -319.88299560546875,
+       "field6": -84.92960357666016,
+       "field7": 21,
+       "floor": 1,
+       "id": 142
+      },
+      {
+       "field3": 2147.556640625,
+       "field4": 2359.9833984375,
+       "field5": -303.2149963378906,
+       "field6": -161.5970001220703,
+       "field7": 21,
+       "floor": 2,
+       "id": 143
+      },
+      {
+       "field3": 2103.77001953125,
+       "field4": 2256.199951171875,
+       "field5": -193.21603393554688,
+       "field6": -91.5960693359375,
+       "field7": 21,
+       "floor": 3,
+       "id": 144
+      },
+      {
+       "field3": 2103.77001953125,
+       "field4": 2256.199951171875,
+       "field5": -193.21499633789062,
+       "field6": -91.59030151367188,
+       "field7": 21,
+       "floor": 4,
+       "id": 145
+      },
+      {
+       "field3": 2103.77001953125,
+       "field4": 2256.199951171875,
+       "field5": -193.21499633789062,
+       "field6": -91.59030151367188,
+       "field7": 21,
+       "floor": 5,
+       "id": 146
+      },
+      {
+       "field3": 2080.77001953125,
+       "field4": 2279.199951171875,
+       "field5": -182.5460205078125,
+       "field6": -50.25939178466797,
+       "field7": 21,
+       "floor": 6,
+       "id": 147
+      },
+      {
+       "field3": 2023.77001953125,
+       "field4": 2296.199951171875,
+       "field5": -278.2160339355469,
+       "field6": -96.5960693359375,
+       "field7": 21,
+       "floor": 7,
+       "id": 148
+      }
+     ],
+     "id": 764,
+     "internalName": "ShadowfangKeep",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 1133.333251953125,
+     "x2": -1666.6666259765625,
+     "y1": 4500.0,
+     "y2": 300.0
+    }
+   ],
+   "mapId": 33
+  }
+ ]
+}

@@ -1,0 +1,512 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/BlackwingLair1_1.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair1_2.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair1_3.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair1_4.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair1_5.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair1_6.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair1_7.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair1_8.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair1_9.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair1_10.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair1_11.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair1_12.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair1_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair2_1.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair2_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair2_2.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair2_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair2_3.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair2_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair2_4.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair2_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair2_5.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair2_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair2_6.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair2_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair2_7.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair2_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair2_8.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair2_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair2_9.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair2_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair2_10.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair2_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair2_11.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair2_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair2_12.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair2_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair3_1.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair3_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair3_2.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair3_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair3_3.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair3_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair3_4.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair3_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair3_5.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair3_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair3_6.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair3_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair3_7.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair3_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair3_8.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair3_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair3_9.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair3_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair3_10.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair3_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair3_11.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair3_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair3_12.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair3_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair4_1.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair4_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair4_2.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair4_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair4_3.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair4_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair4_4.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair4_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair4_5.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair4_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair4_6.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair4_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair4_7.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair4_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair4_8.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair4_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair4_9.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair4_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair4_10.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair4_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair4_11.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair4_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackwingLair4_12.blp",
+   "target": "Interface/WorldMap/BlackwingLair/BlackwingLair4_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Blackwing Lair instance map: 4 DungeonMap floors, 22 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 48 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Blackwing Lair",
+ "package": "mod-native-instance-maps.blackwing-lair",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 2677,
+     "chunks": [
+      {
+       "dungeonMapId": 185,
+       "field2": 15174,
+       "field4": -10000.0,
+       "id": 2856
+      },
+      {
+       "dungeonMapId": 182,
+       "field2": 15175,
+       "field4": -10000.0,
+       "id": 2836
+      },
+      {
+       "dungeonMapId": 185,
+       "field2": 15178,
+       "field4": -10000.0,
+       "id": 2860
+      },
+      {
+       "dungeonMapId": 182,
+       "field2": 15181,
+       "field4": -10000.0,
+       "id": 2837
+      },
+      {
+       "dungeonMapId": 182,
+       "field2": 15182,
+       "field4": -10000.0,
+       "id": 2838
+      },
+      {
+       "dungeonMapId": 182,
+       "field2": 15183,
+       "field4": -10000.0,
+       "id": 2839
+      },
+      {
+       "dungeonMapId": 182,
+       "field2": 15185,
+       "field4": -10000.0,
+       "id": 2840
+      },
+      {
+       "dungeonMapId": 183,
+       "field2": 15185,
+       "field4": 420.0,
+       "id": 2841
+      },
+      {
+       "dungeonMapId": 183,
+       "field2": 15186,
+       "field4": -10000.0,
+       "id": 2843
+      },
+      {
+       "dungeonMapId": 183,
+       "field2": 15187,
+       "field4": -10000.0,
+       "id": 2842
+      },
+      {
+       "dungeonMapId": 183,
+       "field2": 15188,
+       "field4": -10000.0,
+       "id": 2844
+      },
+      {
+       "dungeonMapId": 184,
+       "field2": 15188,
+       "field4": 445.0,
+       "id": 2845
+      },
+      {
+       "dungeonMapId": 185,
+       "field2": 19132,
+       "field4": -10000.0,
+       "id": 2859
+      },
+      {
+       "dungeonMapId": 184,
+       "field2": 19133,
+       "field4": -10000.0,
+       "id": 2846
+      },
+      {
+       "dungeonMapId": 184,
+       "field2": 19134,
+       "field4": -10000.0,
+       "id": 2847
+      },
+      {
+       "dungeonMapId": 184,
+       "field2": 19135,
+       "field4": -10000.0,
+       "id": 2849
+      },
+      {
+       "dungeonMapId": 185,
+       "field2": 19135,
+       "field4": -10000.0,
+       "id": 2861
+      },
+      {
+       "dungeonMapId": 184,
+       "field2": 19136,
+       "field4": -10000.0,
+       "id": 2848
+      },
+      {
+       "dungeonMapId": 185,
+       "field2": 19136,
+       "field4": -10000.0,
+       "id": 2862
+      },
+      {
+       "dungeonMapId": 185,
+       "field2": 19137,
+       "field4": -10000.0,
+       "id": 2863
+      },
+      {
+       "dungeonMapId": 185,
+       "field2": 19138,
+       "field4": -10000.0,
+       "id": 2858
+      },
+      {
+       "dungeonMapId": 185,
+       "field2": 19139,
+       "field4": -10000.0,
+       "id": 2857
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Garnison des Drachenmals",
+       "2": "Hallen des Zwists",
+       "3": "Die Blutroten Labore",
+       "4": "Nefarians Unterschlupf"
+      },
+      "enCN": {
+       "1": "龙喉兵营",
+       "2": "征战大厅",
+       "3": "血色实验室",
+       "4": "奈法利安的巢穴"
+      },
+      "enGB": {
+       "1": "Dragonmaw Garrison",
+       "2": "Halls of Strife",
+       "3": "Crimson Laboratories",
+       "4": "Nefarian's Lair"
+      },
+      "enUS": {
+       "1": "Dragonmaw Garrison",
+       "2": "Halls of Strife",
+       "3": "Crimson Laboratories",
+       "4": "Nefarian's Lair"
+      },
+      "esES": {
+       "1": "Cuartel Faucedraco",
+       "2": "Salas de los Conflictos",
+       "3": "Laboratorios Carmesí",
+       "4": "Guarida de Nefarian"
+      },
+      "esMX": {
+       "1": "Cuartel Faucedraco",
+       "2": "Salas de los Conflictos",
+       "3": "Laboratorios Carmesí",
+       "4": "Guarida de Nefarian"
+      },
+      "frFR": {
+       "1": "Garnison des Gueules-de-dragon",
+       "2": "Halls des conflits",
+       "3": "Laboratoires Cramoisis",
+       "4": "Antre de Nefarian"
+      },
+      "koKR": {
+       "1": "용아귀 주둔지",
+       "2": "투쟁의 전당",
+       "3": "진홍빛 연구소",
+       "4": "네파리안의 둥지"
+      },
+      "ruRU": {
+       "1": "Гарнизон Драконьей Пасти",
+       "2": "Залы Раздора",
+       "3": "Багровые лаборатории",
+       "4": "Логово Нефариана"
+      },
+      "zhCN": {
+       "1": "龙喉兵营",
+       "2": "征战大厅",
+       "3": "血色实验室",
+       "4": "奈法利安的巢穴"
+      },
+      "zhTW": {
+       "1": "龍喉兵營",
+       "2": "征戰大廳",
+       "3": "赤紅實驗室",
+       "4": "奈法利安的巢穴"
+      }
+     },
+     "floors": [
+      {
+       "field3": -1344.050048828125,
+       "field4": -844.6220092773438,
+       "field5": -7727.06982421875,
+       "field6": -7394.1201171875,
+       "field7": 29,
+       "floor": 1,
+       "id": 182
+      },
+      {
+       "field3": -1379.050048828125,
+       "field4": -729.6229858398438,
+       "field5": -7777.06982421875,
+       "field6": -7344.1201171875,
+       "field7": 29,
+       "floor": 2,
+       "id": 183
+      },
+      {
+       "field3": -1369.050048828125,
+       "field4": -719.6229858398438,
+       "field5": -7757.06982421875,
+       "field6": -7324.1201171875,
+       "field7": 29,
+       "floor": 3,
+       "id": 184
+      },
+      {
+       "field3": -1419.050048828125,
+       "field4": -769.6229858398438,
+       "field5": -7637.06982421875,
+       "field6": -7204.1201171875,
+       "field7": 29,
+       "floor": 4,
+       "id": 185
+      }
+     ],
+     "id": 755,
+     "internalName": "BlackwingLair",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": -6333.3330078125,
+     "x2": -8600.0,
+     "y1": 633.3333129882812,
+     "y2": -2766.66650390625
+    }
+   ],
+   "mapId": 469
+  }
+ ]
+}

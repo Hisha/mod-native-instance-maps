@@ -1,18 +1,174 @@
 {
+  "AhnQiraj": {
+    "slug": "ahnqiraj",
+    "title": "Ahn'Qiraj"
+  },
+  "AuchenaiCrypts": {
+    "slug": "auchenai-crypts",
+    "title": "Auchenai Crypts"
+  },
+  "BlackTemple": {
+    "slug": "black-temple",
+    "title": "Black Temple"
+  },
+  "BlackfathomDeeps": {
+    "slug": "blackfathom-deeps",
+    "title": "Blackfathom Deeps"
+  },
+  "BlackrockDepths": {
+    "slug": "blackrock-depths",
+    "title": "Blackrock Depths"
+  },
+  "BlackrockSpire": {
+    "slug": "blackrock-spire",
+    "title": "Blackrock Spire"
+  },
+  "BlackwingLair": {
+    "slug": "blackwing-lair",
+    "title": "Blackwing Lair"
+  },
+  "CoilfangReservoir": {
+    "slug": "coilfang-reservoir",
+    "title": "Coilfang Reservoir"
+  },
   "DeeprunTram": {
     "slug": "deeprun-tram",
     "title": "Deeprun Tram"
+  },
+  "DireMaul": {
+    "slug": "dire-maul",
+    "title": "Dire Maul"
+  },
+  "Gnomeregan": {
+    "slug": "gnomeregan",
+    "title": "Gnomeregan"
+  },
+  "GruulsLair": {
+    "slug": "gruuls-lair",
+    "title": "Gruul's Lair"
+  },
+  "HellfireRamparts": {
+    "slug": "hellfire-ramparts",
+    "title": "Hellfire Ramparts"
   },
   "Karazhan": {
     "slug": "karazhan",
     "title": "Karazhan"
   },
+  "MagistersTerrace": {
+    "slug": "magisters-terrace",
+    "title": "Magister's Terrace"
+  },
+  "MagtheridonsLair": {
+    "slug": "magtheridons-lair",
+    "title": "Magtheridon's Lair"
+  },
+  "ManaTombs": {
+    "slug": "mana-tombs",
+    "title": "Mana Tombs"
+  },
+  "Maraudon": {
+    "slug": "maraudon",
+    "title": "Maraudon"
+  },
+  "MoltenCore": {
+    "slug": "molten-core",
+    "title": "Molten Core"
+  },
+  "OnyxiasLair": {
+    "slug": "onyxias-lair",
+    "title": "Onyxia's Lair"
+  },
+  "Ragefire": {
+    "slug": "ragefire-chasm",
+    "title": "Ragefire Chasm"
+  },
+  "RazorfenDowns": {
+    "slug": "razorfen-downs",
+    "title": "Razorfen Downs"
+  },
+  "RazorfenKraul": {
+    "slug": "razorfen-kraul",
+    "title": "Razorfen Kraul"
+  },
+  "ScarletMonastery": {
+    "slug": "scarlet-monastery",
+    "title": "Scarlet Monastery"
+  },
+  "Scholomance": {
+    "slug": "scholomance",
+    "title": "Scholomance"
+  },
+  "SethekkHalls": {
+    "slug": "sethekk-halls",
+    "title": "Sethekk Halls"
+  },
+  "ShadowLabyrinth": {
+    "slug": "shadow-labyrinth",
+    "title": "Shadow Labyrinth"
+  },
+  "ShadowfangKeep": {
+    "slug": "shadowfang-keep",
+    "title": "Shadowfang Keep"
+  },
+  "Stratholme": {
+    "slug": "stratholme",
+    "title": "Stratholme"
+  },
+  "SunwellPlateau": {
+    "slug": "sunwell-plateau",
+    "title": "Sunwell Plateau"
+  },
+  "TempestKeep": {
+    "slug": "tempest-keep",
+    "title": "Tempest Keep"
+  },
+  "TheArcatraz": {
+    "slug": "the-arcatraz",
+    "title": "The Arcatraz"
+  },
+  "TheBloodFurnace": {
+    "slug": "the-blood-furnace",
+    "title": "The Blood Furnace"
+  },
+  "TheBotanica": {
+    "slug": "the-botanica",
+    "title": "The Botanica"
+  },
   "TheDeadmines": {
     "slug": "the-deadmines",
     "title": "The Deadmines"
   },
+  "TheMechanar": {
+    "slug": "the-mechanar",
+    "title": "The Mechanar"
+  },
+  "TheShatteredHalls": {
+    "slug": "the-shattered-halls",
+    "title": "The Shattered Halls"
+  },
+  "TheSlavePens": {
+    "slug": "the-slave-pens",
+    "title": "The Slave Pens"
+  },
+  "TheSteamvault": {
+    "slug": "the-steamvault",
+    "title": "The Steamvault"
+  },
+  "TheStockade": {
+    "slug": "the-stockade",
+    "title": "The Stockade"
+  },
   "TheTempleOfAtalHakkar": {
     "slug": "temple-of-atal-hakkar",
     "title": "Temple of Atal Hakkar"
+  },
+  "TheUnderbog": {
+    "slug": "the-underbog",
+    "title": "The Underbog"
+  },
+  "Uldaman": {
+    "slug": "uldaman",
+    "title": "Uldaman"
   }
 }

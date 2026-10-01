@@ -1,0 +1,236 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/TempestKeep1_1.blp",
+   "target": "Interface/WorldMap/TempestKeep/TempestKeep1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TempestKeep1_2.blp",
+   "target": "Interface/WorldMap/TempestKeep/TempestKeep1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TempestKeep1_3.blp",
+   "target": "Interface/WorldMap/TempestKeep/TempestKeep1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TempestKeep1_4.blp",
+   "target": "Interface/WorldMap/TempestKeep/TempestKeep1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TempestKeep1_5.blp",
+   "target": "Interface/WorldMap/TempestKeep/TempestKeep1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TempestKeep1_6.blp",
+   "target": "Interface/WorldMap/TempestKeep/TempestKeep1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TempestKeep1_7.blp",
+   "target": "Interface/WorldMap/TempestKeep/TempestKeep1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TempestKeep1_8.blp",
+   "target": "Interface/WorldMap/TempestKeep/TempestKeep1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TempestKeep1_9.blp",
+   "target": "Interface/WorldMap/TempestKeep/TempestKeep1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TempestKeep1_10.blp",
+   "target": "Interface/WorldMap/TempestKeep/TempestKeep1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TempestKeep1_11.blp",
+   "target": "Interface/WorldMap/TempestKeep/TempestKeep1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TempestKeep1_12.blp",
+   "target": "Interface/WorldMap/TempestKeep/TempestKeep1_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Tempest Keep instance map: 1 DungeonMap floor, 16 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 12 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Tempest Keep",
+ "package": "mod-native-instance-maps.tempest-keep",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 3845,
+     "chunks": [
+      {
+       "dungeonMapId": 349,
+       "field2": 20854,
+       "field4": -10000.0,
+       "id": 4315
+      },
+      {
+       "dungeonMapId": 349,
+       "field2": 20855,
+       "field4": -10000.0,
+       "id": 4329
+      },
+      {
+       "dungeonMapId": 349,
+       "field2": 21359,
+       "field4": -10000.0,
+       "id": 4316
+      },
+      {
+       "dungeonMapId": 349,
+       "field2": 21361,
+       "field4": -10000.0,
+       "id": 4323
+      },
+      {
+       "dungeonMapId": 349,
+       "field2": 21412,
+       "field4": -10000.0,
+       "id": 4326
+      },
+      {
+       "dungeonMapId": 349,
+       "field2": 21414,
+       "field4": -10000.0,
+       "id": 4324
+      },
+      {
+       "dungeonMapId": 349,
+       "field2": 21423,
+       "field4": -10000.0,
+       "id": 4314
+      },
+      {
+       "dungeonMapId": 349,
+       "field2": 22050,
+       "field4": -10000.0,
+       "id": 4327
+      },
+      {
+       "dungeonMapId": 349,
+       "field2": 22051,
+       "field4": -10000.0,
+       "id": 4325
+      },
+      {
+       "dungeonMapId": 349,
+       "field2": 22052,
+       "field4": -10000.0,
+       "id": 4321
+      },
+      {
+       "dungeonMapId": 349,
+       "field2": 22053,
+       "field4": -10000.0,
+       "id": 4322
+      },
+      {
+       "dungeonMapId": 349,
+       "field2": 22209,
+       "field4": -10000.0,
+       "id": 4319
+      },
+      {
+       "dungeonMapId": 349,
+       "field2": 22210,
+       "field4": -10000.0,
+       "id": 4318
+      },
+      {
+       "dungeonMapId": 349,
+       "field2": 22211,
+       "field4": -10000.0,
+       "id": 4317
+      },
+      {
+       "dungeonMapId": 349,
+       "field2": 22370,
+       "field4": -10000.0,
+       "id": 4328
+      },
+      {
+       "dungeonMapId": 349,
+       "field2": 22371,
+       "field4": -10000.0,
+       "id": 4320
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Das Auge"
+      },
+      "enCN": {
+       "1": "要塞之眼"
+      },
+      "enGB": {
+       "1": "The Eye"
+      },
+      "enUS": {
+       "1": "The Eye"
+      },
+      "esES": {
+       "1": "El Ojo"
+      },
+      "esMX": {
+       "1": "El Ojo"
+      },
+      "frFR": {
+       "1": "L'Œil"
+      },
+      "koKR": {
+       "1": "폭풍우 눈"
+      },
+      "ruRU": {
+       "1": "Око"
+      },
+      "zhCN": {
+       "1": "要塞之眼"
+      },
+      "zhTW": {
+       "1": "風暴核心"
+      }
+     },
+     "floors": [
+      {
+       "field3": -787.5,
+       "field4": 787.5,
+       "field5": -100.0,
+       "field6": 950.0,
+       "field7": 479,
+       "floor": 1,
+       "id": 349
+      }
+     ],
+     "id": 782,
+     "internalName": "TempestKeep",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 550
+  }
+ ]
+}

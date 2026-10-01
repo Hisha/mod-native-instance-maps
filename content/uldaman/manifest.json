@@ -1,0 +1,532 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/Uldaman1_1.blp",
+   "target": "Interface/WorldMap/Uldaman/Uldaman1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Uldaman1_2.blp",
+   "target": "Interface/WorldMap/Uldaman/Uldaman1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Uldaman1_3.blp",
+   "target": "Interface/WorldMap/Uldaman/Uldaman1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Uldaman1_4.blp",
+   "target": "Interface/WorldMap/Uldaman/Uldaman1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Uldaman1_5.blp",
+   "target": "Interface/WorldMap/Uldaman/Uldaman1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Uldaman1_6.blp",
+   "target": "Interface/WorldMap/Uldaman/Uldaman1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Uldaman1_7.blp",
+   "target": "Interface/WorldMap/Uldaman/Uldaman1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Uldaman1_8.blp",
+   "target": "Interface/WorldMap/Uldaman/Uldaman1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Uldaman1_9.blp",
+   "target": "Interface/WorldMap/Uldaman/Uldaman1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Uldaman1_10.blp",
+   "target": "Interface/WorldMap/Uldaman/Uldaman1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Uldaman1_11.blp",
+   "target": "Interface/WorldMap/Uldaman/Uldaman1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Uldaman1_12.blp",
+   "target": "Interface/WorldMap/Uldaman/Uldaman1_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Uldaman2_1.blp",
+   "target": "Interface/WorldMap/Uldaman/Uldaman2_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Uldaman2_2.blp",
+   "target": "Interface/WorldMap/Uldaman/Uldaman2_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Uldaman2_3.blp",
+   "target": "Interface/WorldMap/Uldaman/Uldaman2_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Uldaman2_4.blp",
+   "target": "Interface/WorldMap/Uldaman/Uldaman2_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Uldaman2_5.blp",
+   "target": "Interface/WorldMap/Uldaman/Uldaman2_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Uldaman2_6.blp",
+   "target": "Interface/WorldMap/Uldaman/Uldaman2_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Uldaman2_7.blp",
+   "target": "Interface/WorldMap/Uldaman/Uldaman2_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Uldaman2_8.blp",
+   "target": "Interface/WorldMap/Uldaman/Uldaman2_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Uldaman2_9.blp",
+   "target": "Interface/WorldMap/Uldaman/Uldaman2_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Uldaman2_10.blp",
+   "target": "Interface/WorldMap/Uldaman/Uldaman2_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Uldaman2_11.blp",
+   "target": "Interface/WorldMap/Uldaman/Uldaman2_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Uldaman2_12.blp",
+   "target": "Interface/WorldMap/Uldaman/Uldaman2_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Uldaman instance map: 2 DungeonMap floors, 52 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 24 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Uldaman",
+ "package": "mod-native-instance-maps.uldaman",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 1337,
+     "chunks": [
+      {
+       "dungeonMapId": 171,
+       "field2": 1259,
+       "field4": -10000.0,
+       "id": 2631
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1260,
+       "field4": -10000.0,
+       "id": 2607
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1261,
+       "field4": -10000.0,
+       "id": 2632
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1262,
+       "field4": -10000.0,
+       "id": 2608
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1263,
+       "field4": -10000.0,
+       "id": 2588
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1264,
+       "field4": -10000.0,
+       "id": 2609
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1265,
+       "field4": -10000.0,
+       "id": 2610
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1266,
+       "field4": -10000.0,
+       "id": 2589
+      },
+      {
+       "dungeonMapId": 180,
+       "field2": 1267,
+       "field4": -10000.0,
+       "id": 2822
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1268,
+       "field4": -10000.0,
+       "id": 2582
+      },
+      {
+       "dungeonMapId": 180,
+       "field2": 1269,
+       "field4": -10000.0,
+       "id": 2819
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1270,
+       "field4": -10000.0,
+       "id": 2612
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1271,
+       "field4": -10000.0,
+       "id": 2613
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1272,
+       "field4": -10000.0,
+       "id": 2591
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1273,
+       "field4": -10000.0,
+       "id": 2614
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1274,
+       "field4": -10000.0,
+       "id": 2592
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1275,
+       "field4": -10000.0,
+       "id": 2615
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1276,
+       "field4": -10000.0,
+       "id": 2616
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1277,
+       "field4": -10000.0,
+       "id": 2593
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1278,
+       "field4": -10000.0,
+       "id": 2617
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1279,
+       "field4": -10000.0,
+       "id": 2603
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1280,
+       "field4": -10000.0,
+       "id": 2594
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1281,
+       "field4": -10000.0,
+       "id": 2618
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1282,
+       "field4": -10000.0,
+       "id": 2595
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1283,
+       "field4": -10000.0,
+       "id": 2619
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1284,
+       "field4": -10000.0,
+       "id": 2620
+      },
+      {
+       "dungeonMapId": 180,
+       "field2": 1284,
+       "field4": -10000.0,
+       "id": 2823
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1285,
+       "field4": -10000.0,
+       "id": 2596
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1286,
+       "field4": -10000.0,
+       "id": 2621
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1287,
+       "field4": -10000.0,
+       "id": 2597
+      },
+      {
+       "dungeonMapId": 180,
+       "field2": 1288,
+       "field4": -10000.0,
+       "id": 2820
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1289,
+       "field4": -10000.0,
+       "id": 2583
+      },
+      {
+       "dungeonMapId": 180,
+       "field2": 1290,
+       "field4": -10000.0,
+       "id": 2821
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1291,
+       "field4": -10000.0,
+       "id": 2623
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1292,
+       "field4": -10000.0,
+       "id": 2624
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1293,
+       "field4": -10000.0,
+       "id": 2599
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1294,
+       "field4": -10000.0,
+       "id": 2625
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1295,
+       "field4": -10000.0,
+       "id": 2626
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1296,
+       "field4": -10000.0,
+       "id": 2600
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1297,
+       "field4": -10000.0,
+       "id": 2627
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1298,
+       "field4": -10000.0,
+       "id": 2601
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1299,
+       "field4": -10000.0,
+       "id": 2584
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1300,
+       "field4": -10000.0,
+       "id": 2628
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1301,
+       "field4": -10000.0,
+       "id": 2602
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1302,
+       "field4": -10000.0,
+       "id": 2629
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 1303,
+       "field4": -10000.0,
+       "id": 2630
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 6174,
+       "field4": -10000.0,
+       "id": 2587
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 8105,
+       "field4": -10000.0,
+       "id": 2604
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 8106,
+       "field4": -10000.0,
+       "id": 2585
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 8107,
+       "field4": -10000.0,
+       "id": 2605
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 8108,
+       "field4": -10000.0,
+       "id": 2586
+      },
+      {
+       "dungeonMapId": 171,
+       "field2": 8109,
+       "field4": -10000.0,
+       "id": 2606
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Halle der Bewahrer",
+       "2": "Khaz'goroths Sitz"
+      },
+      "enCN": {
+       "1": "守护者大厅",
+       "2": "卡兹格罗斯之座"
+      },
+      "enGB": {
+       "1": "Hall of the Keepers",
+       "2": "Khaz'Goroth's Seat"
+      },
+      "enUS": {
+       "1": "Hall of the Keepers",
+       "2": "Khaz'Goroth's Seat"
+      },
+      "esES": {
+       "1": "Sala de los Guardianes",
+       "2": "Trono de Khaz'goroth"
+      },
+      "esMX": {
+       "1": "Sala de los Guardianes",
+       "2": "Trono de Khaz'goroth"
+      },
+      "frFR": {
+       "1": "Hall des Gardiens",
+       "2": "Siège de Khaz'goroth"
+      },
+      "koKR": {
+       "1": "수호자의 전당",
+       "2": "카즈고로스의 왕좌"
+      },
+      "ruRU": {
+       "1": "Зал Хранителей",
+       "2": "Трон Каз'горота"
+      },
+      "zhCN": {
+       "1": "守护者大厅",
+       "2": "卡兹格罗斯之座"
+      },
+      "zhTW": {
+       "1": "守衛者大廳",
+       "2": "卡茲格羅斯的王座"
+      }
+     },
+     "floors": [
+      {
+       "field3": -248.5489959716797,
+       "field4": 645.1190185546875,
+       "field5": -391.4729919433594,
+       "field6": 204.30599975585938,
+       "field7": 17,
+       "floor": 1,
+       "id": 171
+      },
+      {
+       "field3": 52.54859924316406,
+       "field4": 545.1190185546875,
+       "field5": -57.77349853515625,
+       "field6": 270.60699462890625,
+       "field7": 17,
+       "floor": 2,
+       "id": 180
+      }
+     ],
+     "id": 692,
+     "internalName": "Uldaman",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 70
+  }
+ ]
+}

@@ -31,6 +31,30 @@ These are the reason the append-only contract is load-bearing. mod-content-manag
 - `DungeonMapChunk` **1238** — **removed** by WDM. Stock record: `ID` `1238`, `MapID` `43`, `field2` `3339`, `DungeonMapID` `28`, `field4` `-10000`
 - `WorldMapArea` **609** — **modified** by WDM: `parentMapID` `0` → `488`
 
+## Coverage: every WDM-added row, accounted for
+
+**Added IDs** is everything WDM introduces. **Shipped** is what a SAFE candidate owns, which is what the composer appends. **Held back** is an added row a decided UNSAFE candidate owns, with the reason codes that stopped it. **Unowned** is an added row no candidate claims at all. The four columns add up, so no WDM-added row is silently dropped from the release.
+
+| Table | Added IDs | Shipped | Held back | Unowned |
+|---|---|---|---|---|
+| `DungeonMap` | 113 | 113 | 0 | 0 |
+| `DungeonMapChunk` | 1312 | 1310 | 0 | 2 |
+| `WorldMapArea` | 51 | 43 | 8 | 0 |
+| `WorldMapTransforms` | 4 | 4 | 0 | 0 |
+
+### Rows that do not ship, and why
+
+- `WorldMapArea` **686** — held back by `ZulFarrak` (`no-chunks`, `no-floors`)
+- `WorldMapArea` **697** — held back by `ZulGurub` (`no-chunks`, `no-floors`)
+- `WorldMapArea` **717** — held back by `RuinsofAhnQiraj` (`no-chunks`, `no-floors`)
+- `WorldMapArea` **733** — held back by `CoTTheBlackMorass` (`no-chunks`, `no-floors`)
+- `WorldMapArea` **734** — held back by `CoTHillsbradFoothills` (`no-chunks`, `no-floors`)
+- `WorldMapArea` **749** — held back by `WailingCaverns` (`stock-chunk`, `stock-mutation-required`)
+- `WorldMapArea` **775** — held back by `CoTMountHyjal` (`no-chunks`, `no-floors`)
+- `WorldMapArea` **781** — held back by `ZulAman` (`no-chunks`, `no-floors`)
+- `DungeonMapChunk` **1828** — no candidate claims it: the map has no WDM artwork directory and no additive area or floor, so there is no package to attach it to
+- `DungeonMapChunk` **1829** — no candidate claims it: the map has no WDM artwork directory and no additive area or floor, so there is no package to attach it to
+
 ## Floors with no WorldMapArea row
 
 These maps have `DungeonMap` floor geometry but no `WorldMapArea` row whose `internalName` matches a WDM artwork directory, so there is no map identity to build a `worldMaps[]` entry around and no directory to attach artwork to. They are not candidates. Most are the stock raid floors (map 631 alone contributes eight), which the client already resolves without a new area.

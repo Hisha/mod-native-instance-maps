@@ -1,0 +1,310 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/TheMechanar1_1.blp",
+   "target": "Interface/WorldMap/TheMechanar/TheMechanar1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheMechanar1_2.blp",
+   "target": "Interface/WorldMap/TheMechanar/TheMechanar1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheMechanar1_3.blp",
+   "target": "Interface/WorldMap/TheMechanar/TheMechanar1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheMechanar1_4.blp",
+   "target": "Interface/WorldMap/TheMechanar/TheMechanar1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheMechanar1_5.blp",
+   "target": "Interface/WorldMap/TheMechanar/TheMechanar1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheMechanar1_6.blp",
+   "target": "Interface/WorldMap/TheMechanar/TheMechanar1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheMechanar1_7.blp",
+   "target": "Interface/WorldMap/TheMechanar/TheMechanar1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheMechanar1_8.blp",
+   "target": "Interface/WorldMap/TheMechanar/TheMechanar1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheMechanar1_9.blp",
+   "target": "Interface/WorldMap/TheMechanar/TheMechanar1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheMechanar1_10.blp",
+   "target": "Interface/WorldMap/TheMechanar/TheMechanar1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheMechanar1_11.blp",
+   "target": "Interface/WorldMap/TheMechanar/TheMechanar1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheMechanar1_12.blp",
+   "target": "Interface/WorldMap/TheMechanar/TheMechanar1_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheMechanar2_1.blp",
+   "target": "Interface/WorldMap/TheMechanar/TheMechanar2_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheMechanar2_2.blp",
+   "target": "Interface/WorldMap/TheMechanar/TheMechanar2_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheMechanar2_3.blp",
+   "target": "Interface/WorldMap/TheMechanar/TheMechanar2_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheMechanar2_4.blp",
+   "target": "Interface/WorldMap/TheMechanar/TheMechanar2_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheMechanar2_5.blp",
+   "target": "Interface/WorldMap/TheMechanar/TheMechanar2_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheMechanar2_6.blp",
+   "target": "Interface/WorldMap/TheMechanar/TheMechanar2_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheMechanar2_7.blp",
+   "target": "Interface/WorldMap/TheMechanar/TheMechanar2_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheMechanar2_8.blp",
+   "target": "Interface/WorldMap/TheMechanar/TheMechanar2_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheMechanar2_9.blp",
+   "target": "Interface/WorldMap/TheMechanar/TheMechanar2_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheMechanar2_10.blp",
+   "target": "Interface/WorldMap/TheMechanar/TheMechanar2_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheMechanar2_11.blp",
+   "target": "Interface/WorldMap/TheMechanar/TheMechanar2_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheMechanar2_12.blp",
+   "target": "Interface/WorldMap/TheMechanar/TheMechanar2_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm The Mechanar instance map: 2 DungeonMap floors, 15 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 24 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "The Mechanar",
+ "package": "mod-native-instance-maps.the-mechanar",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 3849,
+     "chunks": [
+      {
+       "dungeonMapId": 231,
+       "field2": 21113,
+       "field4": -10000.0,
+       "id": 3323
+      },
+      {
+       "dungeonMapId": 232,
+       "field2": 21113,
+       "field4": 24.0,
+       "id": 3327
+      },
+      {
+       "dungeonMapId": 231,
+       "field2": 21249,
+       "field4": -10000.0,
+       "id": 3324
+      },
+      {
+       "dungeonMapId": 232,
+       "field2": 21249,
+       "field4": 20.0,
+       "id": 3325
+      },
+      {
+       "dungeonMapId": 232,
+       "field2": 21250,
+       "field4": -10000.0,
+       "id": 3329
+      },
+      {
+       "dungeonMapId": 231,
+       "field2": 21251,
+       "field4": -10000.0,
+       "id": 3321
+      },
+      {
+       "dungeonMapId": 231,
+       "field2": 21252,
+       "field4": -10000.0,
+       "id": 3320
+      },
+      {
+       "dungeonMapId": 232,
+       "field2": 21255,
+       "field4": -10000.0,
+       "id": 3328
+      },
+      {
+       "dungeonMapId": 232,
+       "field2": 21256,
+       "field4": -10000.0,
+       "id": 4155
+      },
+      {
+       "dungeonMapId": 232,
+       "field2": 21257,
+       "field4": -10000.0,
+       "id": 3326
+      },
+      {
+       "dungeonMapId": 231,
+       "field2": 21258,
+       "field4": -10000.0,
+       "id": 3322
+      },
+      {
+       "dungeonMapId": 231,
+       "field2": 21259,
+       "field4": -10000.0,
+       "id": 4157
+      },
+      {
+       "dungeonMapId": 231,
+       "field2": 21260,
+       "field4": -10000.0,
+       "id": 4156
+      },
+      {
+       "dungeonMapId": 232,
+       "field2": 21912,
+       "field4": -10000.0,
+       "id": 3330
+      },
+      {
+       "dungeonMapId": 231,
+       "field2": 21913,
+       "field4": -10000.0,
+       "id": 3319
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Die Mechanar",
+       "2": "Berechnungskammer"
+      },
+      "enCN": {
+       "1": "能源舰",
+       "2": "计算密室"
+      },
+      "enGB": {
+       "1": "The Mechanar",
+       "2": "Calculation Chamber"
+      },
+      "enUS": {
+       "1": "The Mechanar",
+       "2": "Calculation Chamber"
+      },
+      "esES": {
+       "1": "El Mechanar",
+       "2": "Estancias de Calculación"
+      },
+      "esMX": {
+       "1": "El Mechanar",
+       "2": "Estancias de Calculación"
+      },
+      "frFR": {
+       "1": "Le Méchanar",
+       "2": "Chambre des Calculs"
+      },
+      "koKR": {
+       "1": "메카나르",
+       "2": "계산의 방"
+      },
+      "ruRU": {
+       "1": "Механар",
+       "2": "Комната Вычислений"
+      },
+      "zhCN": {
+       "1": "能源舰",
+       "2": "计算密室"
+      },
+      "zhTW": {
+       "1": "麥克納爾",
+       "2": "運算室"
+      }
+     },
+     "floors": [
+      {
+       "field3": -341.7799987792969,
+       "field4": 334.4580078125,
+       "field5": -100.83919525146484,
+       "field6": 349.9862060546875,
+       "field7": 479,
+       "floor": 1,
+       "id": 231
+      },
+      {
+       "field3": -341.7799987792969,
+       "field4": 334.4580078125,
+       "field5": -37.8393440246582,
+       "field6": 412.98602294921875,
+       "field7": 479,
+       "floor": 2,
+       "id": 232
+      }
+     ],
+     "id": 730,
+     "internalName": "TheMechanar",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 554
+  }
+ ]
+}

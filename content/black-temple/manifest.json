@@ -1,0 +1,920 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/BlackTemple1.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple1_1.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple1_2.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple1_3.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple1_4.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple1_5.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple1_6.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple1_7.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple1_8.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple1_9.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple1_10.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple1_11.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple1_12.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple1_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple2.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple2_1.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple2_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple2_2.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple2_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple2_3.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple2_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple2_4.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple2_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple2_5.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple2_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple2_6.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple2_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple2_7.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple2_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple2_8.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple2_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple2_9.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple2_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple2_10.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple2_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple2_11.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple2_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple2_12.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple2_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple3.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple3_1.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple3_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple3_2.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple3_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple3_3.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple3_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple3_4.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple3_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple3_5.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple3_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple3_6.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple3_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple3_7.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple3_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple3_8.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple3_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple3_9.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple3_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple3_10.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple3_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple3_11.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple3_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple3_12.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple3_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple4.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple4_1.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple4_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple4_2.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple4_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple4_3.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple4_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple4_4.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple4_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple4_5.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple4_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple4_6.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple4_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple4_7.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple4_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple4_8.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple4_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple4_9.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple4_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple4_10.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple4_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple4_11.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple4_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple4_12.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple4_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple5.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple5_1.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple5_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple5_2.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple5_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple5_3.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple5_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple5_4.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple5_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple5_5.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple5_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple5_6.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple5_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple5_7.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple5_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple5_8.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple5_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple5_9.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple5_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple5_10.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple5_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple5_11.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple5_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple5_12.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple5_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple6.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple6_1.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple6_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple6_2.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple6_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple6_3.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple6_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple6_4.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple6_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple6_5.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple6_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple6_6.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple6_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple6_7.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple6_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple6_8.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple6_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple6_9.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple6_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple6_10.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple6_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple6_11.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple6_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple6_12.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple6_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple7.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple7_1.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple7_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple7_2.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple7_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple7_3.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple7_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple7_4.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple7_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple7_5.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple7_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple7_6.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple7_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple7_7.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple7_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple7_8.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple7_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple7_9.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple7_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple7_10.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple7_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple7_11.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple7_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple7_12.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple7_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple8.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple9.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple10.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple11.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackTemple12.blp",
+   "target": "Interface/WorldMap/BlackTemple/BlackTemple12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Black Temple instance map: 7 DungeonMap floors, 40 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 96 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Black Temple",
+ "package": "mod-native-instance-maps.black-temple",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 3959,
+     "chunks": [
+      {
+       "dungeonMapId": 434,
+       "field2": 21697,
+       "field4": -10000.0,
+       "id": 4578
+      },
+      {
+       "dungeonMapId": 436,
+       "field2": 21697,
+       "field4": 185.0,
+       "id": 4606
+      },
+      {
+       "dungeonMapId": 434,
+       "field2": 21700,
+       "field4": -10000.0,
+       "id": 4585
+      },
+      {
+       "dungeonMapId": 434,
+       "field2": 21701,
+       "field4": -10000.0,
+       "id": 4587
+      },
+      {
+       "dungeonMapId": 435,
+       "field2": 22070,
+       "field4": -10000.0,
+       "id": 4591
+      },
+      {
+       "dungeonMapId": 434,
+       "field2": 22071,
+       "field4": -10000.0,
+       "id": 4580
+      },
+      {
+       "dungeonMapId": 434,
+       "field2": 22072,
+       "field4": -10000.0,
+       "id": 4584
+      },
+      {
+       "dungeonMapId": 435,
+       "field2": 22073,
+       "field4": -10000.0,
+       "id": 4589
+      },
+      {
+       "dungeonMapId": 435,
+       "field2": 22074,
+       "field4": -10000.0,
+       "id": 4588
+      },
+      {
+       "dungeonMapId": 435,
+       "field2": 22075,
+       "field4": -10000.0,
+       "id": 4590
+      },
+      {
+       "dungeonMapId": 434,
+       "field2": 22340,
+       "field4": -10000.0,
+       "id": 4579
+      },
+      {
+       "dungeonMapId": 437,
+       "field2": 22341,
+       "field4": -10000.0,
+       "id": 4598
+      },
+      {
+       "dungeonMapId": 437,
+       "field2": 22342,
+       "field4": -10000.0,
+       "id": 4602
+      },
+      {
+       "dungeonMapId": 438,
+       "field2": 22343,
+       "field4": -10000.0,
+       "id": 4609
+      },
+      {
+       "dungeonMapId": 436,
+       "field2": 22344,
+       "field4": -10000.0,
+       "id": 4604
+      },
+      {
+       "dungeonMapId": 438,
+       "field2": 22345,
+       "field4": -10000.0,
+       "id": 4607
+      },
+      {
+       "dungeonMapId": 437,
+       "field2": 22346,
+       "field4": -10000.0,
+       "id": 4601
+      },
+      {
+       "dungeonMapId": 438,
+       "field2": 22347,
+       "field4": -10000.0,
+       "id": 4608
+      },
+      {
+       "dungeonMapId": 436,
+       "field2": 22348,
+       "field4": -10000.0,
+       "id": 4603
+      },
+      {
+       "dungeonMapId": 439,
+       "field2": 22351,
+       "field4": -10000.0,
+       "id": 4611
+      },
+      {
+       "dungeonMapId": 438,
+       "field2": 22352,
+       "field4": -10000.0,
+       "id": 4610
+      },
+      {
+       "dungeonMapId": 437,
+       "field2": 22353,
+       "field4": -10000.0,
+       "id": 4599
+      },
+      {
+       "dungeonMapId": 434,
+       "field2": 22355,
+       "field4": -10000.0,
+       "id": 4575
+      },
+      {
+       "dungeonMapId": 434,
+       "field2": 22360,
+       "field4": -10000.0,
+       "id": 4586
+      },
+      {
+       "dungeonMapId": 433,
+       "field2": 22363,
+       "field4": -10000.0,
+       "id": 4569
+      },
+      {
+       "dungeonMapId": 433,
+       "field2": 22364,
+       "field4": -10000.0,
+       "id": 4573
+      },
+      {
+       "dungeonMapId": 433,
+       "field2": 22365,
+       "field4": -10000.0,
+       "id": 4574
+      },
+      {
+       "dungeonMapId": 433,
+       "field2": 22366,
+       "field4": -10000.0,
+       "id": 4570
+      },
+      {
+       "dungeonMapId": 433,
+       "field2": 22367,
+       "field4": -10000.0,
+       "id": 4568
+      },
+      {
+       "dungeonMapId": 433,
+       "field2": 22368,
+       "field4": -10000.0,
+       "id": 4567
+      },
+      {
+       "dungeonMapId": 433,
+       "field2": 22369,
+       "field4": -10000.0,
+       "id": 4571
+      },
+      {
+       "dungeonMapId": 436,
+       "field2": 22426,
+       "field4": -10000.0,
+       "id": 4605
+      },
+      {
+       "dungeonMapId": 434,
+       "field2": 22427,
+       "field4": -10000.0,
+       "id": 4581
+      },
+      {
+       "dungeonMapId": 434,
+       "field2": 22428,
+       "field4": -10000.0,
+       "id": 4582
+      },
+      {
+       "dungeonMapId": 435,
+       "field2": 22429,
+       "field4": -10000.0,
+       "id": 4592
+      },
+      {
+       "dungeonMapId": 434,
+       "field2": 22442,
+       "field4": -10000.0,
+       "id": 4583
+      },
+      {
+       "dungeonMapId": 437,
+       "field2": 22478,
+       "field4": -10000.0,
+       "id": 4600
+      },
+      {
+       "dungeonMapId": 434,
+       "field2": 22496,
+       "field4": -10000.0,
+       "id": 4576
+      },
+      {
+       "dungeonMapId": 434,
+       "field2": 22499,
+       "field4": -10000.0,
+       "id": 4577
+      },
+      {
+       "dungeonMapId": 433,
+       "field2": 22500,
+       "field4": -10000.0,
+       "id": 4572
+      }
+     ],
+     "dungeonMapId": -1,
+     "floorNames": {
+      "deDE": {
+       "1": "Kanäle von Karabor",
+       "2": "Zuflucht der Schatten",
+       "3": "Hallen der Pein",
+       "4": "Blutschattens Wacht",
+       "5": "Hof der Irdischen Gelüste",
+       "6": "Kommandoraum",
+       "7": "Tempelspitze"
+      },
+      "enCN": {
+       "1": "卡拉波下水道",
+       "2": "暗影圣殿",
+       "3": "苦痛大厅",
+       "4": "血魔之厅",
+       "5": "欢愉之园",
+       "6": "命令大厅",
+       "7": "神殿之巅"
+      },
+      "enGB": {
+       "1": "Karabor Sewers",
+       "2": "Sanctuary of Shadows",
+       "3": "Halls of Anguish",
+       "4": "Gorefiend's Vigil",
+       "5": "Den of Mortal Delights",
+       "6": "Chamber of Command",
+       "7": "Temple Summit"
+      },
+      "enUS": {
+       "1": "Karabor Sewers",
+       "2": "Sanctuary of Shadows",
+       "3": "Halls of Anguish",
+       "4": "Gorefiend's Vigil",
+       "5": "Den of Mortal Delights",
+       "6": "Chamber of Command",
+       "7": "Temple Summit"
+      },
+      "esES": {
+       "1": "Cloacas de Karabor",
+       "2": "Santuario de las Sombras",
+       "3": "Salas de Angustia",
+       "4": "Vigilia de Sanguino",
+       "5": "Guarida de los Placeres Mortales",
+       "6": "Cámara de Mando",
+       "7": "Cima del Templo"
+      },
+      "esMX": {
+       "1": "Cloacas de Karabor",
+       "2": "Santuario de las Sombras",
+       "3": "Salas de Angustia",
+       "4": "Vigilia de Sanguino",
+       "5": "Guarida de los Placeres Mortales",
+       "6": "Cámara de Mando",
+       "7": "Cima del Templo"
+      },
+      "frFR": {
+       "1": "Égouts de Karabor",
+       "2": "Sanctuaire des ombres",
+       "3": "Les salles de l’Angoisse",
+       "4": "Veillée de Fielsang",
+       "5": "Tanière des Délices mortels",
+       "6": "Chambre de commandement",
+       "7": "Sommet du temple"
+      },
+      "koKR": {
+       "1": "카라보르 하수도",
+       "2": "어둠의 성역",
+       "3": "고뇌의 전당",
+       "4": "고어핀드의 경비초소",
+       "5": "향락의 소굴",
+       "6": "지휘의 방",
+       "7": "사원 정상"
+      },
+      "ruRU": {
+       "1": "Канализация",
+       "2": "Святилище Теней",
+       "3": "Залы Страданий",
+       "4": "Пост Кровожада",
+       "5": "Приют Земных Наслаждений",
+       "6": "Чертог Власти",
+       "7": "Храмовая вершина"
+      },
+      "zhCN": {
+       "1": "卡拉波下水道",
+       "2": "暗影圣殿",
+       "3": "苦痛大厅",
+       "4": "血魔之厅",
+       "5": "欢愉之园",
+       "6": "命令大厅",
+       "7": "神殿之巅"
+      },
+      "zhTW": {
+       "1": "卡拉伯爾下水道",
+       "2": "暗影聖堂",
+       "3": "苦痛大廳",
+       "4": "血魔禁地",
+       "5": "凡慾邪窟",
+       "6": "指揮之廳",
+       "7": "神廟議會"
+      }
+     },
+     "floors": [
+      {
+       "field3": 23.87053871154785,
+       "field4": 1276.1201171875,
+       "field5": -240.0,
+       "field6": 594.8330078125,
+       "field7": 473,
+       "floor": 1,
+       "id": 433
+      },
+      {
+       "field3": -176.0,
+       "field4": 799.0,
+       "field5": 380.0,
+       "field6": 1030.0,
+       "field7": 473,
+       "floor": 2,
+       "id": 434
+      },
+      {
+       "field3": -191.0,
+       "field4": 814.0,
+       "field5": 400.0,
+       "field6": 1070.0,
+       "field7": 473,
+       "floor": 3,
+       "id": 435
+      },
+      {
+       "field3": 134.99951171875,
+       "field4": 575.00048828125,
+       "field5": 343.3330078125,
+       "field6": 636.6669921875,
+       "field7": 473,
+       "floor": 4,
+       "id": 436
+      },
+      {
+       "field3": -70.0,
+       "field4": 600.0,
+       "field5": 664.1636352539062,
+       "field6": 1110.830322265625,
+       "field7": 473,
+       "floor": 5,
+       "id": 437
+      },
+      {
+       "field3": -67.5,
+       "field4": 637.5,
+       "field5": 450.0,
+       "field6": 920.0,
+       "field7": 473,
+       "floor": 6,
+       "id": 438
+      },
+      {
+       "field3": 137.5,
+       "field4": 492.5,
+       "field5": 606.6666870117188,
+       "field6": 843.3333129882812,
+       "field7": 473,
+       "floor": 7,
+       "id": 439
+      }
+     ],
+     "id": 796,
+     "internalName": "BlackTemple",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 949.9999389648438,
+     "x2": 427.08331298828125,
+     "y1": 1150.0,
+     "y2": 366.6666564941406
+    }
+   ],
+   "mapId": 564
+  }
+ ]
+}

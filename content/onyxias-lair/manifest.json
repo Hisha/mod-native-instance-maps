@@ -1,0 +1,188 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/OnyxiasLair1_1.blp",
+   "target": "Interface/WorldMap/OnyxiasLair/OnyxiasLair1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/OnyxiasLair1_2.blp",
+   "target": "Interface/WorldMap/OnyxiasLair/OnyxiasLair1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/OnyxiasLair1_3.blp",
+   "target": "Interface/WorldMap/OnyxiasLair/OnyxiasLair1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/OnyxiasLair1_4.blp",
+   "target": "Interface/WorldMap/OnyxiasLair/OnyxiasLair1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/OnyxiasLair1_5.blp",
+   "target": "Interface/WorldMap/OnyxiasLair/OnyxiasLair1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/OnyxiasLair1_6.blp",
+   "target": "Interface/WorldMap/OnyxiasLair/OnyxiasLair1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/OnyxiasLair1_7.blp",
+   "target": "Interface/WorldMap/OnyxiasLair/OnyxiasLair1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/OnyxiasLair1_8.blp",
+   "target": "Interface/WorldMap/OnyxiasLair/OnyxiasLair1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/OnyxiasLair1_9.blp",
+   "target": "Interface/WorldMap/OnyxiasLair/OnyxiasLair1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/OnyxiasLair1_10.blp",
+   "target": "Interface/WorldMap/OnyxiasLair/OnyxiasLair1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/OnyxiasLair1_11.blp",
+   "target": "Interface/WorldMap/OnyxiasLair/OnyxiasLair1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/OnyxiasLair1_12.blp",
+   "target": "Interface/WorldMap/OnyxiasLair/OnyxiasLair1_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Onyxia's Lair instance map: 1 DungeonMap floor, 8 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 12 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Onyxia's Lair",
+ "package": "mod-native-instance-maps.onyxias-lair",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 2159,
+     "chunks": [
+      {
+       "dungeonMapId": 196,
+       "field2": 13551,
+       "field4": -10000.0,
+       "id": 2938
+      },
+      {
+       "dungeonMapId": 196,
+       "field2": 13552,
+       "field4": -10000.0,
+       "id": 2943
+      },
+      {
+       "dungeonMapId": 196,
+       "field2": 13553,
+       "field4": -10000.0,
+       "id": 2939
+      },
+      {
+       "dungeonMapId": 196,
+       "field2": 13554,
+       "field4": -10000.0,
+       "id": 2942
+      },
+      {
+       "dungeonMapId": 196,
+       "field2": 13555,
+       "field4": -10000.0,
+       "id": 2944
+      },
+      {
+       "dungeonMapId": 196,
+       "field2": 13556,
+       "field4": -10000.0,
+       "id": 2940
+      },
+      {
+       "dungeonMapId": 196,
+       "field2": 13557,
+       "field4": -10000.0,
+       "id": 2945
+      },
+      {
+       "dungeonMapId": 196,
+       "field2": 13558,
+       "field4": -10000.0,
+       "id": 2941
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Onyxias Hort"
+      },
+      "enCN": {
+       "1": "奥妮克希亚的巢穴"
+      },
+      "enGB": {
+       "1": "Onyxia's Lair"
+      },
+      "enUS": {
+       "1": "Onyxia's Lair"
+      },
+      "esES": {
+       "1": "Guarida de Onyxia"
+      },
+      "esMX": {
+       "1": "Guarida de Onyxia"
+      },
+      "frFR": {
+       "1": "Le repaire d'Onyxia"
+      },
+      "koKR": {
+       "1": "오닉시아의 둥지"
+      },
+      "ruRU": {
+       "1": "Логово Ониксии"
+      },
+      "zhCN": {
+       "1": "奥妮克希亚的巢穴"
+      },
+      "zhTW": {
+       "1": "奧妮克希亞的巢穴"
+      }
+     },
+     "floors": [
+      {
+       "field3": -371.7349853515625,
+       "field4": 111.38300323486328,
+       "field5": -223.83299255371094,
+       "field6": 98.24579620361328,
+       "field7": 141,
+       "floor": 1,
+       "id": 196
+      }
+     ],
+     "id": 718,
+     "internalName": "OnyxiasLair",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 249
+  }
+ ]
+}

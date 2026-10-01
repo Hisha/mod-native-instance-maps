@@ -1,0 +1,212 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/MoltenCore1_1.blp",
+   "target": "Interface/WorldMap/MoltenCore/MoltenCore1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MoltenCore1_2.blp",
+   "target": "Interface/WorldMap/MoltenCore/MoltenCore1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MoltenCore1_3.blp",
+   "target": "Interface/WorldMap/MoltenCore/MoltenCore1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MoltenCore1_4.blp",
+   "target": "Interface/WorldMap/MoltenCore/MoltenCore1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MoltenCore1_5.blp",
+   "target": "Interface/WorldMap/MoltenCore/MoltenCore1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MoltenCore1_6.blp",
+   "target": "Interface/WorldMap/MoltenCore/MoltenCore1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MoltenCore1_7.blp",
+   "target": "Interface/WorldMap/MoltenCore/MoltenCore1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MoltenCore1_8.blp",
+   "target": "Interface/WorldMap/MoltenCore/MoltenCore1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MoltenCore1_9.blp",
+   "target": "Interface/WorldMap/MoltenCore/MoltenCore1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MoltenCore1_10.blp",
+   "target": "Interface/WorldMap/MoltenCore/MoltenCore1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MoltenCore1_11.blp",
+   "target": "Interface/WorldMap/MoltenCore/MoltenCore1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MoltenCore1_12.blp",
+   "target": "Interface/WorldMap/MoltenCore/MoltenCore1_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Molten Core instance map: 1 DungeonMap floor, 12 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 12 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Molten Core",
+ "package": "mod-native-instance-maps.molten-core",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 2717,
+     "chunks": [
+      {
+       "dungeonMapId": 181,
+       "field2": 14763,
+       "field4": -10000.0,
+       "id": 2832
+      },
+      {
+       "dungeonMapId": 181,
+       "field2": 14764,
+       "field4": -10000.0,
+       "id": 2826
+      },
+      {
+       "dungeonMapId": 181,
+       "field2": 14765,
+       "field4": -10000.0,
+       "id": 2825
+      },
+      {
+       "dungeonMapId": 181,
+       "field2": 14766,
+       "field4": -10000.0,
+       "id": 2833
+      },
+      {
+       "dungeonMapId": 181,
+       "field2": 14767,
+       "field4": -10000.0,
+       "id": 2827
+      },
+      {
+       "dungeonMapId": 181,
+       "field2": 14768,
+       "field4": -10000.0,
+       "id": 2834
+      },
+      {
+       "dungeonMapId": 181,
+       "field2": 14769,
+       "field4": -10000.0,
+       "id": 2824
+      },
+      {
+       "dungeonMapId": 181,
+       "field2": 14770,
+       "field4": -10000.0,
+       "id": 2828
+      },
+      {
+       "dungeonMapId": 181,
+       "field2": 14771,
+       "field4": -10000.0,
+       "id": 2835
+      },
+      {
+       "dungeonMapId": 181,
+       "field2": 14772,
+       "field4": -10000.0,
+       "id": 2829
+      },
+      {
+       "dungeonMapId": 181,
+       "field2": 14773,
+       "field4": -10000.0,
+       "id": 2830
+      },
+      {
+       "dungeonMapId": 181,
+       "field2": 14775,
+       "field4": -10000.0,
+       "id": 2831
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Der Geschmolzene Kern"
+      },
+      "enCN": {
+       "1": "熔火之心"
+      },
+      "enGB": {
+       "1": "The Molten Core"
+      },
+      "enUS": {
+       "1": "The Molten Core"
+      },
+      "esES": {
+       "1": "Núcleo de Magma"
+      },
+      "esMX": {
+       "1": "Núcleo de Magma"
+      },
+      "frFR": {
+       "1": "Le Cœur du Magma"
+      },
+      "koKR": {
+       "1": "화산 심장부"
+      },
+      "ruRU": {
+       "1": "Огненные Недра"
+      },
+      "zhCN": {
+       "1": "熔火之心"
+      },
+      "zhTW": {
+       "1": "熔火之心"
+      }
+     },
+     "floors": [
+      {
+       "field3": -1395.56005859375,
+       "field4": -130.75999450683594,
+       "field5": 459.8609924316406,
+       "field6": 1303.06005859375,
+       "field7": 29,
+       "floor": 1,
+       "id": 181
+      }
+     ],
+     "id": 696,
+     "internalName": "MoltenCore",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 409
+  }
+ ]
+}

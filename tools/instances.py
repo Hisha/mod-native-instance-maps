@@ -11,6 +11,18 @@ is deliberately asymmetric: it is easy to be SAFE and very hard to stay there.
 A candidate is SAFE only when the whole package can be expressed as *additive*
 ``worldMaps[]`` data whose every row already exists, byte for byte, in WDM
 Stable and whose every reference resolves inside the package.
+
+Every candidate reaches a terminal verdict.  There is no "a human should look at
+this later" level, because every question this battery can ask has been asked and
+answered against the vendored data; a candidate that is not SAFE records exactly
+which row, artwork or reference is missing, and why no package can be built from
+it without either authoring data WDM does not ship or replacing a row the stock
+client already has.
+
+Artwork is resolved case-insensitively against the declared ``internal_name``,
+because WDM Stable ships two dungeon artwork directories whose casing disagrees
+with the ``WorldMapArea.internal_name`` they belong to.  See
+:func:`tile_target_name`.
 """
 
 from __future__ import annotations
@@ -26,16 +38,25 @@ import paths
 
 __all__ = [
     "SAFE",
-    "REVIEW",
+    "TABLES",
     "UNSAFE",
     "Candidate",
     "Discovery",
     "discover",
     "artwork_files",
+    "tile_target_name",
 ]
 
+#: The four client tables a native instance map composes into, in the order the
+#: coverage audit and the reports list them.
+TABLES = ("DungeonMap", "DungeonMapChunk", "WorldMapArea", "WorldMapTransforms")
+
+#: A complete, additive package can be built from WDM Stable alone.
 SAFE = "SAFE"
-REVIEW = "REVIEW"
+
+#: No package can be built.  Either WDM Stable ships nothing additive for the map,
+#: or the only package that would work has to replace a row the stock client
+#: already has.  Every UNSAFE candidate carries the reason codes that say which.
 UNSAFE = "UNSAFE"
 
 _NATURAL = re.compile(r"(\d+)")
@@ -60,6 +81,54 @@ def artwork_files(directory: Path) -> List[str]:
     )
 
 
+def tile_target_name(internal_name: str, source_dir: Optional[str], leaf: str) -> str:
+    """The tile file name the client looks for, given a WDM artwork leaf name.
+
+    The client derives a tile's name from the ``WorldMapArea.internal_name`` of
+    the area it is drawing, and WDM's artwork directory is not always spelled with
+    those same capitals: it ships ``BlackFathomDeeps/BlackFathomDeeps1_1.blp`` for
+    the area whose ``internal_name`` is ``BlackfathomDeeps``, and
+    ``Magtheridonslair/`` for ``MagtheridonsLair``.
+
+    That inconsistency is WDM's, and it only resolves at all because the client
+    runs on a case-insensitive filesystem.  A package does not need the filesystem
+    to rescue it: the name is rebuilt from the client-baked ``internal_name`` the
+    DBC row carries, which is the identity the client actually uses.  Only the
+    path changes -- the BLP bytes are copied verbatim, and the ``<floor>_<tile>``
+    tail is WDM's own, so no tile is added, dropped, reordered or renumbered.
+
+    Scope is deliberately the directory name.  A leaf that is not the area's own
+    name in different capitals -- including WDM's own inconsistent casing *within*
+    a directory, and flat ``<name><n>.blp`` world tiles -- is returned unchanged,
+    so a genuine naming defect still reaches the caller as a defect instead of
+    being silently rewritten.
+    """
+    if leaf.startswith(internal_name):
+        return leaf
+    if source_dir and source_dir.casefold() == internal_name.casefold():
+        if leaf.startswith(source_dir):
+            return internal_name + leaf[len(source_dir) :]
+    return leaf
+
+    match = _DUNGEON_TILE.match(leaf)
+    if match and match.group("prefix").casefold() == internal_name.casefold():
+        return internal_name + match.group("tail")
+    return leaf
+
+
+def artwork_alias_matches(artwork_dirs: Dict[str, Path], internal_name: str) -> List[str]:
+    """WDM artwork directories that differ from ``internal_name`` only by case.
+
+    Sorted so a candidate's artwork source is deterministic.  An empty list means
+    the area either has its own directory or has no artwork at all; more than one
+    entry means the spelling is genuinely ambiguous and nothing may be bound.
+    """
+    folded = internal_name.casefold()
+    return sorted(
+        name for name in artwork_dirs if name.casefold() == folded and name != internal_name
+    )
+
+
 def _all_entries(directory: Path) -> List[str]:
     if not directory.is_dir():
         return []
@@ -80,7 +149,17 @@ class Candidate:
     artwork_dir: str
     blps: List[str] = field(default_factory=list)
     artwork_entries: List[str] = field(default_factory=list)
-    artwork_alias: Optional[str] = None
+    #: The WDM directory the tiles are read from.  Equal to ``internal_name``
+    #: except where WDM's artwork directory casing disagrees with the
+    #: ``WorldMapArea`` row that owns it; ``None`` until :func:`discover` binds it.
+    artwork_source: Optional[str] = None
+    #: WDM directory names that case-fold to this candidate's ``internal_name``.
+    #: Empty is the ordinary case, one entry is a bound alias, more than one is
+    #: an ambiguous spelling nothing may be bound to.
+    artwork_aliases: List[str] = field(default_factory=list)
+    #: Set when another candidate's ``internal_name`` is this candidate's only
+    #: spelling difference away, i.e. this directory is that map's artwork.
+    artwork_claimed_by: Optional[str] = None
     reason_codes: List[str] = field(default_factory=list)
     world_map_area_ids: List[int] = field(default_factory=list)
     world_map_area_additive: List[bool] = field(default_factory=list)
@@ -94,7 +173,7 @@ class Candidate:
     #: signed 32-bit integer.  This is a *reference* the client reads, not a row
     #: this package owns, so it is recorded for fidelity and never rewritten.
     area_dungeon_map_id: Optional[int] = None
-    classification: str = REVIEW
+    classification: str = UNSAFE
     findings: List[str] = field(default_factory=list)
 
     @property
@@ -102,9 +181,31 @@ class Candidate:
         return paths.package_key(self.slug)
 
     @property
+    def source_dir(self) -> str:
+        """The WDM directory name the tiles are read from."""
+        return self.artwork_source or self.internal_name
+
+    @property
+    def tile_targets(self) -> List[str]:
+        """Tile file names the client derives from ``internal_name``, in WDM order."""
+        return [
+            tile_target_name(self.internal_name, self.source_dir, leaf)
+            for leaf in self.blps
+        ]
+
+    @property
+    def artwork_renames(self) -> Dict[str, str]:
+        """``source leaf -> target leaf`` for the tiles WDM mis-cased, if any."""
+        return {
+            source: target
+            for source, target in zip(self.blps, self.tile_targets)
+            if source != target
+        }
+
+    @property
     def artwork_targets(self) -> List[str]:
         prefix = f"Interface/WorldMap/{self.internal_name}/"
-        return [prefix + name for name in self.blps]
+        return [prefix + leaf for leaf in self.tile_targets]
 
     def to_json(self) -> Dict[str, object]:
         return {
@@ -114,6 +215,10 @@ class Candidate:
             "package": self.package_key,
             "mapId": self.map_id,
             "artworkDirectory": self.artwork_dir,
+            "artworkSource": self.source_dir,
+            "artworkLeafRenames": self.artwork_renames,
+            "artworkNameAliases": list(self.artwork_aliases),
+            "artworkClaimedBy": self.artwork_claimed_by,
             "blpCount": len(self.blps),
             "worldMapArea": [
                 {"id": identifier, "additive": additive}
@@ -135,7 +240,6 @@ class Candidate:
                     self.transform_ids, self.transform_additive
                 )
             ],
-            "artworkNameAlias": self.artwork_alias,
             "areaDungeonMapId": self.area_dungeon_map_id,
             "classification": self.classification,
             "reasonCodes": list(self.reason_codes),
@@ -150,6 +254,11 @@ class Discovery:
     unmapped_wdm_only_areas: List[Dict[str, object]]
     floors_without_area: List[Dict[str, object]]
     stock_mutations: List[Dict[str, object]]
+    #: WDM-added row IDs per table, and the stock baseline's ID set.  Populated by
+    #: :func:`discover`; :meth:`coverage` and the reports read them so the numbers
+    #: have exactly one source.
+    added_ids: Dict[str, set] = field(default_factory=dict)
+    stock_ids: Dict[str, set] = field(default_factory=dict)
 
     def by_classification(self, level: str) -> List[Candidate]:
         return [item for item in self.candidates if item.classification == level]
@@ -158,9 +267,70 @@ class Discovery:
         return {
             "candidates": len(self.candidates),
             SAFE: len(self.by_classification(SAFE)),
-            REVIEW: len(self.by_classification(REVIEW)),
             UNSAFE: len(self.by_classification(UNSAFE)),
         }
+
+    def claimed_ids(self, table: str, level: Optional[str] = None) -> set:
+        """Every row ID the given classification claims in one table.
+
+        ``level=None`` means every candidate, which is what the coverage audit
+        needs to tell "held back by a decided UNSAFE map" apart from "belongs to no
+        map this project could package at all".
+        """
+        accessor = {
+            "DungeonMap": lambda item: item.floor_ids,
+            "DungeonMapChunk": lambda item: item.chunk_ids,
+            "WorldMapArea": lambda item: item.world_map_area_ids,
+            "WorldMapTransforms": lambda item: item.transform_ids,
+        }[table]
+        out: set = set()
+        for item in self.candidates:
+            if level is not None and item.classification != level:
+                continue
+            out.update(accessor(item))
+        return out
+
+    def coverage(self) -> List[Dict[str, object]]:
+        """Reconcile WDM's added rows against what the SAFE set actually ships.
+
+        The three numbers per table are the whole claim this project makes, so
+        they are computed rather than asserted:
+
+        ``shipped``
+            added rows a SAFE candidate owns.  Every one of these becomes a
+            composer request, a lease and a composed row.
+        ``heldBack``
+            added rows a decided UNSAFE candidate owns, with the reason codes
+            that stopped it.
+        ``unowned``
+            added rows no candidate claims, because the map they belong to has no
+            artwork directory and no additive area or floor to package.
+        """
+        out: List[Dict[str, object]] = []
+        for table in TABLES:
+            added = self.added_ids[table]
+            shipped = self.claimed_ids(table, SAFE) & added
+            unsafe = self.claimed_ids(table, UNSAFE) & added
+            owners: Dict[int, List[str]] = {}
+            accessor = {
+                "DungeonMap": lambda item: item.floor_ids,
+                "DungeonMapChunk": lambda item: item.chunk_ids,
+                "WorldMapArea": lambda item: item.world_map_area_ids,
+                "WorldMapTransforms": lambda item: item.transform_ids,
+            }[table]
+            for item in self.by_classification(UNSAFE):
+                for identifier in set(accessor(item)) & added:
+                    owners.setdefault(identifier, []).append(item.internal_name)
+            out.append(
+                {
+                    "table": table,
+                    "added": len(added),
+                    "shipped": len(shipped),
+                    "heldBack": {identifier: names for identifier, names in sorted(owners.items())},
+                    "unowned": sorted(added - shipped - set(owners)),
+                }
+            )
+        return out
 
 
 # ---------------------------------------------------------------------------
@@ -171,7 +341,7 @@ class Discovery:
 def _load_tables(wdm_dbc: Path) -> Dict[str, DbcFile]:
     return {
         table: parse_file(wdm_dbc / f"{table}.dbc", table)
-        for table in ("DungeonMap", "DungeonMapChunk", "WorldMapArea", "WorldMapTransforms")
+        for table in TABLES
     }
 
 
@@ -191,8 +361,6 @@ class StockView:
         any declared ID that is occupied in the verified stock baseline, and it
         must, because appending a second row with a live ID is not an append.
     """
-
-    TABLES = ("DungeonMap", "DungeonMapChunk", "WorldMapArea", "WorldMapTransforms")
 
     def __init__(self, documents: Dict[str, DbcFile]):
         self.documents = documents
@@ -243,13 +411,13 @@ def _stock_view(stock_dbc: Path, wdm_dbc: Path) -> "StockView":
     view = StockView(
         {
             table: parse_file(stock_dbc / f"{table}.dbc", table)
-            for table in StockView.TABLES
+            for table in TABLES
         }
     )
     view.attach_wdm(
         {
             table: parse_file(wdm_dbc / f"{table}.dbc", table)
-            for table in StockView.TABLES
+            for table in TABLES
         }
     )
     return view
@@ -260,7 +428,7 @@ def stock_mutation_records(
 ) -> List[Dict[str, object]]:
     """Every place WDM changes or drops a row the stock client already has."""
     out: List[Dict[str, object]] = []
-    for table in StockView.TABLES:
+    for table in TABLES:
         document = tables[table]
         for identifier in sorted(stock.mutated[table] | stock.removed[table]):
             if identifier in stock.removed[table]:
@@ -360,7 +528,14 @@ def discover(
         map_id = area_rows[0].map_id() if area_rows else None
         if map_id is not None:
             covered_maps.add(map_id)
+        # Artwork is looked up by the exact directory first and by a case-only
+        # variant second, so an area whose WorldMapArea row is spelled with
+        # different capitals than its own artwork directory still finds its
+        # tiles.  Nothing is bound when the spelling is ambiguous.
+        aliases = artwork_alias_matches(artwork_dirs, name)
         directory = artwork_dirs.get(name)
+        if directory is None and len(aliases) == 1:
+            directory = artwork_dirs[aliases[0]]
         candidate = Candidate(
             internal_name=name,
             map_id=map_id,
@@ -369,6 +544,8 @@ def discover(
             artwork_dir=f"Interface/WorldMap/{name}",
             blps=artwork_files(directory) if directory else [],
             artwork_entries=_all_entries(directory) if directory else [],
+            artwork_source=directory.name if directory else None,
+            artwork_aliases=aliases,
         )
         candidate.world_map_area_ids = [record.id for record in area_rows]
         candidate.world_map_area_additive = [
@@ -416,6 +593,7 @@ def discover(
         }
         for record in added_areas
         if str(record.value("internal_name")) not in artwork_dirs
+        and not artwork_alias_matches(artwork_dirs, str(record.value("internal_name")))
     ]
     floors_without_area = [
         {
@@ -426,12 +604,22 @@ def discover(
         if map_id not in covered_maps
     ]
 
+    # An artwork directory whose name is only a case variant of a *different*
+    # candidate's ``internal_name`` is that candidate's artwork, not a map of its
+    # own: the area row that would make it a map does not exist.  Recorded so the
+    # duplicate spelling is reported instead of being counted twice.
+    owners = {
+        candidate.internal_name: candidate
+        for candidate in candidates
+        if candidate.world_map_area_ids
+    }
     for candidate in candidates:
-        if not candidate.artwork_entries:
-            folded = candidate.internal_name.casefold()
-            aliases = [name for name in artwork_dirs if name.casefold() == folded]
-            if aliases and aliases[0] != candidate.internal_name:
-                candidate.artwork_alias = aliases[0]
+        if candidate.world_map_area_ids:
+            continue
+        for owner_name, owner in owners.items():
+            if owner_name.casefold() == candidate.internal_name.casefold():
+                candidate.artwork_claimed_by = owner.internal_name
+                break
 
     discovery = Discovery(
         candidates=candidates,
@@ -439,6 +627,11 @@ def discover(
         unmapped_wdm_only_areas=unmapped,
         floors_without_area=floors_without_area,
         stock_mutations=stock_mutation_records(stock, tables, wdm_dbc),
+        added_ids={
+            table: {record.id for record in document.records} - stock.ids[table]
+            for table, document in tables.items()
+        },
+        stock_ids={table: set(ids) for table, ids in stock.ids.items()},
     )
     for candidate in candidates:
         _classify(candidate, tables, stock)
@@ -449,33 +642,29 @@ def discover(
 # Reason codes
 # ---------------------------------------------------------------------------
 #
-# Every rejection is one of these.  ``UNSAFE`` codes mean the package cannot be
-# built without breaking mod-content-manager's append-only contract (an
-# existing stock row would have to be replaced, or the client would be handed
-# artwork it cannot read).  ``REVIEW`` codes mean WDM's own rows are additive
-# and self-consistent but the package cannot be completed from them alone, so a
-# human has to decide whether the gap may be closed at all.
-
-# The only two states a package genuinely cannot be built from.  Both mean the
-# client would end up holding something WDM's own data contradicts.
-UNSAFE_REASONS = frozenset(
-    {
-        "stock-mutation-required",
-        "artwork-not-blp",
-    }
-)
-
-# Everything else is additive-but-incomplete: WDM's rows are consistent and
-# safe to append, they just do not add up to a shippable package.  A human has
-# to decide whether the gap may be closed, and how.
+# A closed set: every reason a candidate is not SAFE is one of these, and each
+# one states which of the three things a package needs is missing or contradictory:
+#
+# ``no-*-row``
+#     WDM Stable does not ship a row the map cannot exist without.  Filling the
+#     gap would mean authoring data WDM does not have, which is invention.
+#
+# ``stock-*-untouched`` / ``stock-mutation-required``
+#     The row already exists in the verified stock baseline.  Untouched, there is
+#     nothing additive to append.  Mutated or deleted, the only working package
+#     would replace a row the client already has, which mod-content-manager's
+#     append-only composer must refuse.
+#
+# ``*-unreadable``
+#     The client would be handed artwork or a row it cannot read back.
 #
 # Two codes that earlier revisions of this file carried are deliberately absent:
 #
 # ``no-transform``
-#     A missing ``WorldMapTransforms`` row is not an incompleteness.  The four
-#     tables describe a native instance map completely without it: stock 3.3.5a
-#     and WDM Stable both ship large multi-floor instances with no transform row
-#     at all (Karazhan, map 532, is seventeen floors with none), and
+#     A missing ``WorldMapTransforms`` row is not a defect.  The four tables
+#     describe a native instance map completely without it: stock 3.3.5a and WDM
+#     Stable both ship large multi-floor instances with no transform row at all
+#     (Karazhan, map 532, is seventeen floors with none), and
 #     mod-content-manager treats ``worldMaps[].transform`` as optional.  A
 #     transform is source data: WDM's rows are preserved byte for byte when it
 #     has one, and when it has none the key is simply absent.  Nothing is derived,
@@ -488,12 +677,15 @@ UNSAFE_REASONS = frozenset(
 #     ``DungeonMap`` row belonging to a different map.  All three are legitimate
 #     source values, so requiring the reference to name a floor of the same map
 #     rejected real content.  The value is carried through verbatim instead.
-REVIEW_REASONS = frozenset(
+UNSAFE_REASONS = frozenset(
     {
+        "stock-mutation-required",
+        "artwork-not-blp",
+        "artwork-name-ambiguous",
+        "duplicate-artwork-alias",
         "no-world-map-area",
         "ambiguous-world-map-area",
         "no-artwork",
-        "artwork-name-mismatch",
         "no-floors",
         "no-chunks",
         "floor-zero",
@@ -530,22 +722,40 @@ def _classify(candidate: Candidate, tables: Dict[str, DbcFile], stock: "StockVie
     chunks: DbcFile = tables["DungeonMapChunk"]
     transforms: DbcFile = tables["WorldMapTransforms"]
 
+    # ---- a second spelling of a map that already has one --------------------
+    # WDM Stable spells two dungeon artwork directories with different capitals
+    # than the ``WorldMapArea.internal_name`` they belong to, and names no
+    # ``WorldMapArea`` row for the artwork spelling at all.  That directory is
+    # therefore one map's artwork, not a map of its own, and every other check
+    # would be noise around this one root cause.
+    if candidate.artwork_claimed_by:
+        check.fail(
+            "duplicate-artwork-alias",
+            f"Interface/WorldMap/{candidate.source_dir}/ is the artwork of "
+            f"{candidate.artwork_claimed_by} -- the same name in different capitals. "
+            f"WDM Stable declares no WorldMapArea row for {candidate.internal_name!r}, "
+            "so it names no map of its own; these tiles ship with "
+            f"{candidate.artwork_claimed_by} and are not a separate candidate",
+        )
+        _finish(candidate, check)
+        return
+
     # ---- artwork -----------------------------------------------------------
     if not candidate.artwork_entries:
-        match = candidate.artwork_alias
-        if match:
+        if len(candidate.artwork_aliases) > 1:
             check.fail(
-                "artwork-name-mismatch",
-                f"WDM Stable draws this map from Interface/WorldMap/{match}/, but the "
-                f"WorldMapArea internal_name is {candidate.internal_name!r}; the client "
-                "derives the directory from internal_name, and inventing or re-casing "
-                "either name would change a client-baked identity",
+                "artwork-name-ambiguous",
+                f"WDM Stable ships {len(candidate.artwork_aliases)} artwork directories "
+                f"that differ from {candidate.internal_name!r} only by case "
+                f"({', '.join(candidate.artwork_aliases)}); none of them can be chosen "
+                "without inventing which one the client reads",
             )
         else:
             check.fail(
                 "no-artwork",
-                f"WDM Stable ships no artwork under {candidate.artwork_dir}; the client "
-                "draws the map from that directory, so the package would be invisible",
+                f"WDM Stable ships no artwork for {candidate.internal_name!r}; the client "
+                f"draws the map from {candidate.artwork_dir}/, so the package would be "
+                "invisible",
             )
     else:
         strays = [
@@ -604,21 +814,15 @@ def _classify(candidate: Candidate, tables: Dict[str, DbcFile], stock: "StockVie
         # Artwork directory with no WorldMapArea row.  Every other check is
         # downstream of a map identity that WDM never supplies, so reporting
         # them would just be noise around one root cause.
-        candidate.reason_codes = sorted(check.codes)
-        candidate.findings = check.findings
-        candidate.classification = (
-            UNSAFE
-            if check.codes & UNSAFE_REASONS
-            else REVIEW
-            if check.codes
-            else SAFE
-        )
+        _finish(candidate, check)
         return
     if not candidate.floor_ids:
         check.fail(
             "no-floors",
-            f"WDM Stable declares no DungeonMap floor for map {candidate.map_id}; the "
-            "instance has no floor geometry to compose",
+            f"WDM Stable declares no DungeonMap floor for map {candidate.map_id}, and "
+            "mod-content-manager rejects a worldMaps[].areas[] entry that declares no "
+            "floors at all.  The map cannot be expressed; supplying a floor row would "
+            "be authoring geometry WDM does not ship",
         )
     else:
         for identifier in candidate.floor_ids:
@@ -743,15 +947,20 @@ def _classify(candidate: Candidate, tables: Dict[str, DbcFile], stock: "StockVie
                 f"map {candidate.map_id}",
             )
 
+    _finish(candidate, check)
+
+
+def _finish(candidate: Candidate, check: _Check) -> None:
+    """Record the verdict.  No reason code means SAFE; any code means UNSAFE."""
     candidate.reason_codes = sorted(check.codes)
     candidate.findings = check.findings
-    candidate.classification = (
-        UNSAFE
-        if check.codes & UNSAFE_REASONS
-        else REVIEW
-        if check.codes
-        else SAFE
-    )
+    unknown = check.codes - UNSAFE_REASONS
+    if unknown:
+        raise AssertionError(
+            f"{candidate.internal_name} carries undeclared reason code(s) "
+            f"{sorted(unknown)}; UNSAFE_REASONS is the closed set"
+        )
+    candidate.classification = UNSAFE if check.codes else SAFE
 
 
 def _join(values: Sequence[int], ellipsis: str = "") -> str:

@@ -1,0 +1,182 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/Magtheridonslair1_1.blp",
+   "target": "Interface/WorldMap/MagtheridonsLair/MagtheridonsLair1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Magtheridonslair1_2.blp",
+   "target": "Interface/WorldMap/MagtheridonsLair/MagtheridonsLair1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Magtheridonslair1_3.blp",
+   "target": "Interface/WorldMap/MagtheridonsLair/MagtheridonsLair1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Magtheridonslair1_4.blp",
+   "target": "Interface/WorldMap/MagtheridonsLair/MagtheridonsLair1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Magtheridonslair1_5.blp",
+   "target": "Interface/WorldMap/MagtheridonsLair/MagtheridonsLair1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Magtheridonslair1_6.blp",
+   "target": "Interface/WorldMap/MagtheridonsLair/MagtheridonsLair1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Magtheridonslair1_7.blp",
+   "target": "Interface/WorldMap/MagtheridonsLair/MagtheridonsLair1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Magtheridonslair1_8.blp",
+   "target": "Interface/WorldMap/MagtheridonsLair/MagtheridonsLair1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Magtheridonslair1_9.blp",
+   "target": "Interface/WorldMap/MagtheridonsLair/MagtheridonsLair1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Magtheridonslair1_10.blp",
+   "target": "Interface/WorldMap/MagtheridonsLair/MagtheridonsLair1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Magtheridonslair1_11.blp",
+   "target": "Interface/WorldMap/MagtheridonsLair/MagtheridonsLair1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Magtheridonslair1_12.blp",
+   "target": "Interface/WorldMap/MagtheridonsLair/MagtheridonsLair1_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Magtheridon's Lair instance map: 1 DungeonMap floor, 7 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 12 client BLP tiles. WDM Stable spells this map's artwork directory Magtheridonslair in different capitals than the WorldMapArea internal_name MagtheridonsLair; the 12 tiles are WDM's bytes installed at the names the client derives from internal_name. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Magtheridon's Lair",
+ "package": "mod-native-instance-maps.magtheridons-lair",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 3836,
+     "chunks": [
+      {
+       "dungeonMapId": 341,
+       "field2": 20481,
+       "field4": -10000.0,
+       "id": 4288
+      },
+      {
+       "dungeonMapId": 341,
+       "field2": 20482,
+       "field4": -10000.0,
+       "id": 4285
+      },
+      {
+       "dungeonMapId": 341,
+       "field2": 20483,
+       "field4": -10000.0,
+       "id": 4282
+      },
+      {
+       "dungeonMapId": 341,
+       "field2": 20484,
+       "field4": -10000.0,
+       "id": 4283
+      },
+      {
+       "dungeonMapId": 341,
+       "field2": 20485,
+       "field4": -10000.0,
+       "id": 4287
+      },
+      {
+       "dungeonMapId": 341,
+       "field2": 20486,
+       "field4": -10000.0,
+       "id": 4284
+      },
+      {
+       "dungeonMapId": 341,
+       "field2": 21208,
+       "field4": -10000.0,
+       "id": 4286
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Magtheridons Kammer"
+      },
+      "enCN": {
+       "1": "玛瑟里顿的巢穴"
+      },
+      "enGB": {
+       "1": "Magtheridon's Lair"
+      },
+      "enUS": {
+       "1": "Magtheridon's Lair"
+      },
+      "esES": {
+       "1": "Guarida de Magtheridon"
+      },
+      "esMX": {
+       "1": "Guarida de Magtheridon"
+      },
+      "frFR": {
+       "1": "Le repaire de Magtheridon"
+      },
+      "koKR": {
+       "1": "마그테리돈의 둥지"
+      },
+      "ruRU": {
+       "1": "Логово Магтеридона"
+      },
+      "zhCN": {
+       "1": "玛瑟里顿的巢穴"
+      },
+      "zhTW": {
+       "1": "瑪瑟里頓的巢穴"
+      }
+     },
+     "floors": [
+      {
+       "field3": -170.5,
+       "field4": 385.5,
+       "field5": -115.3333511352539,
+       "field6": 255.33334350585938,
+       "field7": 465,
+       "floor": 1,
+       "id": 341
+      }
+     ],
+     "id": 779,
+     "internalName": "MagtheridonsLair",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 544
+  }
+ ]
+}

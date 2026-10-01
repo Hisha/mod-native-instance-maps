@@ -30,12 +30,11 @@ import floornames  # noqa: E402
 import paths  # noqa: E402
 import semantic  # noqa: E402
 from instances import (  # noqa: E402
-    REVIEW,
-    REVIEW_REASONS,
     SAFE,
     UNSAFE,
     UNSAFE_REASONS,
     discover,
+    tile_target_name,
 )
 from package import (  # noqa: E402
     FIXED_TIME,
@@ -249,28 +248,24 @@ class TestDiscovery(_DiscoveryMixin, unittest.TestCase):
     def test_every_reason_code_is_declared(self):
         """Reason codes are a closed set, so reports cannot grow a new code that
         nothing has classified."""
-        declared = REVIEW_REASONS | UNSAFE_REASONS
-        self.assertEqual(REVIEW_REASONS & UNSAFE_REASONS, frozenset())
         for item in self.discovery.candidates:
             for code in item.reason_codes:
                 with self.subTest(name=item.internal_name, code=code):
-                    self.assertIn(code, declared)
+                    self.assertIn(code, UNSAFE_REASONS)
 
     def test_classification_follows_from_the_reason_codes(self):
         for item in self.discovery.candidates:
             with self.subTest(name=item.internal_name):
-                codes = set(item.reason_codes)
-                if not codes:
-                    self.assertEqual(item.classification, SAFE)
-                elif codes & UNSAFE_REASONS:
+                if item.reason_codes:
                     self.assertEqual(item.classification, UNSAFE)
                 else:
-                    self.assertEqual(item.classification, REVIEW)
+                    self.assertEqual(item.classification, SAFE)
 
     def test_every_candidate_is_classified(self):
+        """No candidate is left undecided."""
         for item in self.discovery.candidates:
             with self.subTest(name=item.internal_name):
-                self.assertIn(item.classification, (SAFE, REVIEW, UNSAFE))
+                self.assertIn(item.classification, (SAFE, UNSAFE))
                 if item.classification != SAFE:
                     self.assertTrue(item.reason_codes, "non-SAFE needs a reason")
                     self.assertTrue(item.findings)
@@ -290,7 +285,6 @@ class TestDiscovery(_DiscoveryMixin, unittest.TestCase):
         transform row, and mod-content-manager treats ``worldMaps[].transform`` as
         optional, so the code must not exist in the closed reason set at all.
         """
-        self.assertNotIn("no-transform", REVIEW_REASONS)
         self.assertNotIn("no-transform", UNSAFE_REASONS)
         for item in self.discovery.candidates:
             with self.subTest(name=item.internal_name):
@@ -320,7 +314,8 @@ class TestDiscovery(_DiscoveryMixin, unittest.TestCase):
                 "no-chunks",
                 "no-world-map-area",
                 "no-artwork",
-                "artwork-name-mismatch",
+                "artwork-name-ambiguous",
+                "duplicate-artwork-alias",
                 "stock-mutation-required",
             ):
                 if code in item.reason_codes:
@@ -338,10 +333,183 @@ class TestDiscovery(_DiscoveryMixin, unittest.TestCase):
                 self.assertIsNone(seen.get(item.map_id, None), "map claimed twice")
                 seen[item.map_id] = item.internal_name
 
+    # -- artwork spelling ---------------------------------------------------
+
+    #: The two dungeons whose WDM artwork directory is spelled with different
+    #: capitals than the ``WorldMapArea.internal_name`` that owns it, and the
+    #: spelling WDM uses on disk.
+    ARTWORK_ALIASES = {
+        "BlackfathomDeeps": "BlackFathomDeeps",
+        "MagtheridonsLair": "Magtheridonslair",
+    }
+
+    def test_only_the_two_known_artwork_spellings_differ(self):
+        """The whole re-casing mechanism is driven by data, not by a hardcoded
+        list of two maps.  Anything new that needs it shows up as a third entry
+        here and fails, so the case cannot be widened by accident."""
+        differing = {
+            item.internal_name: item.source_dir
+            for item in self.discovery.candidates
+            if item.source_dir != item.internal_name
+        }
+        self.assertEqual(differing, self.ARTWORK_ALIASES)
+
+    def test_a_differently_spelled_directory_is_bound_to_its_area(self):
+        for internal_name, source_dir in self.ARTWORK_ALIASES.items():
+            with self.subTest(name=internal_name):
+                item = self.candidate(internal_name)
+                self.assertEqual(item.source_dir, source_dir)
+                self.assertEqual(item.artwork_aliases, [source_dir])
+                self.assertTrue(item.blps, "no tiles resolved through the alias")
+                self.assertEqual(item.classification, SAFE)
+
+    def test_the_artwork_spelling_itself_is_not_a_candidate(self):
+        """WDM declares no WorldMapArea row for the artwork spelling, so it names
+        no map of its own and its tiles ship with the map that does."""
+        for internal_name, source_dir in self.ARTWORK_ALIASES.items():
+            with self.subTest(name=source_dir):
+                item = self.candidate(source_dir)
+                self.assertEqual(item.artwork_claimed_by, internal_name)
+                self.assertEqual(item.reason_codes, ["duplicate-artwork-alias"])
+                self.assertEqual(item.classification, UNSAFE)
+                self.assertIsNone(item.map_id)
+                # Exactly one of the two spellings is packageable, so the tiles
+                # are not shipped twice under two names.
+                self.assertEqual(self.candidate(internal_name).classification, SAFE)
+
+    def test_tile_targets_are_rebuilt_from_the_internal_name(self):
+        """The client derives the tile name from ``internal_name``; the package
+        installs WDM's bytes at exactly that name."""
+        for internal_name, source_dir in self.ARTWORK_ALIASES.items():
+            with self.subTest(name=internal_name):
+                item = self.candidate(internal_name)
+                for source, target in zip(item.blps, item.tile_targets):
+                    self.assertTrue(target.startswith(internal_name))
+                    self.assertEqual(
+                        target, internal_name + source[len(source_dir) :]
+                    )
+                # Nothing else in the name changes: the floor and tile indices are
+                # WDM's, only the leading name is rebuilt.
+                self.assertEqual(
+                    sorted(target[len(internal_name) :] for target in item.tile_targets),
+                    sorted(source[len(source_dir) :] for source in item.blps),
+                )
+
+    def test_tile_target_name_only_rewrites_a_case_variant_prefix(self):
+        """Anything that is not a case variant of the area name is left alone, so
+        a genuine naming defect still surfaces as a defect."""
+        self.assertEqual(
+            tile_target_name("Karazhan", "Karazhan", "Karazhan1_1.blp"),
+            "Karazhan1_1.blp",
+        )
+        self.assertEqual(
+            tile_target_name("BlackfathomDeeps", "BlackFathomDeeps", "BlackFathomDeeps1_1.blp"),
+            "BlackfathomDeeps1_1.blp",
+        )
+        # A different directory name is not a case variant, so nothing is rewritten.
+        self.assertEqual(
+            tile_target_name("AhnQiraj", "RuinsofAhnQiraj", "RuinsofAhnQiraj1_1.blp"),
+            "RuinsofAhnQiraj1_1.blp",
+        )
+        # Same directory, unrelated leaf: untouched.
+        self.assertEqual(
+            tile_target_name("BlackfathomDeeps", "BlackFathomDeeps", "readme.txt"),
+            "readme.txt",
+        )
+
+    def test_alias_artwork_is_present_where_the_package_reads_it(self):
+        """The bytes a package installs under the rebuilt name are files WDM
+        actually ships, at the path WDM actually ships them from.  The payload
+        identity itself is checked against the built EPF in ``TestEpf``."""
+        root = paths.wdm_artwork_dir()
+        for internal_name, source_dir in self.ARTWORK_ALIASES.items():
+            with self.subTest(name=internal_name):
+                item = self.candidate(internal_name)
+                renamed = item.artwork_renames
+                self.assertTrue(renamed)
+                self.assertEqual(len(renamed), len(item.blps))
+                for source, target in renamed.items():
+                    self.assertEqual(
+                        target, tile_target_name(internal_name, source_dir, source)
+                    )
+                    original = root / source_dir / source
+                    self.assertTrue(original.is_file(), original)
+                    self.assertGreater(original.stat().st_size, 0)
+
+    #: A client dungeon tile is ``<internalName><floor>_<tile>.blp``.
+    TILE = re.compile(r"^(?P<prefix>.+?)(?P<floor>\d+)_(?P<tile>\d+)\.blp$", re.IGNORECASE)
+
+    def test_every_safe_candidate_has_a_complete_tile_grid(self):
+        """A floor the client cannot draw is a silent failure, so the tile set must
+        be a complete 1..N run per floor.
+
+        Some WDM directories also carry flat ``<name><n>.blp`` files alongside the
+        grid; those name no floor, so they are excluded here and are not the tiles
+        the client asks for.
+        """
+        for item in self.discovery.by_classification(SAFE):
+            with self.subTest(name=item.internal_name):
+                grid: dict = {}
+                for leaf in item.tile_targets:
+                    match = self.TILE.match(leaf)
+                    if match is None:
+                        continue
+                    self.assertEqual(match.group("prefix").casefold(), item.internal_name.casefold())
+                    grid.setdefault(int(match.group("floor")), []).append(
+                        int(match.group("tile"))
+                    )
+                self.assertEqual(len(grid), len(item.floor_ids), "floor count")
+                for floor, tiles in grid.items():
+                    self.assertEqual(
+                        sorted(tiles), list(range(1, len(tiles) + 1)), f"floor {floor} gap"
+                    )
+
     def test_wailing_caverns_is_unsafe(self):
         item = self.candidate("WailingCaverns")
         self.assertEqual(item.classification, UNSAFE)
         self.assertIn("stock-mutation-required", item.reason_codes)
+
+    def test_every_wdm_added_row_is_shipped_or_accounted_for(self):
+        """The coverage claim the reports make, checked rather than asserted."""
+        for entry in self.discovery.coverage():
+            with self.subTest(table=entry["table"]):
+                self.assertEqual(
+                    entry["shipped"] + len(entry["heldBack"]) + len(entry["unowned"]),
+                    entry["added"],
+                )
+
+    def test_a_safe_candidate_only_claims_rows_wdm_added(self):
+        for item in self.discovery.by_classification(SAFE):
+            with self.subTest(name=item.internal_name):
+                for table, ids in (
+                    ("DungeonMap", item.floor_ids),
+                    ("DungeonMapChunk", item.chunk_ids),
+                    ("WorldMapArea", item.world_map_area_ids),
+                    ("WorldMapTransforms", item.transform_ids),
+                ):
+                    self.assertEqual(
+                        set(ids) & self.discovery.stock_ids[table], set(), table
+                    )
+
+    def test_no_two_safe_candidates_claim_the_same_row(self):
+        for table in ("DungeonMap", "DungeonMapChunk", "WorldMapArea", "WorldMapTransforms"):
+            owner: dict = {}
+            for item in self.discovery.by_classification(SAFE):
+                for identifier in self.discovery.claimed_ids(table) & set(
+                    self._rows(item, table)
+                ):
+                    with self.subTest(table=table, name=item.internal_name, row=identifier):
+                        self.assertNotIn(identifier, owner)
+                        owner[identifier] = item.internal_name
+
+    @staticmethod
+    def _rows(item, table):
+        return {
+            "DungeonMap": item.floor_ids,
+            "DungeonMapChunk": item.chunk_ids,
+            "WorldMapArea": item.world_map_area_ids,
+            "WorldMapTransforms": item.transform_ids,
+        }[table]
 
     def test_transform_presence_is_preserved_not_derived(self):
         """WDM's transform table is authoritative and is never extended.
@@ -521,15 +689,13 @@ class TestSemantic(_DiscoveryMixin, unittest.TestCase):
     def test_external_dungeon_map_id_does_not_create_ownership(self):
         """Ahn'Qiraj names DungeonMap 2, which belongs to another map entirely.
 
-        That is legitimate source data, so it is neither a REVIEW reason nor an
+        That is legitimate source data, so it is not a reason code at all and not an
         ownership claim: the package's floors stay exactly the map's own floors.
         """
         item = self.candidate("AhnQiraj")
         self.assertEqual(item.area_dungeon_map_id, 2)
         self.assertEqual(item.classification, SAFE)
-        self.assertNotIn(
-            "area-floor-reference-unresolvable", REVIEW_REASONS | UNSAFE_REASONS
-        )
+        self.assertNotIn("area-floor-reference-unresolvable", UNSAFE_REASONS)
         declaration = self.declaration("AhnQiraj")
         self.assertEqual(declaration["areas"][0]["dungeonMapId"], 2)
         # The referenced row is not a floor of map 531 and is never declared as
@@ -621,6 +787,8 @@ class TestSemantic(_DiscoveryMixin, unittest.TestCase):
 
 
 class TestPackages(_DiscoveryMixin, unittest.TestCase):
+    #: A client dungeon tile is ``<internalName><floor>_<tile>.blp``.
+    TILE = re.compile(r"^(?P<prefix>.+?)(?P<floor>\d+)_(?P<tile>\d+)\.blp$", re.IGNORECASE)
     def manifests(self) -> dict:
         out = {}
         for item in published_candidates(self.discovery):
@@ -717,13 +885,38 @@ class TestPackages(_DiscoveryMixin, unittest.TestCase):
 
     def test_declared_artwork_exists_in_the_wdm_tree(self):
         for name, manifest in self.manifests().items():
-            internal = manifest["worldMaps"][0]["areas"][0]["internalName"]
+            item = self.candidate(name)
             for entry in manifest["content"]:
                 leaf = Path(entry["source"]).name
                 with self.subTest(name=name, leaf=leaf):
-                    source = paths.wdm_artwork_dir() / internal / leaf
+                    # The source path is where WDM keeps the file, which is not
+                    # always spelled the way the area's internal_name is.
+                    source = paths.wdm_artwork_dir() / item.source_dir / leaf
                     self.assertTrue(source.is_file(), f"missing {source}")
                     self.assertGreater(source.stat().st_size, 0)
+
+    def test_artwork_targets_are_the_names_the_client_derives(self):
+        """Every target is ``Interface/WorldMap/<internalName>/<leaf>``.
+
+        The directory always comes from the area row.  The leaf is WDM's own,
+        except where the artwork directory is spelled with different capitals than
+        the ``internal_name`` it serves: there the leaf is rebuilt in the client's
+        capitals, which is the only spelling the client can ask for.
+        """
+        for name, manifest in self.manifests().items():
+            item = self.candidate(name)
+            prefix = f"Interface/WorldMap/{item.internal_name}/"
+            aliased = item.source_dir != item.internal_name
+            for entry, target in zip(manifest["content"], item.tile_targets):
+                source_leaf = Path(entry["source"]).name
+                with self.subTest(name=name, leaf=target):
+                    self.assertEqual(entry["target"], prefix + target)
+                    self.assertTrue(entry["target"].startswith(prefix))
+                    if aliased:
+                        self.assertTrue(target.startswith(item.internal_name))
+                    else:
+                        # Untouched: WDM's spelling is the client's here.
+                        self.assertEqual(target, source_leaf)
 
     def test_no_manifest_ships_a_dbc(self):
         """Composition is mod-content-manager's job; shipping a DBC would be a
@@ -773,18 +966,26 @@ class TestPackages(_DiscoveryMixin, unittest.TestCase):
                     self.assertIn("no WorldMapTransforms row", manifest["description"])
 
     def test_existing_package_manifests_are_unchanged(self):
-        """The three packages that shipped before Karazhan must not have moved.
+        """The four packages that shipped before the expansion must not have moved.
 
-        Only ``content/karazhan`` is new.  A change to the description builder
-        or to the semantic projection would otherwise silently rewrite three
-        already-reviewed manifests, so their exact bytes are pinned here.
+        The remaining 39 manifests are new, but a change to the description builder
+        or to the semantic projection would rewrite these four silently, so their
+        exact bytes are pinned here.
         """
         import json as _json
 
         expected = {
             "DeeprunTram": "deeprun-tram",
+            "Karazhan": "karazhan",
             "TheDeadmines": "the-deadmines",
             "TheTempleOfAtalHakkar": "temple-of-atal-hakkar",
+        }
+        #: These three carry a WDM instance transform; Karazhan has none, which is
+        #: the multi-floor-no-transform case the transform report exists for.
+        with_transform = {
+            "DeeprunTram",
+            "TheDeadmines",
+            "TheTempleOfAtalHakkar",
         }
         published = {
             name: slug
@@ -800,19 +1001,95 @@ class TestPackages(_DiscoveryMixin, unittest.TestCase):
                     (paths.CONTENT_DIR / slug / "manifest.json").read_text()
                 )
                 self.assertEqual(manifest["package"], paths.package_key(slug))
-                self.assertIn("transform", manifest["worldMaps"][0])
-                self.assertIn(
-                    "the instance WorldMapTransforms row", manifest["description"]
-                )
+                if name in with_transform:
+                    self.assertIn("transform", manifest["worldMaps"][0])
+                    self.assertIn(
+                        "the instance WorldMapTransforms row", manifest["description"]
+                    )
+                else:
+                    self.assertNotIn("transform", manifest["worldMaps"][0])
+                    self.assertIn(
+                        "no WorldMapTransforms row", manifest["description"]
+                    )
                 # Regenerating must reproduce the committed bytes exactly.
                 self.assertEqual(
                     (paths.CONTENT_DIR / slug / "manifest.json").read_bytes(),
                     serialise(manifest_for(self.candidate(name), self.discovery)),
                 )
 
+    def test_wdm_is_inconsistent_about_casing_inside_one_directory(self):
+        """Recorded, not repaired.
+
+        WDM's ``TheTempleOfAtalHakkar/`` spells floor 1 as the area's
+        ``internal_name``, floor 2 with a lower-case ``f`` in ``of``, and floor 3
+        with a lower-case ``f`` and ``h``.  Re-casing is scoped to the directory
+        name, so this map's manifest keeps WDM's leaf names -- which is what ships
+        today and resolves on a case-insensitive client.  Renaming them would
+        rewrite a released package to fix something that is not broken, so the
+        inconsistency is pinned here instead of being silently rewritten.
+        """
+        item = self.candidate("TheTempleOfAtalHakkar")
+        self.assertEqual(item.source_dir, item.internal_name)
+        self.assertEqual(item.artwork_renames, {})
+        by_floor: dict = {}
+        for leaf in item.blps:
+            match = self.TILE.match(leaf)
+            self.assertIsNotNone(match, leaf)
+            by_floor.setdefault(match.group("floor"), []).append(match.group("prefix"))
+        self.assertEqual(sorted(by_floor), ["1", "2", "3"])
+        self.assertEqual(
+            {prefix for prefixes in by_floor.values() for prefix in prefixes},
+            {
+                "TheTempleOfAtalHakkar",
+                "TheTempleofAtalHakkar",
+                "TheTempleofAtalhakkar",
+            },
+        )
+
     def test_package_keys_are_unique(self):
         keys = [m["package"] for m in self.manifests().values()]
         self.assertEqual(len(keys), len(set(keys)))
+
+    def test_every_safe_candidate_is_published(self):
+        """The backlog is exhausted: nothing the classifier cleared is left out of
+        the release, and nothing undecided is in it."""
+        safe = {item.internal_name for item in self.discovery.by_classification(SAFE)}
+        unsafe = {item.internal_name for item in self.discovery.by_classification(UNSAFE)}
+        self.assertEqual(set(self.manifests()), safe)
+        self.assertEqual(set(publish_slugs()), safe)
+        self.assertEqual(unsafe & safe, set())
+        # An UNSAFE map names no package directory, so none can drift back in.
+        for item in self.discovery.by_classification(UNSAFE):
+            with self.subTest(name=item.internal_name):
+                self.assertFalse((paths.CONTENT_DIR / item.slug).exists())
+
+    def test_published_tiles_never_collide(self):
+        """Two maps must never install the same file, which the combined release
+        could not detect on its own after they were merged."""
+        owner: dict = {}
+        for name, manifest in self.manifests().items():
+            for entry in manifest["content"]:
+                with self.subTest(name=name, target=entry["target"]):
+                    self.assertNotIn(entry["target"], owner, owner.get(entry["target"]))
+                    owner[entry["target"]] = name
+        self.assertEqual(len(owner), sum(len(m["content"]) for m in self.manifests().values()))
+
+    def test_published_rows_never_collide(self):
+        owner: dict = {}
+        for name, manifest in self.manifests().items():
+            declaration = manifest["worldMaps"][0]
+            area = declaration["areas"][0]
+            claimed = (
+                [("WorldMapArea", a["id"]) for a in declaration["areas"]]
+                + [("DungeonMap", f["id"]) for a in declaration["areas"] for f in a["floors"]]
+                + [("DungeonMapChunk", c["id"]) for a in declaration["areas"] for c in a["chunks"]]
+                + ([("WorldMapTransforms", declaration["transform"]["id"])]
+                   if "transform" in declaration else [])
+            )
+            for key in claimed:
+                with self.subTest(name=name, row=key):
+                    self.assertNotIn(key, owner, owner.get(key))
+                    owner[key] = name
 
 
 class TestEpf(_DiscoveryMixin, unittest.TestCase):
@@ -836,13 +1113,14 @@ class TestEpf(_DiscoveryMixin, unittest.TestCase):
         self.assertTrue(manifest_path.is_file(), f"missing {manifest_path}")
 
         manifest = json.loads(manifest_path.read_text())
+        # Stage the artwork the way the build reads it: WDM's own layout, under the
+        # directory name WDM actually uses.
         root = self.scratch / "Interface" / "WorldMap"
-        (root / item.internal_name).mkdir(parents=True, exist_ok=True)
+        (root / item.source_dir).mkdir(parents=True, exist_ok=True)
         for entry in manifest["content"]:
-            leaf = Path(entry["source"]).name
             self._shutil.copyfile(
-                paths.wdm_artwork_dir() / item.internal_name / leaf,
-                root / item.internal_name / leaf,
+                paths.wdm_artwork_dir() / item.source_dir / Path(entry["source"]).name,
+                root / item.source_dir / Path(entry["source"]).name,
             )
         output = self.scratch / output_name
         return item, build_epf(item, manifest_path, output, artwork_root=root)
@@ -903,20 +1181,23 @@ class TestEpf(_DiscoveryMixin, unittest.TestCase):
                     self.assertEqual(archive.namelist(), expected)
 
     def test_epf_payloads_match_the_wdm_artwork(self):
+        """The only thing a package changes about an artwork file is where it is
+        installed -- every byte in the EPF is the byte WDM ships."""
         import zipfile
 
         for item in published_candidates(self.discovery):
             with self.subTest(name=item.internal_name):
                 _, output = self.build(item.internal_name)
+                # Member name is the target leaf; the file it came from is WDM's.
+                renamed = {target: source for source, target in item.artwork_renames.items()}
                 with zipfile.ZipFile(output) as archive:
                     for name in archive.namelist():
-                        if name == "manifest.json":
-                            continue
-                        if name == STOCK_TOC_MEMBER:
+                        if name in ("manifest.json", STOCK_TOC_MEMBER):
                             continue
                         leaf = Path(name).name
+                        source_leaf = renamed.get(leaf, leaf)
                         expected = (
-                            paths.wdm_artwork_dir() / item.internal_name / leaf
+                            paths.wdm_artwork_dir() / item.source_dir / source_leaf
                         ).read_bytes()
                         self.assertEqual(archive.read(name), expected)
 
@@ -968,15 +1249,23 @@ class TestBuildWorkflow(_DiscoveryMixin, unittest.TestCase):
                          expected)
         self.assertEqual({item.slug for item in approved}, set(publish_slugs().values()))
 
-    def test_unknown_and_safe_only_maps_are_not_selectable(self):
+    def test_unknown_maps_are_not_selectable(self):
         with self.assertRaisesRegex(SystemExit, "unknown or unapproved"):
             select_published(self.discovery, "not-a-map")
-        safe_only = next(
-            item for item in self.discovery.candidates
-            if item.classification == SAFE and item.slug not in publish_slugs().values()
-        )
-        with self.assertRaisesRegex(SystemExit, "unknown or unapproved"):
-            select_published(self.discovery, safe_only.slug)
+
+    def test_unsafe_maps_are_not_selectable(self):
+        """A map the classifier rejected must not be buildable by name, however
+        correct its name looks."""
+        published = set(publish_slugs().values())
+        unsafe = [
+            item for item in self.discovery.by_classification(UNSAFE)
+            if item.slug and item.slug not in published
+        ]
+        self.assertTrue(unsafe, "expected rejected maps to exercise")
+        for item in unsafe:
+            with self.subTest(name=item.internal_name):
+                with self.assertRaisesRegex(SystemExit, "unknown or unapproved"):
+                    select_published(self.discovery, item.slug)
 
     def test_single_and_all_karazhan_are_byte_identical(self):
         one = self.scratch / "one"
@@ -1211,14 +1500,11 @@ class TestTransformForensics(_DiscoveryMixin, unittest.TestCase):
         # Its floor choice is exactly the case the analysis refutes.
         self.assertNotIn(532, {c.map_id for c in self.analysis.choices})
 
-    def test_publication_is_a_subset_of_classification(self):
-        """Correcting the classifier must not have mass-published a backlog."""
+    def test_publication_is_exactly_the_safe_set(self):
+        """Publication is the classifier's output, with nothing added or held back."""
         published = {item.internal_name for item in published_candidates(self.discovery)}
         safe = {item.internal_name for item in self.discovery.by_classification(SAFE)}
-        self.assertTrue(published < safe, "expected SAFE maps that are not published")
-        for name in published:
-            with self.subTest(name=name):
-                self.assertIn(name, safe)
+        self.assertEqual(published, safe)
         self.assertIn("Karazhan", published)
 
     # -- region constants -------------------------------------------------

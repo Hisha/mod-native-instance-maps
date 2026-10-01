@@ -1,0 +1,164 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/GruulsLair1_1.blp",
+   "target": "Interface/WorldMap/GruulsLair/GruulsLair1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/GruulsLair1_2.blp",
+   "target": "Interface/WorldMap/GruulsLair/GruulsLair1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/GruulsLair1_3.blp",
+   "target": "Interface/WorldMap/GruulsLair/GruulsLair1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/GruulsLair1_4.blp",
+   "target": "Interface/WorldMap/GruulsLair/GruulsLair1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/GruulsLair1_5.blp",
+   "target": "Interface/WorldMap/GruulsLair/GruulsLair1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/GruulsLair1_6.blp",
+   "target": "Interface/WorldMap/GruulsLair/GruulsLair1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/GruulsLair1_7.blp",
+   "target": "Interface/WorldMap/GruulsLair/GruulsLair1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/GruulsLair1_8.blp",
+   "target": "Interface/WorldMap/GruulsLair/GruulsLair1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/GruulsLair1_9.blp",
+   "target": "Interface/WorldMap/GruulsLair/GruulsLair1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/GruulsLair1_10.blp",
+   "target": "Interface/WorldMap/GruulsLair/GruulsLair1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/GruulsLair1_11.blp",
+   "target": "Interface/WorldMap/GruulsLair/GruulsLair1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/GruulsLair1_12.blp",
+   "target": "Interface/WorldMap/GruulsLair/GruulsLair1_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Gruul's Lair instance map: 1 DungeonMap floor, 4 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 12 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Gruul's Lair",
+ "package": "mod-native-instance-maps.gruuls-lair",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 3923,
+     "chunks": [
+      {
+       "dungeonMapId": 322,
+       "field2": 21908,
+       "field4": -10000.0,
+       "id": 4164
+      },
+      {
+       "dungeonMapId": 322,
+       "field2": 21910,
+       "field4": -10000.0,
+       "id": 4167
+      },
+      {
+       "dungeonMapId": 322,
+       "field2": 21911,
+       "field4": -10000.0,
+       "id": 4166
+      },
+      {
+       "dungeonMapId": 322,
+       "field2": 21929,
+       "field4": -10000.0,
+       "id": 4165
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Gruuls Unterschlupf"
+      },
+      "enCN": {
+       "1": "格鲁尔的巢穴"
+      },
+      "enGB": {
+       "1": "Gruul's Lair"
+      },
+      "enUS": {
+       "1": "Gruul's Lair"
+      },
+      "esES": {
+       "1": "Guarida de Gruul"
+      },
+      "esMX": {
+       "1": "Guarida de Gruul"
+      },
+      "frFR": {
+       "1": "Repaire de Gruul"
+      },
+      "koKR": {
+       "1": "그룰의 둥지"
+      },
+      "ruRU": {
+       "1": "Логово Груула"
+      },
+      "zhCN": {
+       "1": "格鲁尔的巢穴"
+      },
+      "zhTW": {
+       "1": "戈魯爾之巢"
+      }
+     },
+     "floors": [
+      {
+       "field3": -50.0,
+       "field4": 475.0,
+       "field5": -12.5,
+       "field6": 337.5,
+       "field7": 475,
+       "floor": 1,
+       "id": 322
+      }
+     ],
+     "id": 776,
+     "internalName": "GruulsLair",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 565
+  }
+ ]
+}

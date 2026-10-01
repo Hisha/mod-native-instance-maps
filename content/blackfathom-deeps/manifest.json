@@ -1,0 +1,456 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/BlackFathomDeeps1_1.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps1_2.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps1_3.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps1_4.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps1_5.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps1_6.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps1_7.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps1_8.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps1_9.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps1_10.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps1_11.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps1_12.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps1_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps2_1.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps2_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps2_2.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps2_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps2_3.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps2_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps2_4.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps2_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps2_5.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps2_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps2_6.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps2_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps2_7.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps2_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps2_8.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps2_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps2_9.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps2_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps2_10.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps2_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps2_11.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps2_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps2_12.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps2_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps3_1.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps3_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps3_2.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps3_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps3_3.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps3_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps3_4.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps3_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps3_5.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps3_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps3_6.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps3_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps3_7.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps3_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps3_8.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps3_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps3_9.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps3_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps3_10.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps3_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps3_11.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps3_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackFathomDeeps3_12.blp",
+   "target": "Interface/WorldMap/BlackfathomDeeps/BlackfathomDeeps3_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Blackfathom Deeps instance map: 3 DungeonMap floors, 26 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 36 client BLP tiles. WDM Stable spells this map's artwork directory BlackFathomDeeps in different capitals than the WorldMapArea internal_name BlackfathomDeeps; the 36 tiles are WDM's bytes installed at the names the client derives from internal_name. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Blackfathom Deeps",
+ "package": "mod-native-instance-maps.blackfathom-deeps",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 719,
+     "chunks": [
+      {
+       "dungeonMapId": 162,
+       "field2": 334,
+       "field4": -10000.0,
+       "id": 2482
+      },
+      {
+       "dungeonMapId": 162,
+       "field2": 335,
+       "field4": -10000.0,
+       "id": 2454
+      },
+      {
+       "dungeonMapId": 162,
+       "field2": 336,
+       "field4": -10000.0,
+       "id": 2456
+      },
+      {
+       "dungeonMapId": 162,
+       "field2": 337,
+       "field4": -10000.0,
+       "id": 2455
+      },
+      {
+       "dungeonMapId": 162,
+       "field2": 338,
+       "field4": -10000.0,
+       "id": 2460
+      },
+      {
+       "dungeonMapId": 162,
+       "field2": 339,
+       "field4": -10000.0,
+       "id": 2459
+      },
+      {
+       "dungeonMapId": 162,
+       "field2": 340,
+       "field4": -10000.0,
+       "id": 2458
+      },
+      {
+       "dungeonMapId": 162,
+       "field2": 341,
+       "field4": -10000.0,
+       "id": 2457
+      },
+      {
+       "dungeonMapId": 162,
+       "field2": 342,
+       "field4": -10000.0,
+       "id": 2462
+      },
+      {
+       "dungeonMapId": 162,
+       "field2": 343,
+       "field4": -10000.0,
+       "id": 2463
+      },
+      {
+       "dungeonMapId": 162,
+       "field2": 344,
+       "field4": -10000.0,
+       "id": 2464
+      },
+      {
+       "dungeonMapId": 162,
+       "field2": 345,
+       "field4": -10000.0,
+       "id": 2465
+      },
+      {
+       "dungeonMapId": 162,
+       "field2": 346,
+       "field4": -10000.0,
+       "id": 2466
+      },
+      {
+       "dungeonMapId": 162,
+       "field2": 347,
+       "field4": -10000.0,
+       "id": 2467
+      },
+      {
+       "dungeonMapId": 163,
+       "field2": 348,
+       "field4": -10000.0,
+       "id": 2470
+      },
+      {
+       "dungeonMapId": 163,
+       "field2": 349,
+       "field4": -10000.0,
+       "id": 2471
+      },
+      {
+       "dungeonMapId": 163,
+       "field2": 350,
+       "field4": -10000.0,
+       "id": 2472
+      },
+      {
+       "dungeonMapId": 163,
+       "field2": 351,
+       "field4": -10000.0,
+       "id": 2473
+      },
+      {
+       "dungeonMapId": 163,
+       "field2": 352,
+       "field4": -10000.0,
+       "id": 2477
+      },
+      {
+       "dungeonMapId": 163,
+       "field2": 353,
+       "field4": -10000.0,
+       "id": 2478
+      },
+      {
+       "dungeonMapId": 163,
+       "field2": 354,
+       "field4": -10000.0,
+       "id": 2475
+      },
+      {
+       "dungeonMapId": 163,
+       "field2": 355,
+       "field4": -10000.0,
+       "id": 2476
+      },
+      {
+       "dungeonMapId": 164,
+       "field2": 355,
+       "field4": -10000.0,
+       "id": 2479
+      },
+      {
+       "dungeonMapId": 163,
+       "field2": 356,
+       "field4": -10000.0,
+       "id": 2474
+      },
+      {
+       "dungeonMapId": 162,
+       "field2": 357,
+       "field4": -10000.0,
+       "id": 2483
+      },
+      {
+       "dungeonMapId": 162,
+       "field2": 358,
+       "field4": -10000.0,
+       "id": 2461
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Der Teich von Ask'Ar",
+       "2": "Mondschreinsanktum",
+       "3": "Der Vergessene Teich"
+      },
+      "enCN": {
+       "1": "阿斯卡之池",
+       "2": "月神圣地密室",
+       "3": "遗忘之池"
+      },
+      "enGB": {
+       "1": "The Pool of Ask'Ar",
+       "2": "Moonshrine Sanctum",
+       "3": "The Forgotten Pool"
+      },
+      "enUS": {
+       "1": "The Pool of Ask'Ar",
+       "2": "Moonshrine Sanctum",
+       "3": "The Forgotten Pool"
+      },
+      "esES": {
+       "1": "La Alberca de Ask'ar",
+       "2": "Sagrario Lunar",
+       "3": "Las Charcas del Olvido"
+      },
+      "esMX": {
+       "1": "La Alberca de Ask'ar",
+       "2": "Sagrario Lunar",
+       "3": "Las Charcas del Olvido"
+      },
+      "frFR": {
+       "1": "Le Bassin d’Ask’ar",
+       "2": "Sanctuaire d’Écrin-de-Lune",
+       "3": "Les bassins Oubliés"
+      },
+      "koKR": {
+       "1": "아스카르 연못",
+       "2": "달의 제단 성소",
+       "3": "잊혀진 웅덩이"
+      },
+      "ruRU": {
+       "1": "Пруд Аск'ара",
+       "2": "Алтарь святилища Луны",
+       "3": "Забытый пруд"
+      },
+      "zhCN": {
+       "1": "阿斯卡之池",
+       "2": "月神圣地密室",
+       "3": "遗忘之池"
+      },
+      "zhTW": {
+       "1": "阿斯卡之池",
+       "2": "月光神殿密室",
+       "3": "遺忘之池"
+      }
+     },
+     "floors": [
+      {
+       "field3": -381.2959899902344,
+       "field4": 502.92401123046875,
+       "field5": -677.14697265625,
+       "field6": -87.66699981689453,
+       "field7": 43,
+       "floor": 1,
+       "id": 162
+      },
+      {
+       "field3": -581.2960205078125,
+       "field4": 302.92401123046875,
+       "field5": -927.14697265625,
+       "field6": -337.6669616699219,
+       "field7": 43,
+       "floor": 2,
+       "id": 163
+      },
+      {
+       "field3": -281.2980041503906,
+       "field4": 2.9260001182556152,
+       "field5": -877.1483154296875,
+       "field6": -687.6656494140625,
+       "field7": 43,
+       "floor": 3,
+       "id": 164
+      }
+     ],
+     "id": 688,
+     "internalName": "BlackfathomDeeps",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 48
+  }
+ ]
+}

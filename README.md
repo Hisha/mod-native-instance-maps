@@ -11,18 +11,58 @@ world-map DBCs is `mod-content-manager`'s job, not this repository's.
 
 ## What ships today
 
-Four packages, all validated against `mod-content-manager`'s real pipeline —
+**43 packages, all validated against `mod-content-manager`'s real pipeline** —
 `ContentPackage::Validate()`, `StageInto()`, `WorldMapDbcComposer`
 `AppendRequests`/`Compose`/`Stage` against the verified stock baseline,
 `ContentFrameXml::ComposeLua`/`ComposeToc`/`Stage`, and
-`ContentServerBundle::VerifyParity()`:
+`ContentServerBundle::VerifyParity()`. All 43 also compose together into one
+`dist/mod-native-instance-maps.epf`.
 
 | Package | Map | Area | Floors | Chunks | Transform | Tiles | Floor labels |
 |---|---:|---|---:|---:|---|---:|---|
+| `mod-native-instance-maps.ahnqiraj` | 531 | `AhnQiraj` | 3 | 50 | WDM 13 | 36 | 11 locales |
+| `mod-native-instance-maps.auchenai-crypts` | 558 | `AuchenaiCrypts` | 2 | 14 | none in WDM | 24 | 11 locales |
+| `mod-native-instance-maps.black-temple` | 564 | `BlackTemple` | 7 | 40 | none in WDM | 96 | 11 locales |
+| `mod-native-instance-maps.blackfathom-deeps` | 48 | `BlackfathomDeeps`<br>(artwork `BlackFathomDeeps`) | 3 | 26 | none in WDM | 36 | 11 locales |
+| `mod-native-instance-maps.blackrock-depths` | 230 | `BlackrockDepths` | 2 | 52 | none in WDM | 24 | 11 locales |
+| `mod-native-instance-maps.blackrock-spire` | 229 | `BlackrockSpire` | 7 | 75 | none in WDM | 84 | 11 locales |
+| `mod-native-instance-maps.blackwing-lair` | 469 | `BlackwingLair` | 4 | 22 | none in WDM | 48 | 11 locales |
+| `mod-native-instance-maps.coilfang-reservoir` | 548 | `CoilfangReservoir` | 1 | 12 | none in WDM | 12 | 11 locales |
 | `mod-native-instance-maps.deeprun-tram` | 369 | `DeeprunTram` | 2 | 7 | WDM 12 | 24 | 11 locales |
+| `mod-native-instance-maps.dire-maul` | 429 | `DireMaul` | 6 | 73 | none in WDM | 84 | 11 locales |
+| `mod-native-instance-maps.gnomeregan` | 90 | `Gnomeregan` | 4 | 79 | none in WDM | 48 | 11 locales |
+| `mod-native-instance-maps.gruuls-lair` | 565 | `GruulsLair` | 1 | 4 | none in WDM | 12 | 11 locales |
+| `mod-native-instance-maps.hellfire-ramparts` | 543 | `HellfireRamparts` | 1 | 3 | none in WDM | 12 | 11 locales |
 | `mod-native-instance-maps.karazhan` | 532 | `Karazhan` | 17 | 86 | none in WDM | 204 | 11 locales |
+| `mod-native-instance-maps.magisters-terrace` | 585 | `MagistersTerrace` | 2 | 19 | none in WDM | 24 | 11 locales |
+| `mod-native-instance-maps.magtheridons-lair` | 544 | `MagtheridonsLair`<br>(artwork `Magtheridonslair`) | 1 | 7 | none in WDM | 12 | 11 locales |
+| `mod-native-instance-maps.mana-tombs` | 557 | `ManaTombs` | 1 | 14 | none in WDM | 12 | 11 locales |
+| `mod-native-instance-maps.maraudon` | 349 | `Maraudon` | 2 | 43 | none in WDM | 24 | 11 locales |
+| `mod-native-instance-maps.molten-core` | 409 | `MoltenCore` | 1 | 12 | none in WDM | 12 | 11 locales |
+| `mod-native-instance-maps.onyxias-lair` | 249 | `OnyxiasLair` | 1 | 8 | none in WDM | 12 | 11 locales |
+| `mod-native-instance-maps.ragefire-chasm` | 389 | `Ragefire` | 1 | 6 | none in WDM | 12 | 11 locales |
+| `mod-native-instance-maps.razorfen-downs` | 129 | `RazorfenDowns` | 1 | 11 | none in WDM | 12 | 11 locales |
+| `mod-native-instance-maps.razorfen-kraul` | 47 | `RazorfenKraul` | 1 | 25 | none in WDM | 12 | 11 locales |
+| `mod-native-instance-maps.scarlet-monastery` | 189 | `ScarletMonastery` | 4 | 89 | none in WDM | 48 | 11 locales |
+| `mod-native-instance-maps.scholomance` | 289 | `Scholomance` | 4 | 26 | none in WDM | 48 | 11 locales |
+| `mod-native-instance-maps.sethekk-halls` | 556 | `SethekkHalls` | 2 | 19 | none in WDM | 24 | 11 locales |
+| `mod-native-instance-maps.shadow-labyrinth` | 555 | `ShadowLabyrinth` | 1 | 21 | none in WDM | 12 | 11 locales |
+| `mod-native-instance-maps.shadowfang-keep` | 33 | `ShadowfangKeep` | 7 | 79 | none in WDM | 84 | 11 locales |
+| `mod-native-instance-maps.stratholme` | 329 | `Stratholme` | 2 | 80 | none in WDM | 24 | 11 locales |
+| `mod-native-instance-maps.sunwell-plateau` | 580 | `SunwellPlateau` | 1 | 2 | none in WDM | 24 | 11 locales |
+| `mod-native-instance-maps.tempest-keep` | 550 | `TempestKeep` | 1 | 16 | none in WDM | 12 | 11 locales |
 | `mod-native-instance-maps.temple-of-atal-hakkar` | 109 | `TheTempleOfAtalHakkar` | 3 | 75 | WDM 14 | 36 | 11 locales |
+| `mod-native-instance-maps.the-arcatraz` | 552 | `TheArcatraz` | 3 | 21 | none in WDM | 36 | 11 locales |
+| `mod-native-instance-maps.the-blood-furnace` | 542 | `TheBloodFurnace` | 1 | 7 | none in WDM | 12 | 11 locales |
+| `mod-native-instance-maps.the-botanica` | 553 | `TheBotanica` | 1 | 6 | none in WDM | 12 | 11 locales |
 | `mod-native-instance-maps.the-deadmines` | 36 | `TheDeadmines` | 2 | 29 | WDM 11 | 24 | 11 locales |
+| `mod-native-instance-maps.the-mechanar` | 554 | `TheMechanar` | 2 | 15 | none in WDM | 24 | 11 locales |
+| `mod-native-instance-maps.the-shattered-halls` | 540 | `TheShatteredHalls` | 1 | 12 | none in WDM | 12 | 11 locales |
+| `mod-native-instance-maps.the-slave-pens` | 547 | `TheSlavePens` | 1 | 5 | none in WDM | 12 | 11 locales |
+| `mod-native-instance-maps.the-steamvault` | 545 | `TheSteamvault` | 2 | 10 | none in WDM | 24 | 11 locales |
+| `mod-native-instance-maps.the-stockade` | 34 | `TheStockade` | 1 | 57 | none in WDM | 12 | 11 locales |
+| `mod-native-instance-maps.the-underbog` | 546 | `TheUnderbog` | 1 | 1 | none in WDM | 12 | 11 locales |
+| `mod-native-instance-maps.uldaman` | 70 | `Uldaman` | 2 | 52 | none in WDM | 24 | 11 locales |
 
 Every map's floors are named in all eleven locales WDM publishes, taken verbatim
 from WDM-addons' own `DUNGEON_FLOOR_<INSTANCE><n>` strings. Karazhan's seventeen
@@ -32,13 +72,20 @@ instead of the stock `Floor 1`…`Floor 17`. See
 
 Karazhan carries no `WorldMapTransforms` row because WDM has none for it. The
 manifest omits the key entirely, so `mod-content-manager` requests no row, leases
-no ID, and composes nothing: the composed `WorldMapTransforms.dbc` is
-byte-identical to the verified stock file.
+no ID, and composes nothing. 39 of the 43 packages take this path; the other four
+declare the transform WDM supplies, and the composed `WorldMapTransforms.dbc`
+gains exactly those 4 rows over the verified stock file.
 
-**Classification and publication are separate.** 41 of the 58 discovered maps are
-now SAFE — the transform is optional source data, not a requirement — but only
-the four packages above are published, listed explicitly in
-`content/publish.json`. The other 37 SAFE maps are not generated. See
+Two packages install their artwork under a name WDM does not use on disk. The
+client derives the artwork directory from the `WorldMapArea.internal_name` in the
+DBC row, and for these two maps WDM's directory is spelled with different
+capitals — `BlackFathomDeeps` for `BlackfathomDeeps`, `Magtheridonslair` for
+`MagtheridonsLair`. The package installs WDM's bytes at the DBC spelling, which
+is the only name the client can ask for. Nothing else about the 1392 tiles changes.
+
+**The backlog is closed.** All 43 SAFE maps are published, listed explicitly in
+`content/publish.json`; the other 15 discovered maps are UNSAFE and each carries
+the reason codes that rejected it. See
 [reports/instance-candidates.md](reports/instance-candidates.md) for the per-map
 verdict and reasoning; [reports/wdm-stable-audit.md](reports/wdm-stable-audit.md)
 records the stock-versus-WDM forensics, and
@@ -55,13 +102,14 @@ make release            # one combined dist/mod-native-instance-maps.epf
 make check              # comprehensive developer verification
 ```
 
-The accepted individual-map slugs are `karazhan`, `the-deadmines`,
-`deeprun-tram`, and `temple-of-atal-hakkar`. Both single-map selection and
-`MAP=all` are resolved through the explicit `content/publish.json` allowlist;
+Every SAFE map has an individual slug, listed in `content/publish.json` — the
+`slug` column is the package directory, so `BlackfathomDeeps` is
+`blackfathom-deeps` and `MagtheridonsLair` is `magtheridons-lair`. Both
+single-map selection and `MAP=all` are resolved through that allowlist;
 classification as SAFE alone never makes a map selectable. A bare `make epf`
 prints usage instead of choosing a publication scope.
 
-`MAP=all` creates the four approved EPFs separately. `make release` instead
+`MAP=all` creates the 43 approved EPFs separately. `make release` instead
 creates one ordinary Content Manager package containing those maps and their
 resources directly; it does not nest the individual ZIPs. The combined package
 is the canonical owner and explicitly migrates retained allocations from the
@@ -106,7 +154,7 @@ upstream/WDM-patch/Stable/enUS/DBFilesClient/*.dbc
    DbcFile  (records keep WDM's declaration order; raw bytes retained)
         │  tools/instances.py   group by WorldMapArea.internalName
         ▼
-   Candidate  ── classify ──▶ SAFE / REVIEW / UNSAFE
+   Candidate  ── classify ──▶ SAFE / UNSAFE
         │  tools/transform.py   decode + test transform rules (analysis only)
         │  tools/semantic.py    project rows onto manifest keys
         ▼
@@ -123,23 +171,45 @@ Nothing in that chain allocates an ID, renumbers a row, sorts a chunk list, or
 drops a record. Those are exactly the operations that would make a package
 wrong, and each one is pinned by a test.
 
-### SAFE / REVIEW / UNSAFE
+### SAFE / UNSAFE
 
-The three levels answer "can this ship?", not "is this data good?".
+Two levels answer "can this ship?", not "is this data good?". There is no
+third level: a map is either publishable from the vendored source or it is
+blocked, and each blocked map carries the reason codes that blocked it.
 
 - **SAFE** — WDM supplies every row the map needs, all of them are additive
   against the verified stock baseline, every reference is preserved as WDM
   wrote it, and the artwork directory the client derives from `internalName`
   exists. A `WorldMapTransforms` row is optional; its absence is not a defect.
-- **REVIEW** — WDM's rows are additive and self-consistent, but do not add up to
-  a shippable package: a required area, floor or chunk list is missing, or the
-  artwork directory does not match the declared `internalName`.
-- **UNSAFE** — building it would contradict WDM's own data, because it depends
-  on a stock row that WDM mutates or deletes. Not publishable.
+- **UNSAFE** — the package would either contradict WDM's own data (it depends on
+  a stock row that WDM mutates or deletes) or be built from source that does not
+  add up to one. Every rejection names its causes:
 
-Only one map is UNSAFE (`WailingCaverns`, which needs WDM's rewritten
-`DungeonMap 28` and its two deleted chunk rows). The 16 REVIEW maps are blocked
-on missing or mismatched source data, not on a missing transform.
+| Reason | Meaning |
+| --- | --- |
+| `no-area` | WDM adds no `WorldMapArea` row, so the map is not addressable. |
+| `no-floors` | WDM adds no `DungeonMap` row, so there is no floor to enter. |
+| `no-chunks` | WDM adds no `DungeonMapChunk` row, so the floor has no geometry. |
+| `stock-world-map-area` | The area is a stock row WDM mutates or deletes. |
+| `stock-floor` | A floor is a stock `DungeonMap` row WDM mutates or deletes. |
+| `stock-chunk` | A chunk is a stock row WDM mutates or deletes. |
+| `stock-transform` | The transform is a stock row WDM mutates. |
+| `ambiguous-transform` | The transform names more than one floor choice. |
+| `duplicate-artwork-alias` | The artwork directory names a map some other candidate already owns. |
+| `no-artwork` | The client would look for artwork WDM does not ship. |
+| `stock-mutation-required` | A composite of the `stock-*` causes above. |
+
+The current backlog is 43 SAFE and 15 UNSAFE:
+
+- 11 blocked on `no-floors` — WDM gives them an area and artwork but no
+  `DungeonMap` row, so there is nothing to enter. Publishing them would mean
+  inventing a floor.
+- `Northrend` — every row it needs is a stock row WDM mutates.
+- `WailingCaverns` — needs WDM's rewritten `DungeonMap 28` and its two deleted
+  chunk rows.
+- `BlackFathomDeeps` and `Magtheridonslair` — artwork directories that name a map
+  the `BlackfathomDeeps` and `MagtheridonsLair` rows already own. They ship
+  inside those two packages instead of as packages of their own.
 
 ## Dungeon floor names
 
@@ -378,12 +448,13 @@ artifact.
 
 ## Known limitations
 
-- **16 maps are withheld** because WDM's own data for them is incomplete: no
-  `WorldMapArea` (2), no floors or no chunks (11 each), an area that maps onto a
-  stock row this package cannot claim (5), a transform WDM supplies twice (1),
-  or an artwork directory whose name does not match the declared `internalName`
-  (2). These are source-data gaps, not schema limits, and a missing transform is
-  no longer among them.
+- **15 maps are withheld**, each with the reason codes that rejected it. Eleven
+  have no `DungeonMap` floor rows and no chunk rows in WDM at all, so there is
+  nothing to enter; `Expansion01` additionally has two transforms for one map.
+  `Northrend` and `WailingCaverns` need stock rows WDM mutates or deletes, which
+  an append-only package cannot claim. `BlackFathomDeeps` and `Magtheridonslair`
+  are artwork directories that name no map of their own; their tiles ship inside
+  the two packages that do. These are source-data gaps, not schema limits.
 - **`dungeonMapId = -1`** is WDM's "not an instance" sentinel, used by
   `BlackTemple` and `SunwellPlateau`. It is a reference like any other, so it is
   preserved verbatim and requests nothing. `mod-content-manager` accepts it.
@@ -391,11 +462,18 @@ artifact.
   row belonging to map 574. That reference cannot resolve and the ID is not
   re-leasable, but it is not this package's to resolve: the value is preserved
   exactly and no DungeonMap 2 row is contributed.
-- **Two WDM casing quirks** — `BlackfathomDeeps`/`BlackFathomDeeps` and
-  `MagtheridonsLair`/`Magtheridonslair`. The client derives the artwork
-  directory from `internalName`, so the declared name and the shipped directory
-  disagree. Not corrected here; correcting either side would change a
-  client-baked identity.
+- **Two WDM casing quirks are re-cased, one is not.** The client derives the
+  artwork directory from `internalName`, and for `BlackfathomDeeps` and
+  `MagtheridonsLair` WDM's directory disagrees in letter case, so those two
+  packages install WDM's bytes at the DBC spelling. Inside
+  `TheTempleOfAtalHakkar`, WDM spells its three floors three different ways; that
+  one is left alone, because it already resolves on a case-insensitive client and
+  re-casing it would rewrite a released package to fix nothing. A test pins both
+  behaviours.
+- **Two WDM chunk rows ship nowhere.** 1828 and 1829 belong to map 631 (*Icecrown
+  Citadel*), which has a stock area, no WDM area, no WDM floors and no WDM
+  artwork, so it is not a candidate. Every other row WDM adds is either shipped or
+  held back by a rejected map; `reports/final-report.md` tabulates the split.
 - **Floors with no `WorldMapArea`** (22 maps, the stock raid floors) have
   geometry but no map identity, so they are not candidates at all. Tabulated in
   the audit report.

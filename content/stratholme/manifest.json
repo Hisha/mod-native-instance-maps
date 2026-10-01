@@ -1,0 +1,700 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/Stratholme1_1.blp",
+   "target": "Interface/WorldMap/Stratholme/Stratholme1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Stratholme1_2.blp",
+   "target": "Interface/WorldMap/Stratholme/Stratholme1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Stratholme1_3.blp",
+   "target": "Interface/WorldMap/Stratholme/Stratholme1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Stratholme1_4.blp",
+   "target": "Interface/WorldMap/Stratholme/Stratholme1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Stratholme1_5.blp",
+   "target": "Interface/WorldMap/Stratholme/Stratholme1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Stratholme1_6.blp",
+   "target": "Interface/WorldMap/Stratholme/Stratholme1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Stratholme1_7.blp",
+   "target": "Interface/WorldMap/Stratholme/Stratholme1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Stratholme1_8.blp",
+   "target": "Interface/WorldMap/Stratholme/Stratholme1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Stratholme1_9.blp",
+   "target": "Interface/WorldMap/Stratholme/Stratholme1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Stratholme1_10.blp",
+   "target": "Interface/WorldMap/Stratholme/Stratholme1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Stratholme1_11.blp",
+   "target": "Interface/WorldMap/Stratholme/Stratholme1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Stratholme1_12.blp",
+   "target": "Interface/WorldMap/Stratholme/Stratholme1_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Stratholme2_1.blp",
+   "target": "Interface/WorldMap/Stratholme/Stratholme2_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Stratholme2_2.blp",
+   "target": "Interface/WorldMap/Stratholme/Stratholme2_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Stratholme2_3.blp",
+   "target": "Interface/WorldMap/Stratholme/Stratholme2_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Stratholme2_4.blp",
+   "target": "Interface/WorldMap/Stratholme/Stratholme2_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Stratholme2_5.blp",
+   "target": "Interface/WorldMap/Stratholme/Stratholme2_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Stratholme2_6.blp",
+   "target": "Interface/WorldMap/Stratholme/Stratholme2_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Stratholme2_7.blp",
+   "target": "Interface/WorldMap/Stratholme/Stratholme2_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Stratholme2_8.blp",
+   "target": "Interface/WorldMap/Stratholme/Stratholme2_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Stratholme2_9.blp",
+   "target": "Interface/WorldMap/Stratholme/Stratholme2_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Stratholme2_10.blp",
+   "target": "Interface/WorldMap/Stratholme/Stratholme2_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Stratholme2_11.blp",
+   "target": "Interface/WorldMap/Stratholme/Stratholme2_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Stratholme2_12.blp",
+   "target": "Interface/WorldMap/Stratholme/Stratholme2_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Stratholme instance map: 2 DungeonMap floors, 80 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 24 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Stratholme",
+ "package": "mod-native-instance-maps.stratholme",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 2017,
+     "chunks": [
+      {
+       "dungeonMapId": 155,
+       "field2": 17737,
+       "field4": -10000.0,
+       "id": 2232
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17738,
+       "field4": -10000.0,
+       "id": 2201
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17739,
+       "field4": -10000.0,
+       "id": 4106
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17740,
+       "field4": -10000.0,
+       "id": 4887
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17741,
+       "field4": -10000.0,
+       "id": 2233
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17742,
+       "field4": -10000.0,
+       "id": 2202
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17743,
+       "field4": -10000.0,
+       "id": 2234
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17744,
+       "field4": -10000.0,
+       "id": 2253
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17745,
+       "field4": -10000.0,
+       "id": 2235
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17746,
+       "field4": -10000.0,
+       "id": 4107
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17749,
+       "field4": -10000.0,
+       "id": 2236
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17749,
+       "field4": -10000.0,
+       "id": 2266
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17751,
+       "field4": -10000.0,
+       "id": 4888
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17752,
+       "field4": -10000.0,
+       "id": 2257
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17753,
+       "field4": -10000.0,
+       "id": 2256
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17754,
+       "field4": -10000.0,
+       "id": 2260
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17755,
+       "field4": -10000.0,
+       "id": 2252
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17756,
+       "field4": -10000.0,
+       "id": 2242
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17757,
+       "field4": -10000.0,
+       "id": 2254
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17758,
+       "field4": -10000.0,
+       "id": 2243
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17759,
+       "field4": -10000.0,
+       "id": 2255
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17760,
+       "field4": -10000.0,
+       "id": 2244
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17761,
+       "field4": -10000.0,
+       "id": 2270
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17762,
+       "field4": -10000.0,
+       "id": 2273
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17763,
+       "field4": -10000.0,
+       "id": 2264
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17764,
+       "field4": -10000.0,
+       "id": 2263
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17765,
+       "field4": -10000.0,
+       "id": 2265
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17766,
+       "field4": -10000.0,
+       "id": 2267
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17767,
+       "field4": -10000.0,
+       "id": 2268
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17768,
+       "field4": -10000.0,
+       "id": 2262
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17769,
+       "field4": -10000.0,
+       "id": 2245
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17770,
+       "field4": -10000.0,
+       "id": 2246
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17771,
+       "field4": -10000.0,
+       "id": 2247
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17772,
+       "field4": -10000.0,
+       "id": 2248
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17773,
+       "field4": -10000.0,
+       "id": 2237
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17774,
+       "field4": -10000.0,
+       "id": 2238
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17775,
+       "field4": -10000.0,
+       "id": 2239
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17776,
+       "field4": -10000.0,
+       "id": 2217
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17777,
+       "field4": -10000.0,
+       "id": 2218
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17778,
+       "field4": -10000.0,
+       "id": 2203
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17779,
+       "field4": -10000.0,
+       "id": 2219
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17780,
+       "field4": -10000.0,
+       "id": 2204
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17781,
+       "field4": -10000.0,
+       "id": 2220
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17782,
+       "field4": -10000.0,
+       "id": 4151
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17783,
+       "field4": -10000.0,
+       "id": 2240
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17784,
+       "field4": -10000.0,
+       "id": 2250
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17785,
+       "field4": -10000.0,
+       "id": 2241
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17786,
+       "field4": -10000.0,
+       "id": 2251
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17787,
+       "field4": -10000.0,
+       "id": 2206
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17788,
+       "field4": -10000.0,
+       "id": 2221
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17789,
+       "field4": -10000.0,
+       "id": 2207
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17790,
+       "field4": -10000.0,
+       "id": 2222
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17791,
+       "field4": -10000.0,
+       "id": 2208
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17792,
+       "field4": -10000.0,
+       "id": 2223
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17793,
+       "field4": -10000.0,
+       "id": 2224
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17794,
+       "field4": -10000.0,
+       "id": 2209
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17795,
+       "field4": -10000.0,
+       "id": 2214
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17800,
+       "field4": -10000.0,
+       "id": 2225
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17802,
+       "field4": -10000.0,
+       "id": 2261
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17803,
+       "field4": -10000.0,
+       "id": 2258
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17806,
+       "field4": -10000.0,
+       "id": 2226
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17807,
+       "field4": -10000.0,
+       "id": 4886
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17808,
+       "field4": -10000.0,
+       "id": 2249
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17812,
+       "field4": -10000.0,
+       "id": 2271
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17813,
+       "field4": -10000.0,
+       "id": 4104
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17814,
+       "field4": -10000.0,
+       "id": 2269
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17815,
+       "field4": -10000.0,
+       "id": 2272
+      },
+      {
+       "dungeonMapId": 156,
+       "field2": 17816,
+       "field4": -10000.0,
+       "id": 4105
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17817,
+       "field4": -10000.0,
+       "id": 2216
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17818,
+       "field4": -10000.0,
+       "id": 2227
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17819,
+       "field4": -10000.0,
+       "id": 2210
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17820,
+       "field4": -10000.0,
+       "id": 2228
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17821,
+       "field4": -10000.0,
+       "id": 2229
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17822,
+       "field4": -10000.0,
+       "id": 2211
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17823,
+       "field4": -10000.0,
+       "id": 2230
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17824,
+       "field4": -10000.0,
+       "id": 2212
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17825,
+       "field4": -10000.0,
+       "id": 2231
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17826,
+       "field4": -10000.0,
+       "id": 2215
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 17827,
+       "field4": -10000.0,
+       "id": 2213
+      },
+      {
+       "dungeonMapId": 155,
+       "field2": 18410,
+       "field4": -10000.0,
+       "id": 2200
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Kreuzzüglerplatz",
+       "2": "Der Spießrutenlauf"
+      },
+      "enCN": {
+       "1": "十字军广场",
+       "2": "街巷"
+      },
+      "enGB": {
+       "1": "Crusader's Square",
+       "2": "The Gauntlet"
+      },
+      "enUS": {
+       "1": "Crusader's Square",
+       "2": "The Gauntlet"
+      },
+      "esES": {
+       "1": "Plaza de los Cruzados",
+       "2": "El Guantelete"
+      },
+      "esMX": {
+       "1": "Plaza de los Cruzados",
+       "2": "El Guantelete"
+      },
+      "frFR": {
+       "1": "Place des Croisés",
+       "2": "Le Défi"
+      },
+      "koKR": {
+       "1": "십자군 광장",
+       "2": "투쟁의 거리"
+      },
+      "ruRU": {
+       "1": "Площадь рыцарей",
+       "2": "Улица Испытаний"
+      },
+      "zhCN": {
+       "1": "十字军广场",
+       "2": "街巷"
+      },
+      "zhTW": {
+       "1": "十字軍廣場",
+       "2": "街巷"
+      }
+     },
+     "floors": [
+      {
+       "field3": -3617.679931640625,
+       "field4": -2911.9599609375,
+       "field5": 3338.969970703125,
+       "field6": 3809.449951171875,
+       "field7": 23,
+       "floor": 1,
+       "id": 155
+      },
+      {
+       "field3": -3967.68017578125,
+       "field4": -2961.959716796875,
+       "field5": 3498.969970703125,
+       "field6": 4169.4501953125,
+       "field7": 23,
+       "floor": 2,
+       "id": 156
+      }
+     ],
+     "id": 765,
+     "internalName": "Stratholme",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 4333.3330078125,
+     "x2": 2066.66650390625,
+     "y1": -1766.6666259765625,
+     "y2": -5166.66650390625
+    }
+   ],
+   "mapId": 329
+  }
+ ]
+}

@@ -1,0 +1,478 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/Maraudon1_1.blp",
+   "target": "Interface/WorldMap/Maraudon/Maraudon1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Maraudon1_2.blp",
+   "target": "Interface/WorldMap/Maraudon/Maraudon1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Maraudon1_3.blp",
+   "target": "Interface/WorldMap/Maraudon/Maraudon1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Maraudon1_4.blp",
+   "target": "Interface/WorldMap/Maraudon/Maraudon1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Maraudon1_5.blp",
+   "target": "Interface/WorldMap/Maraudon/Maraudon1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Maraudon1_6.blp",
+   "target": "Interface/WorldMap/Maraudon/Maraudon1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Maraudon1_7.blp",
+   "target": "Interface/WorldMap/Maraudon/Maraudon1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Maraudon1_8.blp",
+   "target": "Interface/WorldMap/Maraudon/Maraudon1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Maraudon1_9.blp",
+   "target": "Interface/WorldMap/Maraudon/Maraudon1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Maraudon1_10.blp",
+   "target": "Interface/WorldMap/Maraudon/Maraudon1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Maraudon1_11.blp",
+   "target": "Interface/WorldMap/Maraudon/Maraudon1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Maraudon1_12.blp",
+   "target": "Interface/WorldMap/Maraudon/Maraudon1_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Maraudon2_1.blp",
+   "target": "Interface/WorldMap/Maraudon/Maraudon2_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Maraudon2_2.blp",
+   "target": "Interface/WorldMap/Maraudon/Maraudon2_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Maraudon2_3.blp",
+   "target": "Interface/WorldMap/Maraudon/Maraudon2_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Maraudon2_4.blp",
+   "target": "Interface/WorldMap/Maraudon/Maraudon2_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Maraudon2_5.blp",
+   "target": "Interface/WorldMap/Maraudon/Maraudon2_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Maraudon2_6.blp",
+   "target": "Interface/WorldMap/Maraudon/Maraudon2_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Maraudon2_7.blp",
+   "target": "Interface/WorldMap/Maraudon/Maraudon2_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Maraudon2_8.blp",
+   "target": "Interface/WorldMap/Maraudon/Maraudon2_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Maraudon2_9.blp",
+   "target": "Interface/WorldMap/Maraudon/Maraudon2_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Maraudon2_10.blp",
+   "target": "Interface/WorldMap/Maraudon/Maraudon2_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Maraudon2_11.blp",
+   "target": "Interface/WorldMap/Maraudon/Maraudon2_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Maraudon2_12.blp",
+   "target": "Interface/WorldMap/Maraudon/Maraudon2_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Maraudon instance map: 2 DungeonMap floors, 43 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 24 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Maraudon",
+ "package": "mod-native-instance-maps.maraudon",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 2100,
+     "chunks": [
+      {
+       "dungeonMapId": 257,
+       "field2": 17052,
+       "field4": -10000.0,
+       "id": 3525
+      },
+      {
+       "dungeonMapId": 257,
+       "field2": 17053,
+       "field4": -10000.0,
+       "id": 3526
+      },
+      {
+       "dungeonMapId": 257,
+       "field2": 17054,
+       "field4": -10000.0,
+       "id": 3527
+      },
+      {
+       "dungeonMapId": 257,
+       "field2": 17055,
+       "field4": -10000.0,
+       "id": 3528
+      },
+      {
+       "dungeonMapId": 257,
+       "field2": 17056,
+       "field4": -10000.0,
+       "id": 3588
+      },
+      {
+       "dungeonMapId": 257,
+       "field2": 17057,
+       "field4": -10000.0,
+       "id": 3529
+      },
+      {
+       "dungeonMapId": 257,
+       "field2": 17058,
+       "field4": -10000.0,
+       "id": 3530
+      },
+      {
+       "dungeonMapId": 257,
+       "field2": 17059,
+       "field4": -10000.0,
+       "id": 3533
+      },
+      {
+       "dungeonMapId": 257,
+       "field2": 17060,
+       "field4": -10000.0,
+       "id": 3534
+      },
+      {
+       "dungeonMapId": 257,
+       "field2": 17061,
+       "field4": -10000.0,
+       "id": 3535
+      },
+      {
+       "dungeonMapId": 257,
+       "field2": 17062,
+       "field4": -10000.0,
+       "id": 3536
+      },
+      {
+       "dungeonMapId": 257,
+       "field2": 17063,
+       "field4": -10000.0,
+       "id": 3537
+      },
+      {
+       "dungeonMapId": 257,
+       "field2": 17064,
+       "field4": -10000.0,
+       "id": 3538
+      },
+      {
+       "dungeonMapId": 257,
+       "field2": 17065,
+       "field4": -10000.0,
+       "id": 3539
+      },
+      {
+       "dungeonMapId": 257,
+       "field2": 17066,
+       "field4": -10000.0,
+       "id": 3590
+      },
+      {
+       "dungeonMapId": 257,
+       "field2": 17067,
+       "field4": -10000.0,
+       "id": 3591
+      },
+      {
+       "dungeonMapId": 257,
+       "field2": 17068,
+       "field4": -10000.0,
+       "id": 3589
+      },
+      {
+       "dungeonMapId": 257,
+       "field2": 17069,
+       "field4": -10000.0,
+       "id": 3531
+      },
+      {
+       "dungeonMapId": 257,
+       "field2": 17070,
+       "field4": -10000.0,
+       "id": 3532
+      },
+      {
+       "dungeonMapId": 257,
+       "field2": 17071,
+       "field4": -10000.0,
+       "id": 3523
+      },
+      {
+       "dungeonMapId": 257,
+       "field2": 17072,
+       "field4": -10000.0,
+       "id": 3524
+      },
+      {
+       "dungeonMapId": 256,
+       "field2": 17073,
+       "field4": -10000.0,
+       "id": 3502
+      },
+      {
+       "dungeonMapId": 256,
+       "field2": 17074,
+       "field4": -10000.0,
+       "id": 3503
+      },
+      {
+       "dungeonMapId": 256,
+       "field2": 17075,
+       "field4": -10000.0,
+       "id": 3504
+      },
+      {
+       "dungeonMapId": 256,
+       "field2": 17076,
+       "field4": -10000.0,
+       "id": 3505
+      },
+      {
+       "dungeonMapId": 256,
+       "field2": 17077,
+       "field4": -10000.0,
+       "id": 3521
+      },
+      {
+       "dungeonMapId": 256,
+       "field2": 17078,
+       "field4": -10000.0,
+       "id": 3520
+      },
+      {
+       "dungeonMapId": 256,
+       "field2": 17079,
+       "field4": -10000.0,
+       "id": 3518
+      },
+      {
+       "dungeonMapId": 256,
+       "field2": 17080,
+       "field4": -10000.0,
+       "id": 3516
+      },
+      {
+       "dungeonMapId": 256,
+       "field2": 17081,
+       "field4": -10000.0,
+       "id": 3507
+      },
+      {
+       "dungeonMapId": 256,
+       "field2": 17086,
+       "field4": -10000.0,
+       "id": 3509
+      },
+      {
+       "dungeonMapId": 256,
+       "field2": 17088,
+       "field4": -10000.0,
+       "id": 3510
+      },
+      {
+       "dungeonMapId": 256,
+       "field2": 17089,
+       "field4": -10000.0,
+       "id": 3511
+      },
+      {
+       "dungeonMapId": 256,
+       "field2": 17091,
+       "field4": -10000.0,
+       "id": 3515
+      },
+      {
+       "dungeonMapId": 256,
+       "field2": 17092,
+       "field4": -10000.0,
+       "id": 3514
+      },
+      {
+       "dungeonMapId": 256,
+       "field2": 17093,
+       "field4": -10000.0,
+       "id": 3513
+      },
+      {
+       "dungeonMapId": 256,
+       "field2": 17094,
+       "field4": -10000.0,
+       "id": 3512
+      },
+      {
+       "dungeonMapId": 256,
+       "field2": 17095,
+       "field4": -10000.0,
+       "id": 3519
+      },
+      {
+       "dungeonMapId": 256,
+       "field2": 17097,
+       "field4": -10000.0,
+       "id": 3522
+      },
+      {
+       "dungeonMapId": 256,
+       "field2": 17911,
+       "field4": -10000.0,
+       "id": 3517
+      },
+      {
+       "dungeonMapId": 256,
+       "field2": 17912,
+       "field4": -10000.0,
+       "id": 3508
+      },
+      {
+       "dungeonMapId": 256,
+       "field2": 19050,
+       "field4": -10000.0,
+       "id": 3506
+      },
+      {
+       "dungeonMapId": 256,
+       "field2": 19051,
+       "field4": -10000.0,
+       "id": 3501
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Höhlen von Maraudon",
+       "2": "Zaetars Grab"
+      },
+      "enCN": {
+       "1": "玛拉顿的洞穴",
+       "2": "扎尔塔之墓"
+      },
+      "enGB": {
+       "1": "Caverns of Maraudon",
+       "2": "Zaetar's Grave"
+      },
+      "enUS": {
+       "1": "Caverns of Maraudon",
+       "2": "Zaetar's Grave"
+      },
+      "esES": {
+       "1": "Cavernas de Maraudon",
+       "2": "Tumba de Zaetar"
+      },
+      "esMX": {
+       "1": "Cavernas de Maraudon",
+       "2": "Tumba de Zaetar"
+      },
+      "frFR": {
+       "1": "Cavernes de Maraudon",
+       "2": "Tombe de Zaetar"
+      },
+      "koKR": {
+       "1": "마라우돈 동굴",
+       "2": "재타르의 무덤"
+      },
+      "ruRU": {
+       "1": "Пещеры Мародона",
+       "2": "Могила Зейтара"
+      },
+      "zhCN": {
+       "1": "玛拉顿的洞穴",
+       "2": "扎尔塔之墓"
+      },
+      "zhTW": {
+       "1": "瑪拉頓的洞穴",
+       "2": "札爾塔之墓"
+      }
+     },
+     "floors": [
+      {
+       "field3": -827.5,
+       "field4": 147.5,
+       "field5": 550.0,
+       "field6": 1200.0,
+       "field7": 101,
+       "floor": 1,
+       "id": 256
+      },
+      {
+       "field3": -1158.75,
+       "field4": 478.75,
+       "field5": -208.33299255371094,
+       "field6": 883.3330078125,
+       "field7": 101,
+       "floor": 2,
+       "id": 257
+      }
+     ],
+     "id": 750,
+     "internalName": "Maraudon",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 349
+  }
+ ]
+}

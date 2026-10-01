@@ -1,0 +1,212 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/CoilfangReservoir1_1.blp",
+   "target": "Interface/WorldMap/CoilfangReservoir/CoilfangReservoir1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoilfangReservoir1_2.blp",
+   "target": "Interface/WorldMap/CoilfangReservoir/CoilfangReservoir1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoilfangReservoir1_3.blp",
+   "target": "Interface/WorldMap/CoilfangReservoir/CoilfangReservoir1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoilfangReservoir1_4.blp",
+   "target": "Interface/WorldMap/CoilfangReservoir/CoilfangReservoir1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoilfangReservoir1_5.blp",
+   "target": "Interface/WorldMap/CoilfangReservoir/CoilfangReservoir1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoilfangReservoir1_6.blp",
+   "target": "Interface/WorldMap/CoilfangReservoir/CoilfangReservoir1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoilfangReservoir1_7.blp",
+   "target": "Interface/WorldMap/CoilfangReservoir/CoilfangReservoir1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoilfangReservoir1_8.blp",
+   "target": "Interface/WorldMap/CoilfangReservoir/CoilfangReservoir1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoilfangReservoir1_9.blp",
+   "target": "Interface/WorldMap/CoilfangReservoir/CoilfangReservoir1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoilfangReservoir1_10.blp",
+   "target": "Interface/WorldMap/CoilfangReservoir/CoilfangReservoir1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoilfangReservoir1_11.blp",
+   "target": "Interface/WorldMap/CoilfangReservoir/CoilfangReservoir1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoilfangReservoir1_12.blp",
+   "target": "Interface/WorldMap/CoilfangReservoir/CoilfangReservoir1_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Coilfang Reservoir instance map: 1 DungeonMap floor, 12 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 12 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Coilfang Reservoir",
+ "package": "mod-native-instance-maps.coilfang-reservoir",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 3607,
+     "chunks": [
+      {
+       "dungeonMapId": 355,
+       "field2": 20474,
+       "field4": -10000.0,
+       "id": 4370
+      },
+      {
+       "dungeonMapId": 355,
+       "field2": 20475,
+       "field4": -10000.0,
+       "id": 4373
+      },
+      {
+       "dungeonMapId": 355,
+       "field2": 20476,
+       "field4": -10000.0,
+       "id": 4372
+      },
+      {
+       "dungeonMapId": 355,
+       "field2": 20477,
+       "field4": -10000.0,
+       "id": 4377
+      },
+      {
+       "dungeonMapId": 355,
+       "field2": 20480,
+       "field4": -10000.0,
+       "id": 4366
+      },
+      {
+       "dungeonMapId": 355,
+       "field2": 22042,
+       "field4": -10000.0,
+       "id": 4367
+      },
+      {
+       "dungeonMapId": 355,
+       "field2": 22261,
+       "field4": -10000.0,
+       "id": 4371
+      },
+      {
+       "dungeonMapId": 355,
+       "field2": 22288,
+       "field4": -10000.0,
+       "id": 4374
+      },
+      {
+       "dungeonMapId": 355,
+       "field2": 22289,
+       "field4": -10000.0,
+       "id": 4369
+      },
+      {
+       "dungeonMapId": 355,
+       "field2": 22291,
+       "field4": -10000.0,
+       "id": 4375
+      },
+      {
+       "dungeonMapId": 355,
+       "field2": 22299,
+       "field4": -10000.0,
+       "id": 4376
+      },
+      {
+       "dungeonMapId": 355,
+       "field2": 22300,
+       "field4": -10000.0,
+       "id": 4368
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Höhle des Schlangenschreins"
+      },
+      "enCN": {
+       "1": "毒蛇神殿"
+      },
+      "enGB": {
+       "1": "Serpentshrine Cavern"
+      },
+      "enUS": {
+       "1": "Serpentshrine Cavern"
+      },
+      "esES": {
+       "1": "Caverna Santuario Serpiente"
+      },
+      "esMX": {
+       "1": "Caverna Santuario Serpiente"
+      },
+      "frFR": {
+       "1": "Caverne du Sanctuaire du Serpent"
+      },
+      "koKR": {
+       "1": "불뱀 제단"
+      },
+      "ruRU": {
+       "1": "Змеиное святилище"
+      },
+      "zhCN": {
+       "1": "毒蛇神殿"
+      },
+      "zhTW": {
+       "1": "毒蛇神殿洞穴"
+      }
+     },
+     "floors": [
+      {
+       "field3": -1362.50048828125,
+       "field4": 212.5024871826172,
+       "field5": -400.0,
+       "field6": 650.0020141601562,
+       "field7": 467,
+       "floor": 1,
+       "id": 355
+      }
+     ],
+     "id": 780,
+     "internalName": "CoilfangReservoir",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 548
+  }
+ ]
+}

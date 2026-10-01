@@ -1,0 +1,334 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/MagistersTerrace1_1.blp",
+   "target": "Interface/WorldMap/MagistersTerrace/MagistersTerrace1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MagistersTerrace1_2.blp",
+   "target": "Interface/WorldMap/MagistersTerrace/MagistersTerrace1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MagistersTerrace1_3.blp",
+   "target": "Interface/WorldMap/MagistersTerrace/MagistersTerrace1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MagistersTerrace1_4.blp",
+   "target": "Interface/WorldMap/MagistersTerrace/MagistersTerrace1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MagistersTerrace1_5.blp",
+   "target": "Interface/WorldMap/MagistersTerrace/MagistersTerrace1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MagistersTerrace1_6.blp",
+   "target": "Interface/WorldMap/MagistersTerrace/MagistersTerrace1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MagistersTerrace1_7.blp",
+   "target": "Interface/WorldMap/MagistersTerrace/MagistersTerrace1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MagistersTerrace1_8.blp",
+   "target": "Interface/WorldMap/MagistersTerrace/MagistersTerrace1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MagistersTerrace1_9.blp",
+   "target": "Interface/WorldMap/MagistersTerrace/MagistersTerrace1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MagistersTerrace1_10.blp",
+   "target": "Interface/WorldMap/MagistersTerrace/MagistersTerrace1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MagistersTerrace1_11.blp",
+   "target": "Interface/WorldMap/MagistersTerrace/MagistersTerrace1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MagistersTerrace1_12.blp",
+   "target": "Interface/WorldMap/MagistersTerrace/MagistersTerrace1_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MagistersTerrace2_1.blp",
+   "target": "Interface/WorldMap/MagistersTerrace/MagistersTerrace2_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MagistersTerrace2_2.blp",
+   "target": "Interface/WorldMap/MagistersTerrace/MagistersTerrace2_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MagistersTerrace2_3.blp",
+   "target": "Interface/WorldMap/MagistersTerrace/MagistersTerrace2_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MagistersTerrace2_4.blp",
+   "target": "Interface/WorldMap/MagistersTerrace/MagistersTerrace2_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MagistersTerrace2_5.blp",
+   "target": "Interface/WorldMap/MagistersTerrace/MagistersTerrace2_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MagistersTerrace2_6.blp",
+   "target": "Interface/WorldMap/MagistersTerrace/MagistersTerrace2_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MagistersTerrace2_7.blp",
+   "target": "Interface/WorldMap/MagistersTerrace/MagistersTerrace2_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MagistersTerrace2_8.blp",
+   "target": "Interface/WorldMap/MagistersTerrace/MagistersTerrace2_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MagistersTerrace2_9.blp",
+   "target": "Interface/WorldMap/MagistersTerrace/MagistersTerrace2_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MagistersTerrace2_10.blp",
+   "target": "Interface/WorldMap/MagistersTerrace/MagistersTerrace2_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MagistersTerrace2_11.blp",
+   "target": "Interface/WorldMap/MagistersTerrace/MagistersTerrace2_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/MagistersTerrace2_12.blp",
+   "target": "Interface/WorldMap/MagistersTerrace/MagistersTerrace2_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Magister's Terrace instance map: 2 DungeonMap floors, 19 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 24 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Magister's Terrace",
+ "package": "mod-native-instance-maps.magisters-terrace",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 4131,
+     "chunks": [
+      {
+       "dungeonMapId": 236,
+       "field2": 23119,
+       "field4": -10000.0,
+       "id": 3357
+      },
+      {
+       "dungeonMapId": 236,
+       "field2": 23120,
+       "field4": -10000.0,
+       "id": 3356
+      },
+      {
+       "dungeonMapId": 236,
+       "field2": 23121,
+       "field4": -10000.0,
+       "id": 3355
+      },
+      {
+       "dungeonMapId": 237,
+       "field2": 23121,
+       "field4": -3.0,
+       "id": 3369
+      },
+      {
+       "dungeonMapId": 237,
+       "field2": 23122,
+       "field4": -10000.0,
+       "id": 3366
+      },
+      {
+       "dungeonMapId": 237,
+       "field2": 23123,
+       "field4": -10000.0,
+       "id": 3365
+      },
+      {
+       "dungeonMapId": 236,
+       "field2": 23125,
+       "field4": -10000.0,
+       "id": 3352
+      },
+      {
+       "dungeonMapId": 236,
+       "field2": 23162,
+       "field4": -10000.0,
+       "id": 3358
+      },
+      {
+       "dungeonMapId": 237,
+       "field2": 23167,
+       "field4": -10000.0,
+       "id": 3362
+      },
+      {
+       "dungeonMapId": 237,
+       "field2": 23168,
+       "field4": -10000.0,
+       "id": 3361
+      },
+      {
+       "dungeonMapId": 237,
+       "field2": 23169,
+       "field4": -10000.0,
+       "id": 3363
+      },
+      {
+       "dungeonMapId": 237,
+       "field2": 23170,
+       "field4": -10000.0,
+       "id": 3364
+      },
+      {
+       "dungeonMapId": 236,
+       "field2": 23171,
+       "field4": -10000.0,
+       "id": 3359
+      },
+      {
+       "dungeonMapId": 237,
+       "field2": 23171,
+       "field4": -12.0,
+       "id": 3360
+      },
+      {
+       "dungeonMapId": 236,
+       "field2": 23731,
+       "field4": -10000.0,
+       "id": 3353
+      },
+      {
+       "dungeonMapId": 236,
+       "field2": 23732,
+       "field4": -10000.0,
+       "id": 3354
+      },
+      {
+       "dungeonMapId": 237,
+       "field2": 23733,
+       "field4": -10000.0,
+       "id": 3367
+      },
+      {
+       "dungeonMapId": 237,
+       "field2": 23734,
+       "field4": -10000.0,
+       "id": 3368
+      },
+      {
+       "dungeonMapId": 237,
+       "field2": 26192,
+       "field4": -10000.0,
+       "id": 3370
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Zuflucht des Großmagisters",
+       "2": "Beobachtungsplatz"
+      },
+      "enCN": {
+       "1": "大魔导师的圣堂",
+       "2": "观测台"
+      },
+      "enGB": {
+       "1": "Grand Magister's Asylum",
+       "2": "Observation Grounds"
+      },
+      "enUS": {
+       "1": "Grand Magister's Asylum",
+       "2": "Observation Grounds"
+      },
+      "esES": {
+       "1": "Asilo del Gran Magister",
+       "2": "Sector de Observación"
+      },
+      "esMX": {
+       "1": "Asilo del Gran Magister",
+       "2": "Sector de Observación"
+      },
+      "frFR": {
+       "1": "Asile du grand magistère",
+       "2": "Terrain d’observation"
+      },
+      "koKR": {
+       "1": "대마법학자의 피신처",
+       "2": "관측 지구"
+      },
+      "ruRU": {
+       "1": "Пристанище Великого Магистра",
+       "2": "Обзорная площадка"
+      },
+      "zhCN": {
+       "1": "大魔导师的圣堂",
+       "2": "观测台"
+      },
+      "zhTW": {
+       "1": "大博學者的庇護所",
+       "2": "觀測之地"
+      }
+     },
+     "floors": [
+      {
+       "field3": -304.22601318359375,
+       "field4": 226.10800170898438,
+       "field5": -27.79583740234375,
+       "field6": 325.7601318359375,
+       "field7": 499,
+       "floor": 1,
+       "id": 236
+      },
+      {
+       "field3": -304.22601318359375,
+       "field4": 226.10800170898438,
+       "field5": -27.79589080810547,
+       "field6": 325.7601013183594,
+       "field7": 499,
+       "floor": 2,
+       "id": 237
+      }
+     ],
+     "id": 798,
+     "internalName": "MagistersTerrace",
+     "parentMapId": 499,
+     "virtualMapId": -1,
+     "x1": 325.0,
+     "x2": -39.58333206176758,
+     "y1": 249.99998474121094,
+     "y2": -297.9166564941406
+    }
+   ],
+   "mapId": 585
+  }
+ ]
+}

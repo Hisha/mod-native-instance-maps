@@ -1,0 +1,266 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/ShadowLabyrinth1_1.blp",
+   "target": "Interface/WorldMap/ShadowLabyrinth/ShadowLabyrinth1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowLabyrinth1_2.blp",
+   "target": "Interface/WorldMap/ShadowLabyrinth/ShadowLabyrinth1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowLabyrinth1_3.blp",
+   "target": "Interface/WorldMap/ShadowLabyrinth/ShadowLabyrinth1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowLabyrinth1_4.blp",
+   "target": "Interface/WorldMap/ShadowLabyrinth/ShadowLabyrinth1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowLabyrinth1_5.blp",
+   "target": "Interface/WorldMap/ShadowLabyrinth/ShadowLabyrinth1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowLabyrinth1_6.blp",
+   "target": "Interface/WorldMap/ShadowLabyrinth/ShadowLabyrinth1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowLabyrinth1_7.blp",
+   "target": "Interface/WorldMap/ShadowLabyrinth/ShadowLabyrinth1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowLabyrinth1_8.blp",
+   "target": "Interface/WorldMap/ShadowLabyrinth/ShadowLabyrinth1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowLabyrinth1_9.blp",
+   "target": "Interface/WorldMap/ShadowLabyrinth/ShadowLabyrinth1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowLabyrinth1_10.blp",
+   "target": "Interface/WorldMap/ShadowLabyrinth/ShadowLabyrinth1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowLabyrinth1_11.blp",
+   "target": "Interface/WorldMap/ShadowLabyrinth/ShadowLabyrinth1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ShadowLabyrinth1_12.blp",
+   "target": "Interface/WorldMap/ShadowLabyrinth/ShadowLabyrinth1_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Shadow Labyrinth instance map: 1 DungeonMap floor, 21 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 12 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Shadow Labyrinth",
+ "package": "mod-native-instance-maps.shadow-labyrinth",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 3789,
+     "chunks": [
+      {
+       "dungeonMapId": 218,
+       "field2": 21570,
+       "field4": -10000.0,
+       "id": 3252
+      },
+      {
+       "dungeonMapId": 218,
+       "field2": 21571,
+       "field4": -10000.0,
+       "id": 3258
+      },
+      {
+       "dungeonMapId": 218,
+       "field2": 21572,
+       "field4": -10000.0,
+       "id": 3268
+      },
+      {
+       "dungeonMapId": 218,
+       "field2": 21574,
+       "field4": -10000.0,
+       "id": 3259
+      },
+      {
+       "dungeonMapId": 218,
+       "field2": 21575,
+       "field4": -10000.0,
+       "id": 3253
+      },
+      {
+       "dungeonMapId": 218,
+       "field2": 21576,
+       "field4": -10000.0,
+       "id": 3260
+      },
+      {
+       "dungeonMapId": 218,
+       "field2": 21577,
+       "field4": -10000.0,
+       "id": 3254
+      },
+      {
+       "dungeonMapId": 218,
+       "field2": 21578,
+       "field4": -10000.0,
+       "id": 3261
+      },
+      {
+       "dungeonMapId": 218,
+       "field2": 21579,
+       "field4": -10000.0,
+       "id": 3250
+      },
+      {
+       "dungeonMapId": 218,
+       "field2": 21580,
+       "field4": -10000.0,
+       "id": 3255
+      },
+      {
+       "dungeonMapId": 218,
+       "field2": 21583,
+       "field4": -10000.0,
+       "id": 3262
+      },
+      {
+       "dungeonMapId": 218,
+       "field2": 21584,
+       "field4": -10000.0,
+       "id": 3256
+      },
+      {
+       "dungeonMapId": 218,
+       "field2": 21585,
+       "field4": -10000.0,
+       "id": 3263
+      },
+      {
+       "dungeonMapId": 218,
+       "field2": 21586,
+       "field4": -10000.0,
+       "id": 3257
+      },
+      {
+       "dungeonMapId": 218,
+       "field2": 21606,
+       "field4": -10000.0,
+       "id": 3267
+      },
+      {
+       "dungeonMapId": 218,
+       "field2": 21741,
+       "field4": -10000.0,
+       "id": 3264
+      },
+      {
+       "dungeonMapId": 218,
+       "field2": 22206,
+       "field4": -10000.0,
+       "id": 3266
+      },
+      {
+       "dungeonMapId": 218,
+       "field2": 22207,
+       "field4": -10000.0,
+       "id": 3248
+      },
+      {
+       "dungeonMapId": 218,
+       "field2": 22208,
+       "field4": -10000.0,
+       "id": 3249
+      },
+      {
+       "dungeonMapId": 218,
+       "field2": 22213,
+       "field4": -10000.0,
+       "id": 3251
+      },
+      {
+       "dungeonMapId": 218,
+       "field2": 22333,
+       "field4": -10000.0,
+       "id": 3265
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Schattenlabyrinth"
+      },
+      "enCN": {
+       "1": "暗影迷宫"
+      },
+      "enGB": {
+       "1": "Shadow Labyrinth"
+      },
+      "enUS": {
+       "1": "Shadow Labyrinth"
+      },
+      "esES": {
+       "1": "Laberinto de las Sombras"
+      },
+      "esMX": {
+       "1": "Laberinto de las Sombras"
+      },
+      "frFR": {
+       "1": "Labyrinthe des Ombres"
+      },
+      "koKR": {
+       "1": "어둠의 미궁"
+      },
+      "ruRU": {
+       "1": "Темный лабиринт"
+      },
+      "zhCN": {
+       "1": "暗影迷宫"
+      },
+      "zhTW": {
+       "1": "暗影迷宮"
+      }
+     },
+     "floors": [
+      {
+       "field3": -656.4431762695312,
+       "field4": 185.0791778564453,
+       "field5": -498.2179870605469,
+       "field6": 62.79690170288086,
+       "field7": 478,
+       "floor": 1,
+       "id": 218
+      }
+     ],
+     "id": 724,
+     "internalName": "ShadowLabyrinth",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 555
+  }
+ ]
+}

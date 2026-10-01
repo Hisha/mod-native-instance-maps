@@ -1,0 +1,290 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/RazorfenKraul1_1.blp",
+   "target": "Interface/WorldMap/RazorfenKraul/RazorfenKraul1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/RazorfenKraul1_2.blp",
+   "target": "Interface/WorldMap/RazorfenKraul/RazorfenKraul1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/RazorfenKraul1_3.blp",
+   "target": "Interface/WorldMap/RazorfenKraul/RazorfenKraul1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/RazorfenKraul1_4.blp",
+   "target": "Interface/WorldMap/RazorfenKraul/RazorfenKraul1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/RazorfenKraul1_5.blp",
+   "target": "Interface/WorldMap/RazorfenKraul/RazorfenKraul1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/RazorfenKraul1_6.blp",
+   "target": "Interface/WorldMap/RazorfenKraul/RazorfenKraul1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/RazorfenKraul1_7.blp",
+   "target": "Interface/WorldMap/RazorfenKraul/RazorfenKraul1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/RazorfenKraul1_8.blp",
+   "target": "Interface/WorldMap/RazorfenKraul/RazorfenKraul1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/RazorfenKraul1_9.blp",
+   "target": "Interface/WorldMap/RazorfenKraul/RazorfenKraul1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/RazorfenKraul1_10.blp",
+   "target": "Interface/WorldMap/RazorfenKraul/RazorfenKraul1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/RazorfenKraul1_11.blp",
+   "target": "Interface/WorldMap/RazorfenKraul/RazorfenKraul1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/RazorfenKraul1_12.blp",
+   "target": "Interface/WorldMap/RazorfenKraul/RazorfenKraul1_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Razorfen Kraul instance map: 1 DungeonMap floor, 25 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 12 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Razorfen Kraul",
+ "package": "mod-native-instance-maps.razorfen-kraul",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 491,
+     "chunks": [
+      {
+       "dungeonMapId": 149,
+       "field2": 2235,
+       "field4": -10000.0,
+       "id": 2140
+      },
+      {
+       "dungeonMapId": 149,
+       "field2": 2236,
+       "field4": -10000.0,
+       "id": 2137
+      },
+      {
+       "dungeonMapId": 149,
+       "field2": 2237,
+       "field4": -10000.0,
+       "id": 2139
+      },
+      {
+       "dungeonMapId": 149,
+       "field2": 2238,
+       "field4": -10000.0,
+       "id": 2154
+      },
+      {
+       "dungeonMapId": 149,
+       "field2": 2239,
+       "field4": -10000.0,
+       "id": 2146
+      },
+      {
+       "dungeonMapId": 149,
+       "field2": 2240,
+       "field4": -10000.0,
+       "id": 2141
+      },
+      {
+       "dungeonMapId": 149,
+       "field2": 2241,
+       "field4": -10000.0,
+       "id": 2142
+      },
+      {
+       "dungeonMapId": 149,
+       "field2": 2242,
+       "field4": -10000.0,
+       "id": 2147
+      },
+      {
+       "dungeonMapId": 149,
+       "field2": 2243,
+       "field4": -10000.0,
+       "id": 2155
+      },
+      {
+       "dungeonMapId": 149,
+       "field2": 2244,
+       "field4": -10000.0,
+       "id": 2148
+      },
+      {
+       "dungeonMapId": 149,
+       "field2": 2245,
+       "field4": -10000.0,
+       "id": 2156
+      },
+      {
+       "dungeonMapId": 149,
+       "field2": 2246,
+       "field4": -10000.0,
+       "id": 2149
+      },
+      {
+       "dungeonMapId": 149,
+       "field2": 2247,
+       "field4": -10000.0,
+       "id": 2138
+      },
+      {
+       "dungeonMapId": 149,
+       "field2": 2248,
+       "field4": -10000.0,
+       "id": 2157
+      },
+      {
+       "dungeonMapId": 149,
+       "field2": 2249,
+       "field4": -10000.0,
+       "id": 2150
+      },
+      {
+       "dungeonMapId": 149,
+       "field2": 2250,
+       "field4": -10000.0,
+       "id": 2158
+      },
+      {
+       "dungeonMapId": 149,
+       "field2": 2251,
+       "field4": -10000.0,
+       "id": 2151
+      },
+      {
+       "dungeonMapId": 149,
+       "field2": 2252,
+       "field4": -10000.0,
+       "id": 2136
+      },
+      {
+       "dungeonMapId": 149,
+       "field2": 2253,
+       "field4": -10000.0,
+       "id": 2152
+      },
+      {
+       "dungeonMapId": 149,
+       "field2": 2255,
+       "field4": -10000.0,
+       "id": 2143
+      },
+      {
+       "dungeonMapId": 149,
+       "field2": 2256,
+       "field4": -10000.0,
+       "id": 2153
+      },
+      {
+       "dungeonMapId": 149,
+       "field2": 2257,
+       "field4": -10000.0,
+       "id": 2145
+      },
+      {
+       "dungeonMapId": 149,
+       "field2": 2258,
+       "field4": -10000.0,
+       "id": 2144
+      },
+      {
+       "dungeonMapId": 149,
+       "field2": 2259,
+       "field4": -10000.0,
+       "id": 2160
+      },
+      {
+       "dungeonMapId": 149,
+       "field2": 2260,
+       "field4": -10000.0,
+       "id": 2159
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Kral der Klingenhauer"
+      },
+      "enCN": {
+       "1": "剃刀沼泽"
+      },
+      "enGB": {
+       "1": "Razorfen Kraul"
+      },
+      "enUS": {
+       "1": "Razorfen Kraul"
+      },
+      "esES": {
+       "1": "Horado Rajacieno"
+      },
+      "esMX": {
+       "1": "Horado Rajacieno"
+      },
+      "frFR": {
+       "1": "Kraal de Tranchebauge"
+      },
+      "koKR": {
+       "1": "가시덩굴 우리"
+      },
+      "ruRU": {
+       "1": "Лабиринты Иглошкурых"
+      },
+      "zhCN": {
+       "1": "剃刀沼泽"
+      },
+      "zhTW": {
+       "1": "剃刀沼澤"
+      }
+     },
+     "floors": [
+      {
+       "field3": 1322.469970703125,
+       "field4": 2058.919921875,
+       "field5": 1858.6800537109375,
+       "field6": 2349.639892578125,
+       "field7": 11,
+       "floor": 1,
+       "id": 149
+      }
+     ],
+     "id": 761,
+     "internalName": "RazorfenKraul",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 2733.333251953125,
+     "x2": 1533.333251953125,
+     "y1": 2766.66650390625,
+     "y2": 966.6666259765625
+    }
+   ],
+   "mapId": 47
+  }
+ ]
+}

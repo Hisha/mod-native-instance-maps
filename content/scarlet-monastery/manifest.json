@@ -1,0 +1,914 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/ScarletMonastery1_1.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery1_2.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery1_3.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery1_4.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery1_5.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery1_6.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery1_7.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery1_8.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery1_9.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery1_10.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery1_11.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery1_12.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery1_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery2_1.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery2_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery2_2.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery2_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery2_3.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery2_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery2_4.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery2_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery2_5.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery2_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery2_6.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery2_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery2_7.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery2_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery2_8.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery2_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery2_9.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery2_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery2_10.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery2_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery2_11.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery2_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery2_12.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery2_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery3_1.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery3_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery3_2.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery3_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery3_3.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery3_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery3_4.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery3_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery3_5.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery3_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery3_6.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery3_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery3_7.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery3_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery3_8.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery3_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery3_9.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery3_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery3_10.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery3_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery3_11.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery3_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery3_12.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery3_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery4_1.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery4_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery4_2.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery4_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery4_3.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery4_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery4_4.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery4_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery4_5.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery4_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery4_6.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery4_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery4_7.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery4_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery4_8.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery4_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery4_9.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery4_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery4_10.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery4_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery4_11.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery4_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ScarletMonastery4_12.blp",
+   "target": "Interface/WorldMap/ScarletMonastery/ScarletMonastery4_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Scarlet Monastery instance map: 4 DungeonMap floors, 89 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 48 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Scarlet Monastery",
+ "package": "mod-native-instance-maps.scarlet-monastery",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 796,
+     "chunks": [
+      {
+       "dungeonMapId": 137,
+       "field2": 7874,
+       "field4": -10000.0,
+       "id": 1996
+      },
+      {
+       "dungeonMapId": 137,
+       "field2": 7875,
+       "field4": -10000.0,
+       "id": 2007
+      },
+      {
+       "dungeonMapId": 137,
+       "field2": 7876,
+       "field4": -10000.0,
+       "id": 1997
+      },
+      {
+       "dungeonMapId": 137,
+       "field2": 7877,
+       "field4": -10000.0,
+       "id": 2008
+      },
+      {
+       "dungeonMapId": 137,
+       "field2": 7878,
+       "field4": -10000.0,
+       "id": 1998
+      },
+      {
+       "dungeonMapId": 137,
+       "field2": 7879,
+       "field4": -10000.0,
+       "id": 2009
+      },
+      {
+       "dungeonMapId": 137,
+       "field2": 7883,
+       "field4": -10000.0,
+       "id": 2811
+      },
+      {
+       "dungeonMapId": 137,
+       "field2": 7884,
+       "field4": -10000.0,
+       "id": 2018
+      },
+      {
+       "dungeonMapId": 137,
+       "field2": 7885,
+       "field4": -10000.0,
+       "id": 2000
+      },
+      {
+       "dungeonMapId": 137,
+       "field2": 7886,
+       "field4": -10000.0,
+       "id": 2011
+      },
+      {
+       "dungeonMapId": 137,
+       "field2": 7887,
+       "field4": -10000.0,
+       "id": 2012
+      },
+      {
+       "dungeonMapId": 137,
+       "field2": 7888,
+       "field4": -10000.0,
+       "id": 2001
+      },
+      {
+       "dungeonMapId": 137,
+       "field2": 7889,
+       "field4": -10000.0,
+       "id": 1994
+      },
+      {
+       "dungeonMapId": 137,
+       "field2": 7890,
+       "field4": -10000.0,
+       "id": 2815
+      },
+      {
+       "dungeonMapId": 137,
+       "field2": 7891,
+       "field4": -10000.0,
+       "id": 2812
+      },
+      {
+       "dungeonMapId": 137,
+       "field2": 7892,
+       "field4": -10000.0,
+       "id": 2816
+      },
+      {
+       "dungeonMapId": 137,
+       "field2": 7893,
+       "field4": -10000.0,
+       "id": 2813
+      },
+      {
+       "dungeonMapId": 137,
+       "field2": 7894,
+       "field4": -10000.0,
+       "id": 2817
+      },
+      {
+       "dungeonMapId": 137,
+       "field2": 7895,
+       "field4": -10000.0,
+       "id": 2814
+      },
+      {
+       "dungeonMapId": 137,
+       "field2": 7896,
+       "field4": -10000.0,
+       "id": 2818
+      },
+      {
+       "dungeonMapId": 137,
+       "field2": 7897,
+       "field4": -10000.0,
+       "id": 4110
+      },
+      {
+       "dungeonMapId": 137,
+       "field2": 7898,
+       "field4": -10000.0,
+       "id": 2005
+      },
+      {
+       "dungeonMapId": 137,
+       "field2": 7899,
+       "field4": -10000.0,
+       "id": 2017
+      },
+      {
+       "dungeonMapId": 137,
+       "field2": 7900,
+       "field4": -10000.0,
+       "id": 2006
+      },
+      {
+       "dungeonMapId": 179,
+       "field2": 7901,
+       "field4": -10000.0,
+       "id": 2802
+      },
+      {
+       "dungeonMapId": 179,
+       "field2": 7903,
+       "field4": -10000.0,
+       "id": 2803
+      },
+      {
+       "dungeonMapId": 179,
+       "field2": 7904,
+       "field4": -10000.0,
+       "id": 2794
+      },
+      {
+       "dungeonMapId": 179,
+       "field2": 7905,
+       "field4": -10000.0,
+       "id": 2804
+      },
+      {
+       "dungeonMapId": 179,
+       "field2": 7906,
+       "field4": -10000.0,
+       "id": 2805
+      },
+      {
+       "dungeonMapId": 179,
+       "field2": 7907,
+       "field4": -10000.0,
+       "id": 2790
+      },
+      {
+       "dungeonMapId": 179,
+       "field2": 7908,
+       "field4": -10000.0,
+       "id": 2795
+      },
+      {
+       "dungeonMapId": 179,
+       "field2": 7910,
+       "field4": -10000.0,
+       "id": 2796
+      },
+      {
+       "dungeonMapId": 179,
+       "field2": 7911,
+       "field4": -10000.0,
+       "id": 2806
+      },
+      {
+       "dungeonMapId": 179,
+       "field2": 7912,
+       "field4": -10000.0,
+       "id": 2797
+      },
+      {
+       "dungeonMapId": 179,
+       "field2": 7913,
+       "field4": -10000.0,
+       "id": 2807
+      },
+      {
+       "dungeonMapId": 179,
+       "field2": 7914,
+       "field4": -10000.0,
+       "id": 4109
+      },
+      {
+       "dungeonMapId": 179,
+       "field2": 7915,
+       "field4": -10000.0,
+       "id": 2808
+      },
+      {
+       "dungeonMapId": 179,
+       "field2": 7916,
+       "field4": -10000.0,
+       "id": 2798
+      },
+      {
+       "dungeonMapId": 179,
+       "field2": 7917,
+       "field4": -10000.0,
+       "id": 2791
+      },
+      {
+       "dungeonMapId": 179,
+       "field2": 7918,
+       "field4": -10000.0,
+       "id": 2809
+      },
+      {
+       "dungeonMapId": 179,
+       "field2": 7919,
+       "field4": -10000.0,
+       "id": 2799
+      },
+      {
+       "dungeonMapId": 179,
+       "field2": 7920,
+       "field4": -10000.0,
+       "id": 2810
+      },
+      {
+       "dungeonMapId": 179,
+       "field2": 7921,
+       "field4": -10000.0,
+       "id": 2800
+      },
+      {
+       "dungeonMapId": 140,
+       "field2": 7923,
+       "field4": -10000.0,
+       "id": 4063
+      },
+      {
+       "dungeonMapId": 140,
+       "field2": 7924,
+       "field4": -10000.0,
+       "id": 2044
+      },
+      {
+       "dungeonMapId": 140,
+       "field2": 7925,
+       "field4": -10000.0,
+       "id": 2038
+      },
+      {
+       "dungeonMapId": 140,
+       "field2": 7926,
+       "field4": -10000.0,
+       "id": 2027
+      },
+      {
+       "dungeonMapId": 140,
+       "field2": 7927,
+       "field4": -10000.0,
+       "id": 2030
+      },
+      {
+       "dungeonMapId": 140,
+       "field2": 7928,
+       "field4": -10000.0,
+       "id": 2028
+      },
+      {
+       "dungeonMapId": 140,
+       "field2": 7929,
+       "field4": -10000.0,
+       "id": 2031
+      },
+      {
+       "dungeonMapId": 140,
+       "field2": 7930,
+       "field4": -10000.0,
+       "id": 4062
+      },
+      {
+       "dungeonMapId": 140,
+       "field2": 7932,
+       "field4": -10000.0,
+       "id": 2032
+      },
+      {
+       "dungeonMapId": 140,
+       "field2": 7933,
+       "field4": -10000.0,
+       "id": 2029
+      },
+      {
+       "dungeonMapId": 140,
+       "field2": 7934,
+       "field4": -10000.0,
+       "id": 2039
+      },
+      {
+       "dungeonMapId": 140,
+       "field2": 7935,
+       "field4": -10000.0,
+       "id": 2033
+      },
+      {
+       "dungeonMapId": 140,
+       "field2": 7936,
+       "field4": -10000.0,
+       "id": 2040
+      },
+      {
+       "dungeonMapId": 140,
+       "field2": 7937,
+       "field4": -10000.0,
+       "id": 4064
+      },
+      {
+       "dungeonMapId": 140,
+       "field2": 7938,
+       "field4": -10000.0,
+       "id": 2034
+      },
+      {
+       "dungeonMapId": 140,
+       "field2": 7939,
+       "field4": -10000.0,
+       "id": 2041
+      },
+      {
+       "dungeonMapId": 140,
+       "field2": 7940,
+       "field4": -10000.0,
+       "id": 2035
+      },
+      {
+       "dungeonMapId": 140,
+       "field2": 7941,
+       "field4": -10000.0,
+       "id": 2042
+      },
+      {
+       "dungeonMapId": 140,
+       "field2": 7943,
+       "field4": -10000.0,
+       "id": 2043
+      },
+      {
+       "dungeonMapId": 140,
+       "field2": 7944,
+       "field4": -10000.0,
+       "id": 2036
+      },
+      {
+       "dungeonMapId": 140,
+       "field2": 7947,
+       "field4": -10000.0,
+       "id": 2037
+      },
+      {
+       "dungeonMapId": 141,
+       "field2": 7949,
+       "field4": -10000.0,
+       "id": 2771
+      },
+      {
+       "dungeonMapId": 141,
+       "field2": 7951,
+       "field4": -10000.0,
+       "id": 2772
+      },
+      {
+       "dungeonMapId": 141,
+       "field2": 7952,
+       "field4": -10000.0,
+       "id": 2782
+      },
+      {
+       "dungeonMapId": 141,
+       "field2": 7953,
+       "field4": -10000.0,
+       "id": 2773
+      },
+      {
+       "dungeonMapId": 141,
+       "field2": 7954,
+       "field4": -10000.0,
+       "id": 2783
+      },
+      {
+       "dungeonMapId": 141,
+       "field2": 7955,
+       "field4": -10000.0,
+       "id": 2774
+      },
+      {
+       "dungeonMapId": 141,
+       "field2": 7956,
+       "field4": -10000.0,
+       "id": 2784
+      },
+      {
+       "dungeonMapId": 141,
+       "field2": 7957,
+       "field4": -10000.0,
+       "id": 2775
+      },
+      {
+       "dungeonMapId": 141,
+       "field2": 7958,
+       "field4": -10000.0,
+       "id": 2785
+      },
+      {
+       "dungeonMapId": 141,
+       "field2": 7959,
+       "field4": -10000.0,
+       "id": 2776
+      },
+      {
+       "dungeonMapId": 141,
+       "field2": 7960,
+       "field4": -10000.0,
+       "id": 2786
+      },
+      {
+       "dungeonMapId": 141,
+       "field2": 7961,
+       "field4": -10000.0,
+       "id": 2777
+      },
+      {
+       "dungeonMapId": 141,
+       "field2": 7962,
+       "field4": -10000.0,
+       "id": 2787
+      },
+      {
+       "dungeonMapId": 141,
+       "field2": 7963,
+       "field4": -10000.0,
+       "id": 2778
+      },
+      {
+       "dungeonMapId": 179,
+       "field2": 7968,
+       "field4": -10000.0,
+       "id": 2801
+      },
+      {
+       "dungeonMapId": 179,
+       "field2": 8548,
+       "field4": -10000.0,
+       "id": 4108
+      },
+      {
+       "dungeonMapId": 179,
+       "field2": 14690,
+       "field4": -10000.0,
+       "id": 2792
+      },
+      {
+       "dungeonMapId": 179,
+       "field2": 14691,
+       "field4": -10000.0,
+       "id": 2789
+      },
+      {
+       "dungeonMapId": 179,
+       "field2": 14692,
+       "field4": -10000.0,
+       "id": 2793
+      },
+      {
+       "dungeonMapId": 141,
+       "field2": 14693,
+       "field4": -10000.0,
+       "id": 2788
+      },
+      {
+       "dungeonMapId": 141,
+       "field2": 14694,
+       "field4": -10000.0,
+       "id": 2769
+      },
+      {
+       "dungeonMapId": 141,
+       "field2": 14695,
+       "field4": -10000.0,
+       "id": 2779
+      },
+      {
+       "dungeonMapId": 141,
+       "field2": 14696,
+       "field4": -10000.0,
+       "id": 2770
+      },
+      {
+       "dungeonMapId": 141,
+       "field2": 14697,
+       "field4": -10000.0,
+       "id": 2780
+      },
+      {
+       "dungeonMapId": 141,
+       "field2": 14698,
+       "field4": -10000.0,
+       "id": 2781
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Friedhof",
+       "2": "Bibliothek",
+       "3": "Waffenkammer",
+       "4": "Kathedrale"
+      },
+      "enCN": {
+       "1": "墓园",
+       "2": "图书馆",
+       "3": "军械库",
+       "4": "教堂"
+      },
+      "enGB": {
+       "1": "Graveyard",
+       "2": "Library",
+       "3": "Armory",
+       "4": "Cathedral"
+      },
+      "enUS": {
+       "1": "Graveyard",
+       "2": "Library",
+       "3": "Armory",
+       "4": "Cathedral"
+      },
+      "esES": {
+       "1": "Cementerio",
+       "2": "Biblioteca",
+       "3": "Arsenal",
+       "4": "Catedral"
+      },
+      "esMX": {
+       "1": "Cementerio",
+       "2": "Biblioteca",
+       "3": "Arsenal",
+       "4": "Catedral"
+      },
+      "frFR": {
+       "1": "Cimetière",
+       "2": "La Bibliothèque",
+       "3": "Armurerie",
+       "4": "Cathédrale"
+      },
+      "koKR": {
+       "1": "묘지",
+       "2": "도서관",
+       "3": "무기고",
+       "4": "예배당"
+      },
+      "ruRU": {
+       "1": "Кладбище",
+       "2": "Библиотека",
+       "3": "Оружейная",
+       "4": "Собор"
+      },
+      "zhCN": {
+       "1": "墓园",
+       "2": "图书馆",
+       "3": "军械库",
+       "4": "教堂"
+      },
+      "zhTW": {
+       "1": "墓地",
+       "2": "圖書館",
+       "3": "軍械庫",
+       "4": "教堂"
+      }
+     },
+     "floors": [
+      {
+       "field3": 947.9860229492188,
+       "field4": 1567.969970703125,
+       "field5": 1616.858642578125,
+       "field6": 2030.181396484375,
+       "field7": 20,
+       "floor": 1,
+       "id": 137
+      },
+      {
+       "field3": -482.4639892578125,
+       "field4": -162.2729949951172,
+       "field5": 93.90550231933594,
+       "field6": 307.3659973144531,
+       "field7": 20,
+       "floor": 2,
+       "id": 140
+      },
+      {
+       "field3": -562.4240112304688,
+       "field4": 50.27259826660156,
+       "field5": 1600.6400146484375,
+       "field6": 2009.0999755859375,
+       "field7": 20,
+       "floor": 3,
+       "id": 141
+      },
+      {
+       "field3": 1040.68994140625,
+       "field4": 1743.989990234375,
+       "field5": 812.4237060546875,
+       "field6": 1281.2904052734375,
+       "field7": 20,
+       "floor": 4,
+       "id": 179
+      }
+     ],
+     "id": 762,
+     "internalName": "ScarletMonastery",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 2733.333251953125,
+     "x2": -600.0,
+     "y1": 3033.333251953125,
+     "y2": -1966.6666259765625
+    }
+   ],
+   "mapId": 189
+  }
+ ]
+}

@@ -1,0 +1,212 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/TheShatteredHalls1_1.blp",
+   "target": "Interface/WorldMap/TheShatteredHalls/TheShatteredHalls1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheShatteredHalls1_2.blp",
+   "target": "Interface/WorldMap/TheShatteredHalls/TheShatteredHalls1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheShatteredHalls1_3.blp",
+   "target": "Interface/WorldMap/TheShatteredHalls/TheShatteredHalls1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheShatteredHalls1_4.blp",
+   "target": "Interface/WorldMap/TheShatteredHalls/TheShatteredHalls1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheShatteredHalls1_5.blp",
+   "target": "Interface/WorldMap/TheShatteredHalls/TheShatteredHalls1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheShatteredHalls1_6.blp",
+   "target": "Interface/WorldMap/TheShatteredHalls/TheShatteredHalls1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheShatteredHalls1_7.blp",
+   "target": "Interface/WorldMap/TheShatteredHalls/TheShatteredHalls1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheShatteredHalls1_8.blp",
+   "target": "Interface/WorldMap/TheShatteredHalls/TheShatteredHalls1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheShatteredHalls1_9.blp",
+   "target": "Interface/WorldMap/TheShatteredHalls/TheShatteredHalls1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheShatteredHalls1_10.blp",
+   "target": "Interface/WorldMap/TheShatteredHalls/TheShatteredHalls1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheShatteredHalls1_11.blp",
+   "target": "Interface/WorldMap/TheShatteredHalls/TheShatteredHalls1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheShatteredHalls1_12.blp",
+   "target": "Interface/WorldMap/TheShatteredHalls/TheShatteredHalls1_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm The Shattered Halls instance map: 1 DungeonMap floor, 12 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 12 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "The Shattered Halls",
+ "package": "mod-native-instance-maps.the-shattered-halls",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 3714,
+     "chunks": [
+      {
+       "dungeonMapId": 222,
+       "field2": 20181,
+       "field4": -10000.0,
+       "id": 3287
+      },
+      {
+       "dungeonMapId": 222,
+       "field2": 20182,
+       "field4": -10000.0,
+       "id": 3289
+      },
+      {
+       "dungeonMapId": 222,
+       "field2": 20183,
+       "field4": -10000.0,
+       "id": 3288
+      },
+      {
+       "dungeonMapId": 222,
+       "field2": 20184,
+       "field4": -10000.0,
+       "id": 3290
+      },
+      {
+       "dungeonMapId": 222,
+       "field2": 20185,
+       "field4": -10000.0,
+       "id": 3291
+      },
+      {
+       "dungeonMapId": 222,
+       "field2": 20186,
+       "field4": -10000.0,
+       "id": 3294
+      },
+      {
+       "dungeonMapId": 222,
+       "field2": 20187,
+       "field4": -10000.0,
+       "id": 3297
+      },
+      {
+       "dungeonMapId": 222,
+       "field2": 20188,
+       "field4": -10000.0,
+       "id": 3293
+      },
+      {
+       "dungeonMapId": 222,
+       "field2": 20189,
+       "field4": -10000.0,
+       "id": 3298
+      },
+      {
+       "dungeonMapId": 222,
+       "field2": 22329,
+       "field4": -10000.0,
+       "id": 3292
+      },
+      {
+       "dungeonMapId": 222,
+       "field2": 22330,
+       "field4": -10000.0,
+       "id": 3296
+      },
+      {
+       "dungeonMapId": 222,
+       "field2": 22378,
+       "field4": -10000.0,
+       "id": 3295
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Die Zerschmetterten Hallen"
+      },
+      "enCN": {
+       "1": "破碎大厅"
+      },
+      "enGB": {
+       "1": "The Shattered Halls"
+      },
+      "enUS": {
+       "1": "The Shattered Halls"
+      },
+      "esES": {
+       "1": "Las Salas Arrasadas"
+      },
+      "esMX": {
+       "1": "Las Salas Arrasadas"
+      },
+      "frFR": {
+       "1": "Les salles Brisées"
+      },
+      "koKR": {
+       "1": "으스러진 손의 전당"
+      },
+      "ruRU": {
+       "1": "Разрушенные залы"
+      },
+      "zhCN": {
+       "1": "破碎大厅"
+      },
+      "zhTW": {
+       "1": "破碎大廳"
+      }
+     },
+     "floors": [
+      {
+       "field3": -432.6392517089844,
+       "field4": 631.1082153320312,
+       "field5": -91.74800109863281,
+       "field6": 617.4169921875,
+       "field7": 465,
+       "floor": 1,
+       "id": 222
+      }
+     ],
+     "id": 710,
+     "internalName": "TheShatteredHalls",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 540
+  }
+ ]
+}

@@ -1,0 +1,1038 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/DireMaul1.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul1_1.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul1_2.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul1_3.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul1_4.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul1_5.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul1_6.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul1_7.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul1_8.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul1_9.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul1_10.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul1_11.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul1_12.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul1_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul2.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul2_1.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul2_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul2_2.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul2_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul2_3.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul2_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul2_4.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul2_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul2_5.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul2_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul2_6.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul2_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul2_7.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul2_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul2_8.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul2_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul2_9.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul2_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul2_10.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul2_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul2_11.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul2_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul2_12.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul2_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul3.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul3_1.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul3_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul3_2.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul3_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul3_3.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul3_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul3_4.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul3_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul3_5.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul3_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul3_6.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul3_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul3_7.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul3_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul3_8.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul3_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul3_9.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul3_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul3_10.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul3_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul3_11.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul3_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul3_12.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul3_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul4.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul4_1.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul4_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul4_2.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul4_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul4_3.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul4_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul4_4.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul4_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul4_5.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul4_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul4_6.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul4_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul4_7.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul4_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul4_8.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul4_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul4_9.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul4_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul4_10.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul4_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul4_11.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul4_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul4_12.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul4_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul5.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul5_1.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul5_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul5_2.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul5_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul5_3.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul5_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul5_4.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul5_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul5_5.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul5_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul5_6.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul5_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul5_7.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul5_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul5_8.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul5_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul5_9.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul5_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul5_10.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul5_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul5_11.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul5_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul5_12.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul5_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul6.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul6_1.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul6_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul6_2.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul6_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul6_3.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul6_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul6_4.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul6_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul6_5.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul6_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul6_6.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul6_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul6_7.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul6_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul6_8.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul6_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul6_9.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul6_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul6_10.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul6_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul6_11.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul6_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul6_12.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul6_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul7.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul8.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul9.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul10.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul11.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/DireMaul12.blp",
+   "target": "Interface/WorldMap/DireMaul/DireMaul12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Dire Maul instance map: 6 DungeonMap floors, 73 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 84 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Dire Maul",
+ "package": "mod-native-instance-maps.dire-maul",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 2557,
+     "chunks": [
+      {
+       "dungeonMapId": 263,
+       "field2": 18116,
+       "field4": -10000.0,
+       "id": 3645
+      },
+      {
+       "dungeonMapId": 267,
+       "field2": 18117,
+       "field4": -10000.0,
+       "id": 3694
+      },
+      {
+       "dungeonMapId": 267,
+       "field2": 18120,
+       "field4": -10000.0,
+       "id": 3692
+      },
+      {
+       "dungeonMapId": 267,
+       "field2": 18121,
+       "field4": -10000.0,
+       "id": 3693
+      },
+      {
+       "dungeonMapId": 267,
+       "field2": 18122,
+       "field4": -10000.0,
+       "id": 3691
+      },
+      {
+       "dungeonMapId": 263,
+       "field2": 18125,
+       "field4": -10000.0,
+       "id": 3651
+      },
+      {
+       "dungeonMapId": 263,
+       "field2": 18126,
+       "field4": -10000.0,
+       "id": 3649
+      },
+      {
+       "dungeonMapId": 263,
+       "field2": 18127,
+       "field4": -10000.0,
+       "id": 3650
+      },
+      {
+       "dungeonMapId": 263,
+       "field2": 18128,
+       "field4": -10000.0,
+       "id": 3652
+      },
+      {
+       "dungeonMapId": 263,
+       "field2": 18129,
+       "field4": -10000.0,
+       "id": 3653
+      },
+      {
+       "dungeonMapId": 266,
+       "field2": 18130,
+       "field4": -10000.0,
+       "id": 3664
+      },
+      {
+       "dungeonMapId": 266,
+       "field2": 18131,
+       "field4": -10000.0,
+       "id": 3665
+      },
+      {
+       "dungeonMapId": 262,
+       "field2": 18135,
+       "field4": -10000.0,
+       "id": 3485
+      },
+      {
+       "dungeonMapId": 262,
+       "field2": 18136,
+       "field4": -10000.0,
+       "id": 3498
+      },
+      {
+       "dungeonMapId": 262,
+       "field2": 18138,
+       "field4": -10000.0,
+       "id": 3500
+      },
+      {
+       "dungeonMapId": 262,
+       "field2": 18139,
+       "field4": -10000.0,
+       "id": 3499
+      },
+      {
+       "dungeonMapId": 266,
+       "field2": 18140,
+       "field4": -10000.0,
+       "id": 3675
+      },
+      {
+       "dungeonMapId": 266,
+       "field2": 18141,
+       "field4": -10000.0,
+       "id": 3680
+      },
+      {
+       "dungeonMapId": 266,
+       "field2": 18142,
+       "field4": -10000.0,
+       "id": 3679
+      },
+      {
+       "dungeonMapId": 266,
+       "field2": 18143,
+       "field4": -10000.0,
+       "id": 3678
+      },
+      {
+       "dungeonMapId": 266,
+       "field2": 18144,
+       "field4": -10000.0,
+       "id": 3677
+      },
+      {
+       "dungeonMapId": 266,
+       "field2": 18145,
+       "field4": -10000.0,
+       "id": 3676
+      },
+      {
+       "dungeonMapId": 266,
+       "field2": 18146,
+       "field4": -10000.0,
+       "id": 3672
+      },
+      {
+       "dungeonMapId": 266,
+       "field2": 18147,
+       "field4": -10000.0,
+       "id": 3673
+      },
+      {
+       "dungeonMapId": 266,
+       "field2": 18148,
+       "field4": -10000.0,
+       "id": 3674
+      },
+      {
+       "dungeonMapId": 266,
+       "field2": 18149,
+       "field4": -10000.0,
+       "id": 3671
+      },
+      {
+       "dungeonMapId": 267,
+       "field2": 18150,
+       "field4": -10000.0,
+       "id": 3695
+      },
+      {
+       "dungeonMapId": 263,
+       "field2": 18151,
+       "field4": -10000.0,
+       "id": 3646
+      },
+      {
+       "dungeonMapId": 263,
+       "field2": 18152,
+       "field4": -10000.0,
+       "id": 3647
+      },
+      {
+       "dungeonMapId": 265,
+       "field2": 18153,
+       "field4": -10000.0,
+       "id": 3656
+      },
+      {
+       "dungeonMapId": 265,
+       "field2": 18154,
+       "field4": -10000.0,
+       "id": 3657
+      },
+      {
+       "dungeonMapId": 265,
+       "field2": 18155,
+       "field4": -10000.0,
+       "id": 3658
+      },
+      {
+       "dungeonMapId": 265,
+       "field2": 18156,
+       "field4": -10000.0,
+       "id": 3659
+      },
+      {
+       "dungeonMapId": 265,
+       "field2": 18157,
+       "field4": -10000.0,
+       "id": 3660
+      },
+      {
+       "dungeonMapId": 263,
+       "field2": 18158,
+       "field4": -10000.0,
+       "id": 3648
+      },
+      {
+       "dungeonMapId": 267,
+       "field2": 18159,
+       "field4": -10000.0,
+       "id": 3687
+      },
+      {
+       "dungeonMapId": 266,
+       "field2": 18160,
+       "field4": -10000.0,
+       "id": 3682
+      },
+      {
+       "dungeonMapId": 262,
+       "field2": 18161,
+       "field4": -10000.0,
+       "id": 3486
+      },
+      {
+       "dungeonMapId": 267,
+       "field2": 18162,
+       "field4": -10000.0,
+       "id": 3701
+      },
+      {
+       "dungeonMapId": 267,
+       "field2": 18163,
+       "field4": -10000.0,
+       "id": 3700
+      },
+      {
+       "dungeonMapId": 267,
+       "field2": 18164,
+       "field4": -10000.0,
+       "id": 3699
+      },
+      {
+       "dungeonMapId": 267,
+       "field2": 18165,
+       "field4": -10000.0,
+       "id": 3698
+      },
+      {
+       "dungeonMapId": 267,
+       "field2": 18166,
+       "field4": -10000.0,
+       "id": 3697
+      },
+      {
+       "dungeonMapId": 267,
+       "field2": 18167,
+       "field4": -10000.0,
+       "id": 3696
+      },
+      {
+       "dungeonMapId": 265,
+       "field2": 18168,
+       "field4": -10000.0,
+       "id": 3663
+      },
+      {
+       "dungeonMapId": 265,
+       "field2": 18169,
+       "field4": -10000.0,
+       "id": 3661
+      },
+      {
+       "dungeonMapId": 264,
+       "field2": 18170,
+       "field4": -10000.0,
+       "id": 3654
+      },
+      {
+       "dungeonMapId": 264,
+       "field2": 18171,
+       "field4": -10000.0,
+       "id": 3655
+      },
+      {
+       "dungeonMapId": 265,
+       "field2": 18172,
+       "field4": -10000.0,
+       "id": 3662
+      },
+      {
+       "dungeonMapId": 266,
+       "field2": 18173,
+       "field4": -10000.0,
+       "id": 3666
+      },
+      {
+       "dungeonMapId": 266,
+       "field2": 18175,
+       "field4": -10000.0,
+       "id": 3668
+      },
+      {
+       "dungeonMapId": 266,
+       "field2": 18176,
+       "field4": -10000.0,
+       "id": 3667
+      },
+      {
+       "dungeonMapId": 267,
+       "field2": 18177,
+       "field4": -10000.0,
+       "id": 3685
+      },
+      {
+       "dungeonMapId": 267,
+       "field2": 18178,
+       "field4": -10000.0,
+       "id": 3684
+      },
+      {
+       "dungeonMapId": 262,
+       "field2": 18179,
+       "field4": -10000.0,
+       "id": 3489
+      },
+      {
+       "dungeonMapId": 262,
+       "field2": 18180,
+       "field4": -10000.0,
+       "id": 3488
+      },
+      {
+       "dungeonMapId": 262,
+       "field2": 18181,
+       "field4": -10000.0,
+       "id": 3487
+      },
+      {
+       "dungeonMapId": 262,
+       "field2": 18187,
+       "field4": -10000.0,
+       "id": 3490
+      },
+      {
+       "dungeonMapId": 267,
+       "field2": 18189,
+       "field4": -10000.0,
+       "id": 3688
+      },
+      {
+       "dungeonMapId": 267,
+       "field2": 18190,
+       "field4": -10000.0,
+       "id": 3689
+      },
+      {
+       "dungeonMapId": 267,
+       "field2": 18191,
+       "field4": -10000.0,
+       "id": 3690
+      },
+      {
+       "dungeonMapId": 262,
+       "field2": 18194,
+       "field4": -10000.0,
+       "id": 3497
+      },
+      {
+       "dungeonMapId": 262,
+       "field2": 18195,
+       "field4": -10000.0,
+       "id": 3492
+      },
+      {
+       "dungeonMapId": 262,
+       "field2": 18196,
+       "field4": -10000.0,
+       "id": 3496
+      },
+      {
+       "dungeonMapId": 262,
+       "field2": 18197,
+       "field4": -10000.0,
+       "id": 3491
+      },
+      {
+       "dungeonMapId": 267,
+       "field2": 18199,
+       "field4": -10000.0,
+       "id": 3686
+      },
+      {
+       "dungeonMapId": 266,
+       "field2": 18200,
+       "field4": -10000.0,
+       "id": 3669
+      },
+      {
+       "dungeonMapId": 266,
+       "field2": 18201,
+       "field4": -10000.0,
+       "id": 3670
+      },
+      {
+       "dungeonMapId": 266,
+       "field2": 18251,
+       "field4": -10000.0,
+       "id": 3681
+      },
+      {
+       "dungeonMapId": 262,
+       "field2": 18430,
+       "field4": -10000.0,
+       "id": 3493
+      },
+      {
+       "dungeonMapId": 262,
+       "field2": 18431,
+       "field4": -10000.0,
+       "id": 3494
+      },
+      {
+       "dungeonMapId": 262,
+       "field2": 18432,
+       "field4": -10000.0,
+       "id": 3495
+      },
+      {
+       "dungeonMapId": 267,
+       "field2": 18692,
+       "field4": -10000.0,
+       "id": 3683
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Gordokhallen",
+       "2": "Hauptstadtgärten",
+       "3": "Hof der Hochgeborenen",
+       "4": "Das Gefängnis von Immol'thar",
+       "5": "Wucherborkenviertel",
+       "6": "Der Schrein von Eldretharr"
+      },
+      "enCN": {
+       "1": "戈多克议会",
+       "2": "中心花园",
+       "3": "上层精灵庭院",
+       "4": "伊莫塔尔的牢笼",
+       "5": "扭木广场",
+       "6": "艾德雷斯神殿"
+      },
+      "enGB": {
+       "1": "Gordok Commons",
+       "2": "Capital Gardens",
+       "3": "Court of the Highborne",
+       "4": "Prison of Immol'Thar",
+       "5": "Warpwood Quarter",
+       "6": "The Shrine of Eldretharr"
+      },
+      "enUS": {
+       "1": "Gordok Commons",
+       "2": "Capital Gardens",
+       "3": "Court of the Highborne",
+       "4": "Prison of Immol'Thar",
+       "5": "Warpwood Quarter",
+       "6": "The Shrine of Eldretharr"
+      },
+      "esES": {
+       "1": "Ágora de Gordok",
+       "2": "Jardines de la Capital",
+       "3": "Corte de los Altonato",
+       "4": "Prisión de Immol'thar",
+       "5": "Barrio Alabeo",
+       "6": "Santuario de Eldretharr"
+      },
+      "esMX": {
+       "1": "Ágora de Gordok",
+       "2": "Jardines de la Capital",
+       "3": "Corte de los Altonato",
+       "4": "Prisión de Immol'thar",
+       "5": "Barrio Alabeo",
+       "6": "Santuario de Eldretharr"
+      },
+      "frFR": {
+       "1": "Communs gordok",
+       "2": "Grands jardins",
+       "3": "Cours des Bien-nés",
+       "4": "Prison d'Immol'Thar",
+       "5": "Quartier de Crochebois",
+       "6": "Le sanctuaire d'Eldretharr"
+      },
+      "koKR": {
+       "1": "고르독 광장",
+       "2": "수도 정원",
+       "3": "명가의 궁정",
+       "4": "이몰타르의 감옥",
+       "5": "굽이나무 지구",
+       "6": "엘드레사르 제단"
+      },
+      "ruRU": {
+       "1": "Палаты Гордока",
+       "2": "Центральный сад",
+       "3": "Двор высокорожденных",
+       "4": "Тюрьма Бессмер'тера",
+       "5": "Квартал Криводревов",
+       "6": "Святилище Элдретарра"
+      },
+      "zhCN": {
+       "1": "戈多克议会",
+       "2": "中心花园",
+       "3": "上层精灵庭院",
+       "4": "伊莫塔尔的牢笼",
+       "5": "扭木广场",
+       "6": "艾德雷斯神殿"
+      },
+      "zhTW": {
+       "1": "戈多克平民區",
+       "2": "中心花園",
+       "3": "精靈貴族庭院",
+       "4": "伊莫塔爾的牢籠",
+       "5": "扭木廣場",
+       "6": "艾德雷斯神殿"
+      }
+     },
+     "floors": [
+      {
+       "field3": -387.5,
+       "field4": 887.5,
+       "field5": 200.0,
+       "field6": 1050.0,
+       "field7": 121,
+       "floor": 1,
+       "id": 262
+      },
+      {
+       "field3": 125.0,
+       "field4": 650.0,
+       "field5": -150.0,
+       "field6": 200.0,
+       "field7": 121,
+       "floor": 2,
+       "id": 263
+      },
+      {
+       "field3": 231.25,
+       "field4": 718.75,
+       "field5": -150.0,
+       "field6": 175.0,
+       "field7": 121,
+       "floor": 3,
+       "id": 264
+      },
+      {
+       "field3": 325.0,
+       "field4": 1075.0,
+       "field5": -250.0,
+       "field6": 250.0,
+       "field7": 121,
+       "floor": 4,
+       "id": 265
+      },
+      {
+       "field3": -900.0,
+       "field4": -99.99919891357422,
+       "field5": -281.6669921875,
+       "field6": 251.66700744628906,
+       "field7": 121,
+       "floor": 5,
+       "id": 266
+      },
+      {
+       "field3": -862.5,
+       "field4": 112.5,
+       "field5": -200.0,
+       "field6": 450.0,
+       "field7": 121,
+       "floor": 6,
+       "id": 267
+      }
+     ],
+     "id": 699,
+     "internalName": "DireMaul",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 429
+  }
+ ]
+}

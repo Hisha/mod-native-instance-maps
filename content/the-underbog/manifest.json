@@ -1,0 +1,146 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/TheUnderbog1_1.blp",
+   "target": "Interface/WorldMap/TheUnderbog/TheUnderbog1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheUnderbog1_2.blp",
+   "target": "Interface/WorldMap/TheUnderbog/TheUnderbog1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheUnderbog1_3.blp",
+   "target": "Interface/WorldMap/TheUnderbog/TheUnderbog1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheUnderbog1_4.blp",
+   "target": "Interface/WorldMap/TheUnderbog/TheUnderbog1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheUnderbog1_5.blp",
+   "target": "Interface/WorldMap/TheUnderbog/TheUnderbog1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheUnderbog1_6.blp",
+   "target": "Interface/WorldMap/TheUnderbog/TheUnderbog1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheUnderbog1_7.blp",
+   "target": "Interface/WorldMap/TheUnderbog/TheUnderbog1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheUnderbog1_8.blp",
+   "target": "Interface/WorldMap/TheUnderbog/TheUnderbog1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheUnderbog1_9.blp",
+   "target": "Interface/WorldMap/TheUnderbog/TheUnderbog1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheUnderbog1_10.blp",
+   "target": "Interface/WorldMap/TheUnderbog/TheUnderbog1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheUnderbog1_11.blp",
+   "target": "Interface/WorldMap/TheUnderbog/TheUnderbog1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheUnderbog1_12.blp",
+   "target": "Interface/WorldMap/TheUnderbog/TheUnderbog1_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm The Underbog instance map: 1 DungeonMap floor, 1 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 12 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "The Underbog",
+ "package": "mod-native-instance-maps.the-underbog",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 3716,
+     "chunks": [
+      {
+       "dungeonMapId": 223,
+       "field2": 20471,
+       "field4": -10000.0,
+       "id": 3299
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Der Tiefensumpf"
+      },
+      "enCN": {
+       "1": "幽暗沼泽"
+      },
+      "enGB": {
+       "1": "The Underbog"
+      },
+      "enUS": {
+       "1": "The Underbog"
+      },
+      "esES": {
+       "1": "La Sotiénaga"
+      },
+      "esMX": {
+       "1": "La Sotiénaga"
+      },
+      "frFR": {
+       "1": "La Basse-tourbière"
+      },
+      "koKR": {
+       "1": "지하수렁"
+      },
+      "ruRU": {
+       "1": "Нижетопь"
+      },
+      "zhCN": {
+       "1": "幽暗沼泽"
+      },
+      "zhTW": {
+       "1": "深幽泥沼"
+      }
+     },
+     "floors": [
+      {
+       "field3": -653.9429931640625,
+       "field4": 240.9770050048828,
+       "field5": -172.87818908691406,
+       "field6": 423.73516845703125,
+       "field7": 467,
+       "floor": 1,
+       "id": 223
+      }
+     ],
+     "id": 726,
+     "internalName": "TheUnderbog",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 546
+  }
+ ]
+}

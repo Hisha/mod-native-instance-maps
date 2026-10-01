@@ -1,0 +1,854 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/Gnomeregan1_1.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan1_2.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan1_3.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan1_4.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan1_5.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan1_6.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan1_7.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan1_8.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan1_9.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan1_10.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan1_11.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan1_12.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan1_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan2_1.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan2_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan2_2.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan2_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan2_3.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan2_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan2_4.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan2_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan2_5.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan2_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan2_6.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan2_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan2_7.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan2_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan2_8.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan2_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan2_9.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan2_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan2_10.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan2_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan2_11.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan2_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan2_12.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan2_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan3_1.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan3_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan3_2.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan3_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan3_3.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan3_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan3_4.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan3_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan3_5.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan3_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan3_6.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan3_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan3_7.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan3_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan3_8.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan3_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan3_9.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan3_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan3_10.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan3_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan3_11.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan3_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan3_12.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan3_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan4_1.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan4_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan4_2.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan4_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan4_3.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan4_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan4_4.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan4_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan4_5.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan4_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan4_6.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan4_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan4_7.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan4_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan4_8.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan4_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan4_9.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan4_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan4_10.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan4_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan4_11.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan4_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/Gnomeregan4_12.blp",
+   "target": "Interface/WorldMap/Gnomeregan/Gnomeregan4_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Gnomeregan instance map: 4 DungeonMap floors, 79 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 48 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Gnomeregan",
+ "package": "mod-native-instance-maps.gnomeregan",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 721,
+     "chunks": [
+      {
+       "dungeonMapId": 172,
+       "field2": 1104,
+       "field4": -10000.0,
+       "id": 2655
+      },
+      {
+       "dungeonMapId": 169,
+       "field2": 1105,
+       "field4": -10000.0,
+       "id": 2561
+      },
+      {
+       "dungeonMapId": 169,
+       "field2": 1106,
+       "field4": -10000.0,
+       "id": 2661
+      },
+      {
+       "dungeonMapId": 169,
+       "field2": 1107,
+       "field4": -10000.0,
+       "id": 2562
+      },
+      {
+       "dungeonMapId": 169,
+       "field2": 1108,
+       "field4": -10000.0,
+       "id": 2563
+      },
+      {
+       "dungeonMapId": 169,
+       "field2": 1109,
+       "field4": -10000.0,
+       "id": 2564
+      },
+      {
+       "dungeonMapId": 169,
+       "field2": 1110,
+       "field4": -10000.0,
+       "id": 2565
+      },
+      {
+       "dungeonMapId": 169,
+       "field2": 1111,
+       "field4": -10000.0,
+       "id": 2566
+      },
+      {
+       "dungeonMapId": 169,
+       "field2": 1112,
+       "field4": -10000.0,
+       "id": 2567
+      },
+      {
+       "dungeonMapId": 168,
+       "field2": 1113,
+       "field4": -10000.0,
+       "id": 2550
+      },
+      {
+       "dungeonMapId": 168,
+       "field2": 1114,
+       "field4": -10000.0,
+       "id": 2549
+      },
+      {
+       "dungeonMapId": 168,
+       "field2": 1115,
+       "field4": -10000.0,
+       "id": 2548
+      },
+      {
+       "dungeonMapId": 168,
+       "field2": 1116,
+       "field4": -10000.0,
+       "id": 2547
+      },
+      {
+       "dungeonMapId": 169,
+       "field2": 1117,
+       "field4": -10000.0,
+       "id": 2558
+      },
+      {
+       "dungeonMapId": 168,
+       "field2": 1117,
+       "field4": -10000.0,
+       "id": 2665
+      },
+      {
+       "dungeonMapId": 169,
+       "field2": 1118,
+       "field4": -10000.0,
+       "id": 4095
+      },
+      {
+       "dungeonMapId": 168,
+       "field2": 1119,
+       "field4": -10000.0,
+       "id": 2556
+      },
+      {
+       "dungeonMapId": 169,
+       "field2": 1119,
+       "field4": -10000.0,
+       "id": 4097
+      },
+      {
+       "dungeonMapId": 168,
+       "field2": 1120,
+       "field4": -10000.0,
+       "id": 2554
+      },
+      {
+       "dungeonMapId": 169,
+       "field2": 1121,
+       "field4": -10000.0,
+       "id": 2557
+      },
+      {
+       "dungeonMapId": 169,
+       "field2": 1122,
+       "field4": -10000.0,
+       "id": 2559
+      },
+      {
+       "dungeonMapId": 168,
+       "field2": 1122,
+       "field4": -180.0,
+       "id": 2552
+      },
+      {
+       "dungeonMapId": 169,
+       "field2": 1123,
+       "field4": -10000.0,
+       "id": 4099
+      },
+      {
+       "dungeonMapId": 169,
+       "field2": 1124,
+       "field4": -10000.0,
+       "id": 4096
+      },
+      {
+       "dungeonMapId": 169,
+       "field2": 1125,
+       "field4": -10000.0,
+       "id": 4101
+      },
+      {
+       "dungeonMapId": 168,
+       "field2": 1127,
+       "field4": -10000.0,
+       "id": 2553
+      },
+      {
+       "dungeonMapId": 168,
+       "field2": 1129,
+       "field4": -10000.0,
+       "id": 2551
+      },
+      {
+       "dungeonMapId": 169,
+       "field2": 1130,
+       "field4": -10000.0,
+       "id": 2560
+      },
+      {
+       "dungeonMapId": 168,
+       "field2": 1131,
+       "field4": -10000.0,
+       "id": 2555
+      },
+      {
+       "dungeonMapId": 169,
+       "field2": 1131,
+       "field4": -10000.0,
+       "id": 4103
+      },
+      {
+       "dungeonMapId": 169,
+       "field2": 1132,
+       "field4": -10000.0,
+       "id": 4098
+      },
+      {
+       "dungeonMapId": 169,
+       "field2": 1133,
+       "field4": -10000.0,
+       "id": 4100
+      },
+      {
+       "dungeonMapId": 169,
+       "field2": 1134,
+       "field4": -10000.0,
+       "id": 4102
+      },
+      {
+       "dungeonMapId": 170,
+       "field2": 1135,
+       "field4": -10000.0,
+       "id": 2641
+      },
+      {
+       "dungeonMapId": 172,
+       "field2": 1135,
+       "field4": -10000.0,
+       "id": 2643
+      },
+      {
+       "dungeonMapId": 169,
+       "field2": 1137,
+       "field4": -10000.0,
+       "id": 2570
+      },
+      {
+       "dungeonMapId": 170,
+       "field2": 1138,
+       "field4": -10000.0,
+       "id": 2572
+      },
+      {
+       "dungeonMapId": 169,
+       "field2": 1139,
+       "field4": -10000.0,
+       "id": 2569
+      },
+      {
+       "dungeonMapId": 169,
+       "field2": 1140,
+       "field4": -10000.0,
+       "id": 2571
+      },
+      {
+       "dungeonMapId": 172,
+       "field2": 1141,
+       "field4": -10000.0,
+       "id": 2660
+      },
+      {
+       "dungeonMapId": 172,
+       "field2": 1142,
+       "field4": -10000.0,
+       "id": 2656
+      },
+      {
+       "dungeonMapId": 172,
+       "field2": 1143,
+       "field4": -10000.0,
+       "id": 2654
+      },
+      {
+       "dungeonMapId": 172,
+       "field2": 1145,
+       "field4": -10000.0,
+       "id": 2652
+      },
+      {
+       "dungeonMapId": 172,
+       "field2": 1146,
+       "field4": -10000.0,
+       "id": 2650
+      },
+      {
+       "dungeonMapId": 172,
+       "field2": 1147,
+       "field4": -10000.0,
+       "id": 2648
+      },
+      {
+       "dungeonMapId": 172,
+       "field2": 1148,
+       "field4": -10000.0,
+       "id": 2646
+      },
+      {
+       "dungeonMapId": 170,
+       "field2": 1149,
+       "field4": -10000.0,
+       "id": 2642
+      },
+      {
+       "dungeonMapId": 172,
+       "field2": 1149,
+       "field4": -10000.0,
+       "id": 2644
+      },
+      {
+       "dungeonMapId": 172,
+       "field2": 1151,
+       "field4": -10000.0,
+       "id": 2647
+      },
+      {
+       "dungeonMapId": 172,
+       "field2": 1152,
+       "field4": -10000.0,
+       "id": 2653
+      },
+      {
+       "dungeonMapId": 172,
+       "field2": 1153,
+       "field4": -10000.0,
+       "id": 2657
+      },
+      {
+       "dungeonMapId": 172,
+       "field2": 1154,
+       "field4": -10000.0,
+       "id": 2659
+      },
+      {
+       "dungeonMapId": 170,
+       "field2": 1155,
+       "field4": -10000.0,
+       "id": 2575
+      },
+      {
+       "dungeonMapId": 170,
+       "field2": 1156,
+       "field4": -10000.0,
+       "id": 2580
+      },
+      {
+       "dungeonMapId": 170,
+       "field2": 1157,
+       "field4": -10000.0,
+       "id": 2581
+      },
+      {
+       "dungeonMapId": 170,
+       "field2": 1158,
+       "field4": -10000.0,
+       "id": 2573
+      },
+      {
+       "dungeonMapId": 170,
+       "field2": 1159,
+       "field4": -10000.0,
+       "id": 2574
+      },
+      {
+       "dungeonMapId": 170,
+       "field2": 1160,
+       "field4": -10000.0,
+       "id": 2578
+      },
+      {
+       "dungeonMapId": 170,
+       "field2": 1161,
+       "field4": -10000.0,
+       "id": 2576
+      },
+      {
+       "dungeonMapId": 170,
+       "field2": 1162,
+       "field4": -10000.0,
+       "id": 2633
+      },
+      {
+       "dungeonMapId": 169,
+       "field2": 1166,
+       "field4": -10000.0,
+       "id": 2568
+      },
+      {
+       "dungeonMapId": 172,
+       "field2": 1167,
+       "field4": -10000.0,
+       "id": 2651
+      },
+      {
+       "dungeonMapId": 172,
+       "field2": 1168,
+       "field4": -10000.0,
+       "id": 2649
+      },
+      {
+       "dungeonMapId": 172,
+       "field2": 1169,
+       "field4": -10000.0,
+       "id": 2645
+      },
+      {
+       "dungeonMapId": 172,
+       "field2": 1170,
+       "field4": -10000.0,
+       "id": 2658
+      },
+      {
+       "dungeonMapId": 168,
+       "field2": 1172,
+       "field4": -10000.0,
+       "id": 2545
+      },
+      {
+       "dungeonMapId": 168,
+       "field2": 6957,
+       "field4": -10000.0,
+       "id": 2546
+      },
+      {
+       "dungeonMapId": 170,
+       "field2": 7187,
+       "field4": -10000.0,
+       "id": 2640
+      },
+      {
+       "dungeonMapId": 170,
+       "field2": 7188,
+       "field4": -10000.0,
+       "id": 2634
+      },
+      {
+       "dungeonMapId": 170,
+       "field2": 7189,
+       "field4": -10000.0,
+       "id": 2579
+      },
+      {
+       "dungeonMapId": 170,
+       "field2": 7190,
+       "field4": -10000.0,
+       "id": 2635
+      },
+      {
+       "dungeonMapId": 170,
+       "field2": 7191,
+       "field4": -10000.0,
+       "id": 2639
+      },
+      {
+       "dungeonMapId": 170,
+       "field2": 7192,
+       "field4": -10000.0,
+       "id": 2636
+      },
+      {
+       "dungeonMapId": 170,
+       "field2": 7193,
+       "field4": -10000.0,
+       "id": 2637
+      },
+      {
+       "dungeonMapId": 170,
+       "field2": 7194,
+       "field4": -10000.0,
+       "id": 2638
+      },
+      {
+       "dungeonMapId": 170,
+       "field2": 18695,
+       "field4": -10000.0,
+       "id": 2662
+      },
+      {
+       "dungeonMapId": 170,
+       "field2": 18696,
+       "field4": -10000.0,
+       "id": 2664
+      },
+      {
+       "dungeonMapId": 170,
+       "field2": 18697,
+       "field4": -10000.0,
+       "id": 2663
+      },
+      {
+       "dungeonMapId": 170,
+       "field2": 18698,
+       "field4": -10000.0,
+       "id": 2577
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Die Halle der Zahnräder",
+       "2": "Der Schlafsaal",
+       "3": "Startrampe",
+       "4": "Tüftlerhof"
+      },
+      "enCN": {
+       "1": "齿轮大厅",
+       "2": "宿舍",
+       "3": "发射台",
+       "4": "工匠议会"
+      },
+      "enGB": {
+       "1": "The Hall of Gears",
+       "2": "The Dormitory",
+       "3": "Launch Bay",
+       "4": "Tinkers' Court"
+      },
+      "enUS": {
+       "1": "The Hall of Gears",
+       "2": "The Dormitory",
+       "3": "Launch Bay",
+       "4": "Tinkers' Court"
+      },
+      "esES": {
+       "1": "La Sala de Máquinas",
+       "2": "Los Dormitorios",
+       "3": "Aeropuerto",
+       "4": "Cámara Manitas"
+      },
+      "esMX": {
+       "1": "La Sala de Máquinas",
+       "2": "Los Dormitorios",
+       "3": "Aeropuerto",
+       "4": "Cámara Manitas"
+      },
+      "frFR": {
+       "1": "Le Hall des engrenages",
+       "2": "Le dortoir",
+       "3": "Baie de lancement",
+       "4": "Cour du Bricoleur"
+      },
+      "koKR": {
+       "1": "톱니바퀴의 전당",
+       "2": "거주 지구",
+       "3": "출격실",
+       "4": "땜장이 왕실"
+      },
+      "ruRU": {
+       "1": "Машинный зал",
+       "2": "Спальни",
+       "3": "Пусковая установка",
+       "4": "Двор Механиков"
+      },
+      "zhCN": {
+       "1": "齿轮大厅",
+       "2": "宿舍",
+       "3": "发射台",
+       "4": "工匠议会"
+      },
+      "zhTW": {
+       "1": "齒輪大廳",
+       "2": "宿舍",
+       "3": "發射台",
+       "4": "技工議會"
+      }
+     },
+     "floors": [
+      {
+       "field3": -277.7720031738281,
+       "field4": 491.89599609375,
+       "field5": -694.0,
+       "field6": -180.88800048828125,
+       "field7": 27,
+       "floor": 1,
+       "id": 168
+      },
+      {
+       "field3": -77.77200317382812,
+       "field4": 691.89599609375,
+       "field5": -714.0,
+       "field6": -200.88800048828125,
+       "field7": 27,
+       "floor": 2,
+       "id": 169
+      },
+      {
+       "field3": -127.77200317382812,
+       "field4": 741.89599609375,
+       "field5": -967.3330078125,
+       "field6": -387.55499267578125,
+       "field7": 27,
+       "floor": 3,
+       "id": 170
+      },
+      {
+       "field3": 72.99929809570312,
+       "field4": 942.6690063476562,
+       "field5": -937.333984375,
+       "field6": -357.5539855957031,
+       "field7": 27,
+       "floor": 4,
+       "id": 172
+      }
+     ],
+     "id": 691,
+     "internalName": "Gnomeregan",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 90
+  }
+ ]
+}

@@ -1,0 +1,176 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/TheBotanica1_1.blp",
+   "target": "Interface/WorldMap/TheBotanica/TheBotanica1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheBotanica1_2.blp",
+   "target": "Interface/WorldMap/TheBotanica/TheBotanica1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheBotanica1_3.blp",
+   "target": "Interface/WorldMap/TheBotanica/TheBotanica1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheBotanica1_4.blp",
+   "target": "Interface/WorldMap/TheBotanica/TheBotanica1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheBotanica1_5.blp",
+   "target": "Interface/WorldMap/TheBotanica/TheBotanica1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheBotanica1_6.blp",
+   "target": "Interface/WorldMap/TheBotanica/TheBotanica1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheBotanica1_7.blp",
+   "target": "Interface/WorldMap/TheBotanica/TheBotanica1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheBotanica1_8.blp",
+   "target": "Interface/WorldMap/TheBotanica/TheBotanica1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheBotanica1_9.blp",
+   "target": "Interface/WorldMap/TheBotanica/TheBotanica1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheBotanica1_10.blp",
+   "target": "Interface/WorldMap/TheBotanica/TheBotanica1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheBotanica1_11.blp",
+   "target": "Interface/WorldMap/TheBotanica/TheBotanica1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheBotanica1_12.blp",
+   "target": "Interface/WorldMap/TheBotanica/TheBotanica1_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm The Botanica instance map: 1 DungeonMap floor, 6 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 12 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "The Botanica",
+ "package": "mod-native-instance-maps.the-botanica",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 3847,
+     "chunks": [
+      {
+       "dungeonMapId": 230,
+       "field2": 21072,
+       "field4": -10000.0,
+       "id": 3318
+      },
+      {
+       "dungeonMapId": 230,
+       "field2": 21073,
+       "field4": -10000.0,
+       "id": 3317
+      },
+      {
+       "dungeonMapId": 230,
+       "field2": 21074,
+       "field4": -10000.0,
+       "id": 3316
+      },
+      {
+       "dungeonMapId": 230,
+       "field2": 21075,
+       "field4": -10000.0,
+       "id": 3315
+      },
+      {
+       "dungeonMapId": 230,
+       "field2": 21081,
+       "field4": -10000.0,
+       "id": 3313
+      },
+      {
+       "dungeonMapId": 230,
+       "field2": 21082,
+       "field4": -10000.0,
+       "id": 3314
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Die Botanika"
+      },
+      "enCN": {
+       "1": "生态船"
+      },
+      "enGB": {
+       "1": "The Botanica"
+      },
+      "enUS": {
+       "1": "The Botanica"
+      },
+      "esES": {
+       "1": "El Invernáculo"
+      },
+      "esMX": {
+       "1": "El Invernáculo"
+      },
+      "frFR": {
+       "1": "La Botanica"
+      },
+      "koKR": {
+       "1": "신록의 정원"
+      },
+      "ruRU": {
+       "1": "Ботаника"
+      },
+      "zhCN": {
+       "1": "生态船"
+      },
+      "zhTW": {
+       "1": "波塔尼卡"
+      }
+     },
+     "floors": [
+      {
+       "field3": -107.64924621582031,
+       "field4": 649.7532348632812,
+       "field5": -256.9100036621094,
+       "field6": 248.02499389648438,
+       "field7": 479,
+       "floor": 1,
+       "id": 230
+      }
+     ],
+     "id": 729,
+     "internalName": "TheBotanica",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 553
+  }
+ ]
+}

@@ -1,0 +1,304 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/AuchenaiCrypts1_1.blp",
+   "target": "Interface/WorldMap/AuchenaiCrypts/AuchenaiCrypts1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AuchenaiCrypts1_2.blp",
+   "target": "Interface/WorldMap/AuchenaiCrypts/AuchenaiCrypts1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AuchenaiCrypts1_3.blp",
+   "target": "Interface/WorldMap/AuchenaiCrypts/AuchenaiCrypts1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AuchenaiCrypts1_4.blp",
+   "target": "Interface/WorldMap/AuchenaiCrypts/AuchenaiCrypts1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AuchenaiCrypts1_5.blp",
+   "target": "Interface/WorldMap/AuchenaiCrypts/AuchenaiCrypts1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AuchenaiCrypts1_6.blp",
+   "target": "Interface/WorldMap/AuchenaiCrypts/AuchenaiCrypts1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AuchenaiCrypts1_7.blp",
+   "target": "Interface/WorldMap/AuchenaiCrypts/AuchenaiCrypts1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AuchenaiCrypts1_8.blp",
+   "target": "Interface/WorldMap/AuchenaiCrypts/AuchenaiCrypts1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AuchenaiCrypts1_9.blp",
+   "target": "Interface/WorldMap/AuchenaiCrypts/AuchenaiCrypts1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AuchenaiCrypts1_10.blp",
+   "target": "Interface/WorldMap/AuchenaiCrypts/AuchenaiCrypts1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AuchenaiCrypts1_11.blp",
+   "target": "Interface/WorldMap/AuchenaiCrypts/AuchenaiCrypts1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AuchenaiCrypts1_12.blp",
+   "target": "Interface/WorldMap/AuchenaiCrypts/AuchenaiCrypts1_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AuchenaiCrypts2_1.blp",
+   "target": "Interface/WorldMap/AuchenaiCrypts/AuchenaiCrypts2_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AuchenaiCrypts2_2.blp",
+   "target": "Interface/WorldMap/AuchenaiCrypts/AuchenaiCrypts2_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AuchenaiCrypts2_3.blp",
+   "target": "Interface/WorldMap/AuchenaiCrypts/AuchenaiCrypts2_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AuchenaiCrypts2_4.blp",
+   "target": "Interface/WorldMap/AuchenaiCrypts/AuchenaiCrypts2_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AuchenaiCrypts2_5.blp",
+   "target": "Interface/WorldMap/AuchenaiCrypts/AuchenaiCrypts2_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AuchenaiCrypts2_6.blp",
+   "target": "Interface/WorldMap/AuchenaiCrypts/AuchenaiCrypts2_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AuchenaiCrypts2_7.blp",
+   "target": "Interface/WorldMap/AuchenaiCrypts/AuchenaiCrypts2_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AuchenaiCrypts2_8.blp",
+   "target": "Interface/WorldMap/AuchenaiCrypts/AuchenaiCrypts2_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AuchenaiCrypts2_9.blp",
+   "target": "Interface/WorldMap/AuchenaiCrypts/AuchenaiCrypts2_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AuchenaiCrypts2_10.blp",
+   "target": "Interface/WorldMap/AuchenaiCrypts/AuchenaiCrypts2_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AuchenaiCrypts2_11.blp",
+   "target": "Interface/WorldMap/AuchenaiCrypts/AuchenaiCrypts2_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AuchenaiCrypts2_12.blp",
+   "target": "Interface/WorldMap/AuchenaiCrypts/AuchenaiCrypts2_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Auchenai Crypts instance map: 2 DungeonMap floors, 14 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 24 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Auchenai Crypts",
+ "package": "mod-native-instance-maps.auchenai-crypts",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 3790,
+     "chunks": [
+      {
+       "dungeonMapId": 215,
+       "field2": 20953,
+       "field4": -10000.0,
+       "id": 3219
+      },
+      {
+       "dungeonMapId": 214,
+       "field2": 20957,
+       "field4": -10000.0,
+       "id": 3216
+      },
+      {
+       "dungeonMapId": 214,
+       "field2": 20958,
+       "field4": -10000.0,
+       "id": 3217
+      },
+      {
+       "dungeonMapId": 215,
+       "field2": 20958,
+       "field4": 12.0,
+       "id": 3224
+      },
+      {
+       "dungeonMapId": 215,
+       "field2": 20960,
+       "field4": -10000.0,
+       "id": 3225
+      },
+      {
+       "dungeonMapId": 215,
+       "field2": 20976,
+       "field4": -10000.0,
+       "id": 3221
+      },
+      {
+       "dungeonMapId": 215,
+       "field2": 20977,
+       "field4": -10000.0,
+       "id": 3227
+      },
+      {
+       "dungeonMapId": 215,
+       "field2": 20978,
+       "field4": -10000.0,
+       "id": 3226
+      },
+      {
+       "dungeonMapId": 215,
+       "field2": 21104,
+       "field4": -10000.0,
+       "id": 3220
+      },
+      {
+       "dungeonMapId": 214,
+       "field2": 21480,
+       "field4": -10000.0,
+       "id": 3215
+      },
+      {
+       "dungeonMapId": 215,
+       "field2": 21497,
+       "field4": -10000.0,
+       "id": 3218
+      },
+      {
+       "dungeonMapId": 215,
+       "field2": 22202,
+       "field4": -10000.0,
+       "id": 3228
+      },
+      {
+       "dungeonMapId": 215,
+       "field2": 22203,
+       "field4": -10000.0,
+       "id": 3223
+      },
+      {
+       "dungeonMapId": 215,
+       "field2": 22223,
+       "field4": -10000.0,
+       "id": 3222
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Hallen des Jenseits",
+       "2": "Brücke der Seelen"
+      },
+      "enCN": {
+       "1": "转生大厅",
+       "2": "灵魂之桥"
+      },
+      "enGB": {
+       "1": "Halls of the Hereafter",
+       "2": "Bridge of Souls"
+      },
+      "enUS": {
+       "1": "Halls of the Hereafter",
+       "2": "Bridge of Souls"
+      },
+      "esES": {
+       "1": "Salas del Más Allá",
+       "2": "Puente de las Almas"
+      },
+      "esMX": {
+       "1": "Salas del Más Allá",
+       "2": "Puente de las Almas"
+      },
+      "frFR": {
+       "1": "Les salles de l’Après-vie",
+       "2": "Le pont des âmes"
+      },
+      "koKR": {
+       "1": "내세의 전당",
+       "2": "영혼의 다리"
+      },
+      "ruRU": {
+       "1": "Потусторонние залы",
+       "2": "Мост Душ"
+      },
+      "zhCN": {
+       "1": "转生大厅",
+       "2": "灵魂之桥"
+      },
+      "zhTW": {
+       "1": "來世大廳",
+       "2": "靈魂大橋"
+      }
+     },
+     "floors": [
+      {
+       "field3": -414.98321533203125,
+       "field4": 327.5572204589844,
+       "field5": -140.0760040283203,
+       "field6": 354.95098876953125,
+       "field7": 478,
+       "floor": 1,
+       "id": 214
+      },
+      {
+       "field3": -602.4832153320312,
+       "field4": 215.0572509765625,
+       "field5": -210.0760040283203,
+       "field6": 334.95098876953125,
+       "field7": 478,
+       "floor": 2,
+       "id": 215
+      }
+     ],
+     "id": 722,
+     "internalName": "AuchenaiCrypts",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 558
+  }
+ ]
+}

@@ -2,8 +2,11 @@
   "candidates": [
     {
       "areaDungeonMapId": 2,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/AhnQiraj",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "AhnQiraj",
       "blpCount": 36,
       "chunks": [
         {
@@ -228,7 +231,7 @@
       "package": "mod-native-instance-maps.ahnqiraj",
       "reasonCodes": [],
       "slug": "ahnqiraj",
-      "title": "AhnQiraj",
+      "title": "Ahn'Qiraj",
       "transforms": [
         {
           "additive": true,
@@ -244,14 +247,17 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/ArathiBasin",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "ArathiBasin",
       "blpCount": 12,
       "chunks": [],
-      "classification": "REVIEW",
+      "classification": "UNSAFE",
       "findings": [
         "WorldMapArea 461 is a stock row that WDM leaves untouched; the client already has it and there is nothing additive to ship",
-        "WDM Stable declares no DungeonMap floor for map 529; the instance has no floor geometry to compose",
+        "WDM Stable declares no DungeonMap floor for map 529, and mod-content-manager rejects a worldMaps[].areas[] entry that declares no floors at all.  The map cannot be expressed; supplying a floor row would be authoring geometry WDM does not ship",
         "WDM Stable declares no DungeonMapChunk for the floors of map 529"
       ],
       "floors": [],
@@ -275,8 +281,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/AuchenaiCrypts",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "AuchenaiCrypts",
       "blpCount": 24,
       "chunks": [
         {
@@ -350,10 +359,10 @@
       ],
       "internalName": "AuchenaiCrypts",
       "mapId": 558,
-      "package": "mod-native-instance-maps.auchenaicrypts",
+      "package": "mod-native-instance-maps.auchenai-crypts",
       "reasonCodes": [],
-      "slug": "auchenaicrypts",
-      "title": "AuchenaiCrypts",
+      "slug": "auchenai-crypts",
+      "title": "Auchenai Crypts",
       "transforms": [],
       "worldMapArea": [
         {
@@ -364,20 +373,23 @@
     },
     {
       "areaDungeonMapId": null,
+      "artworkClaimedBy": "BlackfathomDeeps",
       "artworkDirectory": "Interface/WorldMap/BlackFathomDeeps",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "BlackFathomDeeps",
       "blpCount": 36,
       "chunks": [],
-      "classification": "REVIEW",
+      "classification": "UNSAFE",
       "findings": [
-        "WDM Stable has no WorldMapArea row whose internal_name is 'BlackFathomDeeps'; there is nothing for the client to attach the artwork directory to, and authoring one would be invention"
+        "Interface/WorldMap/BlackFathomDeeps/ is the artwork of BlackfathomDeeps -- the same name in different capitals. WDM Stable declares no WorldMapArea row for 'BlackFathomDeeps', so it names no map of its own; these tiles ship with BlackfathomDeeps and are not a separate candidate"
       ],
       "floors": [],
       "internalName": "BlackFathomDeeps",
       "mapId": null,
       "package": "mod-native-instance-maps.blackfathomdeeps",
       "reasonCodes": [
-        "no-world-map-area"
+        "duplicate-artwork-alias"
       ],
       "slug": "blackfathomdeeps",
       "title": "BlackFathomDeeps",
@@ -386,8 +398,11 @@
     },
     {
       "areaDungeonMapId": -1,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/BlackTemple",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "BlackTemple",
       "blpCount": 96,
       "chunks": [
         {
@@ -585,10 +600,10 @@
       ],
       "internalName": "BlackTemple",
       "mapId": 564,
-      "package": "mod-native-instance-maps.blacktemple",
+      "package": "mod-native-instance-maps.black-temple",
       "reasonCodes": [],
-      "slug": "blacktemple",
-      "title": "BlackTemple",
+      "slug": "black-temple",
+      "title": "Black Temple",
       "transforms": [],
       "worldMapArea": [
         {
@@ -599,9 +614,51 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/BlackfathomDeeps",
-      "artworkNameAlias": "BlackFathomDeeps",
-      "blpCount": 0,
+      "artworkLeafRenames": {
+        "BlackFathomDeeps1_1.blp": "BlackfathomDeeps1_1.blp",
+        "BlackFathomDeeps1_10.blp": "BlackfathomDeeps1_10.blp",
+        "BlackFathomDeeps1_11.blp": "BlackfathomDeeps1_11.blp",
+        "BlackFathomDeeps1_12.blp": "BlackfathomDeeps1_12.blp",
+        "BlackFathomDeeps1_2.blp": "BlackfathomDeeps1_2.blp",
+        "BlackFathomDeeps1_3.blp": "BlackfathomDeeps1_3.blp",
+        "BlackFathomDeeps1_4.blp": "BlackfathomDeeps1_4.blp",
+        "BlackFathomDeeps1_5.blp": "BlackfathomDeeps1_5.blp",
+        "BlackFathomDeeps1_6.blp": "BlackfathomDeeps1_6.blp",
+        "BlackFathomDeeps1_7.blp": "BlackfathomDeeps1_7.blp",
+        "BlackFathomDeeps1_8.blp": "BlackfathomDeeps1_8.blp",
+        "BlackFathomDeeps1_9.blp": "BlackfathomDeeps1_9.blp",
+        "BlackFathomDeeps2_1.blp": "BlackfathomDeeps2_1.blp",
+        "BlackFathomDeeps2_10.blp": "BlackfathomDeeps2_10.blp",
+        "BlackFathomDeeps2_11.blp": "BlackfathomDeeps2_11.blp",
+        "BlackFathomDeeps2_12.blp": "BlackfathomDeeps2_12.blp",
+        "BlackFathomDeeps2_2.blp": "BlackfathomDeeps2_2.blp",
+        "BlackFathomDeeps2_3.blp": "BlackfathomDeeps2_3.blp",
+        "BlackFathomDeeps2_4.blp": "BlackfathomDeeps2_4.blp",
+        "BlackFathomDeeps2_5.blp": "BlackfathomDeeps2_5.blp",
+        "BlackFathomDeeps2_6.blp": "BlackfathomDeeps2_6.blp",
+        "BlackFathomDeeps2_7.blp": "BlackfathomDeeps2_7.blp",
+        "BlackFathomDeeps2_8.blp": "BlackfathomDeeps2_8.blp",
+        "BlackFathomDeeps2_9.blp": "BlackfathomDeeps2_9.blp",
+        "BlackFathomDeeps3_1.blp": "BlackfathomDeeps3_1.blp",
+        "BlackFathomDeeps3_10.blp": "BlackfathomDeeps3_10.blp",
+        "BlackFathomDeeps3_11.blp": "BlackfathomDeeps3_11.blp",
+        "BlackFathomDeeps3_12.blp": "BlackfathomDeeps3_12.blp",
+        "BlackFathomDeeps3_2.blp": "BlackfathomDeeps3_2.blp",
+        "BlackFathomDeeps3_3.blp": "BlackfathomDeeps3_3.blp",
+        "BlackFathomDeeps3_4.blp": "BlackfathomDeeps3_4.blp",
+        "BlackFathomDeeps3_5.blp": "BlackfathomDeeps3_5.blp",
+        "BlackFathomDeeps3_6.blp": "BlackfathomDeeps3_6.blp",
+        "BlackFathomDeeps3_7.blp": "BlackfathomDeeps3_7.blp",
+        "BlackFathomDeeps3_8.blp": "BlackfathomDeeps3_8.blp",
+        "BlackFathomDeeps3_9.blp": "BlackfathomDeeps3_9.blp"
+      },
+      "artworkNameAliases": [
+        "BlackFathomDeeps"
+      ],
+      "artworkSource": "BlackFathomDeeps",
+      "blpCount": 36,
       "chunks": [
         {
           "additive": true,
@@ -708,10 +765,8 @@
           "id": 2461
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable draws this map from Interface/WorldMap/BlackFathomDeeps/, but the WorldMapArea internal_name is 'BlackfathomDeeps'; the client derives the directory from internal_name, and inventing or re-casing either name would change a client-baked identity"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -728,12 +783,10 @@
       ],
       "internalName": "BlackfathomDeeps",
       "mapId": 48,
-      "package": "mod-native-instance-maps.blackfathomdeeps",
-      "reasonCodes": [
-        "artwork-name-mismatch"
-      ],
-      "slug": "blackfathomdeeps",
-      "title": "BlackfathomDeeps",
+      "package": "mod-native-instance-maps.blackfathom-deeps",
+      "reasonCodes": [],
+      "slug": "blackfathom-deeps",
+      "title": "Blackfathom Deeps",
       "transforms": [],
       "worldMapArea": [
         {
@@ -744,8 +797,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/BlackrockDepths",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "BlackrockDepths",
       "blpCount": 24,
       "chunks": [
         {
@@ -971,10 +1027,10 @@
       ],
       "internalName": "BlackrockDepths",
       "mapId": 230,
-      "package": "mod-native-instance-maps.blackrockdepths",
+      "package": "mod-native-instance-maps.blackrock-depths",
       "reasonCodes": [],
-      "slug": "blackrockdepths",
-      "title": "BlackrockDepths",
+      "slug": "blackrock-depths",
+      "title": "Blackrock Depths",
       "transforms": [],
       "worldMapArea": [
         {
@@ -985,8 +1041,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/BlackrockSpire",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "BlackrockSpire",
       "blpCount": 84,
       "chunks": [
         {
@@ -1324,10 +1383,10 @@
       ],
       "internalName": "BlackrockSpire",
       "mapId": 229,
-      "package": "mod-native-instance-maps.blackrockspire",
+      "package": "mod-native-instance-maps.blackrock-spire",
       "reasonCodes": [],
-      "slug": "blackrockspire",
-      "title": "BlackrockSpire",
+      "slug": "blackrock-spire",
+      "title": "Blackrock Spire",
       "transforms": [],
       "worldMapArea": [
         {
@@ -1338,8 +1397,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/BlackwingLair",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "BlackwingLair",
       "blpCount": 48,
       "chunks": [
         {
@@ -1453,10 +1515,10 @@
       ],
       "internalName": "BlackwingLair",
       "mapId": 469,
-      "package": "mod-native-instance-maps.blackwinglair",
+      "package": "mod-native-instance-maps.blackwing-lair",
       "reasonCodes": [],
-      "slug": "blackwinglair",
-      "title": "BlackwingLair",
+      "slug": "blackwing-lair",
+      "title": "Blackwing Lair",
       "transforms": [],
       "worldMapArea": [
         {
@@ -1467,13 +1529,16 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/CoTHillsbradFoothills",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "CoTHillsbradFoothills",
       "blpCount": 12,
       "chunks": [],
-      "classification": "REVIEW",
+      "classification": "UNSAFE",
       "findings": [
-        "WDM Stable declares no DungeonMap floor for map 560; the instance has no floor geometry to compose",
+        "WDM Stable declares no DungeonMap floor for map 560, and mod-content-manager rejects a worldMaps[].areas[] entry that declares no floors at all.  The map cannot be expressed; supplying a floor row would be authoring geometry WDM does not ship",
         "WDM Stable declares no DungeonMapChunk for the floors of map 560"
       ],
       "floors": [],
@@ -1496,13 +1561,16 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/CoTMountHyjal",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "CoTMountHyjal",
       "blpCount": 12,
       "chunks": [],
-      "classification": "REVIEW",
+      "classification": "UNSAFE",
       "findings": [
-        "WDM Stable declares no DungeonMap floor for map 534; the instance has no floor geometry to compose",
+        "WDM Stable declares no DungeonMap floor for map 534, and mod-content-manager rejects a worldMaps[].areas[] entry that declares no floors at all.  The map cannot be expressed; supplying a floor row would be authoring geometry WDM does not ship",
         "WDM Stable declares no DungeonMapChunk for the floors of map 534"
       ],
       "floors": [],
@@ -1525,13 +1593,16 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/CoTTheBlackMorass",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "CoTTheBlackMorass",
       "blpCount": 12,
       "chunks": [],
-      "classification": "REVIEW",
+      "classification": "UNSAFE",
       "findings": [
-        "WDM Stable declares no DungeonMap floor for map 269; the instance has no floor geometry to compose",
+        "WDM Stable declares no DungeonMap floor for map 269, and mod-content-manager rejects a worldMaps[].areas[] entry that declares no floors at all.  The map cannot be expressed; supplying a floor row would be authoring geometry WDM does not ship",
         "WDM Stable declares no DungeonMapChunk for the floors of map 269"
       ],
       "floors": [],
@@ -1554,8 +1625,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/CoilfangReservoir",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "CoilfangReservoir",
       "blpCount": 12,
       "chunks": [
         {
@@ -1617,10 +1691,10 @@
       ],
       "internalName": "CoilfangReservoir",
       "mapId": 548,
-      "package": "mod-native-instance-maps.coilfangreservoir",
+      "package": "mod-native-instance-maps.coilfang-reservoir",
       "reasonCodes": [],
-      "slug": "coilfangreservoir",
-      "title": "CoilfangReservoir",
+      "slug": "coilfang-reservoir",
+      "title": "Coilfang Reservoir",
       "transforms": [],
       "worldMapArea": [
         {
@@ -1631,8 +1705,11 @@
     },
     {
       "areaDungeonMapId": 741,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/DeeprunTram",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "DeeprunTram",
       "blpCount": 24,
       "chunks": [
         {
@@ -1697,8 +1774,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/DireMaul",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "DireMaul",
       "blpCount": 84,
       "chunks": [
         {
@@ -2024,10 +2104,10 @@
       ],
       "internalName": "DireMaul",
       "mapId": 429,
-      "package": "mod-native-instance-maps.diremaul",
+      "package": "mod-native-instance-maps.dire-maul",
       "reasonCodes": [],
-      "slug": "diremaul",
-      "title": "DireMaul",
+      "slug": "dire-maul",
+      "title": "Dire Maul",
       "transforms": [],
       "worldMapArea": [
         {
@@ -2038,14 +2118,17 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/Expansion01",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "Expansion01",
       "blpCount": 12,
       "chunks": [],
-      "classification": "REVIEW",
+      "classification": "UNSAFE",
       "findings": [
         "WorldMapArea 466 is a stock row that WDM leaves untouched; the client already has it and there is nothing additive to ship",
-        "WDM Stable declares no DungeonMap floor for map 530; the instance has no floor geometry to compose",
+        "WDM Stable declares no DungeonMap floor for map 530, and mod-content-manager rejects a worldMaps[].areas[] entry that declares no floors at all.  The map cannot be expressed; supplying a floor row would be authoring geometry WDM does not ship",
         "WDM Stable declares no DungeonMapChunk for the floors of map 530",
         "ambiguous: WorldMapTransforms 2, 3 all name map 530; a package declares one transform per map"
       ],
@@ -2080,8 +2163,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/Gnomeregan",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "Gnomeregan",
       "blpCount": 48,
       "chunks": [
         {
@@ -2437,8 +2523,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/GruulsLair",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "GruulsLair",
       "blpCount": 12,
       "chunks": [
         {
@@ -2468,10 +2557,10 @@
       ],
       "internalName": "GruulsLair",
       "mapId": 565,
-      "package": "mod-native-instance-maps.gruulslair",
+      "package": "mod-native-instance-maps.gruuls-lair",
       "reasonCodes": [],
-      "slug": "gruulslair",
-      "title": "GruulsLair",
+      "slug": "gruuls-lair",
+      "title": "Gruul's Lair",
       "transforms": [],
       "worldMapArea": [
         {
@@ -2482,8 +2571,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/HellfireRamparts",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "HellfireRamparts",
       "blpCount": 12,
       "chunks": [
         {
@@ -2509,10 +2601,10 @@
       ],
       "internalName": "HellfireRamparts",
       "mapId": 543,
-      "package": "mod-native-instance-maps.hellfireramparts",
+      "package": "mod-native-instance-maps.hellfire-ramparts",
       "reasonCodes": [],
-      "slug": "hellfireramparts",
-      "title": "HellfireRamparts",
+      "slug": "hellfire-ramparts",
+      "title": "Hellfire Ramparts",
       "transforms": [],
       "worldMapArea": [
         {
@@ -2523,8 +2615,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/Karazhan",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "Karazhan",
       "blpCount": 204,
       "chunks": [
         {
@@ -2960,8 +3055,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/MagistersTerrace",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "MagistersTerrace",
       "blpCount": 24,
       "chunks": [
         {
@@ -3055,10 +3153,10 @@
       ],
       "internalName": "MagistersTerrace",
       "mapId": 585,
-      "package": "mod-native-instance-maps.magistersterrace",
+      "package": "mod-native-instance-maps.magisters-terrace",
       "reasonCodes": [],
-      "slug": "magistersterrace",
-      "title": "MagistersTerrace",
+      "slug": "magisters-terrace",
+      "title": "Magister's Terrace",
       "transforms": [],
       "worldMapArea": [
         {
@@ -3069,9 +3167,27 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/MagtheridonsLair",
-      "artworkNameAlias": "Magtheridonslair",
-      "blpCount": 0,
+      "artworkLeafRenames": {
+        "Magtheridonslair1_1.blp": "MagtheridonsLair1_1.blp",
+        "Magtheridonslair1_10.blp": "MagtheridonsLair1_10.blp",
+        "Magtheridonslair1_11.blp": "MagtheridonsLair1_11.blp",
+        "Magtheridonslair1_12.blp": "MagtheridonsLair1_12.blp",
+        "Magtheridonslair1_2.blp": "MagtheridonsLair1_2.blp",
+        "Magtheridonslair1_3.blp": "MagtheridonsLair1_3.blp",
+        "Magtheridonslair1_4.blp": "MagtheridonsLair1_4.blp",
+        "Magtheridonslair1_5.blp": "MagtheridonsLair1_5.blp",
+        "Magtheridonslair1_6.blp": "MagtheridonsLair1_6.blp",
+        "Magtheridonslair1_7.blp": "MagtheridonsLair1_7.blp",
+        "Magtheridonslair1_8.blp": "MagtheridonsLair1_8.blp",
+        "Magtheridonslair1_9.blp": "MagtheridonsLair1_9.blp"
+      },
+      "artworkNameAliases": [
+        "Magtheridonslair"
+      ],
+      "artworkSource": "Magtheridonslair",
+      "blpCount": 12,
       "chunks": [
         {
           "additive": true,
@@ -3102,10 +3218,8 @@
           "id": 4286
         }
       ],
-      "classification": "REVIEW",
-      "findings": [
-        "WDM Stable draws this map from Interface/WorldMap/Magtheridonslair/, but the WorldMapArea internal_name is 'MagtheridonsLair'; the client derives the directory from internal_name, and inventing or re-casing either name would change a client-baked identity"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [
         {
           "additive": true,
@@ -3114,12 +3228,10 @@
       ],
       "internalName": "MagtheridonsLair",
       "mapId": 544,
-      "package": "mod-native-instance-maps.magtheridonslair",
-      "reasonCodes": [
-        "artwork-name-mismatch"
-      ],
-      "slug": "magtheridonslair",
-      "title": "MagtheridonsLair",
+      "package": "mod-native-instance-maps.magtheridons-lair",
+      "reasonCodes": [],
+      "slug": "magtheridons-lair",
+      "title": "Magtheridon's Lair",
       "transforms": [],
       "worldMapArea": [
         {
@@ -3130,20 +3242,23 @@
     },
     {
       "areaDungeonMapId": null,
+      "artworkClaimedBy": "MagtheridonsLair",
       "artworkDirectory": "Interface/WorldMap/Magtheridonslair",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "Magtheridonslair",
       "blpCount": 12,
       "chunks": [],
-      "classification": "REVIEW",
+      "classification": "UNSAFE",
       "findings": [
-        "WDM Stable has no WorldMapArea row whose internal_name is 'Magtheridonslair'; there is nothing for the client to attach the artwork directory to, and authoring one would be invention"
+        "Interface/WorldMap/Magtheridonslair/ is the artwork of MagtheridonsLair -- the same name in different capitals. WDM Stable declares no WorldMapArea row for 'Magtheridonslair', so it names no map of its own; these tiles ship with MagtheridonsLair and are not a separate candidate"
       ],
       "floors": [],
       "internalName": "Magtheridonslair",
       "mapId": null,
       "package": "mod-native-instance-maps.magtheridonslair",
       "reasonCodes": [
-        "no-world-map-area"
+        "duplicate-artwork-alias"
       ],
       "slug": "magtheridonslair",
       "title": "Magtheridonslair",
@@ -3152,8 +3267,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/ManaTombs",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "ManaTombs",
       "blpCount": 12,
       "chunks": [
         {
@@ -3223,10 +3341,10 @@
       ],
       "internalName": "ManaTombs",
       "mapId": 557,
-      "package": "mod-native-instance-maps.manatombs",
+      "package": "mod-native-instance-maps.mana-tombs",
       "reasonCodes": [],
-      "slug": "manatombs",
-      "title": "ManaTombs",
+      "slug": "mana-tombs",
+      "title": "Mana Tombs",
       "transforms": [],
       "worldMapArea": [
         {
@@ -3237,8 +3355,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/Maraudon",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "Maraudon",
       "blpCount": 24,
       "chunks": [
         {
@@ -3442,8 +3563,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/MoltenCore",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "MoltenCore",
       "blpCount": 12,
       "chunks": [
         {
@@ -3505,10 +3629,10 @@
       ],
       "internalName": "MoltenCore",
       "mapId": 409,
-      "package": "mod-native-instance-maps.moltencore",
+      "package": "mod-native-instance-maps.molten-core",
       "reasonCodes": [],
-      "slug": "moltencore",
-      "title": "MoltenCore",
+      "slug": "molten-core",
+      "title": "Molten Core",
       "transforms": [],
       "worldMapArea": [
         {
@@ -3519,14 +3643,17 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/NetherstormArena",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "NetherstormArena",
       "blpCount": 12,
       "chunks": [],
-      "classification": "REVIEW",
+      "classification": "UNSAFE",
       "findings": [
         "WorldMapArea 482 is a stock row that WDM leaves untouched; the client already has it and there is nothing additive to ship",
-        "WDM Stable declares no DungeonMap floor for map 566; the instance has no floor geometry to compose",
+        "WDM Stable declares no DungeonMap floor for map 566, and mod-content-manager rejects a worldMaps[].areas[] entry that declares no floors at all.  The map cannot be expressed; supplying a floor row would be authoring geometry WDM does not ship",
         "WDM Stable declares no DungeonMapChunk for the floors of map 566"
       ],
       "floors": [],
@@ -3550,8 +3677,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/Northrend",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "Northrend",
       "blpCount": 12,
       "chunks": [
         {
@@ -4131,7 +4261,7 @@
           "id": 1315
         }
       ],
-      "classification": "REVIEW",
+      "classification": "UNSAFE",
       "findings": [
         "WorldMapArea 485 is a stock row that WDM leaves untouched; the client already has it and there is nothing additive to ship",
         "DungeonMap floor 27 is already a stock row; the client already has this floor and there is nothing additive to ship",
@@ -4168,8 +4298,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/OnyxiasLair",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "OnyxiasLair",
       "blpCount": 12,
       "chunks": [
         {
@@ -4215,10 +4348,10 @@
       ],
       "internalName": "OnyxiasLair",
       "mapId": 249,
-      "package": "mod-native-instance-maps.onyxiaslair",
+      "package": "mod-native-instance-maps.onyxias-lair",
       "reasonCodes": [],
-      "slug": "onyxiaslair",
-      "title": "OnyxiasLair",
+      "slug": "onyxias-lair",
+      "title": "Onyxia's Lair",
       "transforms": [],
       "worldMapArea": [
         {
@@ -4229,8 +4362,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/Ragefire",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "Ragefire",
       "blpCount": 12,
       "chunks": [
         {
@@ -4268,10 +4404,10 @@
       ],
       "internalName": "Ragefire",
       "mapId": 389,
-      "package": "mod-native-instance-maps.ragefire",
+      "package": "mod-native-instance-maps.ragefire-chasm",
       "reasonCodes": [],
-      "slug": "ragefire",
-      "title": "Ragefire",
+      "slug": "ragefire-chasm",
+      "title": "Ragefire Chasm",
       "transforms": [],
       "worldMapArea": [
         {
@@ -4282,8 +4418,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/RazorfenDowns",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "RazorfenDowns",
       "blpCount": 12,
       "chunks": [
         {
@@ -4341,10 +4480,10 @@
       ],
       "internalName": "RazorfenDowns",
       "mapId": 129,
-      "package": "mod-native-instance-maps.razorfendowns",
+      "package": "mod-native-instance-maps.razorfen-downs",
       "reasonCodes": [],
-      "slug": "razorfendowns",
-      "title": "RazorfenDowns",
+      "slug": "razorfen-downs",
+      "title": "Razorfen Downs",
       "transforms": [],
       "worldMapArea": [
         {
@@ -4355,8 +4494,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/RazorfenKraul",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "RazorfenKraul",
       "blpCount": 12,
       "chunks": [
         {
@@ -4470,10 +4612,10 @@
       ],
       "internalName": "RazorfenKraul",
       "mapId": 47,
-      "package": "mod-native-instance-maps.razorfenkraul",
+      "package": "mod-native-instance-maps.razorfen-kraul",
       "reasonCodes": [],
-      "slug": "razorfenkraul",
-      "title": "RazorfenKraul",
+      "slug": "razorfen-kraul",
+      "title": "Razorfen Kraul",
       "transforms": [],
       "worldMapArea": [
         {
@@ -4484,13 +4626,16 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/RuinsofAhnQiraj",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "RuinsofAhnQiraj",
       "blpCount": 12,
       "chunks": [],
-      "classification": "REVIEW",
+      "classification": "UNSAFE",
       "findings": [
-        "WDM Stable declares no DungeonMap floor for map 509; the instance has no floor geometry to compose",
+        "WDM Stable declares no DungeonMap floor for map 509, and mod-content-manager rejects a worldMaps[].areas[] entry that declares no floors at all.  The map cannot be expressed; supplying a floor row would be authoring geometry WDM does not ship",
         "WDM Stable declares no DungeonMapChunk for the floors of map 509"
       ],
       "floors": [],
@@ -4513,8 +4658,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/ScarletMonastery",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "ScarletMonastery",
       "blpCount": 48,
       "chunks": [
         {
@@ -4896,10 +5044,10 @@
       ],
       "internalName": "ScarletMonastery",
       "mapId": 189,
-      "package": "mod-native-instance-maps.scarletmonastery",
+      "package": "mod-native-instance-maps.scarlet-monastery",
       "reasonCodes": [],
-      "slug": "scarletmonastery",
-      "title": "ScarletMonastery",
+      "slug": "scarlet-monastery",
+      "title": "Scarlet Monastery",
       "transforms": [],
       "worldMapArea": [
         {
@@ -4910,8 +5058,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/Scholomance",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "Scholomance",
       "blpCount": 48,
       "chunks": [
         {
@@ -5055,8 +5206,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/SethekkHalls",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "SethekkHalls",
       "blpCount": 24,
       "chunks": [
         {
@@ -5150,10 +5304,10 @@
       ],
       "internalName": "SethekkHalls",
       "mapId": 556,
-      "package": "mod-native-instance-maps.sethekkhalls",
+      "package": "mod-native-instance-maps.sethekk-halls",
       "reasonCodes": [],
-      "slug": "sethekkhalls",
-      "title": "SethekkHalls",
+      "slug": "sethekk-halls",
+      "title": "Sethekk Halls",
       "transforms": [],
       "worldMapArea": [
         {
@@ -5164,8 +5318,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/ShadowLabyrinth",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "ShadowLabyrinth",
       "blpCount": 12,
       "chunks": [
         {
@@ -5263,10 +5420,10 @@
       ],
       "internalName": "ShadowLabyrinth",
       "mapId": 555,
-      "package": "mod-native-instance-maps.shadowlabyrinth",
+      "package": "mod-native-instance-maps.shadow-labyrinth",
       "reasonCodes": [],
-      "slug": "shadowlabyrinth",
-      "title": "ShadowLabyrinth",
+      "slug": "shadow-labyrinth",
+      "title": "Shadow Labyrinth",
       "transforms": [],
       "worldMapArea": [
         {
@@ -5277,8 +5434,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/ShadowfangKeep",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "ShadowfangKeep",
       "blpCount": 84,
       "chunks": [
         {
@@ -5632,10 +5792,10 @@
       ],
       "internalName": "ShadowfangKeep",
       "mapId": 33,
-      "package": "mod-native-instance-maps.shadowfangkeep",
+      "package": "mod-native-instance-maps.shadowfang-keep",
       "reasonCodes": [],
-      "slug": "shadowfangkeep",
-      "title": "ShadowfangKeep",
+      "slug": "shadowfang-keep",
+      "title": "Shadowfang Keep",
       "transforms": [],
       "worldMapArea": [
         {
@@ -5646,8 +5806,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/Stratholme",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "Stratholme",
       "blpCount": 24,
       "chunks": [
         {
@@ -5999,8 +6162,11 @@
     },
     {
       "areaDungeonMapId": -1,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/SunwellPlateau",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "SunwellPlateau",
       "blpCount": 24,
       "chunks": [
         {
@@ -6022,10 +6188,10 @@
       ],
       "internalName": "SunwellPlateau",
       "mapId": 580,
-      "package": "mod-native-instance-maps.sunwellplateau",
+      "package": "mod-native-instance-maps.sunwell-plateau",
       "reasonCodes": [],
-      "slug": "sunwellplateau",
-      "title": "SunwellPlateau",
+      "slug": "sunwell-plateau",
+      "title": "Sunwell Plateau",
       "transforms": [],
       "worldMapArea": [
         {
@@ -6036,8 +6202,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/TempestKeep",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "TempestKeep",
       "blpCount": 12,
       "chunks": [
         {
@@ -6115,10 +6284,10 @@
       ],
       "internalName": "TempestKeep",
       "mapId": 550,
-      "package": "mod-native-instance-maps.tempestkeep",
+      "package": "mod-native-instance-maps.tempest-keep",
       "reasonCodes": [],
-      "slug": "tempestkeep",
-      "title": "TempestKeep",
+      "slug": "tempest-keep",
+      "title": "Tempest Keep",
       "transforms": [],
       "worldMapArea": [
         {
@@ -6129,8 +6298,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/TheArcatraz",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "TheArcatraz",
       "blpCount": 36,
       "chunks": [
         {
@@ -6236,10 +6408,10 @@
       ],
       "internalName": "TheArcatraz",
       "mapId": 552,
-      "package": "mod-native-instance-maps.thearcatraz",
+      "package": "mod-native-instance-maps.the-arcatraz",
       "reasonCodes": [],
-      "slug": "thearcatraz",
-      "title": "TheArcatraz",
+      "slug": "the-arcatraz",
+      "title": "The Arcatraz",
       "transforms": [],
       "worldMapArea": [
         {
@@ -6250,8 +6422,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/TheBloodFurnace",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "TheBloodFurnace",
       "blpCount": 12,
       "chunks": [
         {
@@ -6293,10 +6468,10 @@
       ],
       "internalName": "TheBloodFurnace",
       "mapId": 542,
-      "package": "mod-native-instance-maps.thebloodfurnace",
+      "package": "mod-native-instance-maps.the-blood-furnace",
       "reasonCodes": [],
-      "slug": "thebloodfurnace",
-      "title": "TheBloodFurnace",
+      "slug": "the-blood-furnace",
+      "title": "The Blood Furnace",
       "transforms": [],
       "worldMapArea": [
         {
@@ -6307,8 +6482,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/TheBotanica",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "TheBotanica",
       "blpCount": 12,
       "chunks": [
         {
@@ -6346,10 +6524,10 @@
       ],
       "internalName": "TheBotanica",
       "mapId": 553,
-      "package": "mod-native-instance-maps.thebotanica",
+      "package": "mod-native-instance-maps.the-botanica",
       "reasonCodes": [],
-      "slug": "thebotanica",
-      "title": "TheBotanica",
+      "slug": "the-botanica",
+      "title": "The Botanica",
       "transforms": [],
       "worldMapArea": [
         {
@@ -6360,8 +6538,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/TheDeadmines",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "TheDeadmines",
       "blpCount": 24,
       "chunks": [
         {
@@ -6514,8 +6695,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/TheMechanar",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "TheMechanar",
       "blpCount": 24,
       "chunks": [
         {
@@ -6593,10 +6777,10 @@
       ],
       "internalName": "TheMechanar",
       "mapId": 554,
-      "package": "mod-native-instance-maps.themechanar",
+      "package": "mod-native-instance-maps.the-mechanar",
       "reasonCodes": [],
-      "slug": "themechanar",
-      "title": "TheMechanar",
+      "slug": "the-mechanar",
+      "title": "The Mechanar",
       "transforms": [],
       "worldMapArea": [
         {
@@ -6607,8 +6791,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/TheShatteredHalls",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "TheShatteredHalls",
       "blpCount": 12,
       "chunks": [
         {
@@ -6670,10 +6857,10 @@
       ],
       "internalName": "TheShatteredHalls",
       "mapId": 540,
-      "package": "mod-native-instance-maps.theshatteredhalls",
+      "package": "mod-native-instance-maps.the-shattered-halls",
       "reasonCodes": [],
-      "slug": "theshatteredhalls",
-      "title": "TheShatteredHalls",
+      "slug": "the-shattered-halls",
+      "title": "The Shattered Halls",
       "transforms": [],
       "worldMapArea": [
         {
@@ -6684,8 +6871,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/TheSlavePens",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "TheSlavePens",
       "blpCount": 12,
       "chunks": [
         {
@@ -6719,10 +6909,10 @@
       ],
       "internalName": "TheSlavePens",
       "mapId": 547,
-      "package": "mod-native-instance-maps.theslavepens",
+      "package": "mod-native-instance-maps.the-slave-pens",
       "reasonCodes": [],
-      "slug": "theslavepens",
-      "title": "TheSlavePens",
+      "slug": "the-slave-pens",
+      "title": "The Slave Pens",
       "transforms": [],
       "worldMapArea": [
         {
@@ -6733,8 +6923,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/TheSteamvault",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "TheSteamvault",
       "blpCount": 24,
       "chunks": [
         {
@@ -6792,10 +6985,10 @@
       ],
       "internalName": "TheSteamvault",
       "mapId": 545,
-      "package": "mod-native-instance-maps.thesteamvault",
+      "package": "mod-native-instance-maps.the-steamvault",
       "reasonCodes": [],
-      "slug": "thesteamvault",
-      "title": "TheSteamvault",
+      "slug": "the-steamvault",
+      "title": "The Steamvault",
       "transforms": [],
       "worldMapArea": [
         {
@@ -6806,8 +6999,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/TheStockade",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "TheStockade",
       "blpCount": 12,
       "chunks": [
         {
@@ -7049,10 +7245,10 @@
       ],
       "internalName": "TheStockade",
       "mapId": 34,
-      "package": "mod-native-instance-maps.thestockade",
+      "package": "mod-native-instance-maps.the-stockade",
       "reasonCodes": [],
-      "slug": "thestockade",
-      "title": "TheStockade",
+      "slug": "the-stockade",
+      "title": "The Stockade",
       "transforms": [],
       "worldMapArea": [
         {
@@ -7063,8 +7259,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/TheTempleOfAtalHakkar",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "TheTempleOfAtalHakkar",
       "blpCount": 36,
       "chunks": [
         {
@@ -7405,8 +7604,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/TheUnderbog",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "TheUnderbog",
       "blpCount": 12,
       "chunks": [
         {
@@ -7424,10 +7626,10 @@
       ],
       "internalName": "TheUnderbog",
       "mapId": 546,
-      "package": "mod-native-instance-maps.theunderbog",
+      "package": "mod-native-instance-maps.the-underbog",
       "reasonCodes": [],
-      "slug": "theunderbog",
-      "title": "TheUnderbog",
+      "slug": "the-underbog",
+      "title": "The Underbog",
       "transforms": [],
       "worldMapArea": [
         {
@@ -7438,8 +7640,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/Uldaman",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "Uldaman",
       "blpCount": 24,
       "chunks": [
         {
@@ -7679,8 +7884,11 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/WailingCaverns",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "WailingCaverns",
       "blpCount": 12,
       "chunks": [
         {
@@ -7862,14 +8070,17 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/WarsongGulch",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "WarsongGulch",
       "blpCount": 12,
       "chunks": [],
-      "classification": "REVIEW",
+      "classification": "UNSAFE",
       "findings": [
         "WorldMapArea 443 is a stock row that WDM leaves untouched; the client already has it and there is nothing additive to ship",
-        "WDM Stable declares no DungeonMap floor for map 489; the instance has no floor geometry to compose",
+        "WDM Stable declares no DungeonMap floor for map 489, and mod-content-manager rejects a worldMaps[].areas[] entry that declares no floors at all.  The map cannot be expressed; supplying a floor row would be authoring geometry WDM does not ship",
         "WDM Stable declares no DungeonMapChunk for the floors of map 489"
       ],
       "floors": [],
@@ -7893,13 +8104,16 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/ZulAman",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "ZulAman",
       "blpCount": 12,
       "chunks": [],
-      "classification": "REVIEW",
+      "classification": "UNSAFE",
       "findings": [
-        "WDM Stable declares no DungeonMap floor for map 568; the instance has no floor geometry to compose",
+        "WDM Stable declares no DungeonMap floor for map 568, and mod-content-manager rejects a worldMaps[].areas[] entry that declares no floors at all.  The map cannot be expressed; supplying a floor row would be authoring geometry WDM does not ship",
         "WDM Stable declares no DungeonMapChunk for the floors of map 568"
       ],
       "floors": [],
@@ -7922,13 +8136,16 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/ZulFarrak",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "ZulFarrak",
       "blpCount": 12,
       "chunks": [],
-      "classification": "REVIEW",
+      "classification": "UNSAFE",
       "findings": [
-        "WDM Stable declares no DungeonMap floor for map 209; the instance has no floor geometry to compose",
+        "WDM Stable declares no DungeonMap floor for map 209, and mod-content-manager rejects a worldMaps[].areas[] entry that declares no floors at all.  The map cannot be expressed; supplying a floor row would be authoring geometry WDM does not ship",
         "WDM Stable declares no DungeonMapChunk for the floors of map 209"
       ],
       "floors": [],
@@ -7951,13 +8168,16 @@
     },
     {
       "areaDungeonMapId": 0,
+      "artworkClaimedBy": null,
       "artworkDirectory": "Interface/WorldMap/ZulGurub",
-      "artworkNameAlias": null,
+      "artworkLeafRenames": {},
+      "artworkNameAliases": [],
+      "artworkSource": "ZulGurub",
       "blpCount": 12,
       "chunks": [],
-      "classification": "REVIEW",
+      "classification": "UNSAFE",
       "findings": [
-        "WDM Stable declares no DungeonMap floor for map 309; the instance has no floor geometry to compose",
+        "WDM Stable declares no DungeonMap floor for map 309, and mod-content-manager rejects a worldMaps[].areas[] entry that declares no floors at all.  The map cannot be expressed; supplying a floor row would be authoring geometry WDM does not ship",
         "WDM Stable declares no DungeonMapChunk for the floors of map 309"
       ],
       "floors": [],
@@ -7980,11 +8200,68 @@
     }
   ],
   "counts": {
-    "REVIEW": 16,
-    "SAFE": 41,
-    "UNSAFE": 1,
+    "SAFE": 43,
+    "UNSAFE": 15,
     "candidates": 58
   },
+  "coverage": [
+    {
+      "added": 113,
+      "heldBack": {},
+      "shipped": 113,
+      "table": "DungeonMap",
+      "unowned": []
+    },
+    {
+      "added": 1312,
+      "heldBack": {},
+      "shipped": 1310,
+      "table": "DungeonMapChunk",
+      "unowned": [
+        1828,
+        1829
+      ]
+    },
+    {
+      "added": 51,
+      "heldBack": {
+        "686": [
+          "ZulFarrak"
+        ],
+        "697": [
+          "ZulGurub"
+        ],
+        "717": [
+          "RuinsofAhnQiraj"
+        ],
+        "733": [
+          "CoTTheBlackMorass"
+        ],
+        "734": [
+          "CoTHillsbradFoothills"
+        ],
+        "749": [
+          "WailingCaverns"
+        ],
+        "775": [
+          "CoTMountHyjal"
+        ],
+        "781": [
+          "ZulAman"
+        ]
+      },
+      "shipped": 43,
+      "table": "WorldMapArea",
+      "unowned": []
+    },
+    {
+      "added": 4,
+      "heldBack": {},
+      "shipped": 4,
+      "table": "WorldMapTransforms",
+      "unowned": []
+    }
+  ],
   "floorsWithoutArea": [
     {
       "floors": [
@@ -8219,18 +8496,5 @@
       "table": "WorldMapArea"
     }
   ],
-  "unmappedWdmOnlyAreas": [
-    {
-      "areaId": 719,
-      "id": 688,
-      "internalName": "BlackfathomDeeps",
-      "mapId": 48
-    },
-    {
-      "areaId": 3836,
-      "id": 779,
-      "internalName": "MagtheridonsLair",
-      "mapId": 544
-    }
-  ]
+  "unmappedWdmOnlyAreas": []
 }

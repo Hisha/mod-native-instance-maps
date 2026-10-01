@@ -1,0 +1,334 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/SethekkHalls1_1.blp",
+   "target": "Interface/WorldMap/SethekkHalls/SethekkHalls1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SethekkHalls1_2.blp",
+   "target": "Interface/WorldMap/SethekkHalls/SethekkHalls1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SethekkHalls1_3.blp",
+   "target": "Interface/WorldMap/SethekkHalls/SethekkHalls1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SethekkHalls1_4.blp",
+   "target": "Interface/WorldMap/SethekkHalls/SethekkHalls1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SethekkHalls1_5.blp",
+   "target": "Interface/WorldMap/SethekkHalls/SethekkHalls1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SethekkHalls1_6.blp",
+   "target": "Interface/WorldMap/SethekkHalls/SethekkHalls1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SethekkHalls1_7.blp",
+   "target": "Interface/WorldMap/SethekkHalls/SethekkHalls1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SethekkHalls1_8.blp",
+   "target": "Interface/WorldMap/SethekkHalls/SethekkHalls1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SethekkHalls1_9.blp",
+   "target": "Interface/WorldMap/SethekkHalls/SethekkHalls1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SethekkHalls1_10.blp",
+   "target": "Interface/WorldMap/SethekkHalls/SethekkHalls1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SethekkHalls1_11.blp",
+   "target": "Interface/WorldMap/SethekkHalls/SethekkHalls1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SethekkHalls1_12.blp",
+   "target": "Interface/WorldMap/SethekkHalls/SethekkHalls1_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SethekkHalls2_1.blp",
+   "target": "Interface/WorldMap/SethekkHalls/SethekkHalls2_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SethekkHalls2_2.blp",
+   "target": "Interface/WorldMap/SethekkHalls/SethekkHalls2_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SethekkHalls2_3.blp",
+   "target": "Interface/WorldMap/SethekkHalls/SethekkHalls2_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SethekkHalls2_4.blp",
+   "target": "Interface/WorldMap/SethekkHalls/SethekkHalls2_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SethekkHalls2_5.blp",
+   "target": "Interface/WorldMap/SethekkHalls/SethekkHalls2_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SethekkHalls2_6.blp",
+   "target": "Interface/WorldMap/SethekkHalls/SethekkHalls2_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SethekkHalls2_7.blp",
+   "target": "Interface/WorldMap/SethekkHalls/SethekkHalls2_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SethekkHalls2_8.blp",
+   "target": "Interface/WorldMap/SethekkHalls/SethekkHalls2_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SethekkHalls2_9.blp",
+   "target": "Interface/WorldMap/SethekkHalls/SethekkHalls2_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SethekkHalls2_10.blp",
+   "target": "Interface/WorldMap/SethekkHalls/SethekkHalls2_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SethekkHalls2_11.blp",
+   "target": "Interface/WorldMap/SethekkHalls/SethekkHalls2_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SethekkHalls2_12.blp",
+   "target": "Interface/WorldMap/SethekkHalls/SethekkHalls2_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Sethekk Halls instance map: 2 DungeonMap floors, 19 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 24 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Sethekk Halls",
+ "package": "mod-native-instance-maps.sethekk-halls",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 3791,
+     "chunks": [
+      {
+       "dungeonMapId": 216,
+       "field2": 21009,
+       "field4": -10000.0,
+       "id": 3238
+      },
+      {
+       "dungeonMapId": 217,
+       "field2": 21009,
+       "field4": 13.0,
+       "id": 3239
+      },
+      {
+       "dungeonMapId": 217,
+       "field2": 21024,
+       "field4": -10000.0,
+       "id": 3245
+      },
+      {
+       "dungeonMapId": 216,
+       "field2": 21281,
+       "field4": -10000.0,
+       "id": 3231
+      },
+      {
+       "dungeonMapId": 217,
+       "field2": 21287,
+       "field4": -10000.0,
+       "id": 3243
+      },
+      {
+       "dungeonMapId": 217,
+       "field2": 21552,
+       "field4": -10000.0,
+       "id": 3246
+      },
+      {
+       "dungeonMapId": 216,
+       "field2": 21553,
+       "field4": -10000.0,
+       "id": 3230
+      },
+      {
+       "dungeonMapId": 216,
+       "field2": 21555,
+       "field4": -10000.0,
+       "id": 3235
+      },
+      {
+       "dungeonMapId": 216,
+       "field2": 21556,
+       "field4": -10000.0,
+       "id": 3236
+      },
+      {
+       "dungeonMapId": 216,
+       "field2": 21557,
+       "field4": -10000.0,
+       "id": 3233
+      },
+      {
+       "dungeonMapId": 216,
+       "field2": 21559,
+       "field4": -10000.0,
+       "id": 3234
+      },
+      {
+       "dungeonMapId": 216,
+       "field2": 21560,
+       "field4": -10000.0,
+       "id": 3229
+      },
+      {
+       "dungeonMapId": 217,
+       "field2": 21561,
+       "field4": -10000.0,
+       "id": 3241
+      },
+      {
+       "dungeonMapId": 216,
+       "field2": 22059,
+       "field4": -10000.0,
+       "id": 3232
+      },
+      {
+       "dungeonMapId": 217,
+       "field2": 22060,
+       "field4": -10000.0,
+       "id": 3247
+      },
+      {
+       "dungeonMapId": 217,
+       "field2": 22061,
+       "field4": -10000.0,
+       "id": 3244
+      },
+      {
+       "dungeonMapId": 217,
+       "field2": 22062,
+       "field4": -10000.0,
+       "id": 3242
+      },
+      {
+       "dungeonMapId": 217,
+       "field2": 22063,
+       "field4": -10000.0,
+       "id": 3240
+      },
+      {
+       "dungeonMapId": 216,
+       "field2": 22064,
+       "field4": -10000.0,
+       "id": 3237
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Sethekkversteck",
+       "2": "Hallen der Trauer"
+      },
+      "enCN": {
+       "1": "塞泰克鸦巢",
+       "2": "哀悼大厅"
+      },
+      "enGB": {
+       "1": "Veil Sethekk",
+       "2": "Halls of Mourning"
+      },
+      "enUS": {
+       "1": "Veil Sethekk",
+       "2": "Halls of Mourning"
+      },
+      "esES": {
+       "1": "Velo Sethekk",
+       "2": "Salas del Luto"
+      },
+      "esMX": {
+       "1": "Velo Sethekk",
+       "2": "Salas del Luto"
+      },
+      "frFR": {
+       "1": "Voile Sethekk",
+       "2": "Les salles du Deuil"
+      },
+      "koKR": {
+       "1": "장막의 세데크",
+       "2": "애도의 전당"
+      },
+      "ruRU": {
+       "1": "Гнездовье Сетекк",
+       "2": "Залы Плача"
+      },
+      "zhCN": {
+       "1": "塞泰克鸦巢",
+       "2": "哀悼大厅"
+      },
+      "zhTW": {
+       "1": "迷霧塞司克",
+       "2": "悲傷大廳"
+      }
+     },
+     "floors": [
+      {
+       "field3": -187.6982421875,
+       "field4": 515.7972412109375,
+       "field5": -295.3429870605469,
+       "field6": 173.6540069580078,
+       "field7": 478,
+       "floor": 1,
+       "id": 216
+      },
+      {
+       "field3": -187.6982421875,
+       "field4": 515.7972412109375,
+       "field5": -295.3429870605469,
+       "field6": 173.6540069580078,
+       "field7": 478,
+       "floor": 2,
+       "id": 217
+      }
+     ],
+     "id": 723,
+     "internalName": "SethekkHalls",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 556
+  }
+ ]
+}

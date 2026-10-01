@@ -23,10 +23,8 @@ from typing import Dict, List
 import paths
 import semantic
 from forensics import TableForensics, compare_table
-from instances import REVIEW, SAFE, UNSAFE, Discovery, discover
+from instances import SAFE, TABLES, UNSAFE, Discovery, discover
 from wdbc import parse_file
-
-TABLES = ("DungeonMap", "DungeonMapChunk", "WorldMapArea", "WorldMapTransforms")
 
 AUDIT_NAME = "wdm-stable-audit.md"
 CANDIDATES_NAME = "instance-candidates.md"
@@ -157,6 +155,63 @@ def audit_markdown(discovery: Discovery, forensics: Dict[str, TableForensics]) -
             add(f"- `{record['table']}` **{record['id']}** — **modified** by WDM: {rendered}")
     add("")
 
+    add("## Coverage: every WDM-added row, accounted for")
+    add("")
+    add(
+        "**Added IDs** is everything WDM introduces. **Shipped** is what a SAFE "
+        "candidate owns, which is what the composer appends. **Held back** is an added "
+        "row a decided UNSAFE candidate owns, with the reason codes that stopped it. "
+        "**Unowned** is an added row no candidate claims at all. The four columns add "
+        "up, so no WDM-added row is silently dropped from the release."
+    )
+    add("")
+    rows = []
+    for entry in discovery.coverage():
+        held = entry["heldBack"]
+        rows.append(
+            {
+                "Table": f"`{entry['table']}`",
+                "Added IDs": entry["added"],
+                "Shipped": entry["shipped"],
+                "Held back": len(held),
+                "Unowned": len(entry["unowned"]),
+            }
+        )
+    out.extend(
+        _table(rows, ["Table", "Added IDs", "Shipped", "Held back", "Unowned"])
+    )
+    add("")
+    reasons = {
+        item.internal_name: item.reason_codes
+        for item in discovery.by_classification(UNSAFE)
+    }
+    outstanding = [
+        (entry, identifier, names)
+        for entry in discovery.coverage()
+        for identifier, names in entry["heldBack"].items()
+    ] + [
+        (entry, identifier, [])
+        for entry in discovery.coverage()
+        for identifier in entry["unowned"]
+    ]
+    if outstanding:
+        add("### Rows that do not ship, and why")
+        add("")
+        for entry, identifier, names in outstanding:
+            if names:
+                why = ", ".join(f"`{code}`" for code in reasons[names[0]])
+                owner = f"held back by {', '.join(f'`{n}`' for n in names)} ({why})"
+            else:
+                owner = (
+                    "no candidate claims it: the map has no WDM artwork directory and "
+                    "no additive area or floor, so there is no package to attach it to"
+                )
+            add(f"- `{entry['table']}` **{identifier}** — {owner}")
+        add("")
+    else:
+        add("Every WDM-added row ships.")
+        add("")
+
     add("## Floors with no WorldMapArea row")
     add("")
     add(
@@ -202,7 +257,8 @@ def candidates_markdown(discovery: Discovery) -> str:
     add("")
     add(
         f"{counts['candidates']} candidates: **{counts[SAFE]} SAFE**, "
-        f"**{counts['REVIEW']} REVIEW**, **{counts[UNSAFE]} UNSAFE**."
+        f"**{counts[UNSAFE]} UNSAFE**. Every candidate reaches a terminal verdict; "
+        "nothing is left for a human to decide."
     )
     add("")
     add("## Classification")
@@ -225,24 +281,18 @@ def candidates_markdown(discovery: Discovery) -> str:
     )
     add("")
     add(
-        "**REVIEW** — WDM's rows are additive and internally consistent, but they do not "
-        "add up to a shippable package: a required row is missing (no floors, no chunks, "
-        "no `WorldMapArea`), the artwork is absent or its directory name disagrees with the "
-        "area's `internalName`, the rows already exist in stock so there is nothing "
-        "additive to ship, or the source data is ambiguous. Closing such a gap would mean "
-        "authoring rows outside WDM's fixed ID space, so a human decides, not the tool."
-    )
-    add("")
-    add(
-        "**UNSAFE** — building this package would contradict WDM's own data: it depends on "
-        "a stock row that WDM mutates or drops, or it would hand the client artwork it "
-        "cannot read. Not publishable under any authoring."
+        "**UNSAFE** — no package can be built from WDM Stable alone. Either the map has no "
+        "additive row to append (a required area, floor or chunk is missing, or every row "
+        "it does have is already in the stock client), or the only working package would "
+        "replace a row the stock client already has, which the append-only composer must "
+        "refuse. Closing such a gap would mean authoring rows outside WDM's fixed ID "
+        "space, so the verdict is that the map does not ship, with the reason recorded. "
+        "See `wdm-stable-audit.md` for the per-row reconciliation."
     )
     add("")
 
     for level, heading in (
         (SAFE, "SAFE"),
-        (REVIEW, "REVIEW"),
         (UNSAFE, "UNSAFE"),
     ):
         items = discovery.by_classification(level)
@@ -274,6 +324,14 @@ def candidates_markdown(discovery: Discovery) -> str:
                     "Chunks": len(item.chunk_ids),
                     "BLPs": len(item.blps),
                     "Transform": transform if transform is not None else "none",
+                    "Artwork source": (
+                        f"`{item.source_dir}`"
+                        + (
+                            f" (re-cased to `{item.internal_name}`)"
+                            if item.artwork_renames
+                            else ""
+                        )
+                    ),
                     "Declaration": digest,
                     "Reasons": ", ".join(f"`{r}`" for r in item.reason_codes) or "—",
                 }
@@ -288,6 +346,7 @@ def candidates_markdown(discovery: Discovery) -> str:
                     "Chunks",
                     "BLPs",
                     "Transform",
+                    "Artwork source",
                     "Declaration",
                     "Reasons",
                 ],
@@ -297,16 +356,23 @@ def candidates_markdown(discovery: Discovery) -> str:
 
     add("## Detail")
     add("")
-    for level in (SAFE, REVIEW, UNSAFE):
+    for level in (SAFE, UNSAFE):
         for item in discovery.by_classification(level):
             add(f"### {item.internal_name} ({level})")
             add("")
             add(f"- Slug: `{item.slug}`")
             add(f"- MapID: {item.map_id if item.map_id is not None else '—'}")
-            if item.artwork_alias:
+            if item.artwork_renames:
                 add(
-                    f"- Artwork directory in WDM: `Interface/WorldMap/{item.artwork_alias}/` "
-                    f"but `internalName` is `{item.internal_name}`"
+                    f"- Artwork: WDM ships `Interface/WorldMap/{item.source_dir}/` and "
+                    f"`internalName` is `{item.internal_name}`; the "
+                    f"{len(item.artwork_renames)} tiles are installed at the names the "
+                    "client derives from `internalName`, with WDM's bytes unchanged"
+                )
+            if item.artwork_claimed_by:
+                add(
+                    f"- Artwork: `Interface/WorldMap/{item.source_dir}/` is the artwork of "
+                    f"`{item.artwork_claimed_by}`; these tiles ship with that map"
                 )
             add("")
             for finding in item.findings or ["No findings."]:
@@ -320,6 +386,7 @@ def candidates_json(discovery: Discovery) -> str:
         json.dumps(
             {
                 "counts": discovery.counts(),
+                "coverage": discovery.coverage(),
                 "candidates": [c.to_json() for c in discovery.candidates],
                 "stockMutations": discovery.stock_mutations,
                 "floorsWithoutArea": discovery.floors_without_area,

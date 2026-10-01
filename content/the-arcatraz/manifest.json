@@ -1,0 +1,426 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/TheArcatraz1_1.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz1_2.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz1_3.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz1_4.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz1_5.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz1_6.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz1_7.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz1_8.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz1_9.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz1_10.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz1_11.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz1_12.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz1_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz2_1.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz2_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz2_2.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz2_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz2_3.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz2_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz2_4.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz2_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz2_5.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz2_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz2_6.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz2_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz2_7.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz2_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz2_8.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz2_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz2_9.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz2_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz2_10.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz2_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz2_11.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz2_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz2_12.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz2_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz3_1.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz3_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz3_2.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz3_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz3_3.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz3_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz3_4.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz3_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz3_5.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz3_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz3_6.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz3_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz3_7.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz3_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz3_8.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz3_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz3_9.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz3_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz3_10.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz3_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz3_11.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz3_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheArcatraz3_12.blp",
+   "target": "Interface/WorldMap/TheArcatraz/TheArcatraz3_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm The Arcatraz instance map: 3 DungeonMap floors, 21 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 36 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "The Arcatraz",
+ "package": "mod-native-instance-maps.the-arcatraz",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 3848,
+     "chunks": [
+      {
+       "dungeonMapId": 233,
+       "field2": 21432,
+       "field4": -10000.0,
+       "id": 3332
+      },
+      {
+       "dungeonMapId": 233,
+       "field2": 21708,
+       "field4": -10000.0,
+       "id": 3331
+      },
+      {
+       "dungeonMapId": 233,
+       "field2": 21709,
+       "field4": -10000.0,
+       "id": 3333
+      },
+      {
+       "dungeonMapId": 235,
+       "field2": 21712,
+       "field4": -10000.0,
+       "id": 3349
+      },
+      {
+       "dungeonMapId": 234,
+       "field2": 21713,
+       "field4": -10000.0,
+       "id": 3341
+      },
+      {
+       "dungeonMapId": 233,
+       "field2": 21715,
+       "field4": -10000.0,
+       "id": 3335
+      },
+      {
+       "dungeonMapId": 233,
+       "field2": 21716,
+       "field4": -10000.0,
+       "id": 3336
+      },
+      {
+       "dungeonMapId": 234,
+       "field2": 21716,
+       "field4": -5.0,
+       "id": 3337
+      },
+      {
+       "dungeonMapId": 235,
+       "field2": 21783,
+       "field4": -10000.0,
+       "id": 3350
+      },
+      {
+       "dungeonMapId": 233,
+       "field2": 21784,
+       "field4": -10000.0,
+       "id": 3334
+      },
+      {
+       "dungeonMapId": 235,
+       "field2": 21785,
+       "field4": -10000.0,
+       "id": 3351
+      },
+      {
+       "dungeonMapId": 234,
+       "field2": 21786,
+       "field4": -10000.0,
+       "id": 4153
+      },
+      {
+       "dungeonMapId": 234,
+       "field2": 21787,
+       "field4": -10000.0,
+       "id": 3345
+      },
+      {
+       "dungeonMapId": 235,
+       "field2": 21787,
+       "field4": 25.0,
+       "id": 3346
+      },
+      {
+       "dungeonMapId": 235,
+       "field2": 21788,
+       "field4": -10000.0,
+       "id": 3347
+      },
+      {
+       "dungeonMapId": 234,
+       "field2": 21789,
+       "field4": -10000.0,
+       "id": 3339
+      },
+      {
+       "dungeonMapId": 235,
+       "field2": 21789,
+       "field4": 48.0,
+       "id": 3348
+      },
+      {
+       "dungeonMapId": 234,
+       "field2": 21790,
+       "field4": -10000.0,
+       "id": 3338
+      },
+      {
+       "dungeonMapId": 234,
+       "field2": 21791,
+       "field4": -10000.0,
+       "id": 3340
+      },
+      {
+       "dungeonMapId": 234,
+       "field2": 21792,
+       "field4": -10000.0,
+       "id": 3342
+      },
+      {
+       "dungeonMapId": 234,
+       "field2": 21793,
+       "field4": -10000.0,
+       "id": 3344
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Stasisblock: Trion",
+       "2": "Stasisblock: Maximus",
+       "3": "Eindämmungskern"
+      },
+      "enCN": {
+       "1": "静止隔间：特雷奥",
+       "2": "静止隔间：玛克希姆",
+       "3": "密封核心"
+      },
+      "enGB": {
+       "1": "Stasis Block: Trion",
+       "2": "Stasis Block: Maximus",
+       "3": "Containment Core"
+      },
+      "enUS": {
+       "1": "Stasis Block: Trion",
+       "2": "Stasis Block: Maximus",
+       "3": "Containment Core"
+      },
+      "esES": {
+       "1": "Bloque de Estasis: Trion",
+       "2": "Bloque de Estasis: Maximus",
+       "3": "Pabellón de Aislamiento"
+      },
+      "esMX": {
+       "1": "Bloque de Estasis: Trion",
+       "2": "Bloque de Estasis: Maximus",
+       "3": "Pabellón de Aislamiento"
+      },
+      "frFR": {
+       "1": "Bloc de stase : Trion",
+       "2": "Bloc de stase : Maximus",
+       "3": "Cœur de confinement"
+      },
+      "koKR": {
+       "1": "트리온 감금 구역",
+       "2": "막시무스 감금 구역",
+       "3": "중앙 격리실"
+      },
+      "ruRU": {
+       "1": "Изоляционная камера: Трион",
+       "2": "Изоляционная камера: Максимус",
+       "3": "Ядро Сдерживания"
+      },
+      "zhCN": {
+       "1": "静止隔间：特雷奥",
+       "2": "静止隔间：玛克希姆",
+       "3": "密封核心"
+      },
+      "zhTW": {
+       "1": "停滯區:提恩",
+       "2": "停滯區:麥希莫斯",
+       "3": "阻礙中心"
+      }
+     },
+     "floors": [
+      {
+       "field3": -405.1050109863281,
+       "field4": 284.5790100097656,
+       "field5": -75.42433166503906,
+       "field6": 384.3650207519531,
+       "field7": 479,
+       "floor": 1,
+       "id": 233
+      },
+      {
+       "field3": -245.2870330810547,
+       "field4": 300.7610168457031,
+       "field5": 44.0,
+       "field6": 408.0320129394531,
+       "field7": 479,
+       "floor": 2,
+       "id": 234
+      },
+      {
+       "field3": -422.6050109863281,
+       "field4": 214.07899475097656,
+       "field5": 150.83297729492188,
+       "field6": 575.2890014648438,
+       "field7": 479,
+       "floor": 3,
+       "id": 235
+      }
+     ],
+     "id": 731,
+     "internalName": "TheArcatraz",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 552
+  }
+ ]
+}

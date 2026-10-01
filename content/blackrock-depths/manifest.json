@@ -1,0 +1,532 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/BlackrockDepths1_1.blp",
+   "target": "Interface/WorldMap/BlackrockDepths/BlackrockDepths1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockDepths1_2.blp",
+   "target": "Interface/WorldMap/BlackrockDepths/BlackrockDepths1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockDepths1_3.blp",
+   "target": "Interface/WorldMap/BlackrockDepths/BlackrockDepths1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockDepths1_4.blp",
+   "target": "Interface/WorldMap/BlackrockDepths/BlackrockDepths1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockDepths1_5.blp",
+   "target": "Interface/WorldMap/BlackrockDepths/BlackrockDepths1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockDepths1_6.blp",
+   "target": "Interface/WorldMap/BlackrockDepths/BlackrockDepths1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockDepths1_7.blp",
+   "target": "Interface/WorldMap/BlackrockDepths/BlackrockDepths1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockDepths1_8.blp",
+   "target": "Interface/WorldMap/BlackrockDepths/BlackrockDepths1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockDepths1_9.blp",
+   "target": "Interface/WorldMap/BlackrockDepths/BlackrockDepths1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockDepths1_10.blp",
+   "target": "Interface/WorldMap/BlackrockDepths/BlackrockDepths1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockDepths1_11.blp",
+   "target": "Interface/WorldMap/BlackrockDepths/BlackrockDepths1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockDepths1_12.blp",
+   "target": "Interface/WorldMap/BlackrockDepths/BlackrockDepths1_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockDepths2_1.blp",
+   "target": "Interface/WorldMap/BlackrockDepths/BlackrockDepths2_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockDepths2_2.blp",
+   "target": "Interface/WorldMap/BlackrockDepths/BlackrockDepths2_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockDepths2_3.blp",
+   "target": "Interface/WorldMap/BlackrockDepths/BlackrockDepths2_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockDepths2_4.blp",
+   "target": "Interface/WorldMap/BlackrockDepths/BlackrockDepths2_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockDepths2_5.blp",
+   "target": "Interface/WorldMap/BlackrockDepths/BlackrockDepths2_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockDepths2_6.blp",
+   "target": "Interface/WorldMap/BlackrockDepths/BlackrockDepths2_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockDepths2_7.blp",
+   "target": "Interface/WorldMap/BlackrockDepths/BlackrockDepths2_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockDepths2_8.blp",
+   "target": "Interface/WorldMap/BlackrockDepths/BlackrockDepths2_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockDepths2_9.blp",
+   "target": "Interface/WorldMap/BlackrockDepths/BlackrockDepths2_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockDepths2_10.blp",
+   "target": "Interface/WorldMap/BlackrockDepths/BlackrockDepths2_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockDepths2_11.blp",
+   "target": "Interface/WorldMap/BlackrockDepths/BlackrockDepths2_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockDepths2_12.blp",
+   "target": "Interface/WorldMap/BlackrockDepths/BlackrockDepths2_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Blackrock Depths instance map: 2 DungeonMap floors, 52 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 24 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Blackrock Depths",
+ "package": "mod-native-instance-maps.blackrock-depths",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 1584,
+     "chunks": [
+      {
+       "dungeonMapId": 200,
+       "field2": 13127,
+       "field4": -10000.0,
+       "id": 2964
+      },
+      {
+       "dungeonMapId": 200,
+       "field2": 13134,
+       "field4": -10000.0,
+       "id": 2958
+      },
+      {
+       "dungeonMapId": 200,
+       "field2": 13135,
+       "field4": -10000.0,
+       "id": 2959
+      },
+      {
+       "dungeonMapId": 200,
+       "field2": 13136,
+       "field4": -10000.0,
+       "id": 2960
+      },
+      {
+       "dungeonMapId": 200,
+       "field2": 13137,
+       "field4": -10000.0,
+       "id": 2961
+      },
+      {
+       "dungeonMapId": 200,
+       "field2": 13138,
+       "field4": -10000.0,
+       "id": 2962
+      },
+      {
+       "dungeonMapId": 200,
+       "field2": 13139,
+       "field4": -10000.0,
+       "id": 2956
+      },
+      {
+       "dungeonMapId": 200,
+       "field2": 13140,
+       "field4": -10000.0,
+       "id": 2963
+      },
+      {
+       "dungeonMapId": 200,
+       "field2": 13141,
+       "field4": -10000.0,
+       "id": 2968
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13141,
+       "field4": -10000.0,
+       "id": 2989
+      },
+      {
+       "dungeonMapId": 200,
+       "field2": 13142,
+       "field4": -10000.0,
+       "id": 3879
+      },
+      {
+       "dungeonMapId": 200,
+       "field2": 13143,
+       "field4": -10000.0,
+       "id": 2971
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13143,
+       "field4": -38.0,
+       "id": 2984
+      },
+      {
+       "dungeonMapId": 200,
+       "field2": 13144,
+       "field4": -10000.0,
+       "id": 2970
+      },
+      {
+       "dungeonMapId": 200,
+       "field2": 13145,
+       "field4": -10000.0,
+       "id": 2972
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13146,
+       "field4": -10000.0,
+       "id": 2983
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13147,
+       "field4": -10000.0,
+       "id": 2987
+      },
+      {
+       "dungeonMapId": 200,
+       "field2": 13148,
+       "field4": -10000.0,
+       "id": 2957
+      },
+      {
+       "dungeonMapId": 200,
+       "field2": 13149,
+       "field4": -10000.0,
+       "id": 2965
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13149,
+       "field4": -43.0,
+       "id": 2982
+      },
+      {
+       "dungeonMapId": 200,
+       "field2": 13150,
+       "field4": -10000.0,
+       "id": 2985
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13150,
+       "field4": -10000.0,
+       "id": 2990
+      },
+      {
+       "dungeonMapId": 200,
+       "field2": 13151,
+       "field4": -10000.0,
+       "id": 2966
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13151,
+       "field4": -49.0,
+       "id": 2976
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13152,
+       "field4": -10000.0,
+       "id": 2992
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13153,
+       "field4": -10000.0,
+       "id": 2991
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13154,
+       "field4": -10000.0,
+       "id": 2993
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13155,
+       "field4": -10000.0,
+       "id": 4093
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13156,
+       "field4": -10000.0,
+       "id": 2980
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13157,
+       "field4": -10000.0,
+       "id": 2979
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13158,
+       "field4": -10000.0,
+       "id": 2981
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13159,
+       "field4": -10000.0,
+       "id": 2977
+      },
+      {
+       "dungeonMapId": 200,
+       "field2": 13160,
+       "field4": -10000.0,
+       "id": 2967
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13160,
+       "field4": -55.0,
+       "id": 2974
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13161,
+       "field4": -10000.0,
+       "id": 2975
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13162,
+       "field4": -10000.0,
+       "id": 2996
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13163,
+       "field4": -10000.0,
+       "id": 2997
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13164,
+       "field4": -10000.0,
+       "id": 4704
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13165,
+       "field4": -10000.0,
+       "id": 2998
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13166,
+       "field4": -10000.0,
+       "id": 3880
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13167,
+       "field4": -10000.0,
+       "id": 3000
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13168,
+       "field4": -10000.0,
+       "id": 3001
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13169,
+       "field4": -10000.0,
+       "id": 3003
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13170,
+       "field4": -10000.0,
+       "id": 3004
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13182,
+       "field4": -10000.0,
+       "id": 2995
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13183,
+       "field4": -10000.0,
+       "id": 4094
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13184,
+       "field4": -10000.0,
+       "id": 2994
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13185,
+       "field4": -10000.0,
+       "id": 2999
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13186,
+       "field4": -10000.0,
+       "id": 3002
+      },
+      {
+       "dungeonMapId": 200,
+       "field2": 13187,
+       "field4": -10000.0,
+       "id": 2973
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13188,
+       "field4": -10000.0,
+       "id": 2988
+      },
+      {
+       "dungeonMapId": 201,
+       "field2": 13190,
+       "field4": -10000.0,
+       "id": 2978
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Gefängnisblock",
+       "2": "Die Schattenschmiede"
+      },
+      "enCN": {
+       "1": "禁闭室",
+       "2": "暗炉城"
+      },
+      "enGB": {
+       "1": "Detention Block",
+       "2": "Shadowforge City"
+      },
+      "enUS": {
+       "1": "Detention Block",
+       "2": "Shadowforge City"
+      },
+      "esES": {
+       "1": "Bloque de Detención",
+       "2": "Ciudad Forjatiniebla"
+      },
+      "esMX": {
+       "1": "Bloque de Detención",
+       "2": "Ciudad Forjatiniebla"
+      },
+      "frFR": {
+       "1": "Le mitard",
+       "2": "Ville des Ombreforges"
+      },
+      "koKR": {
+       "1": "감금 구역",
+       "2": "어둠괴철로 도시"
+      },
+      "ruRU": {
+       "1": "Тюремный блок",
+       "2": "Тенегорн"
+      },
+      "zhCN": {
+       "1": "禁闭室",
+       "2": "暗炉城"
+      },
+      "zhTW": {
+       "1": "禁閉室",
+       "2": "影爐城"
+      }
+     },
+     "floors": [
+      {
+       "field3": -884.7239990234375,
+       "field4": 522.3369750976562,
+       "field5": 248.63966369628906,
+       "field6": 1186.680419921875,
+       "field7": 28,
+       "floor": 1,
+       "id": 200
+      },
+      {
+       "field3": -934.7239990234375,
+       "field4": 572.3369750976562,
+       "field5": 495.3028259277344,
+       "field6": 1500.01025390625,
+       "field7": 28,
+       "floor": 2,
+       "id": 201
+      }
+     ],
+     "id": 704,
+     "internalName": "BlackrockDepths",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 230
+  }
+ ]
+}

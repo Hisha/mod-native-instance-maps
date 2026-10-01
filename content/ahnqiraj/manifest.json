@@ -1,0 +1,611 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/AhnQiraj1_1.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj1_2.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj1_3.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj1_4.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj1_5.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj1_6.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj1_7.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj1_8.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj1_9.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj1_10.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj1_11.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj1_12.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj1_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj2_1.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj2_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj2_2.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj2_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj2_3.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj2_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj2_4.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj2_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj2_5.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj2_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj2_6.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj2_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj2_7.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj2_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj2_8.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj2_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj2_9.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj2_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj2_10.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj2_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj2_11.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj2_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj2_12.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj2_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj3_1.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj3_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj3_2.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj3_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj3_3.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj3_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj3_4.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj3_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj3_5.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj3_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj3_6.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj3_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj3_7.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj3_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj3_8.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj3_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj3_9.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj3_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj3_10.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj3_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj3_11.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj3_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/AhnQiraj3_12.blp",
+   "target": "Interface/WorldMap/AhnQiraj/AhnQiraj3_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Ahn'Qiraj instance map: 3 DungeonMap floors, 50 DungeonMapChunk entries, one WorldMapArea, the instance WorldMapTransforms row and 36 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Ahn'Qiraj",
+ "package": "mod-native-instance-maps.ahnqiraj",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 3428,
+     "chunks": [
+      {
+       "dungeonMapId": 195,
+       "field2": 47,
+       "field4": -10000.0,
+       "id": 2926
+      },
+      {
+       "dungeonMapId": 192,
+       "field2": 49,
+       "field4": -10000.0,
+       "id": 2921
+      },
+      {
+       "dungeonMapId": 195,
+       "field2": 55,
+       "field4": -10000.0,
+       "id": 2934
+      },
+      {
+       "dungeonMapId": 195,
+       "field2": 56,
+       "field4": -10000.0,
+       "id": 2935
+      },
+      {
+       "dungeonMapId": 195,
+       "field2": 57,
+       "field4": -10000.0,
+       "id": 2936
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 67,
+       "field4": -10000.0,
+       "id": 2895
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 69,
+       "field4": -10000.0,
+       "id": 2896
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 71,
+       "field4": -10000.0,
+       "id": 2897
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 72,
+       "field4": -10000.0,
+       "id": 2915
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 74,
+       "field4": -10000.0,
+       "id": 2916
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 75,
+       "field4": -10000.0,
+       "id": 2899
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 76,
+       "field4": -10000.0,
+       "id": 2903
+      },
+      {
+       "dungeonMapId": 195,
+       "field2": 76,
+       "field4": -10000.0,
+       "id": 2930
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 77,
+       "field4": -10000.0,
+       "id": 2917
+      },
+      {
+       "dungeonMapId": 195,
+       "field2": 77,
+       "field4": -10000.0,
+       "id": 2927
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 81,
+       "field4": -10000.0,
+       "id": 2883
+      },
+      {
+       "dungeonMapId": 192,
+       "field2": 81,
+       "field4": -10000.0,
+       "id": 2922
+      },
+      {
+       "dungeonMapId": 195,
+       "field2": 87,
+       "field4": -10000.0,
+       "id": 2931
+      },
+      {
+       "dungeonMapId": 195,
+       "field2": 13610,
+       "field4": -10000.0,
+       "id": 2933
+      },
+      {
+       "dungeonMapId": 195,
+       "field2": 13613,
+       "field4": -10000.0,
+       "id": 2932
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 13614,
+       "field4": -10000.0,
+       "id": 2905
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 13616,
+       "field4": -10000.0,
+       "id": 2901
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 13617,
+       "field4": -10000.0,
+       "id": 2886
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 13618,
+       "field4": -10000.0,
+       "id": 2885
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 13619,
+       "field4": -10000.0,
+       "id": 2904
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 13621,
+       "field4": -10000.0,
+       "id": 2906
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 13625,
+       "field4": -10000.0,
+       "id": 2887
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 13626,
+       "field4": -10000.0,
+       "id": 2902
+      },
+      {
+       "dungeonMapId": 192,
+       "field2": 13627,
+       "field4": -10000.0,
+       "id": 2920
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 13628,
+       "field4": -10000.0,
+       "id": 2907
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 13629,
+       "field4": -10000.0,
+       "id": 2888
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 13630,
+       "field4": -10000.0,
+       "id": 2908
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 13725,
+       "field4": -10000.0,
+       "id": 2909
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 13726,
+       "field4": -10000.0,
+       "id": 2910
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 13729,
+       "field4": -10000.0,
+       "id": 2911
+      },
+      {
+       "dungeonMapId": 195,
+       "field2": 13729,
+       "field4": -10000.0,
+       "id": 2928
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 13731,
+       "field4": -10000.0,
+       "id": 2912
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 13734,
+       "field4": -10000.0,
+       "id": 2913
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 13735,
+       "field4": -10000.0,
+       "id": 2882
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 19519,
+       "field4": -10000.0,
+       "id": 2889
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 19584,
+       "field4": -10000.0,
+       "id": 2878
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 19585,
+       "field4": -10000.0,
+       "id": 2890
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 19586,
+       "field4": -10000.0,
+       "id": 2879
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 19587,
+       "field4": -10000.0,
+       "id": 2881
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 19588,
+       "field4": -10000.0,
+       "id": 2880
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 19589,
+       "field4": -10000.0,
+       "id": 2891
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 20044,
+       "field4": -10000.0,
+       "id": 2898
+      },
+      {
+       "dungeonMapId": 195,
+       "field2": 20086,
+       "field4": -10000.0,
+       "id": 2937
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 20087,
+       "field4": -10000.0,
+       "id": 2919
+      },
+      {
+       "dungeonMapId": 191,
+       "field2": 20088,
+       "field4": -10000.0,
+       "id": 2918
+      }
+     ],
+     "dungeonMapId": 2,
+     "floorNames": {
+      "deDE": {
+       "1": "Untergrund des Schwarmbaus",
+       "2": "Die Tempeltore",
+       "3": "Höhle von C'Thun"
+      },
+      "enCN": {
+       "1": "地下虫巢",
+       "2": "神殿大门",
+       "3": "克苏恩地穴"
+      },
+      "enGB": {
+       "1": "The Hive Undergrounds",
+       "2": "The Temple Gates",
+       "3": "Vault of C'Thun"
+      },
+      "enUS": {
+       "1": "The Hive Undergrounds",
+       "2": "The Temple Gates",
+       "3": "Vault of C'Thun"
+      },
+      "esES": {
+       "1": "Las Puertas del Templo",
+       "2": "El Subterráneo de la Colmena",
+       "3": "Cámara de C'Thun"
+      },
+      "esMX": {
+       "1": "Las Puertas del Templo",
+       "2": "El Subterráneo de la Colmena",
+       "3": "Cámara de C'Thun"
+      },
+      "frFR": {
+       "1": "Les souterrains de la ruche",
+       "2": "Portes du Temple",
+       "3": "Caveau de C'Thun"
+      },
+      "koKR": {
+       "1": "지하 부화장",
+       "2": "사원 관문",
+       "3": "크툰의 금고"
+      },
+      "ruRU": {
+       "1": "Подземелье улья",
+       "2": "Ворота храма",
+       "3": "Обитель К'Туна"
+      },
+      "zhCN": {
+       "1": "地下虫巢",
+       "2": "神殿大门",
+       "3": "克苏恩地穴"
+      },
+      "zhTW": {
+       "1": "蟲巢地穴",
+       "2": "神廟大門",
+       "3": "克蘇恩穹殿"
+      }
+     },
+     "floors": [
+      {
+       "field3": 138.0760040283203,
+       "field4": 2915.6201171875,
+       "field5": -9510.9833984375,
+       "field6": -7659.287109375,
+       "field7": 261,
+       "floor": 1,
+       "id": 191
+      },
+      {
+       "field3": 1538.0699462890625,
+       "field4": 2515.6298828125,
+       "field5": -8703.5029296875,
+       "field6": -8051.79638671875,
+       "field7": 261,
+       "floor": 2,
+       "id": 192
+      },
+      {
+       "field3": 1738.06982421875,
+       "field4": 2315.6298828125,
+       "field5": -8720.169921875,
+       "field6": -8335.1298828125,
+       "field7": 261,
+       "floor": 3,
+       "id": 195
+      }
+     ],
+     "id": 766,
+     "internalName": "AhnQiraj",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": -7933.3330078125,
+     "x2": -9133.3330078125,
+     "y1": 3033.333251953125,
+     "y2": 1233.333251953125
+    }
+   ],
+   "mapId": 531,
+   "transform": {
+    "id": 13,
+    "newDungeonMapId": 192,
+    "newMapId": 531,
+    "regionBottom": -20000.0,
+    "regionLeft": 20000.0,
+    "regionOffsetX": 0.0,
+    "regionOffsetY": 0.0,
+    "regionRight": -20000.0,
+    "regionTop": 20000.0
+   }
+  }
+ ]
+}

@@ -1,0 +1,224 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/ManaTombs1_1.blp",
+   "target": "Interface/WorldMap/ManaTombs/ManaTombs1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ManaTombs1_2.blp",
+   "target": "Interface/WorldMap/ManaTombs/ManaTombs1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ManaTombs1_3.blp",
+   "target": "Interface/WorldMap/ManaTombs/ManaTombs1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ManaTombs1_4.blp",
+   "target": "Interface/WorldMap/ManaTombs/ManaTombs1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ManaTombs1_5.blp",
+   "target": "Interface/WorldMap/ManaTombs/ManaTombs1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ManaTombs1_6.blp",
+   "target": "Interface/WorldMap/ManaTombs/ManaTombs1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ManaTombs1_7.blp",
+   "target": "Interface/WorldMap/ManaTombs/ManaTombs1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ManaTombs1_8.blp",
+   "target": "Interface/WorldMap/ManaTombs/ManaTombs1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ManaTombs1_9.blp",
+   "target": "Interface/WorldMap/ManaTombs/ManaTombs1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ManaTombs1_10.blp",
+   "target": "Interface/WorldMap/ManaTombs/ManaTombs1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ManaTombs1_11.blp",
+   "target": "Interface/WorldMap/ManaTombs/ManaTombs1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ManaTombs1_12.blp",
+   "target": "Interface/WorldMap/ManaTombs/ManaTombs1_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Mana Tombs instance map: 1 DungeonMap floor, 14 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 12 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Mana Tombs",
+ "package": "mod-native-instance-maps.mana-tombs",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 3792,
+     "chunks": [
+      {
+       "dungeonMapId": 238,
+       "field2": 20936,
+       "field4": -10000.0,
+       "id": 3374
+      },
+      {
+       "dungeonMapId": 238,
+       "field2": 20944,
+       "field4": -10000.0,
+       "id": 3375
+      },
+      {
+       "dungeonMapId": 238,
+       "field2": 21165,
+       "field4": -10000.0,
+       "id": 3383
+      },
+      {
+       "dungeonMapId": 238,
+       "field2": 21167,
+       "field4": -10000.0,
+       "id": 3384
+      },
+      {
+       "dungeonMapId": 238,
+       "field2": 21172,
+       "field4": -10000.0,
+       "id": 3372
+      },
+      {
+       "dungeonMapId": 238,
+       "field2": 21173,
+       "field4": -10000.0,
+       "id": 3378
+      },
+      {
+       "dungeonMapId": 238,
+       "field2": 21175,
+       "field4": -10000.0,
+       "id": 3371
+      },
+      {
+       "dungeonMapId": 238,
+       "field2": 21504,
+       "field4": -10000.0,
+       "id": 3379
+      },
+      {
+       "dungeonMapId": 238,
+       "field2": 21505,
+       "field4": -10000.0,
+       "id": 3377
+      },
+      {
+       "dungeonMapId": 238,
+       "field2": 21506,
+       "field4": -10000.0,
+       "id": 3380
+      },
+      {
+       "dungeonMapId": 238,
+       "field2": 21508,
+       "field4": -10000.0,
+       "id": 3381
+      },
+      {
+       "dungeonMapId": 238,
+       "field2": 21847,
+       "field4": -10000.0,
+       "id": 3376
+      },
+      {
+       "dungeonMapId": 238,
+       "field2": 21848,
+       "field4": -10000.0,
+       "id": 3382
+      },
+      {
+       "dungeonMapId": 238,
+       "field2": 22205,
+       "field4": -10000.0,
+       "id": 3373
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Managruft"
+      },
+      "enCN": {
+       "1": "法力陵墓"
+      },
+      "enGB": {
+       "1": "Mana Tombs"
+      },
+      "enUS": {
+       "1": "Mana Tombs"
+      },
+      "esES": {
+       "1": "Tumbas de Maná"
+      },
+      "esMX": {
+       "1": "Tumbas de Maná"
+      },
+      "frFR": {
+       "1": "Tombes-mana"
+      },
+      "koKR": {
+       "1": "마나 무덤"
+      },
+      "ruRU": {
+       "1": "Гробницы Маны"
+      },
+      "zhCN": {
+       "1": "法力陵墓"
+      },
+      "zhTW": {
+       "1": "法力墓地"
+      }
+     },
+     "floors": [
+      {
+       "field3": -546.35107421875,
+       "field4": 276.93408203125,
+       "field5": -458.7860107421875,
+       "field6": 90.07080078125,
+       "field7": 478,
+       "floor": 1,
+       "id": 238
+      }
+     ],
+     "id": 732,
+     "internalName": "ManaTombs",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 557
+  }
+ ]
+}

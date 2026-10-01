@@ -40,7 +40,7 @@ from typing import Dict, List, Sequence, Tuple
 
 import paths
 import semantic
-from instances import SAFE, Candidate, Discovery, discover, natural_key
+from instances import SAFE, Candidate, Discovery, discover
 
 #: Fixed DOS timestamp for every archive member.  1980-01-01 is the epoch of the
 #: ZIP format, so this is the one value that cannot drift with the clock.
@@ -100,15 +100,20 @@ def floor_label_locales(world_map: Dict[str, object]) -> List[str]:
 
 
 def artwork_targets(candidate: Candidate) -> List[Dict[str, str]]:
-    """One content entry per tile, in stable natural filename order."""
-    leaves = sorted((candidate.blps or []), key=natural_key)
+    """One content entry per tile, in stable natural filename order.
+
+    ``source`` names the file in the vendored WDM tree, ``target`` names the file
+    the client reads.  The two differ only for a map whose WDM artwork directory
+    is spelled with different capitals than its ``WorldMapArea.internal_name``;
+    see :func:`instances.tile_target_name`.
+    """
     return [
         {
             "type": "file",
-            "source": SOURCE_PREFIX + Path(leaf).name,
-            "target": f"{ARTWORK_PREFIX}{candidate.internal_name}/{Path(leaf).name}",
+            "source": SOURCE_PREFIX + source,
+            "target": f"{ARTWORK_PREFIX}{candidate.internal_name}/{target}",
         }
-        for leaf in leaves
+        for source, target in zip(candidate.blps, candidate.tile_targets)
     ]
 
 
@@ -200,6 +205,17 @@ def manifest_for(candidate: Candidate, discovery: Discovery) -> Dict[str, object
         "content": tiles,
         "worldMaps": [declaration],
     }
+    if candidate.artwork_renames:
+        # Stated in the package's own description because it is the one thing a
+        # reader of this manifest cannot see: the bytes are WDM's, and only the
+        # path the client reads was rebuilt from the area's own internal_name.
+        manifest["description"] += (
+            f" WDM Stable spells this map's artwork directory "
+            f"{candidate.source_dir} in different capitals than the WorldMapArea "
+            f"internal_name {candidate.internal_name}; the {len(tiles)} tiles are "
+            "WDM's bytes installed at the names the client derives from "
+            "internal_name."
+        )
     locales = floor_label_locales(declaration)
     if locales:
         # Declaring floor labels obliges the package to name the exact stock
@@ -264,11 +280,14 @@ def _artwork_source(
 ) -> Path:
     """Resolve a declared tile to its file under ``artwork_root``.
 
-    The tile is looked up by leaf name beneath the area directory, matching how
-    ``mod-content-manager``'s own end-to-end test supplies artwork.
+    The tile is looked up by leaf name beneath the candidate's WDM artwork
+    directory, matching how ``mod-content-manager``'s own end-to-end test supplies
+    artwork.  The directory is the one the vendored tree actually uses, which is
+    the ``internal_name`` spelling except for the two maps WDM spells with
+    different capitals than their own ``WorldMapArea`` row.
     """
     name = Path(entry["source"]).name
-    source = artwork_root / candidate.internal_name / name
+    source = artwork_root / candidate.source_dir / name
     if not source.is_file():
         raise SystemExit(f"missing artwork for {candidate.internal_name}: {source}")
     return source

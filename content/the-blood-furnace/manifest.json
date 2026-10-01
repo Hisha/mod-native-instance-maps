@@ -1,0 +1,182 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/TheBloodFurnace1_1.blp",
+   "target": "Interface/WorldMap/TheBloodFurnace/TheBloodFurnace1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheBloodFurnace1_2.blp",
+   "target": "Interface/WorldMap/TheBloodFurnace/TheBloodFurnace1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheBloodFurnace1_3.blp",
+   "target": "Interface/WorldMap/TheBloodFurnace/TheBloodFurnace1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheBloodFurnace1_4.blp",
+   "target": "Interface/WorldMap/TheBloodFurnace/TheBloodFurnace1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheBloodFurnace1_5.blp",
+   "target": "Interface/WorldMap/TheBloodFurnace/TheBloodFurnace1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheBloodFurnace1_6.blp",
+   "target": "Interface/WorldMap/TheBloodFurnace/TheBloodFurnace1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheBloodFurnace1_7.blp",
+   "target": "Interface/WorldMap/TheBloodFurnace/TheBloodFurnace1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheBloodFurnace1_8.blp",
+   "target": "Interface/WorldMap/TheBloodFurnace/TheBloodFurnace1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheBloodFurnace1_9.blp",
+   "target": "Interface/WorldMap/TheBloodFurnace/TheBloodFurnace1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheBloodFurnace1_10.blp",
+   "target": "Interface/WorldMap/TheBloodFurnace/TheBloodFurnace1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheBloodFurnace1_11.blp",
+   "target": "Interface/WorldMap/TheBloodFurnace/TheBloodFurnace1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheBloodFurnace1_12.blp",
+   "target": "Interface/WorldMap/TheBloodFurnace/TheBloodFurnace1_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm The Blood Furnace instance map: 1 DungeonMap floor, 7 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 12 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "The Blood Furnace",
+ "package": "mod-native-instance-maps.the-blood-furnace",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 3713,
+     "chunks": [
+      {
+       "dungeonMapId": 221,
+       "field2": 20174,
+       "field4": -10000.0,
+       "id": 3278
+      },
+      {
+       "dungeonMapId": 221,
+       "field2": 20175,
+       "field4": -10000.0,
+       "id": 3274
+      },
+      {
+       "dungeonMapId": 221,
+       "field2": 20176,
+       "field4": -10000.0,
+       "id": 3281
+      },
+      {
+       "dungeonMapId": 221,
+       "field2": 20178,
+       "field4": -10000.0,
+       "id": 3286
+      },
+      {
+       "dungeonMapId": 221,
+       "field2": 20179,
+       "field4": -10000.0,
+       "id": 3280
+      },
+      {
+       "dungeonMapId": 221,
+       "field2": 20180,
+       "field4": -10000.0,
+       "id": 3276
+      },
+      {
+       "dungeonMapId": 221,
+       "field2": 22065,
+       "field4": -10000.0,
+       "id": 3277
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Blutkessel"
+      },
+      "enCN": {
+       "1": "鲜血熔炉"
+      },
+      "enGB": {
+       "1": "The Blood Furnace"
+      },
+      "enUS": {
+       "1": "The Blood Furnace"
+      },
+      "esES": {
+       "1": "El Horno de Sangre"
+      },
+      "esMX": {
+       "1": "El Horno de Sangre"
+      },
+      "frFR": {
+       "1": "La Fournaise du sang"
+      },
+      "koKR": {
+       "1": "피의 용광로"
+      },
+      "ruRU": {
+       "1": "Кузня Крови"
+      },
+      "zhCN": {
+       "1": "鲜血熔炉"
+      },
+      "zhTW": {
+       "1": "血熔爐"
+      }
+     },
+     "floors": [
+      {
+       "field3": -504.5299987792969,
+       "field4": 498.989013671875,
+       "field5": -65.87670135498047,
+       "field6": 603.135986328125,
+       "field7": 465,
+       "floor": 1,
+       "id": 221
+      }
+     ],
+     "id": 725,
+     "internalName": "TheBloodFurnace",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 542
+  }
+ ]
+}

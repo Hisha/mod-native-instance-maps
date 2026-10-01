@@ -1,0 +1,212 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/SunwellPlateau1.blp",
+   "target": "Interface/WorldMap/SunwellPlateau/SunwellPlateau1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SunwellPlateau1_1.blp",
+   "target": "Interface/WorldMap/SunwellPlateau/SunwellPlateau1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SunwellPlateau1_2.blp",
+   "target": "Interface/WorldMap/SunwellPlateau/SunwellPlateau1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SunwellPlateau1_3.blp",
+   "target": "Interface/WorldMap/SunwellPlateau/SunwellPlateau1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SunwellPlateau1_4.blp",
+   "target": "Interface/WorldMap/SunwellPlateau/SunwellPlateau1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SunwellPlateau1_5.blp",
+   "target": "Interface/WorldMap/SunwellPlateau/SunwellPlateau1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SunwellPlateau1_6.blp",
+   "target": "Interface/WorldMap/SunwellPlateau/SunwellPlateau1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SunwellPlateau1_7.blp",
+   "target": "Interface/WorldMap/SunwellPlateau/SunwellPlateau1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SunwellPlateau1_8.blp",
+   "target": "Interface/WorldMap/SunwellPlateau/SunwellPlateau1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SunwellPlateau1_9.blp",
+   "target": "Interface/WorldMap/SunwellPlateau/SunwellPlateau1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SunwellPlateau1_10.blp",
+   "target": "Interface/WorldMap/SunwellPlateau/SunwellPlateau1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SunwellPlateau1_11.blp",
+   "target": "Interface/WorldMap/SunwellPlateau/SunwellPlateau1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SunwellPlateau1_12.blp",
+   "target": "Interface/WorldMap/SunwellPlateau/SunwellPlateau1_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SunwellPlateau2.blp",
+   "target": "Interface/WorldMap/SunwellPlateau/SunwellPlateau2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SunwellPlateau3.blp",
+   "target": "Interface/WorldMap/SunwellPlateau/SunwellPlateau3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SunwellPlateau4.blp",
+   "target": "Interface/WorldMap/SunwellPlateau/SunwellPlateau4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SunwellPlateau5.blp",
+   "target": "Interface/WorldMap/SunwellPlateau/SunwellPlateau5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SunwellPlateau6.blp",
+   "target": "Interface/WorldMap/SunwellPlateau/SunwellPlateau6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SunwellPlateau7.blp",
+   "target": "Interface/WorldMap/SunwellPlateau/SunwellPlateau7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SunwellPlateau8.blp",
+   "target": "Interface/WorldMap/SunwellPlateau/SunwellPlateau8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SunwellPlateau9.blp",
+   "target": "Interface/WorldMap/SunwellPlateau/SunwellPlateau9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SunwellPlateau10.blp",
+   "target": "Interface/WorldMap/SunwellPlateau/SunwellPlateau10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SunwellPlateau11.blp",
+   "target": "Interface/WorldMap/SunwellPlateau/SunwellPlateau11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/SunwellPlateau12.blp",
+   "target": "Interface/WorldMap/SunwellPlateau/SunwellPlateau12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Sunwell Plateau instance map: 1 DungeonMap floor, 2 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 24 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Sunwell Plateau",
+ "package": "mod-native-instance-maps.sunwell-plateau",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 4075,
+     "chunks": [
+      {
+       "dungeonMapId": 440,
+       "field2": 23468,
+       "field4": -10000.0,
+       "id": 4613
+      },
+      {
+       "dungeonMapId": 440,
+       "field2": 23469,
+       "field4": -10000.0,
+       "id": 4612
+      }
+     ],
+     "dungeonMapId": -1,
+     "floorNames": {
+      "deDE": {
+       "1": "Schrein der Finsternis"
+      },
+      "enCN": {
+       "1": "日蚀神殿"
+      },
+      "enGB": {
+       "1": "Shrine of the Eclipse"
+      },
+      "enUS": {
+       "1": "Shrine of the Eclipse"
+      },
+      "esES": {
+       "1": "Santuario del Eclipse"
+      },
+      "esMX": {
+       "1": "Santuario del Eclipse"
+      },
+      "frFR": {
+       "1": "Sanctuaire de l’eclipse"
+      },
+      "koKR": {
+       "1": "일식 제단"
+      },
+      "ruRU": {
+       "1": "Святилище Затмения"
+      },
+      "zhCN": {
+       "1": "日蚀神殿"
+      },
+      "zhTW": {
+       "1": "日蝕神殿"
+      }
+     },
+     "floors": [
+      {
+       "field3": 377.5,
+       "field4": 842.5,
+       "field5": 1580.0,
+       "field6": 1890.0,
+       "field7": 540,
+       "floor": 1,
+       "id": 440
+      }
+     ],
+     "id": 789,
+     "internalName": "SunwellPlateau",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 2012.4998779296875,
+     "x2": 1408.333251953125,
+     "y1": 1206.25,
+     "y2": 300.0
+    }
+   ],
+   "mapId": 580
+  }
+ ]
+}

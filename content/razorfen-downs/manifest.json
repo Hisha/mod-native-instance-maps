@@ -1,0 +1,206 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/RazorfenDowns1_1.blp",
+   "target": "Interface/WorldMap/RazorfenDowns/RazorfenDowns1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/RazorfenDowns1_2.blp",
+   "target": "Interface/WorldMap/RazorfenDowns/RazorfenDowns1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/RazorfenDowns1_3.blp",
+   "target": "Interface/WorldMap/RazorfenDowns/RazorfenDowns1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/RazorfenDowns1_4.blp",
+   "target": "Interface/WorldMap/RazorfenDowns/RazorfenDowns1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/RazorfenDowns1_5.blp",
+   "target": "Interface/WorldMap/RazorfenDowns/RazorfenDowns1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/RazorfenDowns1_6.blp",
+   "target": "Interface/WorldMap/RazorfenDowns/RazorfenDowns1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/RazorfenDowns1_7.blp",
+   "target": "Interface/WorldMap/RazorfenDowns/RazorfenDowns1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/RazorfenDowns1_8.blp",
+   "target": "Interface/WorldMap/RazorfenDowns/RazorfenDowns1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/RazorfenDowns1_9.blp",
+   "target": "Interface/WorldMap/RazorfenDowns/RazorfenDowns1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/RazorfenDowns1_10.blp",
+   "target": "Interface/WorldMap/RazorfenDowns/RazorfenDowns1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/RazorfenDowns1_11.blp",
+   "target": "Interface/WorldMap/RazorfenDowns/RazorfenDowns1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/RazorfenDowns1_12.blp",
+   "target": "Interface/WorldMap/RazorfenDowns/RazorfenDowns1_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Razorfen Downs instance map: 1 DungeonMap floor, 11 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 12 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Razorfen Downs",
+ "package": "mod-native-instance-maps.razorfen-downs",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 722,
+     "chunks": [
+      {
+       "dungeonMapId": 150,
+       "field2": 5911,
+       "field4": -10000.0,
+       "id": 2161
+      },
+      {
+       "dungeonMapId": 150,
+       "field2": 5912,
+       "field4": -10000.0,
+       "id": 2167
+      },
+      {
+       "dungeonMapId": 150,
+       "field2": 5913,
+       "field4": -10000.0,
+       "id": 2162
+      },
+      {
+       "dungeonMapId": 150,
+       "field2": 5914,
+       "field4": -10000.0,
+       "id": 2168
+      },
+      {
+       "dungeonMapId": 150,
+       "field2": 5915,
+       "field4": -10000.0,
+       "id": 2163
+      },
+      {
+       "dungeonMapId": 150,
+       "field2": 5916,
+       "field4": -10000.0,
+       "id": 2169
+      },
+      {
+       "dungeonMapId": 150,
+       "field2": 5917,
+       "field4": -10000.0,
+       "id": 2164
+      },
+      {
+       "dungeonMapId": 150,
+       "field2": 5918,
+       "field4": -10000.0,
+       "id": 2166
+      },
+      {
+       "dungeonMapId": 150,
+       "field2": 5919,
+       "field4": -10000.0,
+       "id": 2170
+      },
+      {
+       "dungeonMapId": 150,
+       "field2": 5923,
+       "field4": -10000.0,
+       "id": 2171
+      },
+      {
+       "dungeonMapId": 150,
+       "field2": 5924,
+       "field4": -10000.0,
+       "id": 2165
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Hügel der Klingenhauer"
+      },
+      "enCN": {
+       "1": "剃刀高地"
+      },
+      "enGB": {
+       "1": "Razorfen Downs"
+      },
+      "enUS": {
+       "1": "Razorfen Downs"
+      },
+      "esES": {
+       "1": "Zahúrda Rajacieno"
+      },
+      "esMX": {
+       "1": "Zahúrda Rajacieno"
+      },
+      "frFR": {
+       "1": "Souilles de Tranchebauge"
+      },
+      "koKR": {
+       "1": "가시덩굴 구릉"
+      },
+      "ruRU": {
+       "1": "Курганы Иглошкурых"
+      },
+      "zhCN": {
+       "1": "剃刀高地"
+      },
+      "zhTW": {
+       "1": "剃刀高地"
+      }
+     },
+     "floors": [
+      {
+       "field3": 570.8909912109375,
+       "field4": 1279.93994140625,
+       "field5": 2209.85009765625,
+       "field6": 2682.550048828125,
+       "field7": 11,
+       "floor": 1,
+       "id": 150
+      }
+     ],
+     "id": 760,
+     "internalName": "RazorfenDowns",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 3266.66650390625,
+     "x2": 999.9999389648438,
+     "y1": 2766.66650390625,
+     "y2": -633.3333129882812
+    }
+   ],
+   "mapId": 129
+  }
+ ]
+}

@@ -1,0 +1,1070 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/BlackrockSpire1_1.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire1_2.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire1_3.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire1_4.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire1_5.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire1_6.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire1_7.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire1_8.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire1_9.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire1_10.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire1_11.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire1_12.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire1_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire2_1.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire2_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire2_2.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire2_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire2_3.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire2_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire2_4.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire2_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire2_5.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire2_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire2_6.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire2_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire2_7.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire2_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire2_8.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire2_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire2_9.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire2_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire2_10.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire2_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire2_11.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire2_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire2_12.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire2_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire3_1.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire3_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire3_2.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire3_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire3_3.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire3_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire3_4.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire3_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire3_5.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire3_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire3_6.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire3_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire3_7.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire3_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire3_8.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire3_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire3_9.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire3_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire3_10.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire3_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire3_11.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire3_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire3_12.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire3_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire4_1.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire4_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire4_2.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire4_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire4_3.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire4_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire4_4.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire4_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire4_5.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire4_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire4_6.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire4_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire4_7.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire4_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire4_8.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire4_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire4_9.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire4_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire4_10.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire4_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire4_11.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire4_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire4_12.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire4_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire5_1.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire5_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire5_2.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire5_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire5_3.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire5_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire5_4.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire5_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire5_5.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire5_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire5_6.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire5_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire5_7.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire5_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire5_8.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire5_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire5_9.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire5_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire5_10.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire5_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire5_11.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire5_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire5_12.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire5_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire6_1.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire6_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire6_2.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire6_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire6_3.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire6_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire6_4.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire6_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire6_5.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire6_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire6_6.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire6_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire6_7.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire6_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire6_8.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire6_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire6_9.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire6_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire6_10.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire6_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire6_11.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire6_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire6_12.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire6_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire7_1.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire7_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire7_2.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire7_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire7_3.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire7_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire7_4.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire7_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire7_5.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire7_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire7_6.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire7_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire7_7.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire7_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire7_8.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire7_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire7_9.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire7_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire7_10.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire7_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire7_11.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire7_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/BlackrockSpire7_12.blp",
+   "target": "Interface/WorldMap/BlackrockSpire/BlackrockSpire7_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Blackrock Spire instance map: 7 DungeonMap floors, 75 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 84 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "Blackrock Spire",
+ "package": "mod-native-instance-maps.blackrock-spire",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 1583,
+     "chunks": [
+      {
+       "dungeonMapId": 209,
+       "field2": 13045,
+       "field4": -10000.0,
+       "id": 3105
+      },
+      {
+       "dungeonMapId": 209,
+       "field2": 13049,
+       "field4": -10000.0,
+       "id": 3104
+      },
+      {
+       "dungeonMapId": 208,
+       "field2": 13052,
+       "field4": -10000.0,
+       "id": 3089
+      },
+      {
+       "dungeonMapId": 209,
+       "field2": 13052,
+       "field4": -10000.0,
+       "id": 3100
+      },
+      {
+       "dungeonMapId": 209,
+       "field2": 13053,
+       "field4": -10000.0,
+       "id": 3210
+      },
+      {
+       "dungeonMapId": 209,
+       "field2": 13054,
+       "field4": -10000.0,
+       "id": 3102
+      },
+      {
+       "dungeonMapId": 209,
+       "field2": 13055,
+       "field4": -10000.0,
+       "id": 3096
+      },
+      {
+       "dungeonMapId": 209,
+       "field2": 13056,
+       "field4": -10000.0,
+       "id": 4742
+      },
+      {
+       "dungeonMapId": 209,
+       "field2": 13057,
+       "field4": -10000.0,
+       "id": 4705
+      },
+      {
+       "dungeonMapId": 210,
+       "field2": 13058,
+       "field4": -10000.0,
+       "id": 3116
+      },
+      {
+       "dungeonMapId": 209,
+       "field2": 13060,
+       "field4": -10000.0,
+       "id": 3097
+      },
+      {
+       "dungeonMapId": 209,
+       "field2": 13061,
+       "field4": -10000.0,
+       "id": 3099
+      },
+      {
+       "dungeonMapId": 210,
+       "field2": 13062,
+       "field4": -10000.0,
+       "id": 3118
+      },
+      {
+       "dungeonMapId": 210,
+       "field2": 13063,
+       "field4": -10000.0,
+       "id": 3119
+      },
+      {
+       "dungeonMapId": 211,
+       "field2": 13064,
+       "field4": -10000.0,
+       "id": 3122
+      },
+      {
+       "dungeonMapId": 212,
+       "field2": 13065,
+       "field4": -10000.0,
+       "id": 3127
+      },
+      {
+       "dungeonMapId": 212,
+       "field2": 13066,
+       "field4": -10000.0,
+       "id": 3126
+      },
+      {
+       "dungeonMapId": 212,
+       "field2": 13067,
+       "field4": -10000.0,
+       "id": 4092
+      },
+      {
+       "dungeonMapId": 211,
+       "field2": 13068,
+       "field4": -10000.0,
+       "id": 3123
+      },
+      {
+       "dungeonMapId": 212,
+       "field2": 13068,
+       "field4": 98.0,
+       "id": 3125
+      },
+      {
+       "dungeonMapId": 211,
+       "field2": 13069,
+       "field4": -10000.0,
+       "id": 3124
+      },
+      {
+       "dungeonMapId": 210,
+       "field2": 13070,
+       "field4": -10000.0,
+       "id": 3120
+      },
+      {
+       "dungeonMapId": 211,
+       "field2": 13070,
+       "field4": -10000.0,
+       "id": 3121
+      },
+      {
+       "dungeonMapId": 212,
+       "field2": 13072,
+       "field4": -10000.0,
+       "id": 3128
+      },
+      {
+       "dungeonMapId": 212,
+       "field2": 13073,
+       "field4": -10000.0,
+       "id": 3135
+      },
+      {
+       "dungeonMapId": 212,
+       "field2": 13074,
+       "field4": -10000.0,
+       "id": 3134
+      },
+      {
+       "dungeonMapId": 212,
+       "field2": 13075,
+       "field4": -10000.0,
+       "id": 3132
+      },
+      {
+       "dungeonMapId": 212,
+       "field2": 13076,
+       "field4": -10000.0,
+       "id": 3133
+      },
+      {
+       "dungeonMapId": 212,
+       "field2": 13077,
+       "field4": -10000.0,
+       "id": 3131
+      },
+      {
+       "dungeonMapId": 212,
+       "field2": 13078,
+       "field4": -10000.0,
+       "id": 3129
+      },
+      {
+       "dungeonMapId": 212,
+       "field2": 13079,
+       "field4": -10000.0,
+       "id": 4145
+      },
+      {
+       "dungeonMapId": 212,
+       "field2": 13080,
+       "field4": -10000.0,
+       "id": 3136
+      },
+      {
+       "dungeonMapId": 212,
+       "field2": 13081,
+       "field4": -10000.0,
+       "id": 4146
+      },
+      {
+       "dungeonMapId": 209,
+       "field2": 13083,
+       "field4": -10000.0,
+       "id": 3098
+      },
+      {
+       "dungeonMapId": 210,
+       "field2": 13084,
+       "field4": -10000.0,
+       "id": 3117
+      },
+      {
+       "dungeonMapId": 202,
+       "field2": 13085,
+       "field4": -10000.0,
+       "id": 3010
+      },
+      {
+       "dungeonMapId": 207,
+       "field2": 13085,
+       "field4": 10.0,
+       "id": 3214
+      },
+      {
+       "dungeonMapId": 208,
+       "field2": 13085,
+       "field4": 20.0,
+       "id": 3091
+      },
+      {
+       "dungeonMapId": 209,
+       "field2": 13085,
+       "field4": 44.0,
+       "id": 3101
+      },
+      {
+       "dungeonMapId": 211,
+       "field2": 13085,
+       "field4": 77.0,
+       "id": 3113
+      },
+      {
+       "dungeonMapId": 212,
+       "field2": 13085,
+       "field4": 95.0,
+       "id": 3130
+      },
+      {
+       "dungeonMapId": 212,
+       "field2": 13086,
+       "field4": -10000.0,
+       "id": 3137
+      },
+      {
+       "dungeonMapId": 202,
+       "field2": 13087,
+       "field4": -10000.0,
+       "id": 3009
+      },
+      {
+       "dungeonMapId": 207,
+       "field2": 13087,
+       "field4": -10000.0,
+       "id": 3081
+      },
+      {
+       "dungeonMapId": 208,
+       "field2": 13087,
+       "field4": -10000.0,
+       "id": 3092
+      },
+      {
+       "dungeonMapId": 202,
+       "field2": 13088,
+       "field4": -10000.0,
+       "id": 3011
+      },
+      {
+       "dungeonMapId": 207,
+       "field2": 13088,
+       "field4": 8.0,
+       "id": 3212
+      },
+      {
+       "dungeonMapId": 207,
+       "field2": 13089,
+       "field4": -10000.0,
+       "id": 3211
+      },
+      {
+       "dungeonMapId": 202,
+       "field2": 13090,
+       "field4": -10000.0,
+       "id": 3006
+      },
+      {
+       "dungeonMapId": 202,
+       "field2": 13091,
+       "field4": -10000.0,
+       "id": 3007
+      },
+      {
+       "dungeonMapId": 202,
+       "field2": 13092,
+       "field4": -10000.0,
+       "id": 3213
+      },
+      {
+       "dungeonMapId": 202,
+       "field2": 13093,
+       "field4": -10000.0,
+       "id": 3005
+      },
+      {
+       "dungeonMapId": 207,
+       "field2": 13093,
+       "field4": -6.0,
+       "id": 3082
+      },
+      {
+       "dungeonMapId": 202,
+       "field2": 13094,
+       "field4": -10000.0,
+       "id": 3008
+      },
+      {
+       "dungeonMapId": 208,
+       "field2": 13095,
+       "field4": -10000.0,
+       "id": 3093
+      },
+      {
+       "dungeonMapId": 207,
+       "field2": 13096,
+       "field4": -10000.0,
+       "id": 3080
+      },
+      {
+       "dungeonMapId": 207,
+       "field2": 13097,
+       "field4": -10000.0,
+       "id": 3083
+      },
+      {
+       "dungeonMapId": 207,
+       "field2": 13098,
+       "field4": -10000.0,
+       "id": 3084
+      },
+      {
+       "dungeonMapId": 209,
+       "field2": 13099,
+       "field4": -10000.0,
+       "id": 3103
+      },
+      {
+       "dungeonMapId": 210,
+       "field2": 13099,
+       "field4": -10000.0,
+       "id": 3109
+      },
+      {
+       "dungeonMapId": 210,
+       "field2": 13100,
+       "field4": -10000.0,
+       "id": 3110
+      },
+      {
+       "dungeonMapId": 211,
+       "field2": 13101,
+       "field4": -10000.0,
+       "id": 3114
+      },
+      {
+       "dungeonMapId": 210,
+       "field2": 13113,
+       "field4": -10000.0,
+       "id": 3108
+      },
+      {
+       "dungeonMapId": 210,
+       "field2": 13114,
+       "field4": -10000.0,
+       "id": 3106
+      },
+      {
+       "dungeonMapId": 208,
+       "field2": 13115,
+       "field4": -10000.0,
+       "id": 3095
+      },
+      {
+       "dungeonMapId": 208,
+       "field2": 13116,
+       "field4": -10000.0,
+       "id": 3094
+      },
+      {
+       "dungeonMapId": 212,
+       "field2": 13117,
+       "field4": -10000.0,
+       "id": 3141
+      },
+      {
+       "dungeonMapId": 212,
+       "field2": 13118,
+       "field4": -10000.0,
+       "id": 3142
+      },
+      {
+       "dungeonMapId": 212,
+       "field2": 13119,
+       "field4": -10000.0,
+       "id": 3140
+      },
+      {
+       "dungeonMapId": 211,
+       "field2": 13120,
+       "field4": -10000.0,
+       "id": 3115
+      },
+      {
+       "dungeonMapId": 212,
+       "field2": 13121,
+       "field4": -10000.0,
+       "id": 3138
+      },
+      {
+       "dungeonMapId": 210,
+       "field2": 13122,
+       "field4": -10000.0,
+       "id": 3111
+      },
+      {
+       "dungeonMapId": 210,
+       "field2": 13123,
+       "field4": -10000.0,
+       "id": 3112
+      },
+      {
+       "dungeonMapId": 212,
+       "field2": 13124,
+       "field4": -10000.0,
+       "id": 3139
+      },
+      {
+       "dungeonMapId": 210,
+       "field2": 17890,
+       "field4": -10000.0,
+       "id": 3107
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Tazz'Alor",
+       "2": "Listspinnertunnel",
+       "3": "Hordemar",
+       "4": "Schwarzfausthalle",
+       "5": "Halycons Hort",
+       "6": "Kammer der Schlachten",
+       "7": "Schwarzfelsspitze Stadion"
+      },
+      "enCN": {
+       "1": "塔萨洛尔",
+       "2": "蛛网隧道",
+       "3": "霍德玛尔城",
+       "4": "黑手大厅",
+       "5": "龙塔大厅",
+       "6": "孵化间",
+       "7": "黑石竞技场"
+      },
+      "enGB": {
+       "1": "Tazz'Alaor",
+       "2": "Skitterweb Tunnels",
+       "3": "Hordemar City",
+       "4": "Hall of Blackhand",
+       "5": "Dragonspire Hall",
+       "6": "The Rookery",
+       "7": "Blackrock Stadium"
+      },
+      "enUS": {
+       "1": "Tazz'Alaor",
+       "2": "Skitterweb Tunnels",
+       "3": "Hordemar City",
+       "4": "Hall of Blackhand",
+       "5": "Dragonspire Hall",
+       "6": "The Rookery",
+       "7": "Blackrock Stadium"
+      },
+      "esES": {
+       "1": "Tazz'Alor",
+       "2": "Túneles de Arácnidas",
+       "3": "Ciudad Hordemar",
+       "4": "Sala de Puño Negro",
+       "5": "Guarida de Halycon",
+       "6": "Sala de la Batalla",
+       "7": "Estadio de Roca Negra"
+      },
+      "esMX": {
+       "1": "Tazz'Alor",
+       "2": "Túneles de Arácnidas",
+       "3": "Ciudad Hordemar",
+       "4": "Sala de Puño Negro",
+       "5": "Guarida de Halycon",
+       "6": "Sala de la Batalla",
+       "7": "Estadio de Roca Negra"
+      },
+      "frFR": {
+       "1": "Tazz'Alaor",
+       "2": "Tunnels de Toile-grouillante",
+       "3": "Cité d'Hordemar",
+       "4": "Hall de Main-noire",
+       "5": "Hall de la Flèche des dragons",
+       "6": "La colonie",
+       "7": "Stade Rochenoire"
+      },
+      "koKR": {
+       "1": "타즈알라올",
+       "2": "그물걸이 통로",
+       "3": "호드마르 도시",
+       "4": "검은손 전당",
+       "5": "용첨탑 전당",
+       "6": "부화장",
+       "7": "검은바위 투기장"
+      },
+      "ruRU": {
+       "1": "Тазз'Алаор",
+       "2": "Паучий лабиринт",
+       "3": "Ордамар",
+       "4": "Зал Чернорука",
+       "5": "Зал Драконов",
+       "6": "Гнездовье",
+       "7": "Стадион Черной горы"
+      },
+      "zhCN": {
+       "1": "塔萨洛尔",
+       "2": "蛛网隧道",
+       "3": "霍德玛尔城",
+       "4": "黑手大厅",
+       "5": "龙塔大厅",
+       "6": "孵化间",
+       "7": "黑石竞技场"
+      },
+      "zhTW": {
+       "1": "塔薩洛爾",
+       "2": "蛛網隧道",
+       "3": "霍德瑪爾城",
+       "4": "黑手大廳",
+       "5": "龍塔大廳",
+       "6": "孵化間",
+       "7": "黑石競技場"
+      }
+     },
+     "floors": [
+      {
+       "field3": -876.2520141601562,
+       "field4": 10.586999893188477,
+       "field5": -286.8280029296875,
+       "field6": 304.39801025390625,
+       "field7": 29,
+       "floor": 1,
+       "id": 202
+      },
+      {
+       "field3": -876.2520141601562,
+       "field4": 10.586999893188477,
+       "field5": -286.8280029296875,
+       "field6": 304.39801025390625,
+       "field7": 29,
+       "floor": 2,
+       "id": 207
+      },
+      {
+       "field3": -876.2520141601562,
+       "field4": 10.586999893188477,
+       "field5": -286.8280029296875,
+       "field6": 304.39801025390625,
+       "field7": 29,
+       "floor": 3,
+       "id": 208
+      },
+      {
+       "field3": -876.2520141601562,
+       "field4": 10.586999893188477,
+       "field5": -286.8280029296875,
+       "field6": 304.39801025390625,
+       "field7": 29,
+       "floor": 4,
+       "id": 209
+      },
+      {
+       "field3": -876.2520141601562,
+       "field4": 10.586999893188477,
+       "field5": -286.8280029296875,
+       "field6": 304.39801025390625,
+       "field7": 29,
+       "floor": 5,
+       "id": 210
+      },
+      {
+       "field3": -876.2520141601562,
+       "field4": 10.586999893188477,
+       "field5": -286.8280029296875,
+       "field6": 304.39801025390625,
+       "field7": 29,
+       "floor": 6,
+       "id": 211
+      },
+      {
+       "field3": -876.2520141601562,
+       "field4": 10.586999893188477,
+       "field5": -286.8280029296875,
+       "field6": 304.39801025390625,
+       "field7": 29,
+       "floor": 7,
+       "id": 212
+      }
+     ],
+     "id": 721,
+     "internalName": "BlackrockSpire",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 229
+  }
+ ]
+}

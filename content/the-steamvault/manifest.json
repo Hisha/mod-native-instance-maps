@@ -1,0 +1,280 @@
+{
+ "clientFrameXml": {
+  "stockTocSha256": "3158bea13225ae51137a389f0f3ab8566e94b6be84196dd2c1fda27024677754",
+  "stockTocSource": "Interface/FrameXML/FrameXML.toc"
+ },
+ "content": [
+  {
+   "source": "artwork/TheSteamvault1_1.blp",
+   "target": "Interface/WorldMap/TheSteamvault/TheSteamvault1_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSteamvault1_2.blp",
+   "target": "Interface/WorldMap/TheSteamvault/TheSteamvault1_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSteamvault1_3.blp",
+   "target": "Interface/WorldMap/TheSteamvault/TheSteamvault1_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSteamvault1_4.blp",
+   "target": "Interface/WorldMap/TheSteamvault/TheSteamvault1_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSteamvault1_5.blp",
+   "target": "Interface/WorldMap/TheSteamvault/TheSteamvault1_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSteamvault1_6.blp",
+   "target": "Interface/WorldMap/TheSteamvault/TheSteamvault1_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSteamvault1_7.blp",
+   "target": "Interface/WorldMap/TheSteamvault/TheSteamvault1_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSteamvault1_8.blp",
+   "target": "Interface/WorldMap/TheSteamvault/TheSteamvault1_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSteamvault1_9.blp",
+   "target": "Interface/WorldMap/TheSteamvault/TheSteamvault1_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSteamvault1_10.blp",
+   "target": "Interface/WorldMap/TheSteamvault/TheSteamvault1_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSteamvault1_11.blp",
+   "target": "Interface/WorldMap/TheSteamvault/TheSteamvault1_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSteamvault1_12.blp",
+   "target": "Interface/WorldMap/TheSteamvault/TheSteamvault1_12.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSteamvault2_1.blp",
+   "target": "Interface/WorldMap/TheSteamvault/TheSteamvault2_1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSteamvault2_2.blp",
+   "target": "Interface/WorldMap/TheSteamvault/TheSteamvault2_2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSteamvault2_3.blp",
+   "target": "Interface/WorldMap/TheSteamvault/TheSteamvault2_3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSteamvault2_4.blp",
+   "target": "Interface/WorldMap/TheSteamvault/TheSteamvault2_4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSteamvault2_5.blp",
+   "target": "Interface/WorldMap/TheSteamvault/TheSteamvault2_5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSteamvault2_6.blp",
+   "target": "Interface/WorldMap/TheSteamvault/TheSteamvault2_6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSteamvault2_7.blp",
+   "target": "Interface/WorldMap/TheSteamvault/TheSteamvault2_7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSteamvault2_8.blp",
+   "target": "Interface/WorldMap/TheSteamvault/TheSteamvault2_8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSteamvault2_9.blp",
+   "target": "Interface/WorldMap/TheSteamvault/TheSteamvault2_9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSteamvault2_10.blp",
+   "target": "Interface/WorldMap/TheSteamvault/TheSteamvault2_10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSteamvault2_11.blp",
+   "target": "Interface/WorldMap/TheSteamvault/TheSteamvault2_11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/TheSteamvault2_12.blp",
+   "target": "Interface/WorldMap/TheSteamvault/TheSteamvault2_12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm The Steamvault instance map: 2 DungeonMap floors, 10 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 24 client BLP tiles. Dungeon floor labels for 11 client locales, added to the stock FrameXML by one added module.",
+ "name": "The Steamvault",
+ "package": "mod-native-instance-maps.the-steamvault",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 3715,
+     "chunks": [
+      {
+       "dungeonMapId": 227,
+       "field2": 20472,
+       "field4": -10000.0,
+       "id": 3303
+      },
+      {
+       "dungeonMapId": 226,
+       "field2": 20472,
+       "field4": -28.0,
+       "id": 3302
+      },
+      {
+       "dungeonMapId": 227,
+       "field2": 20473,
+       "field4": -10000.0,
+       "id": 3306
+      },
+      {
+       "dungeonMapId": 226,
+       "field2": 20473,
+       "field4": -28.0,
+       "id": 4160
+      },
+      {
+       "dungeonMapId": 227,
+       "field2": 22230,
+       "field4": -10000.0,
+       "id": 3305
+      },
+      {
+       "dungeonMapId": 226,
+       "field2": 22230,
+       "field4": -28.0,
+       "id": 4159
+      },
+      {
+       "dungeonMapId": 227,
+       "field2": 22231,
+       "field4": -10000.0,
+       "id": 3304
+      },
+      {
+       "dungeonMapId": 226,
+       "field2": 22231,
+       "field4": -28.0,
+       "id": 4158
+      },
+      {
+       "dungeonMapId": 227,
+       "field2": 22232,
+       "field4": -10000.0,
+       "id": 4152
+      },
+      {
+       "dungeonMapId": 226,
+       "field2": 22232,
+       "field4": -28.0,
+       "id": 4161
+      }
+     ],
+     "dungeonMapId": 0,
+     "floorNames": {
+      "deDE": {
+       "1": "Die Dampfkammer",
+       "2": "Die Kühlteiche"
+      },
+      "enCN": {
+       "1": "蒸汽地窟",
+       "2": "冷却池"
+      },
+      "enGB": {
+       "1": "The Steamvault",
+       "2": "The Cooling Pools"
+      },
+      "enUS": {
+       "1": "The Steamvault",
+       "2": "The Cooling Pools"
+      },
+      "esES": {
+       "1": "La Cámara de Vapor",
+       "2": "Las Charcas Refrescantes"
+      },
+      "esMX": {
+       "1": "La Cámara de Vapor",
+       "2": "Las Charcas Refrescantes"
+      },
+      "frFR": {
+       "1": "Le caveau de la Vapeur",
+       "2": "Les bassins de refroidissement"
+      },
+      "koKR": {
+       "1": "증기 저장고",
+       "2": "냉각 못"
+      },
+      "ruRU": {
+       "1": "Паровое подземелье",
+       "2": "Охладительные резервуары"
+      },
+      "zhCN": {
+       "1": "蒸汽地窟",
+       "2": "冷却池"
+      },
+      "zhTW": {
+       "1": "蒸汽洞窟",
+       "2": "冷卻池"
+      }
+     },
+     "floors": [
+      {
+       "field3": -716.7420043945312,
+       "field4": 160.02200317382812,
+       "field5": -425.94219970703125,
+       "field6": 158.5672149658203,
+       "field7": 467,
+       "floor": 1,
+       "id": 226
+      },
+      {
+       "field3": -716.7420043945312,
+       "field4": 160.02200317382812,
+       "field5": -425.94219970703125,
+       "field6": 158.5672149658203,
+       "field7": 467,
+       "floor": 2,
+       "id": 227
+      }
+     ],
+     "id": 727,
+     "internalName": "TheSteamvault",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 0.0,
+     "x2": 0.0,
+     "y1": 0.0,
+     "y2": 0.0
+    }
+   ],
+   "mapId": 545
+  }
+ ]
+}
