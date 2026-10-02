@@ -27,6 +27,18 @@
     "slug": "blackwing-lair",
     "title": "Blackwing Lair"
   },
+  "CoTHillsbradFoothills": {
+    "slug": "hillsbrad-foothills",
+    "title": "Hillsbrad Foothills"
+  },
+  "CoTMountHyjal": {
+    "slug": "mount-hyjal",
+    "title": "Mount Hyjal"
+  },
+  "CoTTheBlackMorass": {
+    "slug": "the-black-morass",
+    "title": "The Black Morass"
+  },
   "CoilfangReservoir": {
     "slug": "coilfang-reservoir",
     "title": "Coilfang Reservoir"
@@ -90,6 +102,10 @@
   "RazorfenKraul": {
     "slug": "razorfen-kraul",
     "title": "Razorfen Kraul"
+  },
+  "RuinsofAhnQiraj": {
+    "slug": "ruins-of-ahnqiraj",
+    "title": "Ruins of Ahn'Qiraj"
   },
   "ScarletMonastery": {
     "slug": "scarlet-monastery",
@@ -170,5 +186,17 @@
   "Uldaman": {
     "slug": "uldaman",
     "title": "Uldaman"
+  },
+  "ZulAman": {
+    "slug": "zulaman",
+    "title": "Zul'Aman"
+  },
+  "ZulFarrak": {
+    "slug": "zulfarrak",
+    "title": "Zul'Farrak"
+  },
+  "ZulGurub": {
+    "slug": "zulgurub",
+    "title": "Zul'Gurub"
   }
 }

@@ -1,0 +1,90 @@
+{
+ "content": [
+  {
+   "source": "artwork/CoTHillsbradFoothills1.blp",
+   "target": "Interface/WorldMap/CoTHillsbradFoothills/CoTHillsbradFoothills1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTHillsbradFoothills2.blp",
+   "target": "Interface/WorldMap/CoTHillsbradFoothills/CoTHillsbradFoothills2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTHillsbradFoothills3.blp",
+   "target": "Interface/WorldMap/CoTHillsbradFoothills/CoTHillsbradFoothills3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTHillsbradFoothills4.blp",
+   "target": "Interface/WorldMap/CoTHillsbradFoothills/CoTHillsbradFoothills4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTHillsbradFoothills5.blp",
+   "target": "Interface/WorldMap/CoTHillsbradFoothills/CoTHillsbradFoothills5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTHillsbradFoothills6.blp",
+   "target": "Interface/WorldMap/CoTHillsbradFoothills/CoTHillsbradFoothills6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTHillsbradFoothills7.blp",
+   "target": "Interface/WorldMap/CoTHillsbradFoothills/CoTHillsbradFoothills7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTHillsbradFoothills8.blp",
+   "target": "Interface/WorldMap/CoTHillsbradFoothills/CoTHillsbradFoothills8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTHillsbradFoothills9.blp",
+   "target": "Interface/WorldMap/CoTHillsbradFoothills/CoTHillsbradFoothills9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTHillsbradFoothills10.blp",
+   "target": "Interface/WorldMap/CoTHillsbradFoothills/CoTHillsbradFoothills10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTHillsbradFoothills11.blp",
+   "target": "Interface/WorldMap/CoTHillsbradFoothills/CoTHillsbradFoothills11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTHillsbradFoothills12.blp",
+   "target": "Interface/WorldMap/CoTHillsbradFoothills/CoTHillsbradFoothills12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Hillsbrad Foothills instance map: 0 DungeonMap floors, 0 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 12 client BLP tiles. This map is floorless by design: the 3.3.5a client draws it from this WorldMapArea row and its tiles alone, WDM Stable declares no DungeonMap, DungeonMapChunk or WorldMapTransforms row for it, and the three remaining world-map DBCs are therefore left stock byte for byte.",
+ "name": "Hillsbrad Foothills",
+ "package": "mod-native-instance-maps.hillsbrad-foothills",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 2367,
+     "chunks": [],
+     "dungeonMapId": 0,
+     "floors": [],
+     "id": 734,
+     "internalName": "CoTHillsbradFoothills",
+     "parentMapId": 161,
+     "virtualMapId": -1,
+     "x1": 3127.083251953125,
+     "x2": 1572.9166259765625,
+     "y1": 1854.1666259765625,
+     "y2": -477.08331298828125
+    }
+   ],
+   "mapId": 560
+  }
+ ]
+}

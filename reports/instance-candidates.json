@@ -256,17 +256,13 @@
       "chunks": [],
       "classification": "UNSAFE",
       "findings": [
-        "WorldMapArea 461 is a stock row that WDM leaves untouched; the client already has it and there is nothing additive to ship",
-        "WDM Stable declares no DungeonMap floor for map 529, and mod-content-manager rejects a worldMaps[].areas[] entry that declares no floors at all.  The map cannot be expressed; supplying a floor row would be authoring geometry WDM does not ship",
-        "WDM Stable declares no DungeonMapChunk for the floors of map 529"
+        "WorldMapArea 461 is a stock row that WDM leaves untouched; the client already has it and there is nothing additive to ship"
       ],
       "floors": [],
       "internalName": "ArathiBasin",
       "mapId": 529,
       "package": "mod-native-instance-maps.arathibasin",
       "reasonCodes": [
-        "no-chunks",
-        "no-floors",
         "stock-world-map-area"
       ],
       "slug": "arathibasin",
@@ -1536,21 +1532,15 @@
       "artworkSource": "CoTHillsbradFoothills",
       "blpCount": 12,
       "chunks": [],
-      "classification": "UNSAFE",
-      "findings": [
-        "WDM Stable declares no DungeonMap floor for map 560, and mod-content-manager rejects a worldMaps[].areas[] entry that declares no floors at all.  The map cannot be expressed; supplying a floor row would be authoring geometry WDM does not ship",
-        "WDM Stable declares no DungeonMapChunk for the floors of map 560"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [],
       "internalName": "CoTHillsbradFoothills",
       "mapId": 560,
-      "package": "mod-native-instance-maps.cothillsbradfoothills",
-      "reasonCodes": [
-        "no-chunks",
-        "no-floors"
-      ],
-      "slug": "cothillsbradfoothills",
-      "title": "CoTHillsbradFoothills",
+      "package": "mod-native-instance-maps.hillsbrad-foothills",
+      "reasonCodes": [],
+      "slug": "hillsbrad-foothills",
+      "title": "Hillsbrad Foothills",
       "transforms": [],
       "worldMapArea": [
         {
@@ -1568,21 +1558,15 @@
       "artworkSource": "CoTMountHyjal",
       "blpCount": 12,
       "chunks": [],
-      "classification": "UNSAFE",
-      "findings": [
-        "WDM Stable declares no DungeonMap floor for map 534, and mod-content-manager rejects a worldMaps[].areas[] entry that declares no floors at all.  The map cannot be expressed; supplying a floor row would be authoring geometry WDM does not ship",
-        "WDM Stable declares no DungeonMapChunk for the floors of map 534"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [],
       "internalName": "CoTMountHyjal",
       "mapId": 534,
-      "package": "mod-native-instance-maps.cotmounthyjal",
-      "reasonCodes": [
-        "no-chunks",
-        "no-floors"
-      ],
-      "slug": "cotmounthyjal",
-      "title": "CoTMountHyjal",
+      "package": "mod-native-instance-maps.mount-hyjal",
+      "reasonCodes": [],
+      "slug": "mount-hyjal",
+      "title": "Mount Hyjal",
       "transforms": [],
       "worldMapArea": [
         {
@@ -1600,21 +1584,15 @@
       "artworkSource": "CoTTheBlackMorass",
       "blpCount": 12,
       "chunks": [],
-      "classification": "UNSAFE",
-      "findings": [
-        "WDM Stable declares no DungeonMap floor for map 269, and mod-content-manager rejects a worldMaps[].areas[] entry that declares no floors at all.  The map cannot be expressed; supplying a floor row would be authoring geometry WDM does not ship",
-        "WDM Stable declares no DungeonMapChunk for the floors of map 269"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [],
       "internalName": "CoTTheBlackMorass",
       "mapId": 269,
-      "package": "mod-native-instance-maps.cottheblackmorass",
-      "reasonCodes": [
-        "no-chunks",
-        "no-floors"
-      ],
-      "slug": "cottheblackmorass",
-      "title": "CoTTheBlackMorass",
+      "package": "mod-native-instance-maps.the-black-morass",
+      "reasonCodes": [],
+      "slug": "the-black-morass",
+      "title": "The Black Morass",
       "transforms": [],
       "worldMapArea": [
         {
@@ -2128,18 +2106,14 @@
       "classification": "UNSAFE",
       "findings": [
         "WorldMapArea 466 is a stock row that WDM leaves untouched; the client already has it and there is nothing additive to ship",
-        "WDM Stable declares no DungeonMap floor for map 530, and mod-content-manager rejects a worldMaps[].areas[] entry that declares no floors at all.  The map cannot be expressed; supplying a floor row would be authoring geometry WDM does not ship",
-        "WDM Stable declares no DungeonMapChunk for the floors of map 530",
-        "ambiguous: WorldMapTransforms 2, 3 all name map 530; a package declares one transform per map"
+        "WorldMapTransforms 2, 3 name a floor of map 530, but that map owns none"
       ],
       "floors": [],
       "internalName": "Expansion01",
       "mapId": 530,
       "package": "mod-native-instance-maps.expansion01",
       "reasonCodes": [
-        "ambiguous-transform",
-        "no-chunks",
-        "no-floors",
+        "floorless-transform-reference",
         "stock-world-map-area"
       ],
       "slug": "expansion01",
@@ -3652,17 +3626,13 @@
       "chunks": [],
       "classification": "UNSAFE",
       "findings": [
-        "WorldMapArea 482 is a stock row that WDM leaves untouched; the client already has it and there is nothing additive to ship",
-        "WDM Stable declares no DungeonMap floor for map 566, and mod-content-manager rejects a worldMaps[].areas[] entry that declares no floors at all.  The map cannot be expressed; supplying a floor row would be authoring geometry WDM does not ship",
-        "WDM Stable declares no DungeonMapChunk for the floors of map 566"
+        "WorldMapArea 482 is a stock row that WDM leaves untouched; the client already has it and there is nothing additive to ship"
       ],
       "floors": [],
       "internalName": "NetherstormArena",
       "mapId": 566,
       "package": "mod-native-instance-maps.netherstormarena",
       "reasonCodes": [
-        "no-chunks",
-        "no-floors",
         "stock-world-map-area"
       ],
       "slug": "netherstormarena",
@@ -4633,21 +4603,15 @@
       "artworkSource": "RuinsofAhnQiraj",
       "blpCount": 12,
       "chunks": [],
-      "classification": "UNSAFE",
-      "findings": [
-        "WDM Stable declares no DungeonMap floor for map 509, and mod-content-manager rejects a worldMaps[].areas[] entry that declares no floors at all.  The map cannot be expressed; supplying a floor row would be authoring geometry WDM does not ship",
-        "WDM Stable declares no DungeonMapChunk for the floors of map 509"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [],
       "internalName": "RuinsofAhnQiraj",
       "mapId": 509,
-      "package": "mod-native-instance-maps.ruinsofahnqiraj",
-      "reasonCodes": [
-        "no-chunks",
-        "no-floors"
-      ],
-      "slug": "ruinsofahnqiraj",
-      "title": "RuinsofAhnQiraj",
+      "package": "mod-native-instance-maps.ruins-of-ahnqiraj",
+      "reasonCodes": [],
+      "slug": "ruins-of-ahnqiraj",
+      "title": "Ruins of Ahn'Qiraj",
       "transforms": [],
       "worldMapArea": [
         {
@@ -8079,17 +8043,13 @@
       "chunks": [],
       "classification": "UNSAFE",
       "findings": [
-        "WorldMapArea 443 is a stock row that WDM leaves untouched; the client already has it and there is nothing additive to ship",
-        "WDM Stable declares no DungeonMap floor for map 489, and mod-content-manager rejects a worldMaps[].areas[] entry that declares no floors at all.  The map cannot be expressed; supplying a floor row would be authoring geometry WDM does not ship",
-        "WDM Stable declares no DungeonMapChunk for the floors of map 489"
+        "WorldMapArea 443 is a stock row that WDM leaves untouched; the client already has it and there is nothing additive to ship"
       ],
       "floors": [],
       "internalName": "WarsongGulch",
       "mapId": 489,
       "package": "mod-native-instance-maps.warsonggulch",
       "reasonCodes": [
-        "no-chunks",
-        "no-floors",
         "stock-world-map-area"
       ],
       "slug": "warsonggulch",
@@ -8111,21 +8071,15 @@
       "artworkSource": "ZulAman",
       "blpCount": 12,
       "chunks": [],
-      "classification": "UNSAFE",
-      "findings": [
-        "WDM Stable declares no DungeonMap floor for map 568, and mod-content-manager rejects a worldMaps[].areas[] entry that declares no floors at all.  The map cannot be expressed; supplying a floor row would be authoring geometry WDM does not ship",
-        "WDM Stable declares no DungeonMapChunk for the floors of map 568"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [],
       "internalName": "ZulAman",
       "mapId": 568,
       "package": "mod-native-instance-maps.zulaman",
-      "reasonCodes": [
-        "no-chunks",
-        "no-floors"
-      ],
+      "reasonCodes": [],
       "slug": "zulaman",
-      "title": "ZulAman",
+      "title": "Zul'Aman",
       "transforms": [],
       "worldMapArea": [
         {
@@ -8143,21 +8097,15 @@
       "artworkSource": "ZulFarrak",
       "blpCount": 12,
       "chunks": [],
-      "classification": "UNSAFE",
-      "findings": [
-        "WDM Stable declares no DungeonMap floor for map 209, and mod-content-manager rejects a worldMaps[].areas[] entry that declares no floors at all.  The map cannot be expressed; supplying a floor row would be authoring geometry WDM does not ship",
-        "WDM Stable declares no DungeonMapChunk for the floors of map 209"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [],
       "internalName": "ZulFarrak",
       "mapId": 209,
       "package": "mod-native-instance-maps.zulfarrak",
-      "reasonCodes": [
-        "no-chunks",
-        "no-floors"
-      ],
+      "reasonCodes": [],
       "slug": "zulfarrak",
-      "title": "ZulFarrak",
+      "title": "Zul'Farrak",
       "transforms": [],
       "worldMapArea": [
         {
@@ -8175,21 +8123,15 @@
       "artworkSource": "ZulGurub",
       "blpCount": 12,
       "chunks": [],
-      "classification": "UNSAFE",
-      "findings": [
-        "WDM Stable declares no DungeonMap floor for map 309, and mod-content-manager rejects a worldMaps[].areas[] entry that declares no floors at all.  The map cannot be expressed; supplying a floor row would be authoring geometry WDM does not ship",
-        "WDM Stable declares no DungeonMapChunk for the floors of map 309"
-      ],
+      "classification": "SAFE",
+      "findings": [],
       "floors": [],
       "internalName": "ZulGurub",
       "mapId": 309,
       "package": "mod-native-instance-maps.zulgurub",
-      "reasonCodes": [
-        "no-chunks",
-        "no-floors"
-      ],
+      "reasonCodes": [],
       "slug": "zulgurub",
-      "title": "ZulGurub",
+      "title": "Zul'Gurub",
       "transforms": [],
       "worldMapArea": [
         {
@@ -8200,8 +8142,8 @@
     }
   ],
   "counts": {
-    "SAFE": 43,
-    "UNSAFE": 15,
+    "SAFE": 50,
+    "UNSAFE": 8,
     "candidates": 58
   },
   "coverage": [
@@ -8225,32 +8167,11 @@
     {
       "added": 51,
       "heldBack": {
-        "686": [
-          "ZulFarrak"
-        ],
-        "697": [
-          "ZulGurub"
-        ],
-        "717": [
-          "RuinsofAhnQiraj"
-        ],
-        "733": [
-          "CoTTheBlackMorass"
-        ],
-        "734": [
-          "CoTHillsbradFoothills"
-        ],
         "749": [
           "WailingCaverns"
-        ],
-        "775": [
-          "CoTMountHyjal"
-        ],
-        "781": [
-          "ZulAman"
         ]
       },
-      "shipped": 43,
+      "shipped": 50,
       "table": "WorldMapArea",
       "unowned": []
     },

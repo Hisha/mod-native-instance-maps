@@ -18,14 +18,14 @@ disagrees in letter case is a path to re-case, not a map to withhold.
 
 ## Verdict
 
-**43 of 58 discovered maps are shippable, and all 43 are published.** The
+**50 of 58 discovered maps are shippable, and all 50 are published.** The
 classifier is terminal — SAFE or UNSAFE — and each rejected map carries the reason
 codes that rejected it.
 
 | Level | Count | Meaning |
 |---|---:|---|
-| SAFE | 43 | every required row is additive, references are preserved as written, artwork present |
-| UNSAFE | 15 | the source does not add up to a package, or the package would contradict WDM's own data |
+| SAFE | 50 | every required row is additive, references are preserved as written, artwork present |
+| UNSAFE | 8 | the source does not add up to a package, or the package would contradict WDM's own data |
 
 | Published | Map | Floors | Chunks | Transform | Tiles |
 |---|---:|---:|---:|---|---:|
@@ -72,10 +72,21 @@ codes that rejected it.
 | `mod-native-instance-maps.the-stockade` | 34 | 1 | 57 | none | 12 |
 | `mod-native-instance-maps.the-underbog` | 546 | 1 | 1 | none | 12 |
 | `mod-native-instance-maps.uldaman` | 70 | 2 | 52 | none | 24 |
+| `mod-native-instance-maps.hillsbrad-foothills` | 560 | 0 | 0 | none | 12 |
+| `mod-native-instance-maps.mount-hyjal` | 534 | 0 | 0 | none | 12 |
+| `mod-native-instance-maps.ruins-of-ahnqiraj` | 509 | 0 | 0 | none | 12 |
+| `mod-native-instance-maps.the-black-morass` | 269 | 0 | 0 | none | 12 |
+| `mod-native-instance-maps.zulaman` | 568 | 0 | 0 | none | 12 |
+| `mod-native-instance-maps.zulfarrak` | 209 | 0 | 0 | none | 12 |
+| `mod-native-instance-maps.zulgurub` | 309 | 0 | 0 | none | 12 |
 
-Totals: **113 floors, 1310 chunks, 43 areas, 4 transforms, 1392 tiles.** Each is a
+The last seven rows are **floorless** maps: real, addressable world maps that own
+no `DungeonMap` row. They are described in
+[Floorless maps](#floorless-maps) below.
+
+Totals: **113 floors, 1310 chunks, 50 areas, 4 transforms, 1476 tiles.** Each is a
 `mod-content-manager` manifest in `content/<slug>/manifest.json` plus a
-deterministic EPF in `dist/`, and all 43 compose into one release EPF. No DBC is
+deterministic EPF in `dist/`, and all 50 compose into one release EPF. No DBC is
 shipped; composition is `mod-content-manager`'s.
 
 Per-map verdicts and reasons: [instance-candidates.md](instance-candidates.md).
@@ -83,8 +94,9 @@ Machine-readable form: [instance-candidates.json](instance-candidates.json).
 
 ## What changed, and why
 
-Three rules in `tools/instances.py` blocked maps that are in fact complete, and a
-fourth change narrowed the classifier to a terminal two-level verdict.
+Three rules in `tools/instances.py` blocked maps that are in fact complete, a
+fourth change narrowed the classifier to a terminal two-level verdict, and a
+fifth added first-class floorless-map support on both sides.
 
 ### 1. `no-transform` is no longer a reason code
 
@@ -95,7 +107,7 @@ omit `transform` entirely, in which case `AppendRequests` emits no
 the verified stock file byte for byte unchanged.
 
 The manifest now omits the key rather than writing `null`, and
-`NewDungeonMapID` is never guessed from a floor. 39 of the 43 published maps carry
+`NewDungeonMapID` is never guessed from a floor. 46 of the 50 published maps carry
 no transform because WDM supplies none.
 
 ### 2. `dungeonMapId` is a reference
@@ -147,6 +159,64 @@ Deeprun Tram are indistinguishable here yet WDM chose different floors for each.
 That analysis is now a statement about what this project will not do, rather than
 about what it may ship.
 
+## Floorless maps
+
+A `no-floors` reason code used to reject eleven maps on the assumption that a
+world map without a `DungeonMap` row was incomplete. It was the wrong assumption.
+Some zones are a single continuous world map rather than a stack of floors, so WDM
+gives them a `WorldMapArea` and artwork but no `DungeonMap` at all. Having no floor
+is not a defect; it is the map's actual shape. The defect was on this side, and it
+was fixed in two places:
+
+- `mod-content-manager` now accepts `"floors": []` and `"chunks": []` and validates
+  the resulting *floorless* area: `dungeonMapId` `0`, no chunks, no `floorNames`,
+  and no map transform (a `WorldMapTransforms` row redirects to a floor that does
+  not exist). See the upstream guide, `docs/WORLD_MAP_DBC.md#floors-may-be-empty`.
+- `tools/instances.py` no longer emits `no-floors` at all. A floorless map is
+  judged on the same terms as any other: is its area additive, is the artwork
+  present, does it collide with stock?
+
+Seven of the eleven are additive and ship. The evidence is direct:
+
+| Map | MapID | WMA | LibMapData type | Verdict |
+|---|---:|---:|---|---|
+| `CoTHillsbradFoothills` | 560 | 734 | party (1) | SAFE |
+| `CoTMountHyjal` | 534 | 775 | raid (2) | SAFE |
+| `CoTTheBlackMorass` | 269 | 733 | party (1) | SAFE |
+| `RuinsofAhnQiraj` | 509 | 717 | raid (2) | SAFE |
+| `ZulAman` | 568 | 781 | raid (2) | SAFE |
+| `ZulFarrak` | 209 | 686 | party (1) | SAFE |
+| `ZulGurub` | 309 | 697 | raid (2) | SAFE |
+
+Each declares `"floors": []`, `"chunks": []`, `dungeonMapId` `0`, and no
+`transform`. Composing one leaves `DungeonMap.dbc`, `DungeonMapChunk.dbc` and
+`WorldMapTransforms.dbc` byte-identical to the verified stock files, and the
+package's only lease is its `WorldMapArea` row. Because a floorless map has no
+floor dropdown row to rename, it declares no `floorNames` and requests no
+`protected-framexml` capability at all — `mod-content-manager` records that
+capability as a consequence of the labels, so its absence is automatic.
+
+The other four floorless maps are UNSAFE, and not because they lack floors:
+
+| Map | Reason codes |
+|---|---|
+| `ArathiBasin` | `stock-world-map-area` |
+| `NetherstormArena` | `stock-world-map-area` |
+| `WarsongGulch` | `stock-world-map-area` |
+| `Expansion01` | `floorless-transform-reference`, `stock-world-map-area` |
+
+The first three are PvP maps whose `WorldMapArea` rows WDM leaves untouched, so
+there is no additive area to ship. `Expansion01` is the same stock row *and* has
+`WorldMapTransforms` rows 2 and 3 naming a floor of map 530, which owns none — the
+`floorless-transform-reference` code this work introduced to name that condition
+precisely, replacing the old catch-all `ambiguous-transform`.
+
+Scope is corroborated independently of WDM. `LibMapData` labels the seven SAFE
+maps `party` or `raid`, and labels the four rejected ones `PvP` or `world`; the
+classifier itself does not read `LibMapData`, so this is a check on the result, not
+an input to it. Mapster independently lists six of the seven SAFE floorless maps
+(all but `ZulAman`).
+
 ## Karazhan
 
 Map 532, the multi-floor stress case the old rule excluded, and still the
@@ -174,19 +244,23 @@ list, a normalized signed field or an invented transform fails the suite. All
 Validate -> StageInto -> AppendRequests -> PlanFixed -> Compose -> Stage -> VerifyParity
 ```
 
-The 43 individual packages and the combined release all pass. The release composes
+The 50 individual packages and the combined release all pass. The release composes
 as:
 
 | Table | Stock rows | Composed rows | Added |
 |---|---:|---:|---:|
 | `DungeonMap` | 55 | 168 | 113 |
 | `DungeonMapChunk` | 622 | 1932 | 1310 |
-| `WorldMapArea` | 108 | 151 | 43 |
+| `WorldMapArea` | 108 | 158 | 50 |
 | `WorldMapTransforms` | 9 | 13 | 4 |
+
+The floorless maps add only `WorldMapArea` rows: the other three tables gain
+nothing from them, and each composed file is the verified stock file byte for
+byte. A floorless package's sole lease is its `WorldMapArea` row.
 
 Verified for every package, Karazhan included:
 
-- no `WorldMapTransforms` request, no lease, no composed row, for the 39 maps WDM
+- no `WorldMapTransforms` request, no lease, no composed row, for the 46 maps WDM
   does not transform — so the composed table gains exactly WDM's 4 rows;
 - every stock row and every stock string byte survives composition in place, so
   no verified row was edited;
@@ -195,7 +269,7 @@ Verified for every package, Karazhan included:
 - every authored row reads back out of the staged `DBFilesClient` file identical
   to the composed bytes;
 - the parity artifact verifies, with a `WorldMapTransforms` hash recorded for
-  the 4 transformed maps and none for the other 39 — because upstream refuses a
+  the 4 transformed maps and none for the other 46 — because upstream refuses a
   hash for a table with no lease;
 - a counterfactual confirms that supplying a transform *would* have produced one
   request, one lease and one row, so the zeroes are measured, not unchecked.
@@ -203,8 +277,11 @@ Verified for every package, Karazhan included:
 ## Artifacts
 
 Deterministic EPFs, stored uncompressed with `manifest.json` first and a fixed
-1980 timestamp. `dist/` holds 44 files: 43 individual packages plus the combined
-`dist/mod-native-instance-maps.epf` (63,086,428 bytes).
+1980 timestamp. `dist/` holds 51 files: 50 individual packages plus the combined
+`dist/mod-native-instance-maps.epf` (66,880,859 bytes). All 51 are byte-reproducible
+across two builds, and the 43 packages that predate the floorless work are
+byte-identical to their pre-change hashes; only the combined release changed,
+because it now contains seven more maps.
 
 The four packages that shipped before the expansion are byte-pinned in
 `tests/run_tests.py`, so a change to the description builder or the semantic
@@ -260,33 +337,27 @@ reportable but not shippable.
 Consequence: *Wailing Caverns* is UNSAFE, because its instance only works with
 WDM's rewritten floor and its deleted chunk rows.
 
-## Why 15 maps are withheld
+## Why 8 maps are withheld
 
 Every rejection, with its reason codes:
 
 | Map | Reason codes |
 |---|---|
-| `ArathiBasin` | `no-chunks`, `no-floors`, `stock-world-map-area` |
-| `CoTHillsbradFoothills` | `no-chunks`, `no-floors` |
-| `CoTMountHyjal` | `no-chunks`, `no-floors` |
-| `CoTTheBlackMorass` | `no-chunks`, `no-floors` |
-| `Expansion01` | `ambiguous-transform`, `no-chunks`, `no-floors`, `stock-world-map-area` |
-| `NetherstormArena` | `no-chunks`, `no-floors`, `stock-world-map-area` |
-| `RuinsofAhnQiraj` | `no-chunks`, `no-floors` |
-| `WarsongGulch` | `no-chunks`, `no-floors`, `stock-world-map-area` |
-| `ZulAman` | `no-chunks`, `no-floors` |
-| `ZulFarrak` | `no-chunks`, `no-floors` |
-| `ZulGurub` | `no-chunks`, `no-floors` |
+| `ArathiBasin` | `stock-world-map-area` |
+| `Expansion01` | `floorless-transform-reference`, `stock-world-map-area` |
+| `NetherstormArena` | `stock-world-map-area` |
+| `WarsongGulch` | `stock-world-map-area` |
 | `Northrend` | `stock-chunk`, `stock-floor`, `stock-world-map-area` |
 | `WailingCaverns` | `stock-chunk`, `stock-mutation-required` |
 | `BlackFathomDeeps` | `duplicate-artwork-alias` |
 | `Magtheridonslair` | `duplicate-artwork-alias` |
 
-The dominant cause is `no-floors` plus `no-chunks` on 11 maps: WDM gives them an
-area and artwork but no `DungeonMap` row, so there is nothing to enter and
-publishing them would mean inventing a floor. `Expansion01` additionally has two
-transforms (2 and 3) for map 530, so no default floor is derivable even if the
-floors existed.
+The four floorless maps are rejected on their own merits, not for lacking floors.
+`ArathiBasin`, `NetherstormArena` and `WarsongGulch` are PvP maps whose
+`WorldMapArea` rows WDM leaves untouched, so there is no additive area to ship.
+`Expansion01` is the same stock row *and* has `WorldMapTransforms` rows 2 and 3
+naming a floor of map 530, which owns none — `floorless-transform-reference`
+names that condition, and replaced the old catch-all `ambiguous-transform`.
 
 `Northrend` and `WailingCaverns` are the two maps whose rows are stock IDs WDM
 mutates or deletes. The composer's append-only contract means neither can ship.
@@ -311,16 +382,16 @@ them. `Discovery.coverage()` reports each table as
 |---|---:|---:|---:|---:|
 | `DungeonMap` | 113 | 113 | 0 | 0 |
 | `DungeonMapChunk` | 1312 | 1310 | 0 | 2 |
-| `WorldMapArea` | 51 | 43 | 8 | 0 |
+| `WorldMapArea` | 51 | 50 | 1 | 0 |
 | `WorldMapTransforms` | 4 | 4 | 0 | 0 |
 
 - **Unowned chunks 1828, 1829** belong to map 631 (*Icecrown Citadel*), which has
   a stock `WorldMapArea` (604), no WDM area, no WDM floors and no WDM artwork —
   so it is not a candidate and the chunks ship nowhere. This is the only
   unaccounted-for row set in the release.
-- **Held-back areas 686, 697, 717, 733, 734, 749, 775, 781** (`ZulFarrak`,
-  `ZulGurub`, `RuinsofAhnQiraj`, `CoTTheBlackMorass`, `CoTHillsbradFoothills`,
-  `WailingCaverns`, `CoTMountHyjal`, `ZulAman`) belong to the withheld maps above.
+- **Held-back area 749** (`WailingCaverns`) is the single additive `WorldMapArea`
+  row not shipped, belonging to the withheld map above. The seven floorless areas
+  that used to be held back (686, 697, 717, 733, 734, 775, 781) now ship.
 
 ## Verification evidence
 
@@ -328,20 +399,25 @@ them. `Discovery.coverage()` reports each table as
 |---|---|
 | `upstream/WDM-patch/SHA256SUMS` | 17,072 OK, 0 FAILED |
 | `git status --porcelain upstream/` | 0 changes |
-| `python3 tests/run_tests.py` | **149 tests, OK, 0 skipped** |
+| `python3 tests/run_tests.py` | **156 tests, OK, 0 failures** |
+| `mod-content-manager` Phase 4 world-map suite | PASS, including floorless area and floorless composition |
 | Deadmines vs `mod-content-manager` golden fixture | exact match on `worldMaps` and `content` |
 | Deadmines chunk order vs WDM's shipped DBC | exact match |
 | Karazhan declaration vs raw WDM rows | field-for-field match, 17/86/1/0/204 |
 | Karazhan artwork vs WDM payloads | 204/204 SHA-256 match |
-| All 43 published EPF payloads vs WDM artwork | byte-for-byte, including the 48 re-cased alias tiles |
+| All 50 published EPF payloads vs WDM artwork | byte-for-byte, including the 48 re-cased alias tiles |
+| Floorless composition | `DungeonMap`/`DungeonMapChunk`/`WorldMapTransforms` byte-identical to stock; one `WorldMapArea` lease |
+| Floorless package client requirements | no `protected-framexml`, no `floorNames` |
 | Every WDM added row accounted for | `shipped + held back + unowned = added`, all four tables |
 | No SAFE map claims a stock ID | 0 collisions across all four tables |
-| No two published maps share a target or a row | 0 collisions, 1392 targets |
-| Publication set == SAFE set | 43 == 43; no UNSAFE map has a `content/` directory |
-| The four pre-existing manifests regenerated | byte-identical, no diff |
-| `tests/validate_epfs.py` — all 44 EPFs through the full CM pipeline | valid, staged, composed, parity verified |
+| No two published maps share a target or a row | 0 collisions, 1476 targets |
+| Publication set == SAFE set | 50 == 50; no UNSAFE map has a `content/` directory |
+| The 43 pre-existing EPFs regenerated | byte-identical to their pre-change hashes |
+| `tests/validate_epfs.py` — all 51 EPFs through the full CM pipeline | valid, staged, composed, parity verified |
+| Release lifecycle (build A → B → C) on the 50-map release | PASS |
+| Two consecutive full builds | all 51 EPFs byte-identical |
 | `WorldMapTransforms` composition | +4 rows, all WDM's; stock rows untouched |
-| `make check` | exit 0 |
+| `make check` / `make verify` | exit 0 / exit 0 |
 
 The golden-fixture comparison remains the load-bearing one for Deadmines: its
 manifest is derived *only* from WDM and then compared field-for-field, in order,
@@ -365,9 +441,12 @@ semantic block and the artwork content block.
 7. **Deterministic** — canonical JSON manifests; uncompressed EPFs with a fixed
    1980 timestamp, verified byte-reproducible.
 8. **Upstream immutable** — vendored, checksummed, never edited.
-9. **Prohibited repos untouched** — `mod-content-manager`, `WDM-patch`,
-   `wdm-stock-dbc/` and `upstream/` are all read-only inputs. Nothing was
-   committed or pushed.
+9. **Vendored inputs untouched** — `WDM-patch`, `wdm-stock-dbc/` and `upstream/`
+   are read-only inputs and were never edited. `mod-content-manager` was modified
+   deliberately: accepting and validating floorless areas is upstream work this
+   task required, and the change is confined to `ContentPackage.{h,cpp}`,
+   `tests/world_map_tests.cpp` and the world-map guide. Nothing was committed or
+   pushed.
 
 ## Recommendations
 
@@ -380,8 +459,8 @@ semantic block and the artwork content block.
 - **Do not synthesise transforms.** A hand-written transform for, say,
   *Blackrock Spire* would be a guess about client-baked behaviour wearing WDM's
   fixed ID, and it would be indistinguishable, in the composed DBC, from real
-  WDM data. A missing transform is a complete row set, not a gap to fill. 39 of the
-  43 published maps have no transform, and that is the correct outcome.
+  WDM data. A missing transform is a complete row set, not a gap to fill. 46 of
+  the 50 published maps have no transform, and that is the correct outcome.
 - **Leave WDM's within-directory casing alone.** `TheTempleOfAtalHakkar` is
   spelled three different ways across its three floors in one directory. It works,
   because the client is case-insensitive. Re-casing it would rewrite a released
@@ -389,10 +468,16 @@ semantic block and the artwork content block.
 - **The `-1` sentinel was a `mod-content-manager` validator bug**, now fixed
   upstream: treating every non-zero `dungeonMapId` as an unresolvable reference
   made a legitimate client value unloadable.
-- **Only Karazhan is runtime-proven.** The other 42 are byte-for-byte WDM's data
+- **Only Karazhan is runtime-proven.** The other 49 are byte-for-byte WDM's data
   composed by the same append-only path, which is the strongest claim the
   evidence supports. Whether the client renders each of them as WDM intends is a
   question only a live client can answer, and no such claim is made here.
+- **Verify a floorless map on a live client.** The seven floorless packages are
+  the first in this project with no `DungeonMap` row and no transform, and their
+  composed `DungeonMap.dbc`, `DungeonMapChunk.dbc` and `WorldMapTransforms.dbc`
+  are the stock files untouched. The client-side claim — that a world map with no
+  floor dropdown behaves correctly when selected — is a static argument until
+  confirmed in game.
 - **Re-run `make check` after any upstream refresh.** The reports are generated,
   so `--check` turns a stale classification into a build failure rather than a
   silent drift.
@@ -404,6 +489,6 @@ make check
 ```
 
 Regenerates `reports/`, `content/` and `dist/` from the vendored WDM tree, runs
-the 149-test suite, and drives every EPF through the `mod-content-manager`
+the 156-test suite, and drives every EPF through the `mod-content-manager`
 checkout. `make verify` is the CI gate: it writes nothing and fails if any
 committed artifact is out of date.

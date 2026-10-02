@@ -6,6 +6,9 @@
   "BlackrockDepths": "blackrock-depths",
   "BlackrockSpire": "blackrock-spire",
   "BlackwingLair": "blackwing-lair",
+  "CoTHillsbradFoothills": "hillsbrad-foothills",
+  "CoTMountHyjal": "mount-hyjal",
+  "CoTTheBlackMorass": "the-black-morass",
   "CoilfangReservoir": "coilfang-reservoir",
   "DeeprunTram": "deeprun-tram",
   "DireMaul": "dire-maul",
@@ -22,6 +25,7 @@
   "Ragefire": "ragefire-chasm",
   "RazorfenDowns": "razorfen-downs",
   "RazorfenKraul": "razorfen-kraul",
+  "RuinsofAhnQiraj": "ruins-of-ahnqiraj",
   "ScarletMonastery": "scarlet-monastery",
   "Scholomance": "scholomance",
   "SethekkHalls": "sethekk-halls",
@@ -41,5 +45,8 @@
   "TheStockade": "the-stockade",
   "TheTempleOfAtalHakkar": "temple-of-atal-hakkar",
   "TheUnderbog": "the-underbog",
-  "Uldaman": "uldaman"
+  "Uldaman": "uldaman",
+  "ZulAman": "zulaman",
+  "ZulFarrak": "zulfarrak",
+  "ZulGurub": "zulgurub"
 }

@@ -1,0 +1,90 @@
+{
+ "content": [
+  {
+   "source": "artwork/zulfarrak1.blp",
+   "target": "Interface/WorldMap/ZulFarrak/zulfarrak1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/zulfarrak2.blp",
+   "target": "Interface/WorldMap/ZulFarrak/zulfarrak2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/zulfarrak3.blp",
+   "target": "Interface/WorldMap/ZulFarrak/zulfarrak3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/zulfarrak4.blp",
+   "target": "Interface/WorldMap/ZulFarrak/zulfarrak4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/zulfarrak5.blp",
+   "target": "Interface/WorldMap/ZulFarrak/zulfarrak5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/zulfarrak6.blp",
+   "target": "Interface/WorldMap/ZulFarrak/zulfarrak6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/zulfarrak7.blp",
+   "target": "Interface/WorldMap/ZulFarrak/zulfarrak7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/zulfarrak8.blp",
+   "target": "Interface/WorldMap/ZulFarrak/zulfarrak8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/zulfarrak9.blp",
+   "target": "Interface/WorldMap/ZulFarrak/zulfarrak9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/zulfarrak10.blp",
+   "target": "Interface/WorldMap/ZulFarrak/zulfarrak10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/zulfarrak11.blp",
+   "target": "Interface/WorldMap/ZulFarrak/zulfarrak11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/zulfarrak12.blp",
+   "target": "Interface/WorldMap/ZulFarrak/zulfarrak12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Zul'Farrak instance map: 0 DungeonMap floors, 0 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 12 client BLP tiles. This map is floorless by design: the 3.3.5a client draws it from this WorldMapArea row and its tiles alone, WDM Stable declares no DungeonMap, DungeonMapChunk or WorldMapTransforms row for it, and the three remaining world-map DBCs are therefore left stock byte for byte.",
+ "name": "Zul'Farrak",
+ "package": "mod-native-instance-maps.zulfarrak",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 1176,
+     "chunks": [],
+     "dungeonMapId": 0,
+     "floors": [],
+     "id": 686,
+     "internalName": "ZulFarrak",
+     "parentMapId": 161,
+     "virtualMapId": -1,
+     "x1": 2052.083251953125,
+     "x2": 1129.1666259765625,
+     "y1": 1624.9998779296875,
+     "y2": 241.66665649414062
+    }
+   ],
+   "mapId": 209
+  }
+ ]
+}

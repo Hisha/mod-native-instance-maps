@@ -1,0 +1,90 @@
+{
+ "content": [
+  {
+   "source": "artwork/ZulAman1.blp",
+   "target": "Interface/WorldMap/ZulAman/ZulAman1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ZulAman2.blp",
+   "target": "Interface/WorldMap/ZulAman/ZulAman2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ZulAman3.blp",
+   "target": "Interface/WorldMap/ZulAman/ZulAman3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ZulAman4.blp",
+   "target": "Interface/WorldMap/ZulAman/ZulAman4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ZulAman5.blp",
+   "target": "Interface/WorldMap/ZulAman/ZulAman5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ZulAman6.blp",
+   "target": "Interface/WorldMap/ZulAman/ZulAman6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ZulAman7.blp",
+   "target": "Interface/WorldMap/ZulAman/ZulAman7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ZulAman8.blp",
+   "target": "Interface/WorldMap/ZulAman/ZulAman8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ZulAman9.blp",
+   "target": "Interface/WorldMap/ZulAman/ZulAman9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ZulAman10.blp",
+   "target": "Interface/WorldMap/ZulAman/ZulAman10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ZulAman11.blp",
+   "target": "Interface/WorldMap/ZulAman/ZulAman11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/ZulAman12.blp",
+   "target": "Interface/WorldMap/ZulAman/ZulAman12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Zul'Aman instance map: 0 DungeonMap floors, 0 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 12 client BLP tiles. This map is floorless by design: the 3.3.5a client draws it from this WorldMapArea row and its tiles alone, WDM Stable declares no DungeonMap, DungeonMapChunk or WorldMapTransforms row for it, and the three remaining world-map DBCs are therefore left stock byte for byte.",
+ "name": "Zul'Aman",
+ "package": "mod-native-instance-maps.zulaman",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 3805,
+     "chunks": [],
+     "dungeonMapId": 0,
+     "floors": [],
+     "id": 781,
+     "internalName": "ZulAman",
+     "parentMapId": 0,
+     "virtualMapId": -1,
+     "x1": 568.75,
+     "x2": -277.08331298828125,
+     "y1": 1852.083251953125,
+     "y2": 583.3333129882812
+    }
+   ],
+   "mapId": 568
+  }
+ ]
+}

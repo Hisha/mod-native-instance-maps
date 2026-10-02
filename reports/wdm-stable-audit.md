@@ -39,19 +39,12 @@ These are the reason the append-only contract is load-bearing. mod-content-manag
 |---|---|---|---|---|
 | `DungeonMap` | 113 | 113 | 0 | 0 |
 | `DungeonMapChunk` | 1312 | 1310 | 0 | 2 |
-| `WorldMapArea` | 51 | 43 | 8 | 0 |
+| `WorldMapArea` | 51 | 50 | 1 | 0 |
 | `WorldMapTransforms` | 4 | 4 | 0 | 0 |
 
 ### Rows that do not ship, and why
 
-- `WorldMapArea` **686** — held back by `ZulFarrak` (`no-chunks`, `no-floors`)
-- `WorldMapArea` **697** — held back by `ZulGurub` (`no-chunks`, `no-floors`)
-- `WorldMapArea` **717** — held back by `RuinsofAhnQiraj` (`no-chunks`, `no-floors`)
-- `WorldMapArea` **733** — held back by `CoTTheBlackMorass` (`no-chunks`, `no-floors`)
-- `WorldMapArea` **734** — held back by `CoTHillsbradFoothills` (`no-chunks`, `no-floors`)
 - `WorldMapArea` **749** — held back by `WailingCaverns` (`stock-chunk`, `stock-mutation-required`)
-- `WorldMapArea` **775** — held back by `CoTMountHyjal` (`no-chunks`, `no-floors`)
-- `WorldMapArea` **781** — held back by `ZulAman` (`no-chunks`, `no-floors`)
 - `DungeonMapChunk` **1828** — no candidate claims it: the map has no WDM artwork directory and no additive area or floor, so there is no package to attach it to
 - `DungeonMapChunk` **1829** — no candidate claims it: the map has no WDM artwork directory and no additive area or floor, so there is no package to attach it to
 

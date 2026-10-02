@@ -1,0 +1,90 @@
+{
+ "content": [
+  {
+   "source": "artwork/CoTTheBlackMorass1.blp",
+   "target": "Interface/WorldMap/CoTTheBlackMorass/CoTTheBlackMorass1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTTheBlackMorass2.blp",
+   "target": "Interface/WorldMap/CoTTheBlackMorass/CoTTheBlackMorass2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTTheBlackMorass3.blp",
+   "target": "Interface/WorldMap/CoTTheBlackMorass/CoTTheBlackMorass3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTTheBlackMorass4.blp",
+   "target": "Interface/WorldMap/CoTTheBlackMorass/CoTTheBlackMorass4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTTheBlackMorass5.blp",
+   "target": "Interface/WorldMap/CoTTheBlackMorass/CoTTheBlackMorass5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTTheBlackMorass6.blp",
+   "target": "Interface/WorldMap/CoTTheBlackMorass/CoTTheBlackMorass6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTTheBlackMorass7.blp",
+   "target": "Interface/WorldMap/CoTTheBlackMorass/CoTTheBlackMorass7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTTheBlackMorass8.blp",
+   "target": "Interface/WorldMap/CoTTheBlackMorass/CoTTheBlackMorass8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTTheBlackMorass9.blp",
+   "target": "Interface/WorldMap/CoTTheBlackMorass/CoTTheBlackMorass9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTTheBlackMorass10.blp",
+   "target": "Interface/WorldMap/CoTTheBlackMorass/CoTTheBlackMorass10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTTheBlackMorass11.blp",
+   "target": "Interface/WorldMap/CoTTheBlackMorass/CoTTheBlackMorass11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTTheBlackMorass12.blp",
+   "target": "Interface/WorldMap/CoTTheBlackMorass/CoTTheBlackMorass12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm The Black Morass instance map: 0 DungeonMap floors, 0 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 12 client BLP tiles. This map is floorless by design: the 3.3.5a client draws it from this WorldMapArea row and its tiles alone, WDM Stable declares no DungeonMap, DungeonMapChunk or WorldMapTransforms row for it, and the three remaining world-map DBCs are therefore left stock byte for byte.",
+ "name": "The Black Morass",
+ "package": "mod-native-instance-maps.the-black-morass",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 2366,
+     "chunks": [],
+     "dungeonMapId": 0,
+     "floors": [],
+     "id": 733,
+     "internalName": "CoTTheBlackMorass",
+     "parentMapId": 161,
+     "virtualMapId": -1,
+     "x1": -1500.0,
+     "x2": -2225.0,
+     "y1": 7649.99951171875,
+     "y2": 6562.49951171875
+    }
+   ],
+   "mapId": 269
+  }
+ ]
+}

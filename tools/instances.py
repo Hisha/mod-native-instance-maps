@@ -686,8 +686,10 @@ UNSAFE_REASONS = frozenset(
         "no-world-map-area",
         "ambiguous-world-map-area",
         "no-artwork",
-        "no-floors",
         "no-chunks",
+        "floorless-dungeon-map-id",
+        "floorless-chunk-reference",
+        "floorless-transform-reference",
         "floor-zero",
         "chunk-field2-zero",
         "chunk-floor-reference-unresolvable",
@@ -816,14 +818,47 @@ def _classify(candidate: Candidate, tables: Dict[str, DbcFile], stock: "StockVie
         # them would just be noise around one root cause.
         _finish(candidate, check)
         return
-    if not candidate.floor_ids:
-        check.fail(
-            "no-floors",
-            f"WDM Stable declares no DungeonMap floor for map {candidate.map_id}, and "
-            "mod-content-manager rejects a worldMaps[].areas[] entry that declares no "
-            "floors at all.  The map cannot be expressed; supplying a floor row would "
-            "be authoring geometry WDM does not ship",
-        )
+    # A map that owns no DungeonMap row is a real 3.3.5a client shape, not a gap
+    # in the source data.  Stock build 12340 already ships 48 such WorldMapArea
+    # rows -- WorldMapArea 531 / MapID 615 TheObsidianSanctum, 602 / 658
+    # PitofSaron and 609 / 724 TheRubySanctum among them -- and WDM Stable
+    # ships 55, including Zul'Farrak (686 / 209).  WDM's own LibMapData records
+    # `floors = 0` for every one of them.  The client draws such a map from its
+    # WorldMapArea row and its artwork alone, so mod-content-manager expresses
+    # it as an area with an empty `floors` array: it then requests, leases and
+    # composes no DungeonMap, DungeonMapChunk or WorldMapTransforms row, and
+    # those three DBCs are reproduced stock byte for byte.
+    #
+    # Accepting the shape must not accept anything alongside it, so what is
+    # checked is only that no reference the area could not satisfy survives.
+    # A DungeonMapChunk names a floor and a WorldMapTransforms names a floor of
+    # its own map, so a floorless map owns neither; and every floorless row in
+    # stock and in WDM carries dungeonMapId exactly 0, so 0 is the only accepted
+    # spelling here.
+    floorless = not candidate.floor_ids
+    if floorless:
+        if candidate.chunk_ids:
+            check.fail(
+                "floorless-chunk-reference",
+                f"map {candidate.map_id} owns no DungeonMap floor, so its "
+                f"DungeonMapChunk row(s) {_join(candidate.chunk_ids[:8], '...')} have "
+                "no floor to name",
+            )
+        if candidate.transform_ids:
+            check.fail(
+                "floorless-transform-reference",
+                f"WorldMapTransforms "
+                f"{_join(candidate.transform_ids[:8], '...')} name a floor of map "
+                f"{candidate.map_id}, but that map owns none",
+            )
+        if candidate.area_dungeon_map_id not in (0, None):
+            check.fail(
+                "floorless-dungeon-map-id",
+                f"WorldMapArea {candidate.world_map_area_ids[0]} owns no "
+                f"DungeonMap floor, so dungeonMapId must be 0 but is "
+                f"{candidate.area_dungeon_map_id}; every floorless row in stock and "
+                "in WDM carries 0",
+            )
     else:
         for identifier in candidate.floor_ids:
             status = stock.dungeon_map_status(identifier)
@@ -852,7 +887,11 @@ def _classify(candidate: Candidate, tables: Dict[str, DbcFile], stock: "StockVie
             )
 
     # ---- chunks ------------------------------------------------------------
-    if not candidate.chunk_ids:
+    if floorless:
+        # A chunk belongs to a floor, so a floorless map owns none.  The check
+        # is reported above, next to the floor evidence it follows from.
+        pass
+    elif not candidate.chunk_ids:
         check.fail(
             "no-chunks",
             f"WDM Stable declares no DungeonMapChunk for the floors of map {candidate.map_id}",
@@ -910,7 +949,9 @@ def _classify(candidate: Candidate, tables: Dict[str, DbcFile], stock: "StockVie
     # and is not a defect: the semantic projection omits the key and
     # mod-content-manager then requests, leases and composes no transform row.
     # What is checked here is only the integrity of a transform that *is* there.
-    if not candidate.transform_ids:
+    # A floorless map is already reported above, so repeating the same root cause
+    # here would only add a second, downstream code.
+    if floorless or not candidate.transform_ids:
         pass
     elif len(candidate.transform_ids) > 1:
         check.fail(

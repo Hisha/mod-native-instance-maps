@@ -274,8 +274,13 @@ class TestDiscovery(_DiscoveryMixin, unittest.TestCase):
         for item in self.discovery.by_classification(SAFE):
             with self.subTest(name=item.internal_name):
                 self.assertEqual(item.reason_codes, [])
-                self.assertTrue(item.floor_ids)
-                self.assertTrue(item.chunk_ids)
+                # Coherent in one of two ways: floors with the chunks that draw
+                # them, or neither, in which case the WorldMapArea row and the
+                # tiles are the whole map.  See TestFloorless.
+                if item.floor_ids:
+                    self.assertTrue(item.chunk_ids)
+                else:
+                    self.assertEqual(item.chunk_ids, [])
                 self.assertTrue(item.blps)
 
     def test_no_transform_is_not_a_reason_code(self):
@@ -301,17 +306,25 @@ class TestDiscovery(_DiscoveryMixin, unittest.TestCase):
         for item in without:
             with self.subTest(name=item.internal_name):
                 self.assertEqual(item.reason_codes, [])
-                self.assertTrue(item.floor_ids)
-                self.assertTrue(item.chunk_ids)
-                self.assertTrue(item.blps)
+                # A transform-less map is coherent in one of two ways: it owns
+                # floors and the chunks that draw them, or it owns neither and
+                # is drawn from its WorldMapArea row and artwork alone.
+                if item.floor_ids:
+                    self.assertTrue(item.chunk_ids)
+                else:
+                    self.assertEqual(item.chunk_ids, [])
+                    self.assertEqual(item.area_dungeon_map_id, 0)
+                    self.assertTrue(item.blps)
 
     def test_a_map_missing_anything_else_is_not_safe(self):
         """Removing no-transform must not have promoted a candidate that still
         carries an independent structural problem."""
         for item in self.discovery.candidates:
             for code in (
-                "no-floors",
                 "no-chunks",
+                "floorless-chunk-reference",
+                "floorless-transform-reference",
+                "floorless-dungeon-map-id",
                 "no-world-map-area",
                 "no-artwork",
                 "artwork-name-ambiguous",
@@ -781,6 +794,216 @@ class TestSemantic(_DiscoveryMixin, unittest.TestCase):
         )
 
 
+class TestFloorless(_DiscoveryMixin, unittest.TestCase):
+    """A map that owns no ``DungeonMap`` row is a native client shape.
+
+    Stock build 12340 already ships 48 such ``WorldMapArea`` rows -- WorldMapArea
+    531 / MapID 615 ``TheObsidianSanctum``, 602 / 658 ``PitofSaron`` and
+    609 / 724 ``TheRubySanctum`` among them -- and WDM Stable ships 55.  The
+    client draws such a map from its ``WorldMapArea`` row and its artwork alone,
+    so the package declares ``"floors": []`` and Content Manager composes no
+    ``DungeonMap``, ``DungeonMapChunk`` or ``WorldMapTransforms`` row for it.
+
+    Every assertion here compares against stock or WDM bytes.  Nothing asserts
+    that a floorless map *can* exist: the DBC evidence below is what establishes
+    it, and the invariants are what keep the accepted set from widening.
+    """
+
+    #: The candidates this project found with no DungeonMap floor, and what
+    #: became of each.  A floorless candidate is not SAFE by being floorless; it
+    #: is SAFE only when WDM also *adds* the WorldMapArea row, so a package has
+    #: an identity to own.
+    FLOORLESS = {
+        "ZulFarrak": SAFE,
+        "ZulGurub": SAFE,
+        "ZulAman": SAFE,
+        "RuinsofAhnQiraj": SAFE,
+        "CoTTheBlackMorass": SAFE,
+        "CoTHillsbradFoothills": SAFE,
+        "CoTMountHyjal": SAFE,
+        "ArathiBasin": UNSAFE,
+        "WarsongGulch": UNSAFE,
+        "NetherstormArena": UNSAFE,
+        "Expansion01": UNSAFE,
+    }
+
+    def floorless(self) -> list:
+        return [
+            item
+            for item in self.discovery.candidates
+            if item.map_id is not None and not item.floor_ids
+        ]
+
+    def declaration(self, item) -> dict:
+        return semantic.world_map_declaration(
+            self.discovery.tables,
+            item.map_id,
+            item.world_map_area_ids,
+            item.floor_ids,
+            item.chunk_ids,
+            item.transform_ids[0] if item.transform_ids else None,
+        )
+
+    def test_the_candidate_set_is_exactly_the_one_this_change_was_made_for(self):
+        """Guard the table above against silently going stale."""
+        self.assertEqual(
+            sorted(item.internal_name for item in self.floorless()),
+            sorted(self.FLOORLESS),
+        )
+
+    def test_stock_already_ships_floorless_instance_maps(self):
+        """The evidence that makes the shape native rather than invented.
+
+        Three stock instance maps own no DungeonMap row at all, are drawn from a
+        single WorldMapArea row, and carry ``dungeonMapId`` 0 -- so the client
+        has always had a way to render a map with no floor.  Read straight from
+        the verified stock baseline so an upstream change surfaces here.
+        """
+        stock = parse_file(paths.stock_dbc_dir() / "DungeonMap.dbc", "DungeonMap")
+        floors_per_map: dict = {}
+        for record in stock.records:
+            floors_per_map.setdefault(record.map_id(), []).append(record.id)
+        areas = parse_file(
+            paths.stock_dbc_dir() / "WorldMapArea.dbc", "WorldMapArea"
+        )
+        proven = {
+            "TheObsidianSanctum": (615, 531),
+            "PitofSaron": (658, 602),
+            "TheRubySanctum": (724, 609),
+        }
+        for name, (map_id, area_id) in proven.items():
+            with self.subTest(internal_name=name):
+                self.assertNotIn(map_id, floors_per_map, f"map {map_id} grew a floor")
+                row = areas.get(area_id)
+                self.assertEqual(row.value("internal_name"), name)
+                self.assertEqual(row.map_id(), map_id)
+                self.assertEqual(int(row.value("dungeonMap_id")), 0)
+                # A non-zero rectangle is what places the map's tiles; the stock
+                # floorless rows are rect-placed rather than left at the origin.
+                self.assertNotEqual(
+                    [row.value(k) for k in ("y1", "y2", "x1", "x2")],
+                    [0.0, 0.0, 0.0, 0.0],
+                )
+
+    def test_wdm_adds_the_area_and_the_artwork_for_a_floorless_map(self):
+        """Zul'Farrak, field for field, against the WDM bytes."""
+        item = self.candidate("ZulFarrak")
+        wdm_areas = self.discovery.tables["WorldMapArea"]
+        stock_areas = parse_file(
+            paths.stock_dbc_dir() / "WorldMapArea.dbc", "WorldMapArea"
+        )
+        self.assertEqual(item.world_map_area_ids, [686])
+        self.assertEqual(item.map_id, 209)
+        row = wdm_areas.get(686)
+        self.assertEqual(row.value("internal_name"), "ZulFarrak")
+        self.assertEqual(row.map_id(), 209)
+        self.assertEqual(int(row.value("area_id")), 1176)
+        self.assertEqual(int(row.value("virtual_map_id")), -1)
+        self.assertEqual(int(row.value("dungeonMap_id")), 0)
+        # parentMapID names another WorldMapArea (Tanaris), not a MapID.
+        self.assertEqual(int(row.value("parentMapID")), 161)
+        self.assertEqual(wdm_areas.get(161).value("internal_name"), "Tanaris")
+        # Stock describes no area of this map, so the package owns a new
+        # identity rather than restating one the client already has.
+        self.assertNotIn(209, {r.map_id() for r in stock_areas.records})
+        # No floor and no transform for the map in WDM or in stock.  A chunk is
+        # reachable only through a floor's DungeonMapID, and there is no floor,
+        # so a floorless map owns no chunk by construction -- `chunk_ids` is
+        # derived from that and asserted in the tests below.
+        for table in ("DungeonMap", "WorldMapTransforms"):
+            with self.subTest(table=table):
+                self.assertEqual(
+                    [r.id for r in self.discovery.tables[table].records if r.map_id() == 209],
+                    [],
+                    f"WDM {table} has a row for map 209",
+                )
+                self.assertEqual(
+                    [r.id for r in self.stock_table(table).records if r.map_id() == 209],
+                    [],
+                    f"stock {table} has a row for map 209",
+                )
+
+    def stock_table(self, table: str):
+        return parse_file(paths.stock_dbc_dir() / f"{table}.dbc", table)
+
+    def test_the_projection_states_the_floorless_shape_explicitly(self):
+        """`floors` and `chunks` stay present and empty, never omitted.
+
+        Omitting a key is still an error in Content Manager, so the projection
+        has to write the empty arrays rather than leave them out.  A floor
+        label is omitted for the opposite reason: WDM ships locale strings for
+        many zone maps, but with no floor there is no dropdown row to rename.
+        """
+        for name, verdict in self.FLOORLESS.items():
+            with self.subTest(internal_name=name):
+                item = self.candidate(name)
+                self.assertEqual(item.classification, verdict)
+                declaration = self.declaration(item)
+                (area,) = declaration["areas"]
+                self.assertIn("floors", area)
+                self.assertIn("chunks", area)
+                self.assertEqual(area["floors"], [])
+                self.assertEqual(area["chunks"], [])
+                self.assertNotIn("floorNames", area)
+                self.assertEqual(area["dungeonMapId"], 0)
+                if verdict is SAFE:
+                    # A map with no transform contributes no transform row, so
+                    # the key is absent rather than null or empty.
+                    self.assertNotIn("transform", declaration)
+
+    def test_a_floorless_candidate_is_rejected_only_for_independent_reasons(self):
+        """The four still-UNSAFE candidates fail on evidence unrelated to floors.
+
+        Each keeps a decisive structural reason, so nothing rests on the
+        floorless rule and no rejection depends on it.
+        """
+        expected = {
+            "ArathiBasin": {"stock-world-map-area"},
+            "WarsongGulch": {"stock-world-map-area"},
+            "NetherstormArena": {"stock-world-map-area"},
+            "Expansion01": {"stock-world-map-area", "floorless-transform-reference"},
+        }
+        for name, codes in expected.items():
+            with self.subTest(internal_name=name):
+                item = self.candidate(name)
+                self.assertEqual(item.classification, UNSAFE)
+                self.assertEqual(set(item.reason_codes), codes)
+
+    def test_no_floorless_candidate_invents_a_row_to_look_floored(self):
+        """A published floorless package owns exactly one row in one table.
+
+        Only the SAFE candidates are asserted here.  The UNSAFE ones are
+        rejected precisely because they are *not* empty in this sense -- a
+        floorless map that still ships a transform is the contradiction the
+        `floorless-transform-reference` code exists to catch.
+        """
+        safe = [n for n, v in self.FLOORLESS.items() if v is SAFE]
+        self.assertTrue(safe)
+        for name in safe:
+            with self.subTest(internal_name=name):
+                item = self.candidate(name)
+                self.assertEqual(item.floor_ids, [])
+                self.assertEqual(item.chunk_ids, [])
+                self.assertEqual(item.transform_ids, [])
+                # Artwork is the only other thing such a map needs, and it is
+                # present: without it the client would have nothing to draw.
+                self.assertTrue(item.blps, "a floorless map still needs its tiles")
+
+    def test_a_floorless_map_that_ships_a_transform_is_refused(self):
+        """The counterfactual, checked against Expansion01's real WDM rows.
+
+        WDM declares two WorldMapTransforms rows for the Outland continent, which
+        owns no DungeonMap row, so both name a floor the map does not have.  That
+        is refused rather than composed, and the map is rejected for a second,
+        independent reason as well.
+        """
+        item = self.candidate("Expansion01")
+        self.assertEqual(item.floor_ids, [])
+        self.assertEqual(len(item.transform_ids), 2)
+        self.assertEqual(item.classification, UNSAFE)
+        self.assertIn("floorless-transform-reference", item.reason_codes)
+
+
 # ---------------------------------------------------------------------------
 # Packages
 # ---------------------------------------------------------------------------
@@ -1128,16 +1351,32 @@ class TestEpf(_DiscoveryMixin, unittest.TestCase):
     def test_epf_is_a_zip_with_manifest_first(self):
         import zipfile
 
+        saw_toc = False
+        saw_no_toc = False
         for item in published_candidates(self.discovery):
             with self.subTest(name=item.internal_name):
                 _, output = self.build(item.internal_name)
                 with zipfile.ZipFile(output) as archive:
                     names = archive.namelist()
                 self.assertEqual(names[0], "manifest.json")
-                # manifest, the stock table of contents, then the artwork.  The TOC
-                # is present because every published map declares floor labels.
-                self.assertEqual(len(names), 2 + len(item.blps))
-                self.assertEqual(names[1], STOCK_TOC_MEMBER)
+                # The stock table of contents rides along only when the manifest
+                # declares clientFrameXml, which a map declares only when it has
+                # floor labels.  A floorless map has no dropdown row to rename, so
+                # it carries no FrameXML change and no TOC.
+                manifest = json.loads(
+                    (paths.CONTENT_DIR / item.slug / "manifest.json").read_text()
+                )
+                declares_toc = "clientFrameXml" in manifest
+                self.assertEqual(declares_toc, bool(item.floor_ids))
+                saw_toc = saw_toc or declares_toc
+                saw_no_toc = saw_no_toc or not declares_toc
+                expected = 2 + len(item.blps) if declares_toc else 1 + len(item.blps)
+                self.assertEqual(len(names), expected)
+                if declares_toc:
+                    self.assertEqual(names[1], STOCK_TOC_MEMBER)
+        # The suite must exercise both shapes, or a change that quietly dropped
+        # the TOC from every package would still pass.
+        self.assertTrue(saw_toc and saw_no_toc)
 
     def test_epf_entries_are_stored_with_a_fixed_timestamp(self):
         import zipfile
@@ -1174,8 +1413,11 @@ class TestEpf(_DiscoveryMixin, unittest.TestCase):
                     e["source"] for e in manifest["content"]
                 ]
                 # The stock TOC sits between the manifest and the artwork, in the
-                # order build_epf writes it, and never in artwork order.
-                expected.insert(1, STOCK_TOC_MEMBER)
+                # order build_epf writes it, and never in artwork order.  It is
+                # written only when the manifest declares clientFrameXml, so a
+                # map with no floor labels has nothing between the two.
+                if "clientFrameXml" in manifest:
+                    expected.insert(1, STOCK_TOC_MEMBER)
                 _, output = self.build(item.internal_name)
                 with zipfile.ZipFile(output) as archive:
                     self.assertEqual(archive.namelist(), expected)

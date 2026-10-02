@@ -11,11 +11,11 @@ world-map DBCs is `mod-content-manager`'s job, not this repository's.
 
 ## What ships today
 
-**43 packages, all validated against `mod-content-manager`'s real pipeline** —
+**50 packages, all validated against `mod-content-manager`'s real pipeline** —
 `ContentPackage::Validate()`, `StageInto()`, `WorldMapDbcComposer`
 `AppendRequests`/`Compose`/`Stage` against the verified stock baseline,
 `ContentFrameXml::ComposeLua`/`ComposeToc`/`Stage`, and
-`ContentServerBundle::VerifyParity()`. All 43 also compose together into one
+`ContentServerBundle::VerifyParity()`. All 50 also compose together into one
 `dist/mod-native-instance-maps.epf`.
 
 | Package | Map | Area | Floors | Chunks | Transform | Tiles | Floor labels |
@@ -33,16 +33,19 @@ world-map DBCs is `mod-content-manager`'s job, not this repository's.
 | `mod-native-instance-maps.gnomeregan` | 90 | `Gnomeregan` | 4 | 79 | none in WDM | 48 | 11 locales |
 | `mod-native-instance-maps.gruuls-lair` | 565 | `GruulsLair` | 1 | 4 | none in WDM | 12 | 11 locales |
 | `mod-native-instance-maps.hellfire-ramparts` | 543 | `HellfireRamparts` | 1 | 3 | none in WDM | 12 | 11 locales |
+| `mod-native-instance-maps.hillsbrad-foothills` | 560 | `CoTHillsbradFoothills` | 0 | 0 | none in WDM | 12 | none (no floors) |
 | `mod-native-instance-maps.karazhan` | 532 | `Karazhan` | 17 | 86 | none in WDM | 204 | 11 locales |
 | `mod-native-instance-maps.magisters-terrace` | 585 | `MagistersTerrace` | 2 | 19 | none in WDM | 24 | 11 locales |
 | `mod-native-instance-maps.magtheridons-lair` | 544 | `MagtheridonsLair`<br>(artwork `Magtheridonslair`) | 1 | 7 | none in WDM | 12 | 11 locales |
 | `mod-native-instance-maps.mana-tombs` | 557 | `ManaTombs` | 1 | 14 | none in WDM | 12 | 11 locales |
 | `mod-native-instance-maps.maraudon` | 349 | `Maraudon` | 2 | 43 | none in WDM | 24 | 11 locales |
 | `mod-native-instance-maps.molten-core` | 409 | `MoltenCore` | 1 | 12 | none in WDM | 12 | 11 locales |
+| `mod-native-instance-maps.mount-hyjal` | 534 | `CoTMountHyjal` | 0 | 0 | none in WDM | 12 | none (no floors) |
 | `mod-native-instance-maps.onyxias-lair` | 249 | `OnyxiasLair` | 1 | 8 | none in WDM | 12 | 11 locales |
 | `mod-native-instance-maps.ragefire-chasm` | 389 | `Ragefire` | 1 | 6 | none in WDM | 12 | 11 locales |
 | `mod-native-instance-maps.razorfen-downs` | 129 | `RazorfenDowns` | 1 | 11 | none in WDM | 12 | 11 locales |
 | `mod-native-instance-maps.razorfen-kraul` | 47 | `RazorfenKraul` | 1 | 25 | none in WDM | 12 | 11 locales |
+| `mod-native-instance-maps.ruins-of-ahnqiraj` | 509 | `RuinsofAhnQiraj` | 0 | 0 | none in WDM | 12 | none (no floors) |
 | `mod-native-instance-maps.scarlet-monastery` | 189 | `ScarletMonastery` | 4 | 89 | none in WDM | 48 | 11 locales |
 | `mod-native-instance-maps.scholomance` | 289 | `Scholomance` | 4 | 26 | none in WDM | 48 | 11 locales |
 | `mod-native-instance-maps.sethekk-halls` | 556 | `SethekkHalls` | 2 | 19 | none in WDM | 24 | 11 locales |
@@ -53,6 +56,7 @@ world-map DBCs is `mod-content-manager`'s job, not this repository's.
 | `mod-native-instance-maps.tempest-keep` | 550 | `TempestKeep` | 1 | 16 | none in WDM | 12 | 11 locales |
 | `mod-native-instance-maps.temple-of-atal-hakkar` | 109 | `TheTempleOfAtalHakkar` | 3 | 75 | WDM 14 | 36 | 11 locales |
 | `mod-native-instance-maps.the-arcatraz` | 552 | `TheArcatraz` | 3 | 21 | none in WDM | 36 | 11 locales |
+| `mod-native-instance-maps.the-black-morass` | 269 | `CoTTheBlackMorass` | 0 | 0 | none in WDM | 12 | none (no floors) |
 | `mod-native-instance-maps.the-blood-furnace` | 542 | `TheBloodFurnace` | 1 | 7 | none in WDM | 12 | 11 locales |
 | `mod-native-instance-maps.the-botanica` | 553 | `TheBotanica` | 1 | 6 | none in WDM | 12 | 11 locales |
 | `mod-native-instance-maps.the-deadmines` | 36 | `TheDeadmines` | 2 | 29 | WDM 11 | 24 | 11 locales |
@@ -63,16 +67,20 @@ world-map DBCs is `mod-content-manager`'s job, not this repository's.
 | `mod-native-instance-maps.the-stockade` | 34 | `TheStockade` | 1 | 57 | none in WDM | 12 | 11 locales |
 | `mod-native-instance-maps.the-underbog` | 546 | `TheUnderbog` | 1 | 1 | none in WDM | 12 | 11 locales |
 | `mod-native-instance-maps.uldaman` | 70 | `Uldaman` | 2 | 52 | none in WDM | 24 | 11 locales |
+| `mod-native-instance-maps.zulaman` | 568 | `ZulAman` | 0 | 0 | none in WDM | 12 | none (no floors) |
+| `mod-native-instance-maps.zulfarrak` | 209 | `ZulFarrak` | 0 | 0 | none in WDM | 12 | none (no floors) |
+| `mod-native-instance-maps.zulgurub` | 309 | `ZulGurub` | 0 | 0 | none in WDM | 12 | none (no floors) |
 
-Every map's floors are named in all eleven locales WDM publishes, taken verbatim
-from WDM-addons' own `DUNGEON_FLOOR_<INSTANCE><n>` strings. Karazhan's seventeen
-read `Servant's Quarters`, `Upper Livery Stables`, `The Banquet Hall` and so on
-instead of the stock `Floor 1`…`Floor 17`. See
+Every map that has floors has them named in all eleven locales WDM publishes,
+taken verbatim from WDM-addons' own `DUNGEON_FLOOR_<INSTANCE><n>` strings. The
+seven floorless maps declare none, because there is no floor row to rename.
+Karazhan's seventeen read `Servant's Quarters`, `Upper Livery Stables`,
+`The Banquet Hall` and so on instead of the stock `Floor 1`…`Floor 17`. See
 [Dungeon floor names](#dungeon-floor-names).
 
 Karazhan carries no `WorldMapTransforms` row because WDM has none for it. The
 manifest omits the key entirely, so `mod-content-manager` requests no row, leases
-no ID, and composes nothing. 39 of the 43 packages take this path; the other four
+no ID, and composes nothing. 46 of the 50 packages take this path; the other four
 declare the transform WDM supplies, and the composed `WorldMapTransforms.dbc`
 gains exactly those 4 rows over the verified stock file.
 
@@ -81,10 +89,20 @@ client derives the artwork directory from the `WorldMapArea.internal_name` in th
 DBC row, and for these two maps WDM's directory is spelled with different
 capitals — `BlackFathomDeeps` for `BlackfathomDeeps`, `Magtheridonslair` for
 `MagtheridonsLair`. The package installs WDM's bytes at the DBC spelling, which
-is the only name the client can ask for. Nothing else about the 1392 tiles changes.
+is the only name the client can ask for. Nothing else about the 1476 tiles changes.
 
-**The backlog is closed.** All 43 SAFE maps are published, listed explicitly in
-`content/publish.json`; the other 15 discovered maps are UNSAFE and each carries
+Of the 50, seven are **floorless** maps: `hillsbrad-foothills`, `mount-hyjal`,
+`ruins-of-ahnqiraj`, `the-black-morass`, `zulaman`, `zulfarrak` and `zulgurub`.
+WDM gives them an area and artwork but no `DungeonMap` row, because the zone is
+a single continuous world map rather than a set of floors. They declare
+`"floors": []` and `"chunks": []`, `dungeonMapId` `0`, and no `transform`; the
+composed `DungeonMap.dbc`, `DungeonMapChunk.dbc` and `WorldMapTransforms.dbc` are
+the verified stock files byte for byte, and each package's only lease is its
+`WorldMapArea` row. They ship no floor labels because there is no floor dropdown
+row to rename, so they do not request the `protected-framexml` capability at all.
+
+**The backlog is closed.** All 50 SAFE maps are published, listed explicitly in
+`content/publish.json`; the other 8 discovered maps are UNSAFE and each carries
 the reason codes that rejected it. See
 [reports/instance-candidates.md](reports/instance-candidates.md) for the per-map
 verdict and reasoning; [reports/wdm-stable-audit.md](reports/wdm-stable-audit.md)
@@ -109,7 +127,7 @@ single-map selection and `MAP=all` are resolved through that allowlist;
 classification as SAFE alone never makes a map selectable. A bare `make epf`
 prints usage instead of choosing a publication scope.
 
-`MAP=all` creates the 43 approved EPFs separately. `make release` instead
+`MAP=all` creates the 50 approved EPFs separately. `make release` instead
 creates one ordinary Content Manager package containing those maps and their
 resources directly; it does not nest the individual ZIPs. The combined package
 is the canonical owner and explicitly migrates retained allocations from the
@@ -180,7 +198,9 @@ blocked, and each blocked map carries the reason codes that blocked it.
 - **SAFE** — WDM supplies every row the map needs, all of them are additive
   against the verified stock baseline, every reference is preserved as WDM
   wrote it, and the artwork directory the client derives from `internalName`
-  exists. A `WorldMapTransforms` row is optional; its absence is not a defect.
+  exists. A `WorldMapTransforms` row is optional; its absence is not a defect. A
+  map that owns no `DungeonMap` row is **floorless**: it is a real, addressable
+  world map with no dungeon floors, and having no floors is not itself a defect.
 - **UNSAFE** — the package would either contradict WDM's own data (it depends on
   a stock row that WDM mutates or deletes) or be built from source that does not
   add up to one. Every rejection names its causes:
@@ -188,8 +208,10 @@ blocked, and each blocked map carries the reason codes that blocked it.
 | Reason | Meaning |
 | --- | --- |
 | `no-area` | WDM adds no `WorldMapArea` row, so the map is not addressable. |
-| `no-floors` | WDM adds no `DungeonMap` row, so there is no floor to enter. |
 | `no-chunks` | WDM adds no `DungeonMapChunk` row, so the floor has no geometry. |
+| `floorless-dungeon-map-id` | A floorless area names a `DungeonMap` floor it owns none of. |
+| `floorless-chunk-reference` | A floorless area owns `DungeonMapChunk` rows, which belong to a floor. |
+| `floorless-transform-reference` | A floorless map declares a transform that redirects to a floor it does not own. |
 | `stock-world-map-area` | The area is a stock row WDM mutates or deletes. |
 | `stock-floor` | A floor is a stock `DungeonMap` row WDM mutates or deletes. |
 | `stock-chunk` | A chunk is a stock row WDM mutates or deletes. |
@@ -199,11 +221,12 @@ blocked, and each blocked map carries the reason codes that blocked it.
 | `no-artwork` | The client would look for artwork WDM does not ship. |
 | `stock-mutation-required` | A composite of the `stock-*` causes above. |
 
-The current backlog is 43 SAFE and 15 UNSAFE:
+The current backlog is 50 SAFE and 8 UNSAFE:
 
-- 11 blocked on `no-floors` — WDM gives them an area and artwork but no
-  `DungeonMap` row, so there is nothing to enter. Publishing them would mean
-  inventing a floor.
+- Four floorless maps are rejected on their own merits, not for lacking floors:
+  `ArathiBasin`, `NetherstormArena` and `WarsongGulch` are PvP maps whose
+  `WorldMapArea` rows WDM leaves untouched, and `Expansion01` is a stock area
+  that also has two transforms for map 530.
 - `Northrend` — every row it needs is a stock row WDM mutates.
 - `WailingCaverns` — needs WDM's rewritten `DungeonMap 28` and its two deleted
   chunk rows.
@@ -448,13 +471,15 @@ artifact.
 
 ## Known limitations
 
-- **15 maps are withheld**, each with the reason codes that rejected it. Eleven
-  have no `DungeonMap` floor rows and no chunk rows in WDM at all, so there is
-  nothing to enter; `Expansion01` additionally has two transforms for one map.
-  `Northrend` and `WailingCaverns` need stock rows WDM mutates or deletes, which
-  an append-only package cannot claim. `BlackFathomDeeps` and `Magtheridonslair`
-  are artwork directories that name no map of their own; their tiles ship inside
-  the two packages that do. These are source-data gaps, not schema limits.
+- **8 maps are withheld**, each with the reason codes that rejected it. Four are
+  floorless maps rejected on their own merits rather than for lacking floors:
+  `ArathiBasin`, `NetherstormArena` and `WarsongGulch` are stock `WorldMapArea`
+  rows, and `Expansion01` is a stock area that also has two transforms for one
+  map. `Northrend` and `WailingCaverns` need stock rows WDM mutates or deletes,
+  which an append-only package cannot claim. `BlackFathomDeeps` and
+  `Magtheridonslair` are artwork directories that name no map of their own; their
+  tiles ship inside the two packages that do. These are source-data gaps, not
+  schema limits.
 - **`dungeonMapId = -1`** is WDM's "not an instance" sentinel, used by
   `BlackTemple` and `SunwellPlateau`. It is a reference like any other, so it is
   preserved verbatim and requests nothing. `mod-content-manager` accepts it.

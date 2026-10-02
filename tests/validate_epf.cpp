@@ -44,6 +44,7 @@
 #include "ContentAllocationRegistry.h"
 #include "ContentBaselineRegistry.h"
 #include "ContentBuildHash.h"
+#include "ContentClientRequirement.h"
 #include "ContentFrameXml.h"
 #include "ContentPackage.h"
 #include "ContentResourceAllocator.h"
@@ -141,11 +142,18 @@ void RunFrameXmlPipeline(fs::path const &package, fs::path const &workspace,
 
     if (declared.empty()) {
         // No labels means no generated files and no requirement: stock behaviour,
-        // unchanged.  Assert the absence rather than tolerating it.
-        Expect(manifest.clientRequirements ==
-                   std::vector<std::string>{"protected-framexml"},
-               package,
+        // unchanged.  Assert the absence rather than tolerating it.  This mirrors
+        // mod-content-manager's own rule, which records the capability as a
+        // consequence of the floor names and never marks a label-less package as
+        // needing FrameXML override support.  A floorless map has no dropdown row
+        // to rename and so reaches this branch.
+        auto const requires = std::find(manifest.clientRequirements.begin(),
+                                        manifest.clientRequirements.end(),
+                                        std::string(ContentClientRequirement::ProtectedFrameXml));
+        Expect(requires == manifest.clientRequirements.end(), package,
                "a package with no floor labels requested protected-framexml");
+        Expect(!manifest.clientFrameXml.has_value(), package,
+               "a package with no floor labels declared clientFrameXml");
         return;
     }
 
@@ -460,8 +468,22 @@ void CheckTransformContract(fs::path const &package, ContentPackageManifest cons
         // A floor is a floor: no floor row may claim to be a transform target
         // unless a transform actually names it, and none is invented here.
         for (auto const &area : map.areas) {
-            Expect(!area.floors.empty() || !area.chunks.empty(), package,
-                   "area " + Number(area.id) + " declares neither floors nor chunks");
+            // An area that owns no DungeonMap row is a real 3.3.5a client shape:
+            // stock ships 48 such WorldMapArea rows and WDM 55.  It is expressed
+            // as an empty floors array, and the rule it must still satisfy is
+            // that no reference it could not satisfy survives -- no chunk, no
+            // floor label, and no dungeonMapId to point at a row that is not
+            // there.  Every floorless row in stock and in WDM carries 0.
+            if (area.floors.empty()) {
+                Expect(area.chunks.empty(), package,
+                       "area " + Number(area.id) + " has no floor but declares chunks");
+                Expect(area.floorNames.empty(), package,
+                       "area " + Number(area.id) + " has no floor but declares floorNames");
+                Expect(area.dungeonMapId == 0, package,
+                       "area " + Number(area.id) + " has no floor but dungeonMapId is " +
+                           Number(area.dungeonMapId) + ", which CM refuses");
+                continue;
+            }
             for (auto const &floor : area.floors) {
                 Expect(floor.id != 0, package, "floor 0 is refused by CM");
                 Expect(floor.floor != 0, package,

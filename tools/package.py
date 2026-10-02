@@ -205,6 +205,20 @@ def manifest_for(candidate: Candidate, discovery: Discovery) -> Dict[str, object
         "content": tiles,
         "worldMaps": [declaration],
     }
+    if not floors:
+        # A reader who finds `"floors": []` cannot tell a deliberate native shape
+        # from a package that forgot its geometry, so the description says which
+        # it is.  The 3.3.5a client draws such a map from its WorldMapArea row and
+        # its tiles alone: stock build 12340 already ships 48 such areas, WDM
+        # Stable 55, and WDM declares no DungeonMap, DungeonMapChunk or
+        # WorldMapTransforms row for this one, so nothing is missing.
+        manifest["description"] += (
+            " This map is floorless by design: the 3.3.5a client draws it from "
+            "this WorldMapArea row and its tiles alone, WDM Stable declares no "
+            "DungeonMap, DungeonMapChunk or WorldMapTransforms row for it, and the "
+            "three remaining world-map DBCs are therefore left stock byte for "
+            "byte."
+        )
     if candidate.artwork_renames:
         # Stated in the package's own description because it is the one thing a
         # reader of this manifest cannot see: the bytes are WDM's, and only the

@@ -116,10 +116,14 @@ def area_declaration(
     declaration.update(_project(record, AREA_FIELDS))
     # Floor labels come from WDM's own locale strings, keyed by the dropdown's loop
     # index.  Omitted entirely when WDM names no floor for this map, so the client
-    # keeps its own label rather than a synthesised empty string.
-    labels = floornames.floor_labels(declaration["internalName"])
-    if labels:
-        declaration["floorNames"] = labels
+    # keeps its own label rather than a synthesised empty string.  The condition is
+    # the floor list, not the presence of locale strings: WDM ships an enUS string
+    # for many zone maps, and for one of those with no DungeonMap row there is no
+    # dropdown row at all, so a label could only ever be unreachable.
+    if floor_ids:
+        labels = floornames.floor_labels(declaration["internalName"])
+        if labels:
+            declaration["floorNames"] = labels
     # Order follows WDM, not ID.  The client walks floors in declaration order.
     declaration["floors"] = [floor_declaration(floors, i) for i in floor_ids]
     declaration["chunks"] = [chunk_declaration(chunks, i) for i in chunk_ids]

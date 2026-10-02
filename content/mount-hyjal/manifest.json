@@ -1,0 +1,90 @@
+{
+ "content": [
+  {
+   "source": "artwork/CoTMountHyjal1.blp",
+   "target": "Interface/WorldMap/CoTMountHyjal/CoTMountHyjal1.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTMountHyjal2.blp",
+   "target": "Interface/WorldMap/CoTMountHyjal/CoTMountHyjal2.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTMountHyjal3.blp",
+   "target": "Interface/WorldMap/CoTMountHyjal/CoTMountHyjal3.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTMountHyjal4.blp",
+   "target": "Interface/WorldMap/CoTMountHyjal/CoTMountHyjal4.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTMountHyjal5.blp",
+   "target": "Interface/WorldMap/CoTMountHyjal/CoTMountHyjal5.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTMountHyjal6.blp",
+   "target": "Interface/WorldMap/CoTMountHyjal/CoTMountHyjal6.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTMountHyjal7.blp",
+   "target": "Interface/WorldMap/CoTMountHyjal/CoTMountHyjal7.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTMountHyjal8.blp",
+   "target": "Interface/WorldMap/CoTMountHyjal/CoTMountHyjal8.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTMountHyjal9.blp",
+   "target": "Interface/WorldMap/CoTMountHyjal/CoTMountHyjal9.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTMountHyjal10.blp",
+   "target": "Interface/WorldMap/CoTMountHyjal/CoTMountHyjal10.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTMountHyjal11.blp",
+   "target": "Interface/WorldMap/CoTMountHyjal/CoTMountHyjal11.blp",
+   "type": "file"
+  },
+  {
+   "source": "artwork/CoTMountHyjal12.blp",
+   "target": "Interface/WorldMap/CoTMountHyjal/CoTMountHyjal12.blp",
+   "type": "file"
+  }
+ ],
+ "description": "Native pre-Cataclysm Mount Hyjal instance map: 0 DungeonMap floors, 0 DungeonMapChunk entries, one WorldMapArea, no WorldMapTransforms row (WDM supplies none for this map) and 12 client BLP tiles. This map is floorless by design: the 3.3.5a client draws it from this WorldMapArea row and its tiles alone, WDM Stable declares no DungeonMap, DungeonMapChunk or WorldMapTransforms row for it, and the three remaining world-map DBCs are therefore left stock byte for byte.",
+ "name": "Mount Hyjal",
+ "package": "mod-native-instance-maps.mount-hyjal",
+ "schema": 3,
+ "version": "1.0.0",
+ "worldMaps": [
+  {
+   "areas": [
+    {
+     "areaId": 3606,
+     "chunks": [],
+     "dungeonMapId": 0,
+     "floors": [],
+     "id": 775,
+     "internalName": "CoTMountHyjal",
+     "parentMapId": 161,
+     "virtualMapId": -1,
+     "x1": 6145.8330078125,
+     "x2": 4479.16650390625,
+     "y1": -1525.0,
+     "y2": -4024.999755859375
+    }
+   ],
+   "mapId": 534
+  }
+ ]
+}
